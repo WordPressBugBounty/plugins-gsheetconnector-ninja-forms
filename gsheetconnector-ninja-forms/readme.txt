@@ -1,12 +1,12 @@
-=== Ninja Forms Google Sheet Connector ===
+=== GSheetConnector For Ninja Forms ===
 Contributors: westerndeal, abdullah17, gsheetconnector
 Author URI: https://www.gsheetconnector.com/
 Tags: Ninja Forms, Ninja Forms Google Sheet, Google Sheet, Ninja Forms Addon, Ninja Forms Google Spreadsheet, Ninja Forms Google Spreadsheet, Google Integration, Ninja Forms Google Sheets Addon, Ninja Forms Google Sheet Integration, Contact Form Google Sheet Integration, Ninja Forms Google API, Ninja Forms API Integration, Ninja Forms Addon, Google Spreadsheet
-Tested up to: 6.7.1
-Requires at least: 5.6 or higher
+Tested up to: 6.8
+Requires at least: 5.6
 Requires PHP: 7.4
 Requires Plugins: ninja-forms
-Stable tag: 1.2.22
+Stable tag: 1.2.23
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -88,6 +88,10 @@ Please double-check those items and hopefully getting them right will fix the is
 
 
 == Changelog ==
+
+= 1.2.23 = (16/07/2025)
+* Tested up to latest version of WordPress 6.8.1.
+* Confirmed compatibility with the latest versions of Ninja Forms (Free and Pro).  
 
 = 1.2.22 = (22/04/2025)
 * Added: Moved saving of credentials to database for Auto API Integration.

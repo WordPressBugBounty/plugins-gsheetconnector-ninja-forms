@@ -1,16 +1,19 @@
 <?php
 /**
- * Plugin Name:  Ninja Forms GSheetConnector
+ * Plugin Name:  GSheetConnector For Ninja Forms 
  * Description:  Send your Ninja Forms data to your Google Sheets spreadsheet.
  * Author:       GSheetConnector
  * Author URI:   https://www.gsheetconnector.com/
- * Version:      1.2.22
+ * Version:      1.2.23
  * Text Domain:  gsheetconnector-ninjaforms
+ * License:      GPLv2
+ * License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  * Domain Path:  /languages
  * Requires Plugins: ninja-forms
  */
 // Exit if accessed directly.
 
+add_filter('doing_it_wrong_trigger_error', '__return_false');
 if (!defined('ABSPATH')) {
     exit;
 }
@@ -91,8 +94,8 @@ if (NJforms_Gsheet_Connector_Init::ninja_gs_is_pugin_active('GSheet_Connector_NJ
 if ((function_exists('is_plugin_active') && is_plugin_active('gsheetconnector-ninja-forms-pro/gsheetconnector-ninja-forms-pro.php'))) {
     return;
 }
-define('NINJAFORMS_GOOGLESHEET_VERSION', '1.2.22');
-define('NINJAFORMS_GOOGLESHEET_DB_VERSION', '1.2.22');
+define('NINJAFORMS_GOOGLESHEET_VERSION', '1.2.23');
+define('NINJAFORMS_GOOGLESHEET_DB_VERSION', '1.2.23');
 define('NINJAFORMS_GOOGLESHEET_ROOT', dirname(__FILE__));
 define('NINJAFORMS_GOOGLESHEET_URL', plugins_url('/', __FILE__));
 define('NINJAFORMS_GOOGLESHEET_BASE_FILE', basename(dirname(__FILE__)) . '/gsheetconnector-ninjaforms.php');
@@ -520,7 +523,7 @@ class NJforms_Gsheet_Connector_Init
             }
             // Fetch and save the API credentails.
             NJForm_gs_Connector_Utility::instance()->save_api_credentials();
-            
+
             // wp_redirect( admin_url( '/admin.php?page=njform-google-sheet-config&tab=integration' ));
         } catch (Exception $e) {
             NJForm_gs_Connector_Utility::gs_debug_log("Something Wrong : - " . $e->getMessage());
