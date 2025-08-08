@@ -16,7 +16,7 @@ final class NF_Action_NJGheetAction extends NF_Abstracts_Action
 	function __construct() {
 		parent::__construct();
 		// $this->name = __( 'Google Sheet' );
-		$this->_nicename = esc_html__( 'Google Sheet', 'gsheetconnector-ninjaforms' );
+		$this->_nicename = esc_html__( 'Google Sheet', 'gsheetconnector-ninja-forms' );
 		 //  if check the user is authenticated or not
        $njauthenticated = get_option('njforms_gs_token');
       
@@ -30,7 +30,7 @@ final class NF_Action_NJGheetAction extends NF_Abstracts_Action
             'width' => 'full',
             'group' => 'primary',
             'tmpl_row' => 'nf-tmpl-ninjags-custom-field-map-row',
-			'help' => esc_html__( 'Go to your google account and click on"Google apps" icon and than click "Sheets". Select the name of the appropriate sheet you want to link your contact form or create new sheet.', 'gsheetconnector-ninjaforms' ),
+			'help' => esc_html__( 'Go to your google account and click on"Google apps" icon and than click "Sheets". Select the name of the appropriate sheet you want to link your contact form or create new sheet.', 'gsheetconnector-ninja-forms' ),
             'columns'           => array(
                 'mautic_ninjags_alias1'          => array(
                     'header' => 'Ninja Field Alias',
@@ -52,7 +52,7 @@ final class NF_Action_NJGheetAction extends NF_Abstracts_Action
             'width' => 'full',
             'group' => 'primary',
             'tmpl_row' => 'nf-tmpl-ninjags-custom-field-map-row',
-			'help' => esc_html__( 'You can get sheet id from your sheet URL.', 'gsheetconnector-ninjaforms' ),
+			'help' => esc_html__( 'You can get sheet id from your sheet URL.', 'gsheetconnector-ninja-forms' ),
             'columns'           => array(
                 'mautic_ninjags_alias'          => array(
                     'header' => 'Ninja Field Alias',
@@ -74,7 +74,7 @@ final class NF_Action_NJGheetAction extends NF_Abstracts_Action
             'width' => 'full',
             'group' => 'primary',
             'tmpl_row' => 'nf-tmpl-ninjags-custom-field-map-row',
-			'help' => esc_html__( 'Open your Google Sheet with which you want to link your contact form . You will notice a tab names at bottom of the screen. Copy the tab name where you want to have an entry of contact form.', 'gsheetconnector-ninjaforms' ),
+			'help' => esc_html__( 'Open your Google Sheet with which you want to link your contact form . You will notice a tab names at bottom of the screen. Copy the tab name where you want to have an entry of contact form.', 'gsheetconnector-ninja-forms' ),
             'columns'           => array(
                 'mautic_ninjags_alias'          => array(
                     'header' => 'Ninja Field Alias',
@@ -89,7 +89,6 @@ final class NF_Action_NJGheetAction extends NF_Abstracts_Action
             ),
         );
 
-
         $this->_settings['field_map_ninja_gstabid'] = array(
             'name' => 'field_map_ninja_gstabid',
             'type' => 'textbox',
@@ -97,7 +96,7 @@ final class NF_Action_NJGheetAction extends NF_Abstracts_Action
             'width' => 'full',
             'group' => 'primary',
             'tmpl_row' => 'nf-tmpl-ninjags-custom-field-map-row',
-			'help' => esc_html__( 'You can get tab id from your sheet URL.', 'gsheetconnector-ninjaforms' ),
+			'help' => esc_html__( 'You can get tab id from your sheet URL.', 'gsheetconnector-ninja-forms' ),
             'columns'           => array(
                 'mautic_ninjags_alias'          => array(
                     'header' => 'Ninja Field Alias',
@@ -136,7 +135,7 @@ final class NF_Action_NJGheetAction extends NF_Abstracts_Action
                     'name'      => 'google_sheet_link',
                     'type'      => 'textbox',
                     'label'     =>'<a  class="nf-button primary nf-close-drawer"  href="'.$link.'" target="_blank">' .
-                                   esc_html__( 'Google Sheet URL', 'gsheetconnector-ninjaforms' ) . '</a>',
+                                   esc_html__( 'Google Sheet URL', 'gsheetconnector-ninja-forms' ) . '</a>',
                     'width'     => 'full',
                     'group'     => 'primary',
                     'tmpl_row'  => 'nf-tmpl-save-field-repeater-row',
@@ -148,7 +147,7 @@ final class NF_Action_NJGheetAction extends NF_Abstracts_Action
       $this->_settings['field_map_ninja_gs_upgrade_to_pro'] = array(
             'name' => 'field_map_ninja_gs_upgrade_to_pro',
             'type' => 'textbox',
-            'label'     => esc_html__( 'Unlock More Features', 'gsheetconnector-ninjaforms' ),
+            'label'     => esc_html__( 'Unlock More Features', 'gsheetconnector-ninja-forms' ),
            
             'width' => 'full',
             'group' => 'primary',
@@ -161,7 +160,7 @@ final class NF_Action_NJGheetAction extends NF_Abstracts_Action
                     'name'      => 'field_map_ninja_gs_upgrade_to_pro_link',
                     'type'      => 'textbox',
                     'label'     =>'<a  class="nf-button primary nf-close-drawer"  href="https://www.gsheetconnector.com/ninja-forms-google-sheet-connector-pro" target="_blank">' .
-                                   esc_html__( 'Upgrade To Pro', 'gsheetconnector-ninjaforms' ) . '</a>',
+                                   esc_html__( 'Upgrade To Pro', 'gsheetconnector-ninja-forms' ) . '</a>',
                     'width'     => 'full',
                     'group'     => 'primary',
                     'tmpl_row'  => 'nf-tmpl-save-field-repeater-row',
@@ -173,8 +172,8 @@ final class NF_Action_NJGheetAction extends NF_Abstracts_Action
         $this->_settings['field_map_ninja_gs_nj_error'] = array(
             'name' => 'field_map_ninja_gs_nj_error',
             'type' => 'textbox',
-           'label'     => esc_html__( '<strong>Authentication Required:</strong> You must have to', 'gsheetconnector-ninjaforms' ) . ' <a href="admin.php?page=njform-google-sheet-config&tab=integration" target="_blank">' .
-                                   esc_html__( 'Authenticate using your Google Account', 'gsheetconnector-ninjaforms' ) . '</a>'. esc_html__( 'along with Google Drive and Google Sheets Permissions in order to enable the settings for configuration.', 'gsheetconnector-ninjaforms' ),
+           'label'     => esc_html__( '<strong>Authentication Required:</strong> You must have to', 'gsheetconnector-ninja-forms' ) . ' <a href="admin.php?page=njform-google-sheet-config&tab=integration" target="_blank">' .
+                                   esc_html__( 'Authenticate using your Google Account', 'gsheetconnector-ninja-forms' ) . '</a>'. esc_html__( 'along with Google Drive and Google Sheets Permissions in order to enable the settings for configuration.', 'gsheetconnector-ninja-forms' ),
            
             'width' => 'full',
             'group' => 'primary',
@@ -196,13 +195,11 @@ final class NF_Action_NJGheetAction extends NF_Abstracts_Action
     {
           $action_settings['id'];
           
-
           $sheet_name = isset($action_settings['field_map_ninja_gsname']) ? $action_settings['field_map_ninja_gsname'] : "";
           $sheet_id = isset($action_settings['field_map_ninja_gsid']) ? $action_settings['field_map_ninja_gsid'] : "";
           $sheet_tab_name = isset($action_settings['field_map_ninja_gstabname']) ? $action_settings['field_map_ninja_gstabname'] : "";
           $tab_id = isset($action_settings['field_map_ninja_gstabid']) ? $action_settings['field_map_ninja_gstabid'] : "";
           
-
           if ( has_filter( 'ninja_forms_get_fields_sorted' ) ) {
             $fields_by_key = array();
             foreach( $data[ 'fields' ] as $field ){

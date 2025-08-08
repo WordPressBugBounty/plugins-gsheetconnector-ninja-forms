@@ -6,7 +6,7 @@ Tested up to: 6.8
 Requires at least: 5.6
 Requires PHP: 7.4
 Requires Plugins: ninja-forms
-Stable tag: 1.2.23
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -88,6 +88,19 @@ Please double-check those items and hopefully getting them right will fix the is
 
 
 == Changelog ==
+
+= 2.0.0 (08-08-2025) =
+- Removed direct links to 5-star reviews to comply with WordPress plugin guidelines.
+- Updated “Tested Up To” value to reflect compatibility with the latest WordPress version.
+- Replaced static <script> and <link> tags with wp_enqueue_script and wp_enqueue_style for proper asset loading and dependency management.
+- Eliminated all remote file inclusions to improve security and meet WordPress repository requirements.
+- Removed plugin folder write operations and any instructions requiring users to manually edit/write files inside the plugin directory.
+- Escaped all variables and options before outputting to the frontend or admin interface.
+- Replaced generic function/class/constant/option names with properly prefixed versions to avoid naming collisions.
+- Corrected text domain to match the plugin slug for consistent internationalization support.
+- Blocked direct file access by adding appropriate file-level checks (e.g., defined( 'ABSPATH' ) || exit;).
+- Implemented proper nonce verification and security best practices throughout AJAX and form submissions.
+- Passed Plugin Check review with all critical issues resolved.
 
 = 1.2.23 = (16/07/2025)
 * Tested up to latest version of WordPress 6.8.1.

@@ -87,7 +87,7 @@ class njfgsc_googlesheet
          }
          //==============permission checking ========== 
       } catch (Exception $e) {
-         Njform_gs_Connector_Utility::gs_debug_log("Token write fail! - " . $e->getMessage());
+         NJForm_gs_Connector_Utility::gs_debug_log("Token write fail! - " . $e->getMessage());
       }
    }
 
@@ -126,6 +126,7 @@ class njfgsc_googlesheet
 
          self::setInstance($client);
       } catch (Exception $e) {
+          NJForm_gs_Connector_Utility::gs_debug_log("Auth, Error fetching OAuth2 access token, message: " . $e->getMessage());
          throw new LogicException("Auth, Error fetching OAuth2 access token, message: " . $e->getMessage());
          exit();
       }
@@ -233,6 +234,7 @@ class njfgsc_googlesheet
             }
          }
       } catch (Exception $e) {
+          NJForm_gs_Connector_Utility::gs_debug_log($e->getMessage());
          return null;
          exit();
       }
@@ -285,6 +287,7 @@ class njfgsc_googlesheet
             );
          }
       } catch (Exception $e) {
+         NJForm_gs_Connector_Utility::gs_debug_log($e->getMessage());
          return null;
          exit();
       }
@@ -347,18 +350,15 @@ class njfgsc_googlesheet
    public function gsheet_print_google_account_email()
    {
       try {
-         // $google_account = get_option("njgs_email_account");
-         // if( false && $google_account ) {
-         //    return $google_account;
-         // }
-         // else {  
+         
          $google_sheet = new njfgsc_googlesheet();
          $google_sheet->auth();
          $email = $google_sheet->gsheet_get_google_account_email();
          update_option("njgs_email_account", $email);
          return $email;
-         // }
+       
       } catch (Exception $e) {
+         NJForm_gs_Connector_Utility::gs_debug_log($e->getMessage());
          return false;
       }
    }

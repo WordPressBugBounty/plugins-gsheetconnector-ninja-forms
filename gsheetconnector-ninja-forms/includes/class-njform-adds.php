@@ -76,7 +76,7 @@ class njform_gs_Connector_Adds {
       $review_text .= '</ul>';
       $review_text .= '<input type="hidden" name="njform_gs_auth_expired_adds_ajax_nonce" id="njform_gs_auth_expired_adds_ajax_nonce" value="' . $ajax_nonce . '" /></div>';
 
-      $rating_block = Njform_gs_Connector_Utility::instance()->admin_notice( array(
+      $rating_block = NJForm_gs_Connector_Utility::instance()->admin_notice( array(
          'type'    => 'auth-expired-notice',
          'message' => $review_text
       ) );

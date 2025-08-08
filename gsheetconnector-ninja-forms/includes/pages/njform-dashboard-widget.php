@@ -19,7 +19,8 @@ if (!defined('ABSPATH')) {
    ?>
    <div class="main-content">
       <div>
-         <h3><?php echo __("Ninja Forms connected with Google Sheets.", "gsheetconnector-ninjaforms"); ?></h3>
+         <h3><?php echo esc_html__("Ninja Forms connected with Google Sheets.", "gsheetconnector-ninja-forms"); ?>
+          </h3>
 		  
 		  
 		  <style>
@@ -31,7 +32,8 @@ if (!defined('ABSPATH')) {
 		  
 		  <table class="widget-table">
     <tr>
-        <th>Form Name</th>
+        <th><?php echo esc_html__('Form Name', 'gsheetconnector-ninja-forms'); ?>
+        </th>
         
     </tr>
     <?php
@@ -40,9 +42,10 @@ if (!defined('ABSPATH')) {
            ?>
                 <tr>
                     <td>
-                        <a href="<?php echo admin_url('admin.php?page=ninja-forms&form_id=' . $value->ID); ?>" target="_blank">
-                            <?php echo esc_html($value->title); ?>
-                        </a>
+                        <a href="<?php echo esc_url( admin_url( 'admin.php?page=ninja-forms&form_id=' . intval( $value->ID ) ) ); ?>" target="_blank" rel="noopener noreferrer">
+                      <?php echo esc_html( $value->title ); ?>
+                     </a>
+
                     </td>
                     
                 </tr>
@@ -53,18 +56,14 @@ if (!defined('ABSPATH')) {
         // No forms found
         ?>
         <tr>
-            <td colspan="2"><?php echo __("No Ninja Forms are connected with Google Sheets.", "gsheetconnector-ninjaforms"); ?></td>
+            <td colspan="2"><?php echo esc_html__('No Ninja Forms are connected with Google Sheets.', 'gsheetconnector-ninja-forms'); ?>
+           </td>
         </tr>
         <?php
     }
     ?>
 </table>
-
-
-	  
-		  
-         
-      </div>
+</div>
    </div> <!-- main-content end -->
 </div> <!-- dashboard-content end -->
 <style type="text/css">

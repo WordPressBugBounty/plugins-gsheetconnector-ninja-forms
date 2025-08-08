@@ -1,36 +1,33 @@
 <?php
 /*
  * Utilities class for njform google sheet connector
- * @since       1.0
+ * @since 1.0
  */
 
 // Exit if accessed directly
 if (!defined('ABSPATH')) {
    exit;
 }
+
 /**
  * Utilities class - singleton class
  * @since 1.0
  */
 class NJForm_gs_Connector_Utility {
 
-   // private function __construct() {
-   //    // Do Nothing
-   // }
-
-  /**
+   /**
     * Add Sub Menu in Ninja Form
     *
     * @return singleton instance of NJForm_gs_Connector_Utility
     */
-  public function admin_page() {
+    public function admin_page() {
     try{
       $current_role = $this->get_current_user_role();
-      add_submenu_page('ninja-forms', __('Google Sheet', 'gsheetconnector-ninjaforms'), __('Google Sheet', 'gsheetconnector-ninjaforms'), $current_role, 'njform-google-sheet-config', array($this, 'njforms_google_sheet_config'));
+      add_submenu_page('ninja-forms', __('Google Sheet', 'gsheetconnector-ninja-forms'), __('Google Sheet', 'gsheetconnector-ninja-forms'), $current_role, 'njform-google-sheet-config', array($this, 'njforms_google_sheet_config'));
     } catch (Exception $e) {
          $this->gs_debug_log("Something Wrong : - " . $e->getMessage());
       } 
-   }
+    }
 
    /**
     * Setting Page 
@@ -78,34 +75,33 @@ class NJForm_gs_Connector_Utility {
     * 
     * @since 1.0 initial version
     */
-   public function admin_notice($data = array()) {
-      // extract message and type from the $data array
-      $message = isset($data['message']) ? $data['message'] : "";
-      $message_type = isset($data['type']) ? $data['type'] : "";
+   public function admin_notice($data = array())
+   {
+      $message = isset($data['message']) ? $data['message'] : '';
+      $message_type = isset($data['type']) ? $data['type'] : '';
+        
       switch ($message_type) {
          case 'error':
-            $admin_notice = '<div id="message" class="error notice is-dismissible">';
-            break;
+             $admin_notice = '<div id="message" class="error notice is-dismissible">';
+             break;
          case 'update':
-            $admin_notice = '<div id="message" class="updated notice is-dismissible">';
-            break;
+             $admin_notice = '<div id="message" class="updated notice is-dismissible">';
+             break;
          case 'update-nag':
-            $admin_notice = '<div id="message" class="update-nag">';
-            break;
+             $admin_notice = '<div id="message" class="update-nag">';
+             break;
          case 'upgrade':
-            $admin_notice = '<div id="message" class="error notice njforms-gs-upgrade is-dismissible">';
-            break;
-		     case 'auth-expired-notice' :
-            $admin_notice = '<div id="message" class="error notice njforms-gs-auth-expired-adds is-dismissible">';
-            break;
+             $admin_notice = '<div id="message" class="error notice wpforms-gs-upgrade is-dismissible">';
+             break;
          default:
-            $message = __('There\'s something wrong with your code...', 'gsheetconnector-ninjaforms');
-            $admin_notice = "<div id=\"message\" class=\"error\">\n";
-            break;
+             $message = __('There\'s something wrong with your code...', 'gsheetconnector-ninja-forms');
+             $admin_notice = "<div id=\"message\" class=\"error\">";
+             break;
       }
 
-      $admin_notice .= "    <p>" . __($message, 'gsheetconnector-ninjaforms') . "</p>\n";
+      $admin_notice .= '<p>' . esc_html( $message ) . '</p>';
       $admin_notice .= "</div>\n";
+
       return $admin_notice;
    }
 
@@ -121,6 +117,7 @@ class NJForm_gs_Connector_Utility {
             return $role;
       endforeach;
    }
+
    /**
     * Fetch and save Auto Integration API credentials
     *
@@ -155,7 +152,7 @@ class NJForm_gs_Connector_Utility {
  
           $decoded_response = json_decode($response);
  
-          if (isset($decoded_response->api_creds) && (!empty($decoded_response->api_creds))) {
+         if (isset($decoded_response->api_creds) && (!empty($decoded_response->api_creds))) {
              $api_creds = wp_parse_args($decoded_response->api_creds);
              if (is_multisite()) {
                 // If it's a multisite, update the site option (network-wide)
@@ -164,71 +161,55 @@ class NJForm_gs_Connector_Utility {
                 // If it's not a multisite, update the regular option
                 update_option('ninjagsc_api_free_creds', $api_creds);
              }
-          }
-       }
-    }
+         }
+      }
+   }
  
- 
-
    /**
     * Utility function to get the current user's role
     *
     * @since 1.0
     */
-   public static function gs_debug_log($error){
-      try{  
-         if( ! is_dir( NINJAFORMS_GOOGLESHEET_PATH.'logs' ) ){
-            mkdir( NINJAFORMS_GOOGLESHEET_PATH . 'logs', 0755, true );
-         }
-      } catch (Exception $e) {
-
-      }
-      try{
-         // check if debug log file exists or not
-        $nflogFilePathToDelete = NINJAFORMS_GOOGLESHEET_PATH . "logs/log.txt";
-        // Check if the log file exists before attempting to delete
-        if (file_exists($nflogFilePathToDelete)) {
-            unlink($nflogFilePathToDelete);
+   public static function gs_debug_log( $error ) {
+        if ( ! function_exists( 'WP_Filesystem' ) ) {
+            require_once ABSPATH . 'wp-admin/includes/file.php';
         }
-         // check if debug unique log file exists or not
-         $nfexistDebugFile = get_option('nfgs_debug_log_file');
-         if (!empty($nfexistDebugFile) && file_exists($nfexistDebugFile)) {
-         $nflog = fopen( $nfexistDebugFile , 'a');
-         if ( is_array( $error ) ) {
-            fwrite($nflog, print_r(date_i18n( 'j F Y H:i:s', current_time( 'timestamp' ) )." \t PHP ".phpversion(), TRUE));
-            fwrite( $nflog, print_r($error, TRUE));   
-         } else {
-         $result = fwrite($nflog, print_r(date_i18n( 'j F Y H:i:s', current_time( 'timestamp' ) )." \t PHP ".phpversion()." \t $error \r\n", TRUE));
-         }
-         fclose( $nflog );
+        global $wp_filesystem;
+        WP_Filesystem();
+
+        $upload_dir = wp_upload_dir();
+        $log_dir = trailingslashit( $upload_dir['basedir'] ) . 'gscninja-debug.log/';
+        $log_file = get_option( 'nfgs_debug_log_file' );
+        $timestamp = gmdate( 'Y-m-d H:i:s' ) . "\t PHP " . phpversion() . "\t";
+
+         try {
+            if ( ! $wp_filesystem->is_dir( $log_dir ) ) {
+                $wp_filesystem->mkdir( $log_dir, FS_CHMOD_DIR );
             }
-        else{
-        // if unique log file not exists then create new file code
-        // Your log content (you can customize this)
-        $nf_unique_log_content = "Log created at " . date('Y-m-d H:i:s');
-        // Create the log file
-          $nflogfileName = 'log-' . uniqid() . '.txt';
-        // Define the file path
-          $nflogUniqueFile = NINJAFORMS_GOOGLESHEET_PATH . "logs/".$nflogfileName;
-       if (file_put_contents($nflogUniqueFile, $nf_unique_log_content)) {
-         // save debug unique file in table
-         update_option('nfgs_debug_log_file', $nflogUniqueFile);
-         $nflog = fopen( $nflogUniqueFile , 'a');
-         if ( is_array( $error ) ) {
-            fwrite($nflog, print_r(date_i18n( 'j F Y H:i:s', current_time( 'timestamp' ) )." \t PHP ".phpversion(), TRUE));
-            fwrite( $nflog, print_r($error, TRUE));   
-         } else {
-         $result = fwrite($nflog, print_r(date_i18n( 'j F Y H:i:s', current_time( 'timestamp' ) )." \t PHP ".phpversion()." \t $error \r\n", TRUE));
-         }
-         fclose( $nflog );
 
-       } else {
-        // Error message
-        echo "Error - Not able to create Log File.";
-          }
-        }
-        
-      } catch (Exception $e) {
+            $old_file = $log_dir . 'log.txt';
+            if ( $wp_filesystem->exists( $old_file ) ) {
+                wp_delete_file( $old_file );
+            }
+
+            $log_message = is_array( $error ) || is_object( $error )
+                ? $timestamp . wp_json_encode( $error ) . "\r\n"
+                : $timestamp . $error . "\r\n";
+
+            if ( ! empty( $log_file ) && $wp_filesystem->exists( $log_file ) ) {
+                $existing = $wp_filesystem->get_contents( $log_file );
+                $wp_filesystem->put_contents( $log_file, $existing . $log_message, FS_CHMOD_FILE );
+            } else {
+                $new_log_file = $log_dir . 'log-' . uniqid() . '.txt';
+                $log_content = "Log created at " . gmdate( 'Y-m-d H:i:s' ) . "\r\n" . $log_message;
+
+                if ( $wp_filesystem->put_contents( $new_log_file, $log_content, FS_CHMOD_FILE ) ) {
+                    update_option( 'nfgs_debug_log_file', $new_log_file );
+                } else {
+                    
+                }
+            }
+      } catch ( Exception $e ) {
          
       }
    }
