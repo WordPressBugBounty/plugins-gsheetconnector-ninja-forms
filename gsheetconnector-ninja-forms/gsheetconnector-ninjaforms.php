@@ -1,10 +1,11 @@
 <?php
 /**
- * Plugin Name:  GSheetConnector For Ninja Forms 
+ * Plugin Name:  GSheetConnector For Ninja Forms
+ * Plugin URI:  https://www.gsheetconnector.com/ninja-forms-google-sheet-connector-pro
  * Description:  Send your Ninja Forms data to your Google Sheets spreadsheet.
  * Author:       GSheetConnector
  * Author URI:   https://www.gsheetconnector.com/
- * Version:      2.0.0
+ * Version:      2.0.2
  * Text Domain:  gsheetconnector-ninja-forms
  * License:      GPLv2
  * License URI:  http://www.gnu.org/licenses/gpl-2.0.html
@@ -97,8 +98,8 @@ if (NJforms_Gsheet_Connector_Init::ninja_gs_is_pugin_active('GSheet_Connector_NJ
 if ((function_exists('is_plugin_active') && is_plugin_active('gsheetconnector-ninja-forms-pro/gsheetconnector-ninja-forms-pro.php'))) {
     return;
 }
-define('NINJAFORMS_GOOGLESHEET_VERSION', '2.0.0');
-define('NINJAFORMS_GOOGLESHEET_DB_VERSION', '2.0.0');
+define('NINJAFORMS_GOOGLESHEET_VERSION', '2.0.2');
+define('NINJAFORMS_GOOGLESHEET_DB_VERSION', '2.0.2');
 define('NINJAFORMS_GOOGLESHEET_ROOT', dirname(__FILE__));
 define('NINJAFORMS_GOOGLESHEET_URL', plugins_url('/', __FILE__));
 define('NINJAFORMS_GOOGLESHEET_BASE_FILE', basename(dirname(__FILE__)) . '/gsheetconnector-ninjaforms.php');
@@ -344,6 +345,7 @@ class NJforms_Gsheet_Connector_Init
      */
     public function gs_clear_logs()
     {
+
         // nonce check
         check_ajax_referer( 'gs-ajax-nonce', 'security' );
 
@@ -463,8 +465,8 @@ class NJforms_Gsheet_Connector_Init
     {
         if (is_admin() && (isset($_GET['page']) && ($_GET['page'] == 'njform-google-sheet-config'))) {
             wp_enqueue_style('njform-gs-connector-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/njform-gs-connector.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
-            wp_enqueue_style('njform-gs-connector-font', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/font-awesome.min.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
-            wp_enqueue_style('njform-gs-connector-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/system-debug.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
+            wp_enqueue_style('njform-gs-connector-font', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/fontawesome.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
+            wp_enqueue_style('system-debug-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/system-debug.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
         }
     }
 
@@ -485,13 +487,15 @@ class NJforms_Gsheet_Connector_Init
                 true
             );
 
-            wp_enqueue_script(
-                'njform-gs-connector-js',
-                NINJAFORMS_GOOGLESHEET_URL . 'assets/js/system-debug.js',
-                array('jquery'),
-                NINJAFORMS_GOOGLESHEET_VERSION,
-                true
-            );
+ wp_enqueue_script('system-debug-js', NINJAFORMS_GOOGLESHEET_URL . 'assets/js/system-debug.js', NINJAFORMS_GOOGLESHEET_VERSION, true);
+
+            // wp_enqueue_script(
+            //     'njform-gs-connector-js',
+            //     NINJAFORMS_GOOGLESHEET_URL . 'assets/js/system-debug.js',
+            //     array('jquery'),
+            //     NINJAFORMS_GOOGLESHEET_VERSION,
+            //     true
+            // );
         }
 
         if (is_admin()) {
@@ -722,9 +726,9 @@ class NJforms_Gsheet_Connector_Init
     public function add_njform_gs_connector_summary_widget()
     {
         $title = sprintf(
-            "<img style='width:30px;margin-right: 10px;' src='%sassets/img/ninja-forms-gsc.png'><span>%s</span>",
+            "<img style='width:30px;margin-right: 10px;' src='%sassets/img/ninja-gsc.svg'><span>%s</span>",
             esc_url(NINJAFORMS_GOOGLESHEET_URL),
-            esc_html__('Ninja Forms - GSheetConnector', 'gsheetconnector-ninja-forms')
+            esc_html__('GSheetConnector For Ninja Forms', 'gsheetconnector-ninja-forms')
         );
 
         wp_add_dashboard_widget('njform_gs_dashboard', $title, array($this, 'njform_gs_connector_summary_dashboard'));
@@ -745,7 +749,13 @@ class NJforms_Gsheet_Connector_Init
      */
     public function nj_clear_debug_logs()
     {
-        // nonce check
+
+         // 🚨 Block subscribers or any user without admin capability
+        if ( ! current_user_can( 'manage_options' ) ) {
+          wp_send_json_error( 'Unauthorized', 403 );
+       }
+
+       // nonce check
         check_ajax_referer( 'gs-ajax-nonce', 'security' );
 
         // Initialize WP_Filesystem
@@ -817,6 +827,7 @@ class NJforms_Gsheet_Connector_Init
         $system_info .= '<div id="info-container" class="info-content" style="display:none;">';
         $system_info .= '<h3>GSheetConnector</h3>';
         $system_info .= '<table>';
+        $system_info .= '<tr><td>Plugin Name</td><td>GSheetConnector For Ninja Forms</td></tr>';
         $system_info .= '<tr><td>Plugin Version</td><td>' . esc_html($plugin_version) . '</td></tr>';
         $system_info .= '<tr><td>Plugin Subscription Plan</td><td>' . esc_html($subscription_plan) . '</td></tr>';
         $system_info .= '<tr><td>Connected Email Account</td><td>' . $connected_email . '</td></tr>';

@@ -24,16 +24,15 @@ add_filter( 'admin_footer_text', 'gsheetconnector_admin_footer_text' );
 
   <ul class="gsheetconnect-footer-promotion-links">
     <li><a href="https://www.gsheetconnector.com/support" target="_blank" rel="noopener"><?php esc_html_e( 'Support', 'gsheetconnector-ninja-forms' ); ?></a></li>
-    <li><a href="https://support.gsheetconnector.com/kb/ninjaforms-gsheetconnector-introduction" target="_blank" rel="noopener"><?php esc_html_e( 'Docs', 'gsheetconnector-ninja-forms' ); ?></a></li>
-    <li><a href="https://www.facebook.com/gsheetconnectorofficial" target="_blank" rel="noopener"><?php esc_html_e( 'VIP Circle', 'gsheetconnector-ninja-forms' ); ?></a></li>
+    <li><a href="https://www.gsheetconnector.com/docs/ninja-forms-gsheetconnector" target="_blank" rel="noopener"><?php esc_html_e( 'Docs', 'gsheetconnector-ninja-forms' ); ?></a></li>
     <li><a href="https://profiles.wordpress.org/westerndeal/#content-plugins" target="_blank" rel="noopener"><?php esc_html_e( 'Free Plugins', 'gsheetconnector-ninja-forms' ); ?></a></li>
   </ul>
 
   <ul class="gsheetconnect-footer-promotion-social">
-    <li><a href="https://www.facebook.com/gsheetconnectorofficial" target="_blank" rel="noopener"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-    <li><a href="https://www.instagram.com/gsheetconnector/" target="_blank" rel="noopener"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-    <li><a href="https://www.linkedin.com/in/abdullah17/" target="_blank" rel="noopener"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-    <li><a href="https://twitter.com/gsheetconnector?lang=en" target="_blank" rel="noopener"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-    <li><a href="https://www.youtube.com/@GSheetConnector" target="_blank" rel="noopener"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+    <li><a href="https://www.facebook.com/gsheetconnectorofficial" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a></li>
+    <li><a href="https://www.instagram.com/gsheetconnector/" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a></li>
+    <li><a href="https://www.linkedin.com/company/gsheetconnector/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a></li>
+    <li><a href="https://twitter.com/gsheetconnector?lang=en" target="_blank" rel="noopener"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+    <li><a href="https://www.youtube.com/@GSheetConnector" target="_blank" rel="noopener"><i class="fa-brands fa-square-youtube"></i></a></li>
   </ul>
 </div>

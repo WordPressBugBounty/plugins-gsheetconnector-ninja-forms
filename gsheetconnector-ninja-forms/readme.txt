@@ -1,12 +1,13 @@
 === GSheetConnector For Ninja Forms ===
 Contributors: westerndeal, abdullah17, gsheetconnector
 Author URI: https://www.gsheetconnector.com/
-Tags: Ninja Forms, Ninja Forms Google Sheet, Google Sheet, Ninja Forms Addon, Ninja Forms Google Spreadsheet, Ninja Forms Google Spreadsheet, Google Integration, Ninja Forms Google Sheets Addon, Ninja Forms Google Sheet Integration, Contact Form Google Sheet Integration, Ninja Forms Google API, Ninja Forms API Integration, Ninja Forms Addon, Google Spreadsheet
-Tested up to: 6.8
+Tags: Ninja Forms, Ninja Forms Google Sheet, Ninja Forms Addon, Google Integration, Ninja Forms Google Sheet Integration
+Docs: https://www.gsheetconnector.com/docs/ninja-forms-gsheetconnector
+Tested up to: 6.9
 Requires at least: 5.6
 Requires PHP: 7.4
 Requires Plugins: ninja-forms
-Stable tag: 2.0.0
+Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,7 +75,6 @@ Enjoy!
 2. How to Enter Sheet Name and Tab Name is shown.
 3. Entering the Field Header Names Manually in the Connected Sheet and Submitting the form.
 4. System Status.
-5. Extensions.
 
 == Frequently Asked Questions ==
 
@@ -89,7 +89,13 @@ Please double-check those items and hopefully getting them right will fix the is
 
 == Changelog ==
 
-= 2.0.0 (08-08-2025) =
+= 2.0.2 = (19/11/2025)
+- Fixed : Vulnerabilities issue resolved. 
+
+= 2.0.1 = (18/11/2025)
+- Updatd:  UI changes. 
+
+= 2.0.0 (08/08/2025) =
 - Removed direct links to 5-star reviews to comply with WordPress plugin guidelines.
 - Updated “Tested Up To” value to reflect compatibility with the latest WordPress version.
 - Replaced static <script> and <link> tags with wp_enqueue_script and wp_enqueue_style for proper asset loading and dependency management.
@@ -103,29 +109,29 @@ Please double-check those items and hopefully getting them right will fix the is
 - Passed Plugin Check review with all critical issues resolved.
 
 = 1.2.23 = (16/07/2025)
-* Tested up to latest version of WordPress 6.8.1.
-* Confirmed compatibility with the latest versions of Ninja Forms (Free and Pro).  
+- Tested up to latest version of WordPress 6.8.1.
+- Confirmed compatibility with the latest versions of Ninja Forms (Free and Pro).  
 
 = 1.2.22 = (22/04/2025)
-* Added: Moved saving of credentials to database for Auto API Integration.
+- Added: Moved saving of credentials to database for Auto API Integration.
 
 = 1.2.21 = (27/01/2025)
-* Added: "Requires By" in our plugin and "Required By" in the parent plugin.
-* Fixed: Minor UI changes. 
+- Added: "Requires By" in our plugin and "Required By" in the parent plugin.
+- Fixed: Minor UI changes. 
 
 = 1.2.20 = (01/01/2025)
-* Added: Added "Requires By" in our plugin and "Required By" in the parent plugin.
-* Added: The "Copy Log" button has been added.
-* Fixed: Undefined error when clicking the "Copy to Clipboard" button in the System Info tab.
-* Fixed: The issue with the Debug Log view and the close button has been fixed.
-* Fixed: Dashboard widget formatting has been improved.
-* Fixed: Function _load_textdomain_just_in_time was called incorrectly.
+- Added: Added "Requires By" in our plugin and "Required By" in the parent plugin.
+- Added: The "Copy Log" button has been added.
+- Fixed: Undefined error when clicking the "Copy to Clipboard" button in the System Info tab.
+- Fixed: The issue with the Debug Log view and the close button has been fixed.
+- Fixed: Dashboard widget formatting has been improved.
+- Fixed: Function _load_textdomain_just_in_time was called incorrectly.
 
 = 1.2.19 = (10/08/2024)
-* Added: Display a notification when authentication expires.
+- Added: Display a notification when authentication expires.
 
 = 1.2.18 = (30/07/2024)
-* Fixed: Google hasn’t verified this app error.
+- Fixed: Google hasn’t verified this app error.
 
 = 1.2.17 = [27/04/2024]
 - Plugin UI Changes as per Standards.

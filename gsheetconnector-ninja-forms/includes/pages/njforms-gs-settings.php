@@ -24,27 +24,36 @@ $plugin_version = defined('NINJAFORMS_GOOGLESHEET_VERSION') ? NINJAFORMS_GOOGLES
 <div class="gsheet-header">
     <div class="gsheet-logo">
         <a href="https://www.gsheetconnector.com/"><i></i></a></div>
-    <h1 class="gsheet-logo-text"><span class="title"><?php echo esc_html__( "Ninja Forms  - GSheetConnector", "gsheetconnector-ninja-forms" ); ?></span>
+    <h1 class="gsheet-logo-text"><span class="title"><?php echo esc_html__( "GSheetConnector For Ninja Forms", "gsheetconnector-ninja-forms" ); ?></span>
     <small><?php echo esc_html__( "Version :", "gsheetconnector-ninja-forms" ); ?> <?php  echo esc_html($plugin_version, NINJAFORMS_GOOGLESHEET_VERSION); ?> </small></h1>
-    <a href="https://support.gsheetconnector.com/kb" title="gsheet Knowledge Base" target="_blank" class="button gsheet-help"><i class="dashicons dashicons-editor-help"></i></a>
+   
+	<ul> <li><a href="https://www.gsheetconnector.com/docs/ninja-forms-gsheetconnector/introduction" title="Document" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-file-lines"></i></a></li>
+        <li><a href="https://www.gsheetconnector.com/support" title="Support" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-life-ring"></i></a></li>
+        <li><a href="https://wordpress.org/plugins/gsheetconnector-ninja-forms/#developers" title="Changelog" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-bullhorn"></i></a></li>
+    </ul>
+	
 </div><!-- header #end -->
+
+<div class="breadcrumb">
 <span class="dashboard-gsc"><?php echo esc_html( __('DASHBOARD', 'gsheetconnector-ninja-forms' ) ); ?></span>
 <span class="divider-gsc"> / </span>
 <span class="modules-gsc"> <?php echo esc_html( __($active_tab_name, 'gsheetconnector-ninja-forms' ) ); ?></span>
+</div>
 
-<div class="wrap">
+
    <?php
-   $tabs = array(
-       'integration'    => __('Integration', 'gsheetconnector-ninja-forms'),
-       'system_status'  => __('System Status', 'gsheetconnector-ninja-forms'),
-   );
+  $tabs = array(
+    'integration'    => esc_html__( 'Integration', 'gsheetconnector-ninja-forms' ),
+    'system_status'  => esc_html__( 'System Status', 'gsheetconnector-ninja-forms' ),
+);
+
    echo '<div id="icon-themes" class="icon32"><br></div>';
-   echo '<h2 class="nav-tab-wrapper">';
+   echo '<div class="nav-tab-wrapper">';
    foreach ($tabs as $tab => $name) {
       $class = ( $tab == $active_tab ) ? ' nav-tab-active' : '';
       echo "<a class='nav-tab$class' href='?page=njform-google-sheet-config&tab=$tab'>".esc_html($name)."</a>";
    }
-   echo '</h2>';
+   echo '</div><div class="wrap-gsc">';
    switch ($active_tab) {
         case 'settings' :
             $njform_settings = new NJforms_Googlesheet_Services();

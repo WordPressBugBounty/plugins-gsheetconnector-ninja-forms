@@ -178,7 +178,7 @@ class NJForm_gs_Connector_Utility {
         WP_Filesystem();
 
         $upload_dir = wp_upload_dir();
-        $log_dir = trailingslashit( $upload_dir['basedir'] ) . 'gscninja-debug.log/';
+        $log_dir = trailingslashit( $upload_dir['basedir'] ) . 'gsc-ninja-logs/';
         $log_file = get_option( 'nfgs_debug_log_file' );
         $timestamp = gmdate( 'Y-m-d H:i:s' ) . "\t PHP " . phpversion() . "\t";
 

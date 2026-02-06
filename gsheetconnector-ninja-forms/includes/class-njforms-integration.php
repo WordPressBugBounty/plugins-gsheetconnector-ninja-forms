@@ -96,22 +96,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 <div class="card-ninjaforms dropdownoption-ninjaforms">
-    <div class="lbl-drop-down-select">
-        <label for="gs_ninjaforms_dro_option"><?php echo esc_html__('Choose Google API Setting :', 'gsheetconnector-ninja-forms'); ?></label>
-    </div>
+	<h2><?php echo esc_html__('Ninja Forms - Google Sheet Integration', 'gsheetconnector-ninja-forms'); ?></h2>
+	<p class="sub-desc"><?php echo esc_html__('Choose your Google API Setting from the dropdown. You can select Use Existing Client/Secret Key (Auto Google API Configuration) or Use Manual Client/Secret Key (Use Your Google API Configuration - Pro Version) or Use Service Account (Recommended- Pro Version) . After saving, the related integration settings will appear, and you can complete the setup.', "gsheetconnector-ninja-forms"); ?></p>
+	
+	<div class="row">
+     
+        <label for="gs_ninjaforms_dro_option"><?php echo esc_html__('Choose Google API Setting ', 'gsheetconnector-ninja-forms'); ?></label>
+     
     <div class="drop-down-select-btn">
         <select id="gs_ninjaforms_dro_option" name="gs_ninjaforms_dro_option">
             <option value="ninjaforms_existing" selected><?php echo esc_html__('Use Existing Client/Secret Key (Auto Google API Configuration)', 'gsheetconnector-ninja-forms'); ?>
             </option>
             <option value="ninjaforms_manual" disabled=""><?php echo esc_html__('Use Manual Client/Secret Key (Use Your Google API Configuration) (Upgrade To PRO)', 'gsheetconnector-ninja-forms'); ?></option>
+             <option value="ninjaforms_service" disabled=""><?php echo esc_html__('Service Account (Recommended) (Upgrade To PRO)', 'gsheetconnector-ninja-forms'); ?></option>
         </select>
-        <p class="int-meth-btn-ninjaforms"><a href="https://www.gsheetconnector.com/ninja-forms-google-sheet-connector-pro" target="_blank"><input type="button" name="save-method-api-ninjaforms" id=""
-                value="<?php _e('Upgrade To PRO', 'gsheetconnector-ninja-forms'); ?>" class="button button-primary" /></a>
-            <span class="tooltip"> <img src="<?php echo NINJAFORMS_GOOGLESHEET_URL; ?>assets/img/help.png"
-                        class="help-icon"> <span
-                        class="tooltiptext tooltip-right"><?php _e('Manual Client/Secret Key (Use Your Google API Configuration) method is available in the PRO version of the plugin.', 'gsheetconnector-ninja-forms'); ?></span></span>
-        </p>
+        <div class="int-meth-btn-ninjaforms">
+    <a href="<?php echo esc_url('https://www.gsheetconnector.com/ninja-forms-google-sheet-connector-pro'); ?>" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        <input 
+            type="button"
+            name="save-method-api-ninjaforms"
+            value="<?php echo esc_attr__('Upgrade To PRO', 'gsheetconnector-ninja-forms'); ?>"
+            class="upgrade-btn"
+        />
+    </a>
+</div>
+
     </div>
+		</div> <!-- row #end -->
+		
 </div>
 
 <div class="card-wp">
@@ -119,9 +133,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <input type="hidden" name="redirect_auth_ninjaforms" id="redirect_auth_ninjaforms"
             value="<?php echo (isset($header)) ? esc_attr($header) : ''; ?>">
         <!-- Changed by ahmed 17-6-23  -->
-        <span class="title1"><?php echo esc_html__('Ninja Forms - ', 'text-domain'); ?></span>
-        <span class="title"><?php echo esc_html__('Google Sheet Integration', 'text-domain'); ?></span>
-        <hr>
+        <h2><?php echo esc_html__('Google Sheet Integration - Use Existing Client/Secret Key (Auto Google API Configuration)', 'gsheetconnector-ninja-forms'); ?></h2>
+		 <p  class="sub-desc"><?php echo esc_html__('Automatic integration allows you to connect Ninja Forms with Google Sheets using built-in Google API configuration. By authorizing your Google account, the plugin will handle API setup and authentication automatically, enabling seamless form data sync. Learn more in the documentation', 'gsheetconnector-ninja-forms'); ?> <a href="https://www.gsheetconnector.com/docs/ninja-forms-gsheetconnector/integration-with-google-existing-method" target="_blank">
+		 <?php echo esc_html__('click here', 'gsheetconnector-ninja-forms'); ?></a>.</p>
+         
 
         <?php if (empty($Code)) { ?>
             <div class="njform-gs-alert-kk" id="google-drive-msg">
@@ -130,14 +145,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 </p>
                 <ol class="njform-gs-alert-steps">
                     <li><?php echo esc_html__('Click on the "Sign In With Google" button.', 'gsheetconnector-ninja-forms'); ?></li>
-                    <li><?php echo esc_html__('Grant permissions for the following:', 'gsheetconnector-ninja-forms'); ?>
-                        <ul class="njform-gs-alert-permissions">
-                            <li><?php echo esc_html__('Google Drive', 'gsheetconnector-ninja-forms'); ?></li>
-                            <li><?php echo esc_html__('Google Sheets', 'gsheetconnector-ninja-forms'); ?>
-							<span><?php echo esc_html__('* Ensure that you enable the checkbox for each of these services.', 'gsheetconnector-ninja-forms'); ?></span></li>
-                        </ul>
-                         
-                    </li>
+                    <li><?php echo esc_html__('Grant permissions for the following:', 'gsheetconnector-ninja-forms'); ?></li> 
+					<li><?php echo esc_html__('Google Drive', 'gsheetconnector-ninja-forms'); ?></li>
+					<li><?php echo esc_html__('Google Sheets', 'gsheetconnector-ninja-forms'); ?>
+					<span><?php echo esc_html__('* Ensure that you enable the checkbox for each of these services.', 'gsheetconnector-ninja-forms'); ?></span></li> 
                     <li><?php echo esc_html__('This will allow the integration to access your Google Drive and Google Sheets.', 'gsheetconnector-ninja-forms'); ?>
                     </li>
                 </ol>
@@ -145,22 +156,22 @@ document.addEventListener("DOMContentLoaded", function () {
         <?php } ?>
 
         <!-- changed end 17-6-23  -->
-        <p>
+        <div class="row">
             <label><?php esc_html_e( 'Google Access Code', 'gsheetconnector-ninja-forms' ); ?></label>
 
             <?php if (!empty(get_option('njforms_gs_token')) && get_option('njforms_gs_token') !== "") { ?>
-                <input type="text" name="google-access-code" id="njforms-setting-google-access-code" value=""
-                    disabled placeholder="<?php echo __('Currently Active', 'gsheetconnector-ninja-forms'); ?>" />
+              <input 
+    type="text" 
+    name="google-access-code" 
+    id="njforms-setting-google-access-code" 
+    value=""
+    disabled 
+    placeholder="<?php echo esc_attr__( 'Currently Active', 'gsheetconnector-ninja-forms' ); ?>" 
+/>
                 <input type="button" name="nj-deactivate-log" id="nj-deactivate-log"
                     value="<?php echo esc_attr__( 'Deactivate', 'gsheetconnector-ninja-forms' ); ?>"
                     class="button button-primary" />
-
-                <span class="tooltip">
-                    <img src="<?php echo esc_url( NINJAFORMS_GOOGLESHEET_URL . 'assets/img/help.png' ); ?>" class="help-icon" alt="Help Icon">
-                    <span class="tooltiptext tooltip-right">
-                        <?php echo esc_html__( 'On deactivation, all your data saved with authentication will be removed and you need to reauthenticate with your google account and configure sheet name and tab.', 'gsheetconnector-ninja-forms' ); ?>
-                    </span>
-                </span>
+ 
 
         <span class="loading-sign-deactive">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <?php } else { 
@@ -178,16 +189,25 @@ document.addEventListener("DOMContentLoaded", function () {
  
             <?php } ?>
             <!-- set nonce -->
-            <input type="hidden" name="gs-ajax-nonce" id="gs-ajax-nonce"
-                value="<?php echo wp_create_nonce('gs-ajax-nonce'); ?>" />
+           <input 
+    type="hidden" 
+    name="gs-ajax-nonce" 
+    id="gs-ajax-nonce"
+    value="<?php echo esc_attr( wp_create_nonce( 'gs-ajax-nonce' ) ); ?>" 
+/>
 
             <?php if (is_user_logged_in() && !empty($Code)) { ?>
-                <input type="submit" name="save-gs" class="njforms-btn njforms-btn-md njforms-btn-orange blinking-button-wc"
-                    id="save-njform-gs-code" value="Click here to Save Authentication Code">
+               <input 
+    type="submit" 
+    name="save-gs"
+    class="njforms-btn njforms-btn-md njforms-btn-orange blinking-button-wc"
+    id="save-njform-gs-code"
+    value="<?php echo esc_attr( 'Click here to Save Authentication Code' ); ?>"
+>
 
             <?php } ?>
             <span class="loading-sign">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-           </p>
+           </div>
             <?php 
             //resolved - google sheet permission issues - START
             if (!empty(get_option('njforms_gs_verify')) && (get_option('njforms_gs_verify') == "invalid-auth")) {
@@ -226,9 +246,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 if ($email_account) {
 					         update_option( 'njform_gs_auth_expired_free', 'false' );
                                 ?>
-                <p class="connected-account">
-                    <?php printf(__('Connected email account: %s', 'gsheetconnector-ninja-forms'), $email_account); ?>
-                </p>
+                <div class="connected-account row">
+                    <label><?php printf(__('Connected Email Account', 'gsheetconnector-ninja-forms'), $email_account); ?></label>
+					<?php printf(__('%s', 'gsheetconnector-ninja-forms'), $email_account); ?>
+                </div>
                <?php } else { 
 					          update_option( 'njform_gs_auth_expired_free', 'true' ); ?>
                 <p style="color:red">
@@ -238,32 +259,32 @@ document.addEventListener("DOMContentLoaded", function () {
                             }
                         }
                     }
-                ?>
-        </br>
-    <div id="nj-gsc-cta" class="nj-gsc-privacy-box">
-        <div class="nj-gsc-table">
-            <div class="nj-gsc-less-free">
-                <p><i class="dashicons dashicons-lock"></i> <?php echo esc_html(__('We do not store any of the data from your Google account on our servers, everything is processed & stored on your server. We take your privacy extremely seriously and ensure it is never misused.', 'gsheetconnector-ninja-forms')); ?></p> <a href="https://gsheetconnector.com/usage-tracking/" target="_blank" rel="noopener noreferrer"><?php echo __('Learn more.', 'gsheetconnector-ninja-forms'); ?></a>
-            </div>
-        </div>
-    </div>
+                ?> 
+	
+				<div class="msg success-msg">
+				<i class="fa-solid fa-lock"></i>
+					<p>
+    <?php echo esc_html__(
+        'We do not store any of the data from your Google account on our servers, everything is processed & stored on your server. We take your privacy extremely seriously and ensure it is never misused.',
+        'gsheetconnector-ninja-forms'
+    ); ?>
+
+    <a href="<?php echo esc_url( 'https://gsheetconnector.com/usage-tracking/' ); ?>"
+       target="_blank"
+       rel="noopener noreferrer">
+       <?php echo esc_html__( 'Learn more.', 'gsheetconnector-ninja-forms' ); ?>
+    </a>
+</p>
+			</div>
+	
+	
+	
     <span class="njforms-setting-field">
         <label><?php esc_html_e( 'Debug Log →', 'gsheetconnector-ninja-forms' ); ?></label>
 
         <button class="njgsc-logs">
             <?php esc_html_e( 'View', 'gsheetconnector-ninja-forms' ); ?>
         </button>
-
-        <!-- Example of linking directly to log file if needed:
-        <label>
-            <a href="<?php echo esc_url( plugins_url( 'logs/log.txt', __FILE__ ) ); ?>"
-               target="_blank" rel="noopener noreferrer"
-               class="njform-debug-view">
-                <?php esc_html_e( 'View', 'gsheetconnector-ninja-forms' ); ?>
-            </a>
-        </label>
-        -->
-
         <label>
             <a class="debug-clear-kk">
                 <?php esc_html_e( 'Clear', 'gsheetconnector-ninja-forms' ); ?>
@@ -273,16 +294,18 @@ document.addEventListener("DOMContentLoaded", function () {
         <span class="clear-loading-sign">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <p id="njgs-validation-message"></p>
         <div class="nj-system-Error-logs">
-    <button id="copy-logs-btn" onclick="copyLogs()"><?php echo __('Copy Logs', 'gsheetconnector-ninja-forms'); ?></button>
+    <button id="copy-logs-btn" onclick="copyLogs()"><?php echo esc_html__( 'Copy Logs', 'gsheetconnector-ninja-forms' ); ?>
+</button>
 
     <div class="njdisplayLogs" id="njdisplayLogs">
         <?php
         $nfexistDebugFile = get_option('nfgs_debug_log_file');
         // Check if debug unique log file exists
         if (!empty($nfexistDebugFile) && file_exists($nfexistDebugFile)) {
-            $displaynjfreeLogs = nl2br(file_get_contents($nfexistDebugFile));
+            $displaynjfreeLogs = file_get_contents($nfexistDebugFile);
             if (!empty($displaynjfreeLogs)) {
-                echo '<pre id="logContent">' . esc_html($displaynjfreeLogs) . '</pre>';
+            // Escape the content safely for HTML, preserving line breaks.
+            echo wp_kses(nl2br(esc_html($displaynjfreeLogs)), array('br' => array()));
             } else {
                 echo esc_html(__('No errors found.', 'gsheetconnector-ninja-forms'));
             }
@@ -360,7 +383,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.gsheetconnector.com/ninja-forms-google-sheet-connector-pro" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.gsheetconnector.com/docs/ninja-forms-gsheetconnector/requirements" target="_blank" rel="noopener noreferrer">
                         <div>
                             <button class="icon-button">
                                 <span class="dashicons dashicons-download"></span>
@@ -371,7 +394,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://support.gsheetconnector.com/kb/ninjaforms-gsheetconnector-introduction" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.gsheetconnector.com/docs/ninja-forms-gsheetconnector/plugin-settings-pro-version" target="_blank" rel="noopener noreferrer">
                         <div>
                             <button class="icon-button">
                                 <span class="dashicons dashicons-chart-bar"></span>
@@ -382,7 +405,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://support.gsheetconnector.com/kb/ninjaforms-gsheetconnector-introduction" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.gsheetconnector.com/docs/ninja-forms-gsheetconnector/plugin-settings-free-version" target="_blank" rel="noopener noreferrer">
                         <div>
                             <button class="icon-button">
                                 <span class="dashicons dashicons-download"></span>
@@ -404,7 +427,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="njgsc-box-content13">
             <ul class="njgsc-list-icon13">
                 <li>
-                    <a href="https://support.gsheetconnector.com/kb/ninjaforms-gsheetconnector-introduction" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.gsheetconnector.com/docs/ninja-forms-gsheetconnector" target="_blank" rel="noopener noreferrer">
                         <span class="dashicons dashicons-book"></span>
                         <div>
                             <strong><?php echo esc_html__( 'Online Documentation', 'gsheetconnector-ninja-forms' ); ?></strong>
