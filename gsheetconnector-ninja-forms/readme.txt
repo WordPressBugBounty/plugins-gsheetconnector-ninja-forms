@@ -2,8 +2,7 @@
 Contributors: westerndeal, abdullah17, gsheetconnector
 Author URI: https://www.gsheetconnector.com/
 Tags: Ninja Forms, Ninja Forms Google Sheet, Ninja Forms Addon, Google Integration, Ninja Forms Google Sheet Integration
-Docs: https://www.gsheetconnector.com/docs/ninja-forms-gsheetconnector
-Tested up to: 6.9
+Tested up to: 7.0
 Requires at least: 5.6
 Requires PHP: 7.4
 Requires Plugins: ninja-forms
