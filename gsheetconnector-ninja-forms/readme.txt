@@ -1,4 +1,4 @@
-=== GSheetConnector For Ninja Forms ===
+=== GSheetConnector – Ninja Forms Google Sheets Connector, Export Form Submissions ===
 Contributors: westerndeal, abdullah17, gsheetconnector
 Author URI: https://www.gsheetconnector.com/
 Tags: Ninja Forms, Ninja Forms Google Sheet, Ninja Forms Addon, Google Integration, Ninja Forms Google Sheet Integration
