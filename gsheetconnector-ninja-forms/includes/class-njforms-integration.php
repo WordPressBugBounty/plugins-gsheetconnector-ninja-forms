@@ -4,521 +4,464 @@
  * @since 1.0
  */
 if (!defined('ABSPATH')) {
-   exit; // Exit if accessed directly
+    exit; // Exit if accessed directly
 }
 /**
  * NJforms_Googlesheet_Services Class
  *
  * @since 1.0
  */
-class NJforms_Googlesheet_Services {
+class NJforms_Googlesheet_Services
+{
 
-   public function __construct() {
-      // activation n deactivation ajax call
-      add_action('wp_ajax_deactivate_nj_integation', array($this, 'deactivate_nj_integation'));
-      
-      // display for upgrade notice
-      add_action( 'admin_notices', array( $this, 'display_upgrade_notice' ) );
-      
-      add_action( 'wp_ajax_set_upgrade_notification_interval', array( $this, 'set_upgrade_notification_interval' ) );
-      add_action( 'wp_ajax_close_upgrade_notification_interval', array( $this, 'close_upgrade_notification_interval' ) );
+    public function __construct()
+    {
+        // activation n deactivation ajax call
+        add_action('wp_ajax_deactivate_nj_integation', array($this, 'deactivate_nj_integation'));
 
-   }
+        // display for upgrade notice
+        add_action('admin_notices', array($this, 'display_upgrade_notice'));
 
-   /**
-    * Function - fetch njform list that is connected with google sheet
-    * @since 1.0
-    */
-   public function get_forms_connected_to_sheet() {
-      global $wpdb;
-      //$query = $wpdb->get_results("SELECT ID,post_title,meta_value from " . $wpdb->prefix . "posts as p JOIN " . $wpdb->prefix . "postmeta as pm on p.ID = pm.post_id where pm.meta_key='njforms_gs_settings' AND p.post_type='njforms' ORDER BY p.ID");
-      $query = $wpdb->get_results("SELECT DISTINCT(naction.parent_id) AS ID, nform.title AS title  FROM ".$wpdb->prefix."nf3_actions AS naction JOIN ". $wpdb->prefix ."nf3_forms AS nform ON nform.id = naction.parent_id
-WHERE type='google_sheet'");
-      return $query;
-   }
+        add_action('wp_ajax_set_upgrade_notification_interval', array($this, 'set_upgrade_notification_interval'));
+        add_action('wp_ajax_close_upgrade_notification_interval', array($this, 'close_upgrade_notification_interval'));
 
-   /**
-    * function to save the setting data of google sheet
-    *
-    * @since 1.0
-    */
-   public function add_integration() {
-    
-    $Code = "";
-    $header = "";
-    if (isset($_GET['code'])) {
-        update_option('is_new_client_secret_njfgsc', 1);
-        if (is_string($_GET['code'])) {
-            $Code = sanitize_text_field($_GET["code"]);
-        }
-        $header = esc_url_raw(admin_url('admin.php?page=njform-google-sheet-config'));
-        //  $service = new NJforms_Gsheet_Connector_Init();
-        //  $service->verify_njforms_gs_integation($Code);
-        //  header("Location: " . admin_url('admin.php?page=njform-google-sheet-config'));
+        /** Hide notification  */
+        add_action('wp_ajax_dismiss_nf_pro_notice', array($this, 'dismiss_nf_pro_notice'));
+
+        /** Disable Notication Bar */
+        add_action('wp_ajax_nf_dismiss_notice', array($this, 'nf_dismiss_notice'));
+
+        /* Snooze notitiacation Bar */
+        add_action('wp_ajax_nf_snooze_notice', array($this, 'nf_snooze_notice'));
+
+        /** Clear Error Log  */
+        add_action('wp_ajax_nj_clear_error_logs', array($this, 'nj_clear_error_logs'));
+
+        /** Update general setting */
+        add_action('wp_ajax_nf_save_uninstall_settings', array($this, 'nf_save_uninstall_settings'));
+
+        /** Clear debug log */
+        add_action('wp_ajax_nf_clear_debug_logs', array($this, 'nf_clear_debug_logs'));
+
+        /*  Activate Forms plugin */
+        add_action('wp_ajax_nf_activate_plugin', array($this, 'nf_activate_plugin'));
+
+        /*  Deactivate Forms plugin */
+        add_action('wp_ajax_nf_deactivate_plugin', array($this, 'nf_deactivate_plugin'));
+
+        /*  Install wp Forms plugin */
+        add_action('wp_ajax_nf_install_plugin', array($this, 'nf_install_plugin'));
+        
     }
-      ?>
 
-<div class="main-promotion-box"> <a href="#" class="close-link"></a>
-  <div class="promotion-inner">
-    <h2>A way to connect WordPress <br />
-      and <span>Google Sheets Pro</span></h2>
-    <p class="ratings">Ratings : <span></span></p>
-    <p>The Most Powerful Bridge Between WordPress  and <strong>Google Sheets</strong>, <br />
-      Now available for popular <strong>Contact Forms</strong>, <strong>Page Builder Forms</strong>,<br />
-      and <strong>E-commerce</strong> Platforms like <strong>WooCommerce</strong> <br />
-      and <strong>Easy Digital Downloads</strong> (EDD).</p>
-    <div class="button-bar"> <a href="https://www.gsheetconnector.com/" target="_blank">Buy Now</a> <a href="https://demo.gsheetconnector.com/" target="_blank">Check Demo</a> </div>
-  </div>
-  <div class="gsheet-plugins"></div>
-</div> <!-- main-promotion-box #end -->
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var closeButton = document.querySelector(".close-link");
-  var promotionBox = document.querySelector(".main-promotion-box");
-
-  // Check if the promotion box should be hidden
-  if (localStorage.getItem("promotionBoxHidden") === "true") {
-    promotionBox.style.display = "none";
-  }
-
-  closeButton.addEventListener("click", function (event) {
-    event.preventDefault();
-
-    // Hide the promotion box
-    promotionBox.style.display = "none";
-
-    // Store hidden state
-    localStorage.setItem("promotionBoxHidden", "true");
-  });
-});
-</script>
+    /**
+     * Function - fetch njform list that is connected with google sheet
+     * @since 1.0
+     */
+    public function get_forms_connected_to_sheet()
+    {
+        global $wpdb;
+        //$query = $wpdb->get_results("SELECT ID,post_title,meta_value from " . $wpdb->prefix . "posts as p JOIN " . $wpdb->prefix . "postmeta as pm on p.ID = pm.post_id where pm.meta_key='njforms_gs_settings' AND p.post_type='njforms' ORDER BY p.ID");
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+        $query = $wpdb->get_results("SELECT DISTINCT(naction.parent_id) AS ID, nform.title AS title  FROM " . $wpdb->prefix . "nf3_actions AS naction JOIN " . $wpdb->prefix . "nf3_forms AS nform ON nform.id = naction.parent_id
+WHERE type='google_sheet'");
+        return $query;
+    }
 
 
-<div class="card-ninjaforms dropdownoption-ninjaforms">
-	<h2><?php echo esc_html__('Ninja Forms - Google Sheet Integration', 'gsheetconnector-ninja-forms'); ?></h2>
-	<p class="sub-desc"><?php echo esc_html__('Choose your Google API Setting from the dropdown. You can select Use Existing Client/Secret Key (Auto Google API Configuration) or Use Manual Client/Secret Key (Use Your Google API Configuration - Pro Version) or Use Service Account (Recommended- Pro Version) . After saving, the related integration settings will appear, and you can complete the setup.', "gsheetconnector-ninja-forms"); ?></p>
-	
-	<div class="row">
-     
-        <label for="gs_ninjaforms_dro_option"><?php echo esc_html__('Choose Google API Setting ', 'gsheetconnector-ninja-forms'); ?></label>
-     
-    <div class="drop-down-select-btn">
-        <select id="gs_ninjaforms_dro_option" name="gs_ninjaforms_dro_option">
-            <option value="ninjaforms_existing" selected><?php echo esc_html__('Use Existing Client/Secret Key (Auto Google API Configuration)', 'gsheetconnector-ninja-forms'); ?>
-            </option>
-            <option value="ninjaforms_manual" disabled=""><?php echo esc_html__('Use Manual Client/Secret Key (Use Your Google API Configuration) (Upgrade To PRO)', 'gsheetconnector-ninja-forms'); ?></option>
-             <option value="ninjaforms_service" disabled=""><?php echo esc_html__('Service Account (Recommended) (Upgrade To PRO)', 'gsheetconnector-ninja-forms'); ?></option>
-        </select>
-        <div class="int-meth-btn-ninjaforms">
-    <a href="<?php echo esc_url('https://www.gsheetconnector.com/ninja-forms-google-sheet-connector-pro'); ?>" 
-       target="_blank" 
-       rel="noopener noreferrer">
-        <input 
-            type="button"
-            name="save-method-api-ninjaforms"
-            value="<?php echo esc_attr__('Upgrade To PRO', 'gsheetconnector-ninja-forms'); ?>"
-            class="upgrade-btn"
-        />
-    </a>
-</div>
 
-    </div>
-		</div> <!-- row #end -->
-		
-</div>
+    /**
+     * AJAX function - deactivate activation
+     * @since 1.0
+     */
+    public function deactivate_nj_integation()
+    {
+        // nonce check
+        check_ajax_referer('gs-ajax-nonce', 'security');
 
-<div class="card-wp">
-    <span class="njforms-setting-field log-setting">
-        <input type="hidden" name="redirect_auth_ninjaforms" id="redirect_auth_ninjaforms"
-            value="<?php echo (isset($header)) ? esc_attr($header) : ''; ?>">
-        <!-- Changed by ahmed 17-6-23  -->
-        <h2><?php echo esc_html__('Google Sheet Integration - Use Existing Client/Secret Key (Auto Google API Configuration)', 'gsheetconnector-ninja-forms'); ?></h2>
-		 <p  class="sub-desc"><?php echo esc_html__('Automatic integration allows you to connect Ninja Forms with Google Sheets using built-in Google API configuration. By authorizing your Google account, the plugin will handle API setup and authentication automatically, enabling seamless form data sync. Learn more in the documentation', 'gsheetconnector-ninja-forms'); ?> <a href="https://www.gsheetconnector.com/docs/ninja-forms-gsheetconnector/integration-with-google-existing-method" target="_blank">
-		 <?php echo esc_html__('click here', 'gsheetconnector-ninja-forms'); ?></a>.</p>
-         
+        if (get_option('njforms_gs_token') != '') {
 
-        <?php if (empty($Code)) { ?>
-            <div class="njform-gs-alert-kk" id="google-drive-msg">
-                <p class="njform-gs-alert-heading">
-                    <?php echo esc_html__('Authenticate with your Google account, follow these steps:', 'gsheetconnector-ninja-forms'); ?>
-                </p>
-                <ol class="njform-gs-alert-steps">
-                    <li><?php echo esc_html__('Click on the "Sign In With Google" button.', 'gsheetconnector-ninja-forms'); ?></li>
-                    <li><?php echo esc_html__('Grant permissions for the following:', 'gsheetconnector-ninja-forms'); ?></li> 
-					<li><?php echo esc_html__('Google Drive', 'gsheetconnector-ninja-forms'); ?></li>
-					<li><?php echo esc_html__('Google Sheets', 'gsheetconnector-ninja-forms'); ?>
-					<span><?php echo esc_html__('* Ensure that you enable the checkbox for each of these services.', 'gsheetconnector-ninja-forms'); ?></span></li> 
-                    <li><?php echo esc_html__('This will allow the integration to access your Google Drive and Google Sheets.', 'gsheetconnector-ninja-forms'); ?>
-                    </li>
-                </ol>
-            </div>
-        <?php } ?>
+            $accesstoken = get_option('njforms_gs_token');
+            $client = new njfgsc_googlesheet();
+            //$client->revokeToken_auto($accesstoken);
 
-        <!-- changed end 17-6-23  -->
-        <div class="row">
-            <label><?php esc_html_e( 'Google Access Code', 'gsheetconnector-ninja-forms' ); ?></label>
+            delete_option('njforms_gs_token');
+            delete_option('njforms_gs_access_code');
+            delete_option('njforms_gs_verify');
+            wp_send_json_success();
+        } else {
+            wp_send_json_error();
+        }
+    }
 
-            <?php if (!empty(get_option('njforms_gs_token')) && get_option('njforms_gs_token') !== "") { ?>
-              <input 
-    type="text" 
-    name="google-access-code" 
-    id="njforms-setting-google-access-code" 
-    value=""
-    disabled 
-    placeholder="<?php echo esc_attr__( 'Currently Active', 'gsheetconnector-ninja-forms' ); ?>" 
-/>
-                <input type="button" name="nj-deactivate-log" id="nj-deactivate-log"
-                    value="<?php echo esc_attr__( 'Deactivate', 'gsheetconnector-ninja-forms' ); ?>"
-                    class="button button-primary" />
- 
+    /**
+     * Function - Display Upgrade Notice
+     * @since 1.0
+     */
 
-        <span class="loading-sign-deactive">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <?php } else { 
-                    $redirct_uri = admin_url('admin.php?page=njform-google-sheet-config');
-                    ?>
-                    <input type="text" name="google-access-code" id="njforms-setting-google-access-code" value="<?php echo esc_attr($Code); ?>" readonly placeholder="<?php echo esc_html__('Click Sign In With Google Button', 'gsheetconnector-ninja-forms'); ?>" oncopy="return false;" onpaste="return false;" oncut="return false;" />
+    public function display_upgrade_notice()
+    {
+        $get_notification_display_interval = get_option('njforms_gs_upgrade_notice_interval');
+        $close_notification_interval = get_option('njforms_gs_close_upgrade_notice');
 
-                    <?php if (empty($Code)) { ?>
-                        <a href="<?php echo esc_url( 'https://oauth.gsheetconnector.com/index.php?clien_admin_url=' . urlencode( $redirct_uri ) . '&plugin=woocommercegsheetconnector' ); ?>">
-                            <img class="custom-image button_njformgsc"
-                                 src="<?php echo esc_url( NINJAFORMS_GOOGLESHEET_URL . '/assets/img/btn_google_signin_dark_pressed_web.gif' ); ?>"
-                                 alt="<?php esc_attr_e( 'Connect Now', 'gsheetconnector-ninja-forms' ); ?>">
-                        </a>
-                    <?php } ?>
- 
-            <?php } ?>
-            <!-- set nonce -->
-           <input 
-    type="hidden" 
-    name="gs-ajax-nonce" 
-    id="gs-ajax-nonce"
-    value="<?php echo esc_attr( wp_create_nonce( 'gs-ajax-nonce' ) ); ?>" 
-/>
+        if ($close_notification_interval === "off") {
+            return;
+        }
 
-            <?php if (is_user_logged_in() && !empty($Code)) { ?>
-               <input 
-    type="submit" 
-    name="save-gs"
-    class="njforms-btn njforms-btn-md njforms-btn-orange blinking-button-wc"
-    id="save-njform-gs-code"
-    value="<?php echo esc_attr( 'Click here to Save Authentication Code' ); ?>"
->
+        if (! empty($get_notification_display_interval)) {
+            $adds_interval_date_object = DateTime::createFromFormat("Y-m-d", $get_notification_display_interval);
+            $notice_interval_timestamp = $adds_interval_date_object->getTimestamp();
+        }
+    }
 
-            <?php } ?>
-            <span class="loading-sign">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-           </div>
-            <?php 
-            //resolved - google sheet permission issues - START
-            if (!empty(get_option('njforms_gs_verify')) && (get_option('njforms_gs_verify') == "invalid-auth")) {
-                ?>
-                <p style="color:red"> 
-                    <?php echo esc_html(__('Something went wrong! It looks you have not given the permission of Google Drive and Google Sheets from your google account.Please Deactivate Auth and Re-Authenticate again with the permissions.', 'gsheetconnector-ninja-forms'));
-                  ?>
-                </p>
-                <p style="color:#c80d0d; border: 1px solid; padding: 8px;">
-                    <img width="350"
-                         src="<?php echo esc_url( NINJAFORMS_GOOGLESHEET_URL . 'assets/img/permission_screen.png' ); ?>"
-                         alt="<?php esc_attr_e( 'Permission Screen', 'gsheetconnector-ninja-forms' ); ?>">
-                </p>
+    public function set_upgrade_notification_interval()
+    {
+        // check nonce
+        check_ajax_referer('njforms_gs_upgrade_ajax_nonce', 'security');
+        $time_interval = gmdate('Y-m-d', strtotime('+10 day'));
+        update_option('njforms_gs_upgrade_notice_interval', $time_interval);
+        wp_send_json_success();
+    }
 
-                <p style="color:#c80d0d; font-size: 14px; border: 1px solid; padding: 8px;">
-                    <?php echo esc_html__( 'Also,', 'gsheetconnector-ninja-forms' ); ?>
-                    <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">
-                        <?php echo esc_html__( 'Click Here', 'gsheetconnector-ninja-forms' ); ?>
-                    </a>
-                    <?php echo esc_html__(
-                        ' and if it displays "GSheetConnector for WP Contact Forms" under Third-party apps with account access then remove it.',
-                        'gsheetconnector-ninja-forms'
-                    ); ?>
-                </p>
+    public function close_upgrade_notification_interval()
+    {
+        // check nonce
+        check_ajax_referer('njforms_gs_upgrade_ajax_nonce', 'security');
+        update_option('njforms_gs_close_upgrade_notice', 'off');
+        wp_send_json_success();
+    }
 
-            <?php
-            }
-            //resolved - google sheet permission issues - END
-            else{
-                // connected-email-account
-                $token = get_option('njforms_gs_token');
-                if (!empty($token) && $token !== "") {
-                $google_sheet = new njfgsc_googlesheet();
-                $email_account = $google_sheet->gsheet_print_google_account_email();
+    public  function dismiss_nf_pro_notice()
+    {
 
-                if ($email_account) {
-					         update_option( 'njform_gs_auth_expired_free', 'false' );
-                                ?>
-                <div class="connected-account row">
-                    <label><?php printf(__('Connected Email Account', 'gsheetconnector-ninja-forms'), $email_account); ?></label>
-					<?php printf(__('%s', 'gsheetconnector-ninja-forms'), $email_account); ?>
-                </div>
-               <?php } else { 
-					          update_option( 'njform_gs_auth_expired_free', 'true' ); ?>
-                <p style="color:red">
-                    <?php echo esc_html(__('Something wrong! Your Auth code may be wrong or expired. Please Deactivate and Do Re-Auth Code ', 'gsheetconnector-ninja-forms')); ?>
-                </p>
-                <?php
-                            }
-                        }
-                    }
-                ?> 
-	
-				<div class="msg success-msg">
-				<i class="fa-solid fa-lock"></i>
-					<p>
-    <?php echo esc_html__(
-        'We do not store any of the data from your Google account on our servers, everything is processed & stored on your server. We take your privacy extremely seriously and ensure it is never misused.',
-        'gsheetconnector-ninja-forms'
-    ); ?>
+        $nonce = isset($_POST['nonce']) ? sanitize_text_field(wp_unslash($_POST['nonce'])) : '';
 
-    <a href="<?php echo esc_url( 'https://gsheetconnector.com/usage-tracking/' ); ?>"
-       target="_blank"
-       rel="noopener noreferrer">
-       <?php echo esc_html__( 'Learn more.', 'gsheetconnector-ninja-forms' ); ?>
-    </a>
-</p>
-			</div>
-	
-	
-	
-    <span class="njforms-setting-field">
-        <label><?php esc_html_e( 'Debug Log →', 'gsheetconnector-ninja-forms' ); ?></label>
+        if (! wp_verify_nonce($nonce, 'gs-ajax-nonce')) {
+            wp_send_json_error('Invalid nonce');
+        }
 
-        <button class="njgsc-logs">
-            <?php esc_html_e( 'View', 'gsheetconnector-ninja-forms' ); ?>
-        </button>
-        <label>
-            <a class="debug-clear-kk">
-                <?php esc_html_e( 'Clear', 'gsheetconnector-ninja-forms' ); ?>
-            </a>
-        </label>
+        setcookie(
+            'gsheet_nf_pro_notice_dismissed',
+            '1',
+            time() + (7 * 24 * 60 * 60),
+            COOKIEPATH,
+            COOKIE_DOMAIN
+        );
 
-        <span class="clear-loading-sign">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <p id="njgs-validation-message"></p>
-        <div class="nj-system-Error-logs">
-    <button id="copy-logs-btn" onclick="copyLogs()"><?php echo esc_html__( 'Copy Logs', 'gsheetconnector-ninja-forms' ); ?>
-</button>
+        wp_send_json_success();
+    }
 
-    <div class="njdisplayLogs" id="njdisplayLogs">
-        <?php
-        $nfexistDebugFile = get_option('nfgs_debug_log_file');
-        // Check if debug unique log file exists
-        if (!empty($nfexistDebugFile) && file_exists($nfexistDebugFile)) {
-            $displaynjfreeLogs = file_get_contents($nfexistDebugFile);
-            if (!empty($displaynjfreeLogs)) {
-            // Escape the content safely for HTML, preserving line breaks.
-            echo wp_kses(nl2br(esc_html($displaynjfreeLogs)), array('br' => array()));
+    
+    /**
+     * AJAX function - Permanently dismiss a notification bar 
+     * @since 1.0.15
+     */
+    public function nf_dismiss_notice()
+    {
+        if (!isset($_POST['security']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['security'])), 'gs-ajax-nonce')) {
+            wp_send_json_error('Invalid nonce');
+        }
+
+        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+        if (!isset($_POST['key'])) {
+            wp_send_json_error('Missing key');
+        }
+
+        $key = isset($_POST['key']) ? sanitize_text_field(wp_unslash($_POST['key'])) : '';
+
+        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+        $key = sanitize_text_field($_POST['key']);
+        update_option('nf_notice_' . $key, 'dismissed');
+        wp_send_json_success();
+    }
+
+
+    /**
+     * AJAX function - Snooze a notification bar by storing its dismissal timestamp
+     * @since 1.0.15
+     */
+
+    public function nf_snooze_notice()
+    {
+        if (!isset($_POST['security']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['security'])), 'gs-ajax-nonce')) {
+            wp_send_json_error('Invalid nonce');
+        }
+        if (!isset($_POST['key'])) {
+            wp_send_json_error('Missing key');
+        }
+
+        $key = sanitize_text_field(wp_unslash($_POST['key']));
+        update_option('nf_notice_' . $key . '_time', time());
+        wp_send_json_success();
+    }
+
+    public function nj_clear_error_logs()
+    {
+        if (
+            !isset($_POST['nonce']) ||
+            !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'gs-ajax-nonce')
+        ) {
+            wp_send_json_error(array(
+                'message' => 'Security check failed.'
+            ));
+        }
+
+        global $wpdb;
+        $table = $wpdb->prefix . 'gscnjf_error_logs';
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching -- table-existence check performed immediately before a truncate; must always be fresh, caching risks acting on a stale existence result.
+        $table_exists = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+            $wpdb->prepare('SHOW TABLES LIKE %s', $table)
+        );
+
+        if ($table_exists !== $table) {
+            wp_send_json_error(esc_html__('Error log table not found.', 'gsheetconnector-ninja-forms'), 404);
+        }
+        // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+        // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- $table is built entirely from $wpdb->prefix + a hardcoded literal ('gsformntr_error_logs'), no user input; TRUNCATE TABLE cannot use prepare() placeholders for identifiers.
+        $wpdb->query("TRUNCATE TABLE {$table}");
+        wp_send_json_success(array('message' => esc_html__('Logs are cleared.', 'gsheetconnector-ninja-forms')));
+    }
+
+    /**
+     * AJAX function - Save the "Remove Data on Uninstall" General Setting
+     * @since 1.0.15
+     */
+
+    public function nf_save_uninstall_settings()
+    {
+        check_ajax_referer('gs-ajax-nonce', 'security');
+        $value = isset($_POST['uninstall_setting']) ? intval($_POST['uninstall_setting']) : 0;
+        update_option('gsc_njf_uninstall_plugin_settings', $value);
+        wp_send_json_success();
+    }
+
+
+    public function nf_clear_debug_logs()
+    {
+        check_ajax_referer('gs-ajax-nonce', 'security');
+
+        /*  Initialize the WP_Filesystem global */
+        global $wp_filesystem;
+        if (empty($wp_filesystem)) {
+            require_once ABSPATH . 'wp-admin/includes/file.php';
+            WP_Filesystem();
+        }
+
+
+        /*  Define log path */
+        $debug_file = WP_CONTENT_DIR . '/debug.log';
+
+        /*  If file exists and is writable, clear it; otherwise create an empty file */
+        if ($wp_filesystem->exists($debug_file)) {
+            if ($wp_filesystem->is_writable($debug_file)) {
+                $result = $wp_filesystem->put_contents($debug_file, '', FS_CHMOD_FILE);
             } else {
-                echo esc_html(__('No errors found.', 'gsheetconnector-ninja-forms'));
+                wp_send_json_error('Debug log is not writable', 403);
             }
         } else {
-            // If debug log file does not exist
-            echo esc_html(__('No log file exists as no errors are generated.', 'gsheetconnector-ninja-forms'));
-        }
-        ?>
-    </div>
-</div>
-
-<script>
-function copyLogs() {
-    // Get the content from the log (text within the <pre> tag)
-    const logContent = document.getElementById('logContent');
-
-    if (logContent) {
-        // Create a range and select the log content
-        const range = document.createRange();
-        range.selectNode(logContent);
-
-        // Clear any existing selections and select the new range
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        try {
-            // Attempt to copy the selected text to clipboard
-            document.execCommand('copy');
-            alert('Logs copied to clipboard!');
-        } catch (err) {
-            console.error('Failed to copy logs: ', err);
-            alert('Failed to copy logs.');
+            /*  Create the file if it doesn’t exist */
+            $result = $wp_filesystem->put_contents($debug_file, '', FS_CHMOD_FILE);
         }
 
-        // Clear the selection after copying
-        selection.removeAllRanges();
-    } else {
-        alert('No logs available to copy.');
+        if (false === $result) {
+            wp_send_json_error('Failed to clear debug log', 500);
+        }
+
+        wp_send_json_success();
     }
-}
-</script>
-         <span id="deactivate-message"></span>
-        </span>
-      </p>
-</div>
-<script>
-// JavaScript/jQuery code
-document.addEventListener('DOMContentLoaded', function() {
-    var googleDriveMsg = document.getElementById('google-drive-msg');
-    if (googleDriveMsg) {
-        // Check if the 'gfgs_token' option is not empty
-        if ('<?php echo get_option('njforms_gs_token'); ?>' !== '') {
-            googleDriveMsg.style.display = 'none';
+
+    
+    /**
+     * Activates a plugin via AJAX using the provided plugin slug.
+     *
+     * @access public
+     * @since 1.0.0
+     */
+
+    public function nf_activate_plugin()
+    {
+
+        /*  Verify nonce */
+        if (! check_ajax_referer('gs-ajax-nonce', 'security', false)) {
+            wp_send_json_error(array(
+                'message' => __('Invalid security token', 'gsheetconnector-ninja-forms')
+            ));
         }
+
+        /*  Permission check */
+        if (! current_user_can('activate_plugins')) {
+            wp_send_json_error(array(
+                'message' => __('You do not have permission to activate plugin', 'gsheetconnector-ninja-forms')
+            ));
+        }
+
+        /*  Check plugin slug */
+        if (empty($_POST['plugin_slug'])) {
+            wp_send_json_error(array(
+                'message' => __('Plugin slug is missing', 'gsheetconnector-ninja-forms')
+            ));
+        }
+
+        $plugin_slug = sanitize_text_field(wp_unslash($_POST['plugin_slug']));
+
+        /*  Load required file */
+        if (! function_exists('activate_plugin')) {
+            require_once ABSPATH . 'wp-admin/includes/plugin.php';
+        }
+
+        /* Check if already active */
+        if (is_plugin_active($plugin_slug)) {
+            wp_send_json_success(array(
+                'message' => __('Plugin is already activated', 'gsheetconnector-ninja-forms')
+            ));
+        }
+
+        /* Activate plugin */
+        $result = activate_plugin($plugin_slug);
+
+        if (is_wp_error($result)) {
+            wp_send_json_error(array(
+                'message' => $result->get_error_message()
+            ));
+        }
+
+        wp_send_json_success(array(
+            'message' => __('Plugin activated successfully', 'gsheetconnector-ninja-forms')
+        ));
     }
-});
-</script>
-<div class="two-col njgsc-box-help12">
-    <div class="col njgsc-box12">
-        <header>
-            <h3><?php echo esc_html__( 'Next steps…', 'gsheetconnector-ninja-forms' ); ?></h3>
-        </header>
-        <div class="njgsc-box-content12">
-            <ul class="njgsc-list-icon12">
-                <li>
-                    <a href="https://www.gsheetconnector.com/ninja-forms-google-sheet-connector-pro" target="_blank" rel="noopener noreferrer">
-                        <div>
-                            <button class="icon-button">
-                                <span class="dashicons dashicons-star-filled"></span>
-                            </button>
-                            <strong><?php echo esc_html__( 'Upgrade to PRO', 'gsheetconnector-ninja-forms' ); ?></strong>
-                            <p><?php echo esc_html__( 'Multiple Forms to Sheets, Merge Tags and much more...', 'gsheetconnector-ninja-forms' ); ?></p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.gsheetconnector.com/docs/ninja-forms-gsheetconnector/requirements" target="_blank" rel="noopener noreferrer">
-                        <div>
-                            <button class="icon-button">
-                                <span class="dashicons dashicons-download"></span>
-                            </button>
-                            <strong><?php echo esc_html__( 'Compatibility', 'gsheetconnector-ninja-forms' ); ?></strong>
-                            <p><?php echo esc_html__( 'Compatibility with Ninja-Forms Third-Party Plugins', 'gsheetconnector-ninja-forms' ); ?></p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.gsheetconnector.com/docs/ninja-forms-gsheetconnector/plugin-settings-pro-version" target="_blank" rel="noopener noreferrer">
-                        <div>
-                            <button class="icon-button">
-                                <span class="dashicons dashicons-chart-bar"></span>
-                            </button>
-                            <strong><?php echo esc_html__( 'Multi Languages', 'gsheetconnector-ninja-forms' ); ?></strong>
-                            <p><?php echo esc_html__( 'This plugin supports multi-languages as well!', 'gsheetconnector-ninja-forms' ); ?></p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.gsheetconnector.com/docs/ninja-forms-gsheetconnector/plugin-settings-free-version" target="_blank" rel="noopener noreferrer">
-                        <div>
-                            <button class="icon-button">
-                                <span class="dashicons dashicons-download"></span>
-                            </button>
-                            <strong><?php echo esc_html__( 'Support WordPress Multisites', 'gsheetconnector-ninja-forms' ); ?></strong>
-                            <p><?php echo esc_html__( 'With the use of a Multisite, you’ll also have a new level of user-available: the Super Admin.', 'gsheetconnector-ninja-forms' ); ?></p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
 
-    <!-- 2nd column -->
-    <div class="col njgsc-box13">
-        <header>
-            <h3><?php echo esc_html__( 'Product Support', 'gsheetconnector-ninja-forms' ); ?></h3>
-        </header>
-        <div class="njgsc-box-content13">
-            <ul class="njgsc-list-icon13">
-                <li>
-                    <a href="https://www.gsheetconnector.com/docs/ninja-forms-gsheetconnector" target="_blank" rel="noopener noreferrer">
-                        <span class="dashicons dashicons-book"></span>
-                        <div>
-                            <strong><?php echo esc_html__( 'Online Documentation', 'gsheetconnector-ninja-forms' ); ?></strong>
-                            <p><?php echo esc_html__( 'Understand all the capabilities of Ninja-Forms GsheetConnector', 'gsheetconnector-ninja-forms' ); ?></p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.gsheetconnector.com/support" target="_blank" rel="noopener noreferrer">
-                        <span class="dashicons dashicons-sos"></span>
-                        <div>
-                            <strong><?php echo esc_html__( 'Ticket Support', 'gsheetconnector-ninja-forms' ); ?></strong>
-                            <p><?php echo esc_html__( 'Direct help from our qualified support team', 'gsheetconnector-ninja-forms' ); ?></p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.gsheetconnector.com/affiliate-area" target="_blank" rel="noopener noreferrer">
-                        <span class="dashicons dashicons-admin-links"></span>
-                        <div>
-                            <strong><?php echo esc_html__( 'Affiliate Program', 'gsheetconnector-ninja-forms' ); ?></strong>
-                            <p><?php echo esc_html__( 'Earn flat 30% on every sale!', 'gsheetconnector-ninja-forms' ); ?></p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
 
-<?php
-   }
+     public function nf_deactivate_plugin()
+    {
 
-   /**
-    * AJAX function - deactivate activation
-    * @since 1.0
-    */
-   public function deactivate_nj_integation() {
-      // nonce check
-      check_ajax_referer('gs-ajax-nonce', 'security');
+        check_ajax_referer('gs-ajax-nonce', 'security');
 
-      if (get_option('njforms_gs_token') != '') {
 
-         $accesstoken = get_option( 'njforms_gs_token' );
-         $client = new njfgsc_googlesheet();
-         //$client->revokeToken_auto($accesstoken);
+        if (!current_user_can('activate_plugins')) {
+            wp_send_json_error('You do not have permission to deactivate plugins.');
+        }
 
-         delete_option('njforms_gs_token');
-         delete_option('njforms_gs_access_code');
-         delete_option('njforms_gs_verify');
-         wp_send_json_success();
-      } else {
-         wp_send_json_error();
-      }
-   }
+        if (!isset($_POST['plugin_slug'])) {
+            wp_send_json_error('Plugin slug is missing.');
+        }
 
-   /**
-    * Function - Display Upgrade Notice
-    * @since 1.0
-    */
-   
-   public function display_upgrade_notice() {
-      $get_notification_display_interval = get_option( 'njforms_gs_upgrade_notice_interval' );
-      $close_notification_interval = get_option( 'njforms_gs_close_upgrade_notice' );
-      
-      if( $close_notification_interval === "off" ) {
-         return;
-      }
-      
-      if ( ! empty( $get_notification_display_interval ) ) {
-         $adds_interval_date_object = DateTime::createFromFormat( "Y-m-d", $get_notification_display_interval );
-         $notice_interval_timestamp = $adds_interval_date_object->getTimestamp();
-      }
-   }
-   
-   public function set_upgrade_notification_interval() {
-      // check nonce
-      check_ajax_referer( 'njforms_gs_upgrade_ajax_nonce', 'security' );
-      $time_interval = date( 'Y-m-d', strtotime( '+10 day' ) );
-      update_option( 'njforms_gs_upgrade_notice_interval', $time_interval );
-      wp_send_json_success();
-   }
-   
-   public function close_upgrade_notification_interval() {
-      // check nonce
-      check_ajax_referer( 'njforms_gs_upgrade_ajax_nonce', 'security' );
-      update_option( 'njforms_gs_close_upgrade_notice', 'off' );
-      wp_send_json_success();
-   }
+        $plugin_slug = sanitize_text_field(wp_unslash($_POST['plugin_slug']));
+
+        if (empty($plugin_slug)) {
+            wp_send_json_error('Invalid plugin.');
+        }
+
+        /*  Ensure plugin exists before attempting to deactivate */
+        if (!file_exists(WP_PLUGIN_DIR . '/' . $plugin_slug)) {
+            wp_send_json_error('Plugin not found.');
+        }
+
+        deactivate_plugins($plugin_slug);
+
+        if (is_plugin_active($plugin_slug)) {
+            wp_send_json_error('Failed to deactivate plugin.');
+        }
+
+        wp_send_json_success('Plugin deactivated successfully.');
+    }
+
+    public function nf_install_plugin()
+    {
+
+        /* Nonce verify */
+        if (! check_ajax_referer('gs-ajax-nonce', 'security', false)) {
+            wp_send_json_error([
+                'message' => __('Invalid security token', 'gsheetconnector-ninja-forms')
+            ]);
+        }
+
+        /* Permission check */
+        if (! current_user_can('install_plugins')) {
+            wp_send_json_error([
+                'message' => __('You do not have permission to install plugin', 'gsheetconnector-ninja-forms')
+            ]);
+        }
+
+        if (empty($_POST['plugin_slug']) || empty($_POST['download_url'])) {
+            wp_send_json_error([
+                'message' => __('Missing required parameters', 'gsheetconnector-ninja-forms')
+            ]);
+        }
+
+        $plugin_slug  = sanitize_text_field(wp_unslash($_POST['plugin_slug']));
+        $download_url = esc_url_raw(wp_unslash($_POST['download_url']));
+
+        if (empty($plugin_slug) || empty($download_url)) {
+            wp_send_json_error([
+                'message' => __('Invalid plugin data', 'gsheetconnector-ninja-forms')
+            ]);
+        }
+
+        /*  Required files */
+        require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+        require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+        require_once ABSPATH . 'wp-admin/includes/file.php';
+        require_once ABSPATH . 'wp-admin/includes/update.php';
+        require_once ABSPATH . 'wp-admin/includes/plugin.php';
+
+        $upgrader = new Plugin_Upgrader(new WP_Ajax_Upgrader_Skin());
+
+        $installed_plugins = get_plugins();
+        $plugin_path = '';
+
+        /* Find installed plugin */
+        foreach ($installed_plugins as $path => $details) {
+            if (strpos($path, $plugin_slug . '/') === 0) {
+                $plugin_path = $path;
+                break;
+            }
+        }
+
+        /* ==============================
+           If Installed → Upgrade
+         ============================== */
+        if ($plugin_path) {
+
+            $update_plugins = get_site_transient('update_plugins');
+
+            if (isset($update_plugins->response[$plugin_path])) {
+
+                $result = $upgrader->upgrade($plugin_path);
+
+                if (is_wp_error($result)) {
+                    wp_send_json_error([
+                        'message' => __('Upgrade failed: ', 'gsheetconnector-ninja-forms') . $result->get_error_message()
+                    ]);
+                }
+
+                wp_send_json_success([
+                    'message' => __('Plugin upgraded successfully', 'gsheetconnector-ninja-forms')
+                ]);
+            } else {
+
+                wp_send_json_success([
+                    'message' => __('Plugin already installed and up to date', 'gsheetconnector-ninja-forms')
+                ]);
+            }
+        }
+
+        /*
+         ==============================
+         Not Installed → Install
+         ============================== */
+        $result = $upgrader->install($download_url);
+
+        if (is_wp_error($result)) {
+            wp_send_json_error([
+                'message' => __('Installation failed: ', 'gsheetconnector-ninja-forms') . $result->get_error_message()
+            ]);
+        }
+
+        wp_send_json_success([
+            'message' => __('Plugin installed successfully', 'gsheetconnector-ninja-forms')
+        ]);
+    }
 
 }
 
-
-$njforms_service = new NJforms_Googlesheet_Services(); ?>
+$njforms_service = new NJforms_Googlesheet_Services();

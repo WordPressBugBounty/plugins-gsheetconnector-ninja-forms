@@ -1,0 +1,795 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GSheetConnector For Ninja Forms\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-08 16:37+0530\n"
+"PO-Revision-Date: 2026-10-14 19:23+0530\n"
+"Last-Translator: POForge <noreply@poforge.com>\n"
+"Language-Team: es_ES <noreply@poforge.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.9\n"
+
+msgid "Hey %1$s"
+msgstr "Hola %1$s"
+
+msgid ""
+"Please help us improve %1$s! If you opt-in, some data about your usage of %1$s "
+"will be sent to %2$s. If you skip this, that's okay! %1$s will still work just "
+"fine."
+msgstr ""
+"¡Por favor, ayúdanos a mejorar %1$s! Si decides participar, se enviarán algunos "
+"datos sobre tu uso de %1$s a %2$s. Si te lo saltas, ¡está bien! %1$s seguirá "
+"funcionando perfectamente."
+
+msgid "View Documentation"
+msgstr "Ver Documentación"
+
+msgid "Docs"
+msgstr "Documentos"
+
+msgid "Get Support"
+msgstr "Obtener Soporte"
+
+msgid "Support"
+msgstr "Soporte"
+
+msgid "Ninja Form Add-on requires Ninja-Forms plugin to be installed and activated."
+msgstr ""
+"El complemento Ninja Form Add-on requiere que el plugin Ninja-Forms esté instalado "
+"y activado."
+
+msgid "Settings"
+msgstr "Configuraciones"
+
+msgid "Upgrade to PRO"
+msgstr "Actualizar a PRO"
+
+msgid "Ninja Forms - GSheetConnector"
+msgstr "Ninja Forms - GSheetConnector"
+
+msgid "Google Sheet"
+msgstr "Google Sheet"
+
+msgid "Google Sheet Name"
+msgstr "Nombre de Google Sheet"
+
+msgid ""
+"Go to your google account and click on\"Google apps\" icon and than click "
+"\"Sheets\". Select the name of the appropriate sheet you want to link your contact "
+"form or create new sheet."
+msgstr ""
+"Ve a tu cuenta de Google y haz clic en el ícono de \"Aplicaciones de Google\" y "
+"luego haz clic en \"Hojas\". Selecciona el nombre de la hoja apropiada que deseas "
+"vincular a tu formulario de contacto o crea una nueva hoja."
+
+msgid "Ninja Field Alias"
+msgstr "Alias de Campo Ninja"
+
+msgid "Ninja Forms Field Key"
+msgstr "Clave de Campo Ninja Forms"
+
+msgid "Google Sheet ID"
+msgstr "ID de la Hoja de Google"
+
+msgid "You can get sheet id from your sheet URL."
+msgstr "Puedes obtener el ID de la hoja desde la URL de tu hoja."
+
+msgid "Google Sheet Tab Name"
+msgstr "Nombre de la pestaña de Google Sheet"
+
+msgid ""
+"Open your Google Sheet with which you want to link your contact form . You will "
+"notice a tab names at bottom of the screen. Copy the tab name where you want to "
+"have an entry of contact form."
+msgstr ""
+"Abre tu Google Sheet con el que deseas vincular tu formulario de contacto. Notarás "
+"un nombre de pestaña en la parte inferior de la pantalla. Copia el nombre de la "
+"pestaña donde deseas tener una entrada del formulario de contacto."
+
+msgid "Google Sheet Tab ID"
+msgstr "ID de la Pestaña de la Hoja de Google"
+
+msgid "You can get tab id from your sheet URL."
+msgstr "Puedes obtener el ID de la pestaña desde la URL de tu hoja."
+
+msgid "Google Sheet URL"
+msgstr "URL de Google Sheet"
+
+msgid "Unlock More Features"
+msgstr "Desbloquear Más Funciones"
+
+msgid "Upgrade To Pro"
+msgstr "Actualizar a Pro"
+
+msgid "<strong>Authentication Required:</strong> You must have to"
+msgstr "<strong>Autenticación Requerida:</strong> Debes"
+
+msgid "Authenticate using your Google Account"
+msgstr "Autenticarse usando tu Cuenta de Google"
+
+msgid ""
+"along with Google Drive and Google Sheets Permissions in order to enable the "
+"settings for configuration."
+msgstr ""
+"junto con permisos de Google Drive y Google Sheets para habilitar la configuración."
+
+msgid "API Base URL"
+msgstr "URL Base de la API"
+
+msgid "Enter your njgs Base Url"
+msgstr "Introduce tu URL Base de njgs"
+
+msgid "Select One"
+msgstr "Seleccionar Uno"
+
+msgid "OAuth1a"
+msgstr "OAuth1a"
+
+msgid "OAuth2"
+msgstr "OAuth2"
+
+msgid "API OAuth Version"
+msgstr "Versión de OAuth de la API"
+
+msgid "Enter your njgs Authentication Version (e.g. OAuth1a or OAuth2"
+msgstr "Introduce tu Versión de Autenticación njgs (p. ej., OAuth1a o OAuth2)"
+
+msgid "API Client Key"
+msgstr "Clave de Cliente de la API"
+
+msgid "Enter your API Client Key"
+msgstr "Introduce tu Clave de Cliente de la API"
+
+msgid "API Client Secret"
+msgstr "Secreto de Cliente de la API"
+
+msgid "Enter your njgs Client Secret"
+msgstr "Introduce tu Secreto de Cliente njgs"
+
+msgid "API Callback"
+msgstr "Callback de la API"
+
+msgid "OPTIONAL: Enter your njgs Callback. Will use this page if not entered."
+msgstr ""
+"OPCIONAL: Introduce tu Callback njgs. Se usará esta página si no se introduce."
+
+msgid "Click button to authorize njgs"
+msgstr "Haz clic en el botón para autorizar njgs"
+
+msgid "Authorize"
+msgstr "Autorizar"
+
+msgid "API Access Token"
+msgstr "Token de Acceso de la API"
+
+msgid "The access token when fetched or manually entered"
+msgstr "El token de acceso cuando se obtiene o se introduce manualmente"
+
+msgid "API Access Token Secret"
+msgstr "Secreto del Token de Acceso de la API"
+
+msgid "The access token secret when fetched or manually entered"
+msgstr "El secreto del token de acceso cuando se obtiene o se introduce manualmente"
+
+msgid "Click button to revoke njgs"
+msgstr "Haz clic en el botón para revocar njgs"
+
+msgid "De-Authorize"
+msgstr "De-Autorizar"
+
+msgid "API - Last Status"
+msgstr "API - Último Estado"
+
+msgid "njgs Settings"
+msgstr "Configuraciones de njgs"
+
+msgid "There's something wrong with your code..."
+msgstr "Hay algo mal con tu código..."
+
+msgid "Choose Google API Setting :"
+msgstr "Elige la Configuración de la API de Google:"
+
+msgid "Use Existing Client/Secret Key (Auto Google API Configuration)"
+msgstr ""
+"Usar Cliente/Clave Secreta Existente (Configuración Automática de Google API)"
+
+msgid ""
+"Use Manual Client/Secret Key (Use Your Google API Configuration) (Upgrade To PRO)"
+msgstr ""
+"Usar Clave/Secreto de Cliente Manual (Usa tu Configuración de API de Google) "
+"(Actualizar a PRO)"
+
+msgid "Upgrade To PRO"
+msgstr "Actualizar a PRO"
+
+msgid ""
+"Manual Client/Secret Key (Use Your Google API Configuration) method is available "
+"in the PRO version of the plugin."
+msgstr ""
+"El método de Clave/Secreto de Cliente Manual (Usa tu Configuración de API de "
+"Google) está disponible en la versión PRO del plugin."
+
+msgid "Ninja Forms - "
+msgstr "Ninja Forms - "
+
+msgid "Google Sheet Integration"
+msgstr "Integración de Hoja de Google"
+
+msgid "Authenticate with your Google account, follow these steps:"
+msgstr "Autentícate con tu cuenta de Google, sigue estos pasos:"
+
+msgid "Click on the \"Sign In With Google\" button."
+msgstr "Haz clic en el botón \"Iniciar Sesión con Google\"."
+
+msgid "Grant permissions for the following:"
+msgstr "Otorga permisos para lo siguiente:"
+
+msgid "Google Drive"
+msgstr "Google Drive"
+
+msgid "Google Sheets"
+msgstr "Google Sheets"
+
+msgid "* Ensure that you enable the checkbox for each of these services."
+msgstr ""
+"* Asegúrate de habilitar la casilla de verificación para cada uno de estos "
+"servicios."
+
+msgid ""
+"This will allow the integration to access your Google Drive and Google Sheets."
+msgstr "Esto permitirá que la integración acceda a tu Google Drive y Google Sheets."
+
+msgid "Google Access Code"
+msgstr "Código de Acceso de Google"
+
+msgid "Currently Active"
+msgstr "Actualmente Activo"
+
+msgid "Deactivate"
+msgstr "Desactivar"
+
+msgid ""
+"On deactivation, all your data saved with authentication will be removed and you "
+"need to reauthenticate with your google account and configure sheet name and tab."
+msgstr ""
+"Al desactivarlo, todos tus datos guardados con autenticación serán eliminados y "
+"necesitarás reautenticarte con tu cuenta de Google y configurar el nombre de la "
+"hoja y la pestaña."
+
+msgid "Click Sign In With Google Button"
+msgstr "Haz clic en el botón Iniciar Sesión con Google"
+
+msgid "Connect Now"
+msgstr "Conectar Ahora"
+
+msgid ""
+"Something went wrong! It looks you have not given the permission of Google Drive "
+"and Google Sheets from your google account.Please Deactivate Auth and Re-"
+"Authenticate again with the permissions."
+msgstr ""
+"¡Algo salió mal! Parece que no has dado permiso para Google Drive y Google Sheets "
+"desde tu cuenta de Google. Por favor, desactiva la autenticación y vuelve a "
+"autenticarte con los permisos."
+
+msgid "Permission Screen"
+msgstr "Pantalla de Permiso"
+
+msgid "Also,"
+msgstr "También,"
+
+msgid "Click Here"
+msgstr "Haz clic aquí"
+
+msgid ""
+" and if it displays \"GSheetConnector for WP Contact Forms\" under Third-party "
+"apps with account access then remove it."
+msgstr ""
+" y si muestra \"GSheetConnector para WP Contact Forms\" bajo aplicaciones de "
+"terceros con acceso a la cuenta, elimínalo."
+
+msgid "Connected email account: %s"
+msgstr "Cuenta de correo electrónico conectada: %s"
+
+msgid ""
+"Something wrong! Your Auth code may be wrong or expired. Please Deactivate and Do "
+"Re-Auth Code "
+msgstr ""
+"¡Algo anda mal! Tu código de autorización puede estar mal o haber expirado. Por "
+"favor, desactiva y haz nuevamente el código de autorización."
+
+msgid ""
+"We do not store any of the data from your Google account on our servers, "
+"everything is processed & stored on your server. We take your privacy extremely "
+"seriously and ensure it is never misused."
+msgstr ""
+"No almacenamos ninguno de los datos de tu cuenta de Google en nuestros servidores, "
+"todo se procesa y almacena en tu servidor. Tomamos tu privacidad muy en serio y "
+"aseguramos que nunca se malutilice."
+
+msgid "Learn more."
+msgstr "Saber más."
+
+msgid "Debug Log →"
+msgstr "Registro de Depuración →"
+
+msgid "View"
+msgstr "Ver"
+
+msgid "Clear"
+msgstr "Limpiar"
+
+msgid "Copy Logs"
+msgstr "Copiar Registros"
+
+msgid "No errors found."
+msgstr "No se encontraron errores."
+
+msgid "No log file exists as no errors are generated."
+msgstr "No existe un archivo de registro ya que no se generan errores."
+
+msgid "Next steps…"
+msgstr "Próximos pasos…"
+
+msgid "Multiple Forms to Sheets, Merge Tags and much more..."
+msgstr "Varios Formularios a Hojas, Etiquetas de Fusión y mucho más..."
+
+msgid "Compatibility"
+msgstr "Compatibilidad"
+
+msgid "Compatibility with Ninja-Forms Third-Party Plugins"
+msgstr "Compatibilidad con Plugins de Terceros Ninja-Forms"
+
+msgid "Multi Languages"
+msgstr "Múltiples Idiomas"
+
+msgid "This plugin supports multi-languages as well!"
+msgstr "¡Este plugin también soporta múltiples idiomas!"
+
+msgid "Support WordPress Multisites"
+msgstr "Soporte para WordPress Multisite"
+
+msgid ""
+"With the use of a Multisite, you’ll also have a new level of user-available: the "
+"Super Admin."
+msgstr ""
+"Con el uso de un Multisite, también tendrás un nuevo nivel de usuario disponible: "
+"el Super Admin."
+
+msgid "Product Support"
+msgstr "Soporte del Producto"
+
+msgid "Online Documentation"
+msgstr "Documentación en Línea"
+
+msgid "Understand all the capabilities of Ninja-Forms GsheetConnector"
+msgstr "Entiende todas las capacidades de Ninja-Forms GsheetConnector"
+
+msgid "Ticket Support"
+msgstr "Soporte por Ticket"
+
+msgid "Direct help from our qualified support team"
+msgstr "Ayuda directa de nuestro equipo de soporte calificado"
+
+msgid "Affiliate Program"
+msgstr "Programa de Afiliados"
+
+msgid "Earn flat 30% on every sale!"
+msgstr "¡Gana un 30% fijo por cada venta!"
+
+msgid "Enjoy using %1$s? Check out our reviews or leave your own on %2$s."
+msgstr "¿Disfrutas usar %1$s? Consulta nuestras reseñas o deja la tuya en %2$s."
+
+msgid "WordPress.org"
+msgstr "WordPress.org"
+
+msgid "Made with ♥ by the GSheetConnector Team"
+msgstr "Hecho con ♥ por el Equipo de GSheetConnector"
+
+msgid "VIP Circle"
+msgstr "Círculo VIP"
+
+msgid "Free Plugins"
+msgstr "Plugins Gratis"
+
+msgid "Upgrade"
+msgstr "Actualizar"
+
+msgid "logo"
+msgstr "logotipo"
+
+msgid "Learn more"
+msgstr "Saber más"
+
+msgid "Ninja Forms Google Sheet Connector"
+msgstr "Conector de Google Sheet para Ninja Forms"
+
+msgid ""
+"Ninja Forms, A bridge between your WordPress based Ninja Forms and Google Sheets. "
+"It helps to record the entries in real-time."
+msgstr ""
+"Ninja Forms, un puente entre tus Ninja Forms basados en WordPress y Google Sheets. "
+"Ayuda a registrar las entradas en tiempo real."
+
+msgid "PRO"
+msgstr "PRO"
+
+msgid "Upgrade Now"
+msgstr "Actualizar Ahora"
+
+msgid "Gravity Forms Google Sheet Connector"
+msgstr "Conector de Google Sheet para Gravity Forms"
+
+msgid ""
+"Gravity Forms Google Sheets Connector Plugin is a Bridge between your Gravity "
+"Forms and Google Sheets."
+msgstr ""
+"El plugin Gravity Forms Google Sheets Connector es un puente entre tus Gravity "
+"Forms y Google Sheets."
+
+msgid "Download"
+msgstr "Descargar"
+
+msgid "Buy Now"
+msgstr "Comprar ahora"
+
+msgid "WooCommerce Google Sheet Connector"
+msgstr "Conector de Google Sheet para WooCommerce"
+
+msgid "WooCommerce Google Spreadsheet Addon Plugin to connect with Google Sheets."
+msgstr ""
+"Complemento de WooCommerce Google Spreadsheet para conectar con Google Sheets."
+
+msgid "Elementor Forms Google Sheet Connector"
+msgstr "Conector de Google Sheet para Elementor Forms"
+
+msgid ""
+"A bridge between your WordPress based Elementor Forms or Metform Elementor Builder "
+"to Google Sheets."
+msgstr ""
+"Un puente entre tus Formularios Elementor basados en WordPress o Metform Elementor "
+"Builder y Google Sheets."
+
+msgid "CF7 Google Sheets Connector"
+msgstr "CF7 Google Sheets Connector"
+
+msgid ""
+"CF7 Google Sheet Connector is an addon plugin, A bridge between your WordPress "
+"based Contact Form 7 forms and Google Sheets."
+msgstr ""
+"CF7 Google Sheet Connector es un complemento, un puente entre tus formularios de "
+"Contact Form 7 basados en WordPress y Google Sheets."
+
+msgid "WPForms Google Sheet Connector"
+msgstr "Conector de Google Sheet para WPForms"
+
+msgid ""
+"WPForms, A bridge between your WordPress based WPForms and Google Sheets. It helps "
+"to record the entries in real-time."
+msgstr ""
+"WPForms, un puente entre tus WPForms basados en WordPress y Google Sheets. Ayuda a "
+"registrar las entradas en tiempo real."
+
+msgid "Easy Digital Downloads Google Sheet Connector"
+msgstr "Conector de Google Sheet para Easy Digital Downloads"
+
+msgid ""
+"Easy Digital Downloads Google Sheet Connector sends orders entries to Google Sheet "
+"in a real-time"
+msgstr ""
+"Easy Digital Downloads Google Sheet Connector envía las entradas de pedidos a "
+"Google Sheet en tiempo real."
+
+msgid "Avada Forms Google Sheet Connector Pro"
+msgstr "Avada Forms Google Sheet Connector Pro"
+
+msgid ""
+"Avada Theme Fusion Builder addon, simplifies real-time data transmission from "
+"Avada theme-based forms to Google Sheets with premium features."
+msgstr ""
+"Complemento de Avada Theme Fusion Builder, simplifica la transmisión de datos en "
+"tiempo real desde formularios basados en el tema Avada a Google Sheets con "
+"características premium."
+
+msgid "Available PRO Version"
+msgstr "Versión PRO disponible"
+
+msgid "Divi Forms Google Sheet Connector Pro"
+msgstr "Divi Forms Google Sheet Connector Pro"
+
+msgid ""
+"Divi Forms GSheetConnector, an addon for DIVI Theme/Builder, simplifies real-time "
+"syncing of data from DIVI theme forms to both the database and Google Sheets."
+msgstr ""
+"Divi Forms GSheetConnector, un complemento para DIVI Theme/Builder, simplifica la "
+"sincronización en tiempo real de datos desde formularios de tema DIVI tanto a la "
+"base de datos como a Google Sheets."
+
+msgid "GSheetConnector for Forminator Forms"
+msgstr "GSheetConnector para Forminator Forms"
+
+msgid ""
+"GSheetConnector for Forminator Forms is an addon plugin, A bridge between your "
+"WordPress based Forminator Forms forms and Google Sheets."
+msgstr ""
+"GSheetConnector para Forminator Forms es un complemento, un puente entre tus "
+"formularios de Forminator Forms basados en WordPress y Google Sheets."
+
+msgid "Free"
+msgstr "Gratis"
+
+msgid "GSheetConnector for Formidable Forms"
+msgstr "GSheetConnector para Formidable Forms"
+
+msgid ""
+"Formidable Forms, A bridge between your WordPress based Formidable Forms forms and "
+"Google Sheets."
+msgstr ""
+"Formidable Forms, un puente entre tus formularios de Formidable Forms basados en "
+"WordPress y Google Sheets."
+
+msgid "Caldera Forms Google Sheets Connector"
+msgstr "Conector de Hojas de Google Caldera Forms"
+
+msgid ""
+"Caldera Forms Closure, No more updates on this plugin Due to Caldera Forms being "
+"sunset/retired on December 31, 2021"
+msgstr ""
+"Caldera Forms Cierre, No hay más actualizaciones en este complemento debido a que "
+"Caldera Forms fue descontinuado/retirado el 31 de diciembre de 2021."
+
+msgid "Ninja Forms connected with Google Sheets."
+msgstr "Ninja Forms conectado con Google Sheets."
+
+msgid "Form Name"
+msgstr "Nombre del Formulario"
+
+msgid "No Ninja Forms are connected with Google Sheets."
+msgstr "No hay Ninja Forms conectados con Google Sheets."
+
+msgid "Like & Subscribe to our channel for regular updates"
+msgstr "Dale Me Gusta y Suscríbete a nuestro canal para actualizaciones regulares"
+
+msgid "Submit A Ticket"
+msgstr "Enviar Un Ticket"
+
+msgid ""
+"We offer excellent support through our advanced ticket system. Make sure to "
+"register your purchase first to access our support services and other resources."
+msgstr ""
+"Ofrecemos un excelente soporte a través de nuestro avanzado sistema de tickets. "
+"Asegúrate de registrar tu compra primero para acceder a nuestros servicios de "
+"soporte y otros recursos."
+
+msgid "Submit a ticket"
+msgstr "Enviar un ticket"
+
+msgid "Documentation"
+msgstr "Documentación"
+
+msgid ""
+"This is the place to go to reference different aspects of the plugin. Our online "
+"documentation is an incredible resource for learning the ins and outs."
+msgstr ""
+"Este es el lugar para referenciar diferentes aspectos del complemento. Nuestra "
+"documentación en línea es un recurso increíble para aprender los entresijos."
+
+msgid "Ninja Forms  - GSheetConnector"
+msgstr "Ninja Forms - GSheetConnector"
+
+msgid "Version :"
+msgstr "Versión :"
+
+msgid "DASHBOARD"
+msgstr "TABLERO"
+
+msgid "Integration"
+msgstr "Integración"
+
+msgid "System Status"
+msgstr "Estado del Sistema"
+
+msgid "System Info"
+msgstr "Información del Sistema"
+
+msgid "Copy System Info to Clipboard"
+msgstr "Copiar Información del Sistema al Portapapeles"
+
+msgid "Error Log"
+msgstr "Registro de Errores"
+
+msgid ""
+"<p>If you have <a href=\"https://www.gsheetconnector.com/how-to-enable-debugging-"
+"in-wordpress\" target=\"_blank\" rel=\"noopener noreferrer\">WP_DEBUG_LOG</a> "
+"enabled, errors are stored in a log file. Here you can find the last 100 lines in "
+"reversed order so that you or the GSheetConnector support team can view it easily. "
+"The file cannot be edited here.</p>"
+msgstr ""
+"<p>Si tienes habilitado <a href=\"https://www.gsheetconnector.com/how-to-enable-"
+"debugging-in-wordpress\" target=\"_blank\" rel=\"noopener "
+"noreferrer\">WP_DEBUG_LOG</a>, los errores se almacenan en un archivo de registro. "
+"Aquí puedes encontrar las últimas 100 líneas en orden inverso para que tú o el "
+"equipo de soporte de GSheetConnector puedan verlo fácilmente. El archivo no se "
+"puede editar aquí.</p>"
+
+msgid "Copy Error Log to Clipboard"
+msgstr "Copiar Registro de Errores al Portapapeles"
+
+msgid "Copied"
+msgstr "Copiado"
+
+msgid "GSheetConnector Ninja Forms Demo Information"
+msgstr "Información de Demostración de GSheetConnector Ninja Forms"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Sheet URL"
+msgstr "URL de la Hoja"
+
+msgid "Demo URL"
+msgstr "URL de la Demostración"
+
+msgid "How to configure your Google Spreadsheet with Ninja Form plugin?"
+msgstr "¿Cómo configurar tu Hoja de Cálculo de Google con el complemento Ninja Form?"
+
+msgid "Go to the Ninja Forms Menu."
+msgstr "Ve al Menú de Ninja Forms."
+
+msgid "Edit/Add Ninja Form."
+msgstr "Editar/Agregar Ninja Form."
+
+msgid "Go to Emails & Actions tabs."
+msgstr "Ve a las pestañas de Correos y Acciones."
+
+msgid "Click on (Add new action) OR +(Plus Sign)."
+msgstr "Haz clic en (Agregar nueva acción) O +(Signo más)."
+
+msgid "Click on Google Sheet action"
+msgstr "Haz clic en la acción de Hoja de Google"
+
+msgid "Fill the below details >> Click on Done button >> Click on Publish button"
+msgstr ""
+"Completa los detalles a continuación >> Haz clic en el botón Hecho >> Haz clic en "
+"el botón Publicar"
+
+msgid ""
+"Google Sheet Name, Google Sheet ID, Tab Name and Tab ID you can copy from "
+"spreadsheet like below"
+msgstr ""
+"Nombre de la Hoja de Google, ID de la Hoja de Google, Nombre de la Pestaña y ID de "
+"la Pestaña puedes copiarlos desde la hoja de cálculo como se muestra a continuación"
+
+msgid "Why I am Getting Error 500 After Installing Plugin."
+msgstr "¿Por qué estoy recibiendo el Error 500 después de instalar el complemento?"
+
+msgid "Following are few of the points which will help to debug the issue."
+msgstr ""
+"A continuación se presentan algunos puntos que ayudarán a depurar el problema."
+
+msgid ""
+"1) Enable debug by adding the following in your wp-config.php file before /* "
+"That’s all, stop editing! Happy blogging."
+msgstr ""
+"1) Habilita la depuración agregando lo siguiente en tu archivo wp-config.php antes "
+"de /* Eso es todo, ¡deja de editar! Feliz blog."
+
+msgid ""
+"define('WP_DEBUG', true); define('WP_DEBUG_LOG', true); define('SCRIPT_DEBUG', "
+"true); define('SAVEQUERIES', true);"
+msgstr ""
+"define('WP_DEBUG', true); define('WP_DEBUG_LOG', true); define('SCRIPT_DEBUG', "
+"true); define('SAVEQUERIES', true);"
+
+msgid ""
+"And then try to activate the plugin again. This will create a debug.log under wp-"
+"content folder. Check for Ninja Forms Google Sheet Connector errors. If found, "
+"send us the file at support@westerndeal.com"
+msgstr ""
+"Y luego intenta activar el complemento nuevamente. Esto creará un debug.log en la "
+"carpeta wp-content. Verifica errores de Ninja Forms Google Sheet Connector. Si los "
+"encuentras, envíanos el archivo a support@westerndeal.com"
+
+msgid ""
+"2) Check the log that is created by Ninja Forms Google Sheet. For that, click "
+"“View” from the Google Sheet Integration page. Let us know if there is any error—"
+"we will assist you."
+msgstr ""
+"2) Verifica el registro creado por Ninja Forms Google Sheet. Para ello, haz clic "
+"en \"Ver\" desde la página de Integración de Google Sheets. Avísanos si hay algún "
+"error, te asistiremos."
+
+msgid "How do I get the Google Access Code required in step 3 of Installation?"
+msgstr ""
+"¿Cómo obtengo el Código de Acceso de Google requerido en el paso 3 de la "
+"Instalación?"
+
+msgid "On the <code>Admin Panel &gt; Ninja Forms &gt; Google Sheets.</code>"
+msgstr ""
+"En el <code>Panel de Administración &gt; Ninja Forms &gt; Google Sheets.</code>"
+
+msgid "Go to “Integration” tab and click on \"Get Code\" button."
+msgstr "Ve a la pestaña \"Integración\" y haz clic en el botón \"Obtener Código\"."
+
+msgid ""
+"In a popup Google will ask you to authorize the plugin to connect to your Google "
+"Sheets. Authorize it – you may have to log in to your Google account if you aren’t "
+"already logged in."
+msgstr ""
+"En una ventana emergente, Google te pedirá que autorices el complemento para "
+"conectarse a tus Google Sheets. Autorizalo; es posible que necesites iniciar "
+"sesión en tu cuenta de Google si no has iniciado sesión ya."
+
+msgid "On the next screen, you should receive the Access Code. Copy it."
+msgstr "En la siguiente pantalla, deberías recibir el Código de Acceso. Copialo."
+
+msgid "Now you can paste this code back in the Google Access Code."
+msgstr "Ahora puedes pegar este código de nuevo en el Código de Acceso de Google."
+
+msgid "Submitted Value is not showing in Googlesheet."
+msgstr "El valor enviado no se muestra en la Hoja de Google."
+
+msgid ""
+"Sometimes it can take a while of spinning before it goes through. But if the "
+"entries never show up in your Sheet then one of these things might be the reason:"
+msgstr ""
+"A veces puede tardar un tiempo en procesar. Pero si las entradas nunca aparecen en "
+"tu Hoja, entonces una de estas cosas podría ser la razón:"
+
+msgid "Wrong access code (Check debug log)"
+msgstr "Código de acceso incorrecto (Revisa el registro de depuración)"
+
+msgid "Wrong Sheet name or tab name"
+msgstr "Nombre de hoja o nombre de pestaña incorrectos"
+
+msgid ""
+"Wrong Column name (Column names in Ninja Forms. It cannot have underscore, space "
+"or any special characters.)"
+msgstr ""
+"Nombre de columna incorrecto (los nombres de columna en Ninja Forms no pueden "
+"tener guiones bajos, espacios ni caracteres especiales.)"
+
+msgid ""
+"Please double-check those items and hopefully getting them right will fix the "
+"issue."
+msgstr ""
+"Por favor, verifica esas opciones y espero que corregirlas resuelva el problema."
+
+msgid "Why am I not seeing Ninja Form values (submitted data) in my Google Sheet?"
+msgstr ""
+"¿Por qué no veo los valores de Ninja Form (datos enviados) en mi Hoja de Google?"
+
+msgid ""
+"Sometimes it can take a while of spinning before it goes through. But if the "
+"entries never show up in your Sheet, then one of these things might be the reason:"
+msgstr ""
+"A veces puede tardar un tiempo en procesar. Pero si las entradas nunca aparecen en "
+"tu Hoja, entonces una de estas cosas podría ser la razón:"
+
+msgid ""
+"Wrong column name mapping (Column names in Ninja Forms cannot have underscores, "
+"spaces, or any special characters)"
+msgstr ""
+"Mapeo de nombres de columna incorrecto (los nombres de columna en Ninja Forms no "
+"pueden tener guiones bajos, espacios o caracteres especiales)"
+
+msgid ""
+"Please double-check those items — getting them right will likely fix the issue."
+msgstr ""
+"Por favor, verifica esas opciones, y corregirlas probablemente resolverá el "
+"problema."
+
+msgid "GSheetConnector For Ninja Forms"
+msgstr "GSheetConnector Para Ninja Forms"
+
+msgid "Send your Ninja Forms data to your Google Sheets spreadsheet."
+msgstr "Envía los datos de tus Ninja Forms a tu hoja de cálculo de Google Sheets."
+
+msgid "GSheetConnector"
+msgstr "GSheetConnector"
+
+msgid "https://www.gsheetconnector.com/"
+msgstr "https://www.gsheetconnector.com/"

@@ -1,11 +1,12 @@
 <?php
+
 /**
  * Plugin Name:  GSheetConnector For Ninja Forms
  * Plugin URI:  https://www.gsheetconnector.com/ninja-forms-google-sheet-connector-pro
  * Description:  Send your Ninja Forms data to your Google Sheets spreadsheet.
  * Author:       GSheetConnector
  * Author URI:   https://www.gsheetconnector.com/
- * Version:      2.0.2
+ * Version:      3.0.0
  * Text Domain:  gsheetconnector-ninja-forms
  * License:      GPLv2
  * License URI:  http://www.gnu.org/licenses/gpl-2.0.html
@@ -18,12 +19,13 @@ add_filter('doing_it_wrong_trigger_error', '__return_false');
 if (!defined('ABSPATH')) {
     exit;
 }
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 
 /*freemius*/
 if (function_exists('is_plugin_active') && is_plugin_active('gsheetconnector-ninja-forms/gsheetconnector-ninjaforms.php')) {
     if (!function_exists('gs_ninjafree')) {
         // Create a helper function for easy SDK access.
-        function gs_ninjafree()
+        function gs_ninjafree() // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
         {
             global $gs_ninjafree;
 
@@ -37,17 +39,18 @@ if (function_exists('is_plugin_active') && is_plugin_active('gsheetconnector-nin
                 require_once dirname(__FILE__) . '/lib/vendor/freemius/start.php';
 
                 $gs_ninjafree = fs_dynamic_init(array(
-                    'id' => '9034',
-                    'slug' => 'gsheetconnector-ninja-forms',
-                    'type' => 'plugin',
-                    'public_key' => 'pk_90fceba6082f2f976d4c7e2128455',
-                    'is_premium' => false,
-                    'has_addons' => false,
-                    'has_paid_plans' => false,
-                    'menu' => array(
-                        'slug' => 'gsheetconnector-ninja-forms',
-                        'first-path' => (!is_multisite() ? 'admin.php?page=njform-google-sheet-config' : 'plugins.php'),
-                        'account' => false,
+                    'id'                  => '9034',
+                    'slug'                => 'gsheetconnector-ninja-forms',
+                    'type'                => 'plugin',
+                    'public_key'          => 'pk_90fceba6082f2f976d4c7e2128455',
+                    'is_premium'          => false,
+                    'has_addons'          => false,
+                    'has_paid_plans'      => false,
+                    'is_org_compliant'    => true,
+                    'menu'                => array(
+                        'slug'           => 'njform-google-sheet-config',
+                        'first-path'     => 'admin.php?page=njform-google-sheet-config',
+                        'account'        => false,
                     ),
                 ));
             }
@@ -58,13 +61,14 @@ if (function_exists('is_plugin_active') && is_plugin_active('gsheetconnector-nin
         // Init Freemius.
         gs_ninjafree();
         // Signal that SDK was initiated.
-        do_action('gs_ninjafree_loaded');
+        // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
+        do_action('gs_ninjafree_loaded'); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound 
     }
 
     // As Per our wc-gsheetconnector commented.
     /*freemius */
     /* Customizing the Opt Message Freemius  */
-    function gs_ninjafree_custom_connect_message_on_update(
+    function gs_ninjafree_custom_connect_message_on_update( // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
         $message,
         $user_first_name,
         $plugin_title,
@@ -74,13 +78,13 @@ if (function_exists('is_plugin_active') && is_plugin_active('gsheetconnector-nin
     ) {
         // translators: %1$s: User first name
         $greeting = sprintf(
-            __('Hey %1$s', 'gsheetconnector-ninja-forms'),
+            ('Hey %1$s'),
             esc_html($user_first_name)
         );
 
         // translators: %1$s: Plugin title, %2$s: Site link (Freemius), both HTML formatted
-        $message_body = sprintf(
-            __('Please help us improve %1$s! If you opt-in, some data about your usage of %1$s will be sent to %2$s. If you skip this, that\'s okay! %1$s will still work just fine.', 'gsheetconnector-ninja-forms'),
+        $message_body = sprintf( // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
+            __('Please help us improve %1$s! If you opt-in, some data about your usage of %1$s will be sent to %2$s. If you skip this, that\'s okay! %1$s will still work just fine.', 'gsheetconnector-ninja-forms'), // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
             '<b>' . esc_html($plugin_title) . '</b>',
             esc_url($freemius_link)
         );
@@ -98,14 +102,16 @@ if (NJforms_Gsheet_Connector_Init::ninja_gs_is_pugin_active('GSheet_Connector_NJ
 if ((function_exists('is_plugin_active') && is_plugin_active('gsheetconnector-ninja-forms-pro/gsheetconnector-ninja-forms-pro.php'))) {
     return;
 }
-define('NINJAFORMS_GOOGLESHEET_VERSION', '2.0.2');
-define('NINJAFORMS_GOOGLESHEET_DB_VERSION', '2.0.2');
+
+define('NINJAFORMS_GOOGLESHEET_VERSION', '3.0.0');
+define('NINJAFORMS_GOOGLESHEET_DB_VERSION', '3.0.0');
 define('NINJAFORMS_GOOGLESHEET_ROOT', dirname(__FILE__));
 define('NINJAFORMS_GOOGLESHEET_URL', plugins_url('/', __FILE__));
 define('NINJAFORMS_GOOGLESHEET_BASE_FILE', basename(dirname(__FILE__)) . '/gsheetconnector-ninjaforms.php');
 define('NINJAFORMS_GOOGLESHEET_BASE_NAME', plugin_basename(__FILE__));
 define('NINJAFORMS_GOOGLESHEET_PATH', plugin_dir_path(__FILE__)); //use for include files to other files
 define('NINJAFORMS_GOOGLESHEET_PRODUCT_NAME', 'Njforms Google Sheet Connector');
+define('NINJAFORMS_GOOGLESHEET_REDIRECT_URI', admin_url('admin.php?page=njform-google-sheet-config&tab=integration'));
 define('NINJAFORMS_GOOGLESHEET_API_URL', 'https://oauth.gsheetconnector.com/api-cred.php');
 define('NINJAFORMS_GOOGLESHEET_CURRENT_THEME', get_stylesheet_directory());
 
@@ -117,6 +123,8 @@ if (!class_exists('NJForm_gs_Connector_Utility')) {
     include(NINJAFORMS_GOOGLESHEET_ROOT . '/includes/class-njform-utility.php');
     $GoogleSheetConnector = new NJForm_gs_Connector_Utility();
 }
+
+
 /*
  * Add Sub Menu 
  */
@@ -129,13 +137,12 @@ if (isset($GoogleSheetConnector)) {
  */
 add_action('ninja_forms_loaded', 'ninjaform_Googlesheet_integration');
 
-function ninjaform_Googlesheet_integration()
+function ninjaform_Googlesheet_integration() // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
 {
     require_once plugin_dir_path(__FILE__) . 'includes/class-njforms-integration.php';
 }
 
 //Include Library Files
-require_once NINJAFORMS_GOOGLESHEET_ROOT . '/lib/vendor/autoload.php';
 include_once(NINJAFORMS_GOOGLESHEET_ROOT . '/lib/google-sheets.php');
 
 class NJforms_Gsheet_Connector_Init
@@ -144,48 +151,52 @@ class NJforms_Gsheet_Connector_Init
     public function __construct()
     {
 
-        //run on activation of plugin
+        /* run on activation of plugin */
         register_activation_hook(__FILE__, array($this, 'njforms_gs_connector_activate'));
 
-        //run on deactivation of plugin
+        /* run on deactivation of plugin */
         register_deactivation_hook(__FILE__, array($this, 'njforms_gs_connector_deactivate'));
 
-        //run on uninstall
+        /* run on uninstall */
         register_uninstall_hook(__FILE__, array('NJforms_Gsheet_Connector_Init', 'njforms_gs_connector_uninstall'));
 
-        // validate is NinjaForms plugin exist
+        /* validate is NinjaForms plugin exist */
         add_action('admin_init', array($this, 'validate_parent_plugin_exists'));
 
-        // Display widget to dashboard
+        /* Display widget to dashboard */
         add_action('wp_dashboard_setup', array($this, 'add_njform_gs_connector_summary_widget'));
 
-        // clear debug log data
+        /* clear debug log data */
         add_action('wp_ajax_gs_clear_logs', array($this, 'gs_clear_logs'));
 
-        // load the js and css files
+        /* load the js and css files */
         add_action('init', array($this, 'load_css_and_js_files'));
-        // run upgradation
+        /* run upgradation */
         add_action('admin_init', array($this, 'run_on_upgrade'));
 
-        // load the classes
+        /* load the classes */
         add_action('init', array($this, 'load_all_classes'));
 
-        // Load text domain
+        /*  Load text domain */
         add_action('init', array($this, 'gsheetconnector_load_textdomain'));
 
-        // verify the spreadsheet connection
+        /* verify the spreadsheet connection */
         add_action('wp_ajax_verify_njforms_gs_integation', array($this, 'verify_njforms_gs_integation'));
 
-        //For register action in ninja form
+        /* For register action in ninja form */
         add_filter('ninja_forms_register_actions', array($this, 'register_actions'));
-        //for calling file.
+
+        /* for calling file. */
         add_action('ninja_forms_builder_templates', array($this, 'builder_templates'));
 
-        // clear debug logs method using ajax for system status tab
+        /* clear debug logs method using ajax for system status tab*/
         add_action('wp_ajax_nj_clear_debug_logs', array($this, 'nj_clear_debug_logs'));
 
+        /** User for row meta */
         add_filter('plugin_row_meta', [$this, 'plugin_row_meta'], 10, 2);
 
+        // Runs when the form is published in the builder. Priority 99 so it runs after the actions are saved.
+        add_action('ninja_forms_save_form', [$this,'gscnjf_delete_saved_sync_ui'], 99);
     }
 
     /**
@@ -222,7 +233,7 @@ class NJforms_Gsheet_Connector_Init
 
     public function gsheetconnector_load_textdomain()
     {
-        load_plugin_textdomain('gsheetconnector-ninja-forms', false, dirname(plugin_basename(__FILE__)) . '/languages');
+        load_plugin_textdomain('gsheetconnector-ninja-forms', false, dirname(plugin_basename(__FILE__)) . '/languages'); // phpcs:ignore luginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound
     }
 
 
@@ -240,10 +251,15 @@ class NJforms_Gsheet_Connector_Init
     public function verify_njforms_gs_integation($Code = "")
     {
         try {
+            // 🚨 Block subscribers or any user without admin capability
+            if (! current_user_can('manage_options')) {
+                wp_send_json_error('Unauthorized', 403);
+            }
+
             // nonce checksave_gs_settings
             check_ajax_referer('gs-ajax-nonce', 'security');
             /* sanitize incoming data */
-            $Code = sanitize_text_field($_POST["code"]);
+            $Code = isset($_POST['code']) ? sanitize_text_field(wp_unslash($_POST['code'])) : '';
 
             if (!empty($Code)) {
                 update_option('njforms_gs_access_code', $Code);
@@ -253,7 +269,7 @@ class NJforms_Gsheet_Connector_Init
             if (get_option('njforms_gs_access_code') != '') {
                 include_once(NINJAFORMS_GOOGLESHEET_ROOT . '/lib/google-sheets.php');
                 njfgsc_googlesheet::preauth(get_option('njforms_gs_access_code'));
-                //update_option('njforms_gs_verify', 'valid');
+
                 wp_send_json_success();
             } else {
                 update_option('njforms_gs_verify', 'invalid');
@@ -264,6 +280,10 @@ class NJforms_Gsheet_Connector_Init
             wp_send_json_error();
         }
     }
+
+
+
+
     /**
      * AJAX function - Process for Google Sheet
      *
@@ -321,7 +341,7 @@ class NJforms_Gsheet_Connector_Init
                 // check if it is a network activation - if so, run the activation function for each blog id
                 if ($network_wide) {
                     // Get all blog ids
-                    $blogids = $wpdb->get_col("SELECT blog_id FROM {$wpdb->base_prefix}blogs");
+                    $blogids = $wpdb->get_col("SELECT blog_id FROM {$wpdb->base_prefix}blogs"); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
                     foreach ($blogids as $blog_id) {
                         switch_to_blog($blog_id);
                         $this->run_for_site();
@@ -335,7 +355,6 @@ class NJforms_Gsheet_Connector_Init
         } catch (Exception $e) {
             NJForm_gs_Connector_Utility::gs_debug_log("Something Wrong : - " . $e->getMessage());
         }
-
     }
 
 
@@ -347,27 +366,27 @@ class NJforms_Gsheet_Connector_Init
     {
 
         // nonce check
-        check_ajax_referer( 'gs-ajax-nonce', 'security' );
+        check_ajax_referer('gs-ajax-nonce', 'security');
 
         // Initialize WP_Filesystem
-        if ( ! function_exists( 'WP_Filesystem' ) ) {
-           require_once ABSPATH . 'wp-admin/includes/file.php';
+        if (! function_exists('WP_Filesystem')) {
+            require_once ABSPATH . 'wp-admin/includes/file.php';
         }
         global $wp_filesystem;
         WP_Filesystem();
 
-        $existDebugFile = get_option( 'nfgs_debug_log_file' );
+        $existDebugFile = get_option('nfgs_debug_log_file');
         $clear_file_msg = '';
 
         // check if debug unique log file exists
-        if ( ! empty( $existDebugFile ) && $wp_filesystem->exists( $existDebugFile ) ) {
-              $wp_filesystem->put_contents( $existDebugFile, '', FS_CHMOD_FILE );
-              $clear_file_msg = 'Logs are cleared.';
+        if (! empty($existDebugFile) && $wp_filesystem->exists($existDebugFile)) {
+            $wp_filesystem->put_contents($existDebugFile, '', FS_CHMOD_FILE);
+            $clear_file_msg = 'Logs are cleared.';
         } else {
-              $clear_file_msg = 'No log file exists to clear logs.';
+            $clear_file_msg = 'No log file exists to clear logs.';
         }
 
-        wp_send_json_success( $clear_file_msg );
+        wp_send_json_success($clear_file_msg);
     }
 
 
@@ -375,10 +394,7 @@ class NJforms_Gsheet_Connector_Init
      * deactivate the plugin
      * @since 1.0
      */
-    public function njforms_gs_connector_deactivate()
-    {
-
-    }
+    public function njforms_gs_connector_deactivate() {}
 
     /**
      *  Runs on plugin uninstall.
@@ -410,15 +426,11 @@ class NJforms_Gsheet_Connector_Init
             deactivate_plugins($plugin);
 
             // Clear some variables from the URL if necessary
-            if (isset($_GET['activate'])) {
+            if (isset($_GET['activate'])) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
                 // Do not sanitize it because we are destroying the variables from the URL
-                unset($_GET['activate']);
-                unset($GLOBALS['gs_ninjafree']); // Unset global variable after deactivating plugins
+                unset($_GET['activate']); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+                unset($GLOBALS['gs_ninjafree']); // phpcs:ignore WordPress.Security.NonceVerification.Recommended // Unset global variable after deactivating plugins
             }
-
-            // Redirect to the plugins page
-            // wp_redirect(admin_url('plugins.php'));
-            // exit; // Ensure that WordPress redirects immediately
         }
     }
 
@@ -430,6 +442,10 @@ class NJforms_Gsheet_Connector_Init
     {
         if (!class_exists('njform_gs_Connector_Adds')) {
             include(NINJAFORMS_GOOGLESHEET_PATH . 'includes/class-njform-adds.php');
+        }
+
+        if (!class_exists('GSCNINJA_Free_Error_Logs')) {
+            include(NINJAFORMS_GOOGLESHEET_ROOT . '/includes/class-njform-error-logs.php');
         }
     }
 
@@ -463,10 +479,17 @@ class NJforms_Gsheet_Connector_Init
      */
     public function add_css_files()
     {
-        if (is_admin() && (isset($_GET['page']) && ($_GET['page'] == 'njform-google-sheet-config'))) {
-            wp_enqueue_style('njform-gs-connector-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/njform-gs-connector.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
-            wp_enqueue_style('njform-gs-connector-font', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/fontawesome.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
-            wp_enqueue_style('system-debug-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/system-debug.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
+        if (is_admin() && (isset($_GET['page']) && ($_GET['page'] == 'njform-google-sheet-config'))) {// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+            /** New CSS file start */
+            wp_enqueue_style('njform-gs-header-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/header.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
+            wp_enqueue_style('njform-gs-footer-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/footer.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
+            wp_enqueue_style('njform-gs-extra-style-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/extra-style.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
+            wp_enqueue_style('njform-gs-connector-font-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/fontawesome.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
+            wp_enqueue_style('njform-gs-connector-font-min-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/font-awesome.min.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
+            wp_enqueue_style('njform-gs-nf-connector-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/gs-nf-connector.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
+            wp_enqueue_style('njform-gs-pro-feature-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/pro-feature.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
+            wp_enqueue_style('njform-gs-global-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/global.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
+            wp_enqueue_style('njform-gs-responsive-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/css/responsive.css', NINJAFORMS_GOOGLESHEET_VERSION, true);
         }
     }
 
@@ -476,32 +499,26 @@ class NJforms_Gsheet_Connector_Init
      */
     public function add_js_files()
     {
-        if (is_admin() && (isset($_GET['page']) && ($_GET['page'] == 'njform-google-sheet-config'))) {
+        if (is_admin() && (isset($_GET['page']) && ($_GET['page'] == 'njform-google-sheet-config'))) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+
+            // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NotInFooter	
             wp_enqueue_script('njform-gs-connector-js', NINJAFORMS_GOOGLESHEET_URL . 'assets/js/njform-gs-connector.js', NINJAFORMS_GOOGLESHEET_VERSION, true);
+
 
             wp_enqueue_script(
                 'njform-gs-connector-js',
                 NINJAFORMS_GOOGLESHEET_URL . 'assets/js/gsc-ninjaform-popup.js',
                 array('jquery'),
                 NINJAFORMS_GOOGLESHEET_VERSION,
-                true
+                true // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NotInFooter
             );
 
- wp_enqueue_script('system-debug-js', NINJAFORMS_GOOGLESHEET_URL . 'assets/js/system-debug.js', NINJAFORMS_GOOGLESHEET_VERSION, true);
-
-            // wp_enqueue_script(
-            //     'njform-gs-connector-js',
-            //     NINJAFORMS_GOOGLESHEET_URL . 'assets/js/system-debug.js',
-            //     array('jquery'),
-            //     NINJAFORMS_GOOGLESHEET_VERSION,
-            //     true
-            // );
+            //wp_enqueue_script('system-debug-js', NINJAFORMS_GOOGLESHEET_URL . 'assets/js/system-debug.js', NINJAFORMS_GOOGLESHEET_VERSION, true); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NotInFooter	
         }
 
         if (is_admin()) {
-            wp_enqueue_script('njform-gs-connector-notice-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/js/njforms-gs-connector-notice.js', NINJAFORMS_GOOGLESHEET_VERSION, true);
-            wp_enqueue_script('njforms-gs-connector-adds-js', NINJAFORMS_GOOGLESHEET_URL . 'assets/js/njforms-gs-connector-adds.js', NINJAFORMS_GOOGLESHEET_VERSION, true);
-
+            wp_enqueue_script('njform-gs-connector-notice-css', NINJAFORMS_GOOGLESHEET_URL . 'assets/js/njforms-gs-connector-notice.js', NINJAFORMS_GOOGLESHEET_VERSION, true); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NotInFooter	
+            wp_enqueue_script('njforms-gs-connector-adds-js', NINJAFORMS_GOOGLESHEET_URL . 'assets/js/njforms-gs-connector-adds.js', NINJAFORMS_GOOGLESHEET_VERSION, true); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NotInFooter	
         }
     }
 
@@ -523,7 +540,7 @@ class NJforms_Gsheet_Connector_Init
             );
 
             $upgrade_link = sprintf(
-                '<a href="%s" target="_blank"><span style="color: #ff0000; font-weight: bold;">%s</span></a>',
+                '<a href="%s" target="_blank"><span style="color: #008000;">%s</span></a>',
                 esc_url('https://www.gsheetconnector.com/ninja-forms-google-sheet-connector-pro'),
                 esc_html__('Upgrade to PRO', 'gsheetconnector-ninja-forms')
             );
@@ -553,6 +570,14 @@ class NJforms_Gsheet_Connector_Init
             } else if (NINJAFORMS_GOOGLESHEET_DB_VERSION != $plugin_options['version']) {
                 $this->run_on_upgrade();
             }
+
+            /** Create debug log table  */
+            $this->create_njfree_debug_log_table();
+
+            if (!get_option('ninja_plugin_activated_at')) {
+                update_option('ninja_plugin_activated_at', time());
+            }
+
             // Fetch and save the API credentails.
             NJForm_gs_Connector_Utility::instance()->save_api_credentials();
 
@@ -584,9 +609,16 @@ class NJforms_Gsheet_Connector_Init
         $nflogFilePathToDelete = NINJAFORMS_GOOGLESHEET_PATH . "logs/log.txt";
         // Check if the log file exists before attempting to delete
         if (file_exists($nflogFilePathToDelete)) {
-            unlink($nflogFilePathToDelete);
+            unlink($nflogFilePathToDelete); // phpcs:ignore WordPress.WP.AlternativeFunctions.unlink_unlink
         }
         update_site_option('njforms_GS_free_info', $google_sheet_info);
+
+        /** Create debug log table  */
+        $this->create_njfree_debug_log_table();
+
+        if (!get_option('ninja_plugin_activated_at')) {
+            update_option('ninja_plugin_activated_at', time());
+        }
     }
     /*
      * @since 2.3.10
@@ -599,7 +631,7 @@ class NJforms_Gsheet_Connector_Init
         // look through each of the blogs and upgrade the DB
         if (function_exists('is_multisite') && is_multisite()) {
             // Get all blog ids; foreach them and call the uninstall procedure on each of them
-            $blog_ids = $wpdb->get_col("SELECT blog_id FROM {$wpdb->base_prefix}blogs");
+            $blog_ids = $wpdb->get_col("SELECT blog_id FROM {$wpdb->base_prefix}blogs"); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 
             // Get all blog ids; foreach them and call the install procedure on each of them if the plugin table is found
             foreach ($blog_ids as $blog_id) {
@@ -642,41 +674,6 @@ class NJforms_Gsheet_Connector_Init
         }
     }
 
-    // /**
-    //   *  Runs on plugin uninstall.
-    //   *  a static class method or function can be used in an uninstall hook
-    //   *
-    //   *  @since 1.0
-    //   */
-    //  public static function njforms_gs_connector_uninstall() {
-    //  global $wpdb;
-    //  NJforms_Gsheet_Connector_Init::njgs_run_on_uninstall();
-    //  if ( function_exists( 'is_multisite' ) && is_multisite() ) {
-    //      //Get all blog ids; foreach of them call the uninstall procedure
-    //      $blog_ids = $wpdb->get_col( "SELECT blog_id FROM {$wpdb->base_prefix}blogs" );
-
-    //      //Get all blog ids; foreach them and call the install procedure on each of them if the plugin table is found
-    //      foreach ( $blog_ids as $blog_id ) {
-    //      switch_to_blog( $blog_id );
-    //      NJforms_Gsheet_Connector_Init::delete_for_site();
-    //      restore_current_blog();
-    //      }
-    //      return;
-    //  }
-    //  NJforms_Gsheet_Connector_Init::delete_for_site();
-    //  }
-
-    //  /**
-    //   * Called on uninstall - deletes site_options
-    //   *
-    //   * @since 1.5
-    //   */
-    //  private static function njforms_gs_connector_uninstall() {
-    //  if ( ! defined( 'ABSPATH' ) && ! defined( 'WP_UNINSTALL_PLUGIN' ) )
-    //      exit();
-
-    //  delete_site_option( 'gscnj_google_sheet_info' );
-    //  }
 
     /**
      * Called on uninstall - deletes site specific options
@@ -686,10 +683,14 @@ class NJforms_Gsheet_Connector_Init
     private static function delete_for_site()
     {
         try {
-            delete_option('njforms_gs_access_code');
-            delete_option('njforms_gs_verify');
-            delete_option('njforms_gs_token');
-            delete_post_meta_by_key('njforms_gs_settings');
+
+            $saved_value = get_option('gsc_njf_uninstall_plugin_settings', 'No'); // Default to 'No' if option is not set
+            if ($saved_value === 'Yes') {
+                delete_option('njforms_gs_access_code');
+                delete_option('njforms_gs_verify');
+                delete_option('njforms_gs_token');
+                delete_post_meta_by_key('njforms_gs_settings');
+            }
         } catch (Exception $e) {
             NJForm_gs_Connector_Utility::gs_debug_log("Something Wrong : - " . $e->getMessage());
         }
@@ -750,17 +751,17 @@ class NJforms_Gsheet_Connector_Init
     public function nj_clear_debug_logs()
     {
 
-         // 🚨 Block subscribers or any user without admin capability
-        if ( ! current_user_can( 'manage_options' ) ) {
-          wp_send_json_error( 'Unauthorized', 403 );
-       }
+        // 🚨 Block subscribers or any user without admin capability
+        if (! current_user_can('manage_options')) {
+            wp_send_json_error('Unauthorized', 403);
+        }
 
-       // nonce check
-        check_ajax_referer( 'gs-ajax-nonce', 'security' );
+        // nonce check
+        check_ajax_referer('gs-ajax-nonce', 'security');
 
         // Initialize WP_Filesystem
-        if ( ! function_exists( 'WP_Filesystem' ) ) {
-              require_once ABSPATH . 'wp-admin/includes/file.php';
+        if (! function_exists('WP_Filesystem')) {
+            require_once ABSPATH . 'wp-admin/includes/file.php';
         }
         global $wp_filesystem;
         WP_Filesystem();
@@ -768,391 +769,14 @@ class NJforms_Gsheet_Connector_Init
         $log_file = WP_CONTENT_DIR . '/debug.log';
 
         // Clear the log file using WP_Filesystem
-        if ( $wp_filesystem->exists( $log_file ) || $wp_filesystem->put_contents( $log_file, '', FS_CHMOD_FILE ) ) {
-              $wp_filesystem->put_contents( $log_file, '', FS_CHMOD_FILE );
+        if ($wp_filesystem->exists($log_file) || $wp_filesystem->put_contents($log_file, '', FS_CHMOD_FILE)) {
+            $wp_filesystem->put_contents($log_file, '', FS_CHMOD_FILE);
         }
 
         wp_send_json_success();
     }
 
-    /**
-     * Build System Information String
-     * @global object $wpdb
-     * @return string
-     * @since 1.2
-     */
-    public function get_njforms_system_info()
-    {
-        global $wpdb;
 
-        // Get WordPress version
-        $wp_version = get_bloginfo('version');
-
-        // Get theme info
-        $theme_data = wp_get_theme();
-        $theme_name_version = $theme_data->get('Name') . ' ' . $theme_data->get('Version');
-        $parent_theme = $theme_data->get('Template');
-
-        if (!empty($parent_theme)) {
-            $parent_theme_data = wp_get_theme($parent_theme);
-            $parent_theme_name_version = $parent_theme_data->get('Name') . ' ' . $parent_theme_data->get('Version');
-        } else {
-            $parent_theme_name_version = 'N/A';
-        }
-
-        // Check plugin version and subscription plan
-        $plugin_version = defined('NINJAFORMS_GOOGLESHEET_VERSION') ? NINJAFORMS_GOOGLESHEET_VERSION : 'N/A';
-        $subscription_plan = 'FREE';
-
-        // Check Google Account Authentication
-        $api_token_auto = get_option('njforms_gs_token');
-
-        if (!empty($api_token_auto)) {
-            // The user is authenticated through the auto method
-            $google_sheet_auto = new njfgsc_googlesheet();
-            $email_account_auto = $google_sheet_auto->gsheet_print_google_account_email();
-            $connected_email = !empty($email_account_auto) ? esc_html($email_account_auto) : 'Not Auth';
-        } else {
-            // Auto authentication is the only method available
-            $connected_email = 'Not Auth';
-        }
-
-        // Check Google Permission
-        $gs_verify_status = get_option('njforms_gs_verify');
-        $search_permission = ($gs_verify_status === 'valid') ? 'Given' : 'Not Given';
-
-        // Create the system info HTML
-        $system_info = '<div class="system-statuswc">';
-        $system_info .= '<h4><button id="show-info-button" class="info-button">GSheetConnector<span class="dashicons dashicons-arrow-down"></span></h4>';
-        $system_info .= '<div id="info-container" class="info-content" style="display:none;">';
-        $system_info .= '<h3>GSheetConnector</h3>';
-        $system_info .= '<table>';
-        $system_info .= '<tr><td>Plugin Name</td><td>GSheetConnector For Ninja Forms</td></tr>';
-        $system_info .= '<tr><td>Plugin Version</td><td>' . esc_html($plugin_version) . '</td></tr>';
-        $system_info .= '<tr><td>Plugin Subscription Plan</td><td>' . esc_html($subscription_plan) . '</td></tr>';
-        $system_info .= '<tr><td>Connected Email Account</td><td>' . $connected_email . '</td></tr>';
-
-        $gscpclass = 'gscpermission-notgiven';
-        if ($search_permission == "Given") {
-            $gscpclass = 'gscpermission-given';
-        }
-        $system_info .= '<tr><td>Google Drive Permission</td><td class="' . $gscpclass . '">' . esc_html($search_permission) . '</td></tr>';
-
-        $system_info .= '<tr><td>Google Sheet Permission</td><td class="' . $gscpclass . '">' . esc_html($search_permission) . '</td></tr>';
-        $system_info .= '</table>';
-        $system_info .= '</div>';
-        // Add WordPress info
-        // Create a button for WordPress info
-        $system_info .= '<h2><button id="show-wordpress-info-button" class="info-button">WordPress Info<span class="dashicons dashicons-arrow-down"></span></h2>';
-        $system_info .= '<div id="wordpress-info-container" class="info-content" style="display:none;">';
-        $system_info .= '<h3>WordPress Info</h3>';
-        $system_info .= '<table>';
-
-        $system_info .= '<tr><td>Version</td><td>' . esc_html(get_bloginfo('version')) . '</td></tr>';
-        $system_info .= '<tr><td>Site Language</td><td>' . esc_html(get_bloginfo('language')) . '</td></tr>';
-        $system_info .= '<tr><td>Debug Mode</td><td>' . (WP_DEBUG ? 'Enabled' : 'Disabled') . '</td></tr>';
-        $system_info .= '<tr><td>Home URL</td><td>' . esc_url(get_home_url()) . '</td></tr>';
-        $system_info .= '<tr><td>Site URL</td><td>' . esc_url(get_site_url()) . '</td></tr>';
-        $system_info .= '<tr><td>Permalink structure</td><td>' . esc_html(get_option('permalink_structure')) . '</td></tr>';
-        $system_info .= '<tr><td>Is this site using HTTPS?</td><td>' . (is_ssl() ? 'Yes' : 'No') . '</td></tr>';
-        $system_info .= '<tr><td>Is this a multisite?</td><td>' . (is_multisite() ? 'Yes' : 'No') . '</td></tr>';
-        $system_info .= '<tr><td>Can anyone register on this site?</td><td>' . (get_option('users_can_register') ? 'Yes' : 'No') . '</td></tr>';
-        $system_info .= '<tr><td>Is this site discouraging search engines?</td><td>' . (get_option('blog_public') ? 'No' : 'Yes') . '</td></tr>';
-        $system_info .= '<tr><td>Default comment status</td><td>' . esc_html(get_option('default_comment_status')) . '</td></tr>';
-
-        // Validate and sanitize $_SERVER['REMOTE_ADDR']
-        $server_ip = isset($_SERVER['REMOTE_ADDR']) ? sanitize_text_field(wp_unslash($_SERVER['REMOTE_ADDR'])) : '';
-        $environment_type = ( $server_ip === '127.0.0.1' || $server_ip === '::1' ) ? 'localhost' : 'production';
-        $system_info .= '<tr><td>Environment type</td><td>' . esc_html($environment_type) . '</td></tr>';
-
-        // User count
-        $user_count = count_users();
-        $total_users = $user_count['total_users'];
-        $system_info .= '<tr><td>User Count</td><td>' . esc_html($total_users) . '</td></tr>';
-
-        // Safe fallback for blog_publicize option
-        $system_info .= '<tr><td>Communication with WordPress.org</td><td>' . (get_option('blog_publicize') ? 'Yes' : 'No') . '</td></tr>';
-
-        // Validate and sanitize $_SERVER['SERVER_SOFTWARE']
-        $server_software = isset($_SERVER['SERVER_SOFTWARE']) ? sanitize_text_field(wp_unslash($_SERVER['SERVER_SOFTWARE'])) : 'Unavailable';
-        $system_info .= '<tr><td>Web Server</td><td>' . esc_html($server_software) . '</td></tr>';
-
-        $system_info .= '</table>';
-        $system_info .= '</div>';
-
-        // info about active theme
-        $active_theme = wp_get_theme();
-
-        $system_info .= '<h2><button id="show-active-info-button" class="info-button">Active Theme<span class="dashicons dashicons-arrow-down"></span></h2>';
-        $system_info .= '<div id="active-info-container" class="info-content" style="display:none;">';
-        $system_info .= '<h3>Active Theme</h3>';
-        $system_info .= '<table>';
-        $system_info .= '<tr><td>Name</td><td>' . $active_theme->get('Name') . '</td></tr>';
-        $system_info .= '<tr><td>Version</td><td>' . $active_theme->get('Version') . '</td></tr>';
-        $system_info .= '<tr><td>Author</td><td>' . $active_theme->get('Author') . '</td></tr>';
-        $system_info .= '<tr><td>Author website</td><td>' . $active_theme->get('AuthorURI') . '</td></tr>';
-        $system_info .= '<tr><td>Theme directory location</td><td>' . $active_theme->get_template_directory() . '</td></tr>';
-        $system_info .= '</table>';
-        $system_info .= '</div>';
-
-        // Get a list of other plugins you want to check compatibility with
-        $other_plugins = array(
-            'plugin-folder/plugin-file.php', // Replace with the actual plugin slug
-            // Add more plugins as needed
-        );
-
-        // Network Active Plugins
-        if (is_multisite()) {
-            $network_active_plugins = get_site_option('active_sitewide_plugins', array());
-            if (!empty($network_active_plugins)) {
-                $system_info .= '<h2><button id="show-netplug-info-button" class="info-button">Network Active plugins<span class="dashicons dashicons-arrow-down"></span></h2>';
-                $system_info .= '<div id="netplug-info-container" class="info-content" style="display:none;">';
-                $system_info .= '<h3>Network Active plugins</h3>';
-                $system_info .= '<table>';
-                foreach ($network_active_plugins as $plugin => $plugin_data) {
-                    $plugin_data = get_plugin_data(WP_PLUGIN_DIR . '/' . $plugin);
-                    $system_info .= '<tr><td>' . $plugin_data['Name'] . '</td><td>' . $plugin_data['Version'] . '</td></tr>';
-                }
-                // Add more network active plugin statuses here...
-                $system_info .= '</table>';
-                $system_info .= '</div>';
-            }
-        }
-        // Active plugins
-        $system_info .= '<h2><button id="show-acplug-info-button" class="info-button">Active plugins<span class="dashicons dashicons-arrow-down"></span></h2>';
-        $system_info .= '<div id="acplug-info-container" class="info-content" style="display:none;">';
-        $system_info .= '<h3>Active plugins</h3>';
-        $system_info .= '<table>';
-
-        // Retrieve all active plugins data
-        $active_plugins_data = array();
-        $active_plugins = get_option('active_plugins', array());
-        foreach ($active_plugins as $plugin) {
-            $plugin_data = get_plugin_data(WP_PLUGIN_DIR . '/' . $plugin);
-            $active_plugins_data[$plugin] = array(
-                'name' => $plugin_data['Name'],
-                'version' => $plugin_data['Version'],
-                'count' => 0, // Initialize the count to zero
-            );
-        }
-
-        // Count the number of active installations for each plugin
-        $all_plugins = get_plugins();
-        foreach ($all_plugins as $plugin_file => $plugin_data) {
-            if (array_key_exists($plugin_file, $active_plugins_data)) {
-                $active_plugins_data[$plugin_file]['count']++;
-            }
-        }
-
-        // Sort plugins based on the number of active installations (descending order)
-        uasort($active_plugins_data, function ($a, $b) {
-            return $b['count'] - $a['count'];
-        });
-
-        // Display the top 5 most used plugins
-        $counter = 0;
-        foreach ($active_plugins_data as $plugin_data) {
-            $system_info .= '<tr><td>' . $plugin_data['name'] . '</td><td>' . $plugin_data['version'] . '</td></tr>';
-            // $counter++;
-            // if ($counter >= 5) {
-            //     break;
-            // }
-        }
-        $system_info .= '</table>';
-        $system_info .= '</div>';
-        // Webserver Configuration
-        // Load WP_Filesystem for file permission check
-        if ( ! function_exists('WP_Filesystem') ) {
-            require_once ABSPATH . 'wp-admin/includes/file.php';
-        }
-        global $wp_filesystem;
-        WP_Filesystem();
-
-        // Check .htaccess writable status using WP_Filesystem
-        $htaccess_path = ABSPATH . '.htaccess';
-        $htaccess_writable = $wp_filesystem->is_writable( $htaccess_path ) ? 'Writable' : 'Non Writable';
-
-        // Get current server time using gmdate() (timezone-safe)
-        $current_server_time = gmdate('Y-m-d H:i:s');
-
-        $system_info .= '<h2><button id="show-server-info-button" class="info-button">Server<span class="dashicons dashicons-arrow-down"></span></h2>';
-        $system_info .= '<div id="server-info-container" class="info-content" style="display:none;">';
-        $system_info .= '<h3>Server</h3>';
-        $system_info .= '<table>';
-        $system_info .= '<p>The options shown below relate to your server setup. If changes are required, you may need your web host’s assistance.</p>';
-
-        $system_info .= '<tr><td>Server Architecture</td><td>' . esc_html(php_uname('s')) . '</td></tr>';
-        $web_server = isset($_SERVER['SERVER_SOFTWARE']) ? sanitize_text_field(wp_unslash($_SERVER['SERVER_SOFTWARE'])) : 'Unavailable';
-        $system_info .= '<tr><td>Web Server</td><td>' . esc_html($web_server) . '</td></tr>';
-        $system_info .= '<tr><td>PHP Version</td><td>' . esc_html(phpversion()) . '</td></tr>';
-        $system_info .= '<tr><td>PHP SAPI</td><td>' . esc_html(php_sapi_name()) . '</td></tr>';
-        $system_info .= '<tr><td>PHP Max Input Variables</td><td>' . esc_html(ini_get('max_input_vars')) . '</td></tr>';
-        $system_info .= '<tr><td>PHP Time Limit</td><td>' . esc_html(ini_get('max_execution_time')) . ' seconds</td></tr>';
-        $system_info .= '<tr><td>PHP Memory Limit</td><td>' . esc_html(ini_get('memory_limit')) . '</td></tr>';
-        $system_info .= '<tr><td>Max Input Time</td><td>' . esc_html(ini_get('max_input_time')) . ' seconds</td></tr>';
-        $system_info .= '<tr><td>Upload Max Filesize</td><td>' . esc_html(ini_get('upload_max_filesize')) . '</td></tr>';
-        $system_info .= '<tr><td>PHP Post Max Size</td><td>' . esc_html(ini_get('post_max_size')) . '</td></tr>';
-        $system_info .= '<tr><td>cURL Version</td><td>' . esc_html(curl_version()['version']) . '</td></tr>';
-        $system_info .= '<tr><td>Is SUHOSIN Installed?</td><td>' . (extension_loaded('suhosin') ? 'Yes' : 'No') . '</td></tr>';
-        $system_info .= '<tr><td>Is the Imagick Library Available?</td><td>' . (extension_loaded('imagick') ? 'Yes' : 'No') . '</td></tr>';
-        $system_info .= '<tr><td>Are Pretty Permalinks Supported?</td><td>' . (get_option('permalink_structure') ? 'Yes' : 'No') . '</td></tr>';
-        $system_info .= '<tr><td>.htaccess Rules</td><td>' . esc_html($htaccess_writable) . '</td></tr>';
-        $system_info .= '<tr><td>Current Time</td><td>' . esc_html(current_time('mysql')) . '</td></tr>';
-        $system_info .= '<tr><td>Current UTC Time</td><td>' . esc_html(current_time('mysql', true)) . '</td></tr>';
-        $system_info .= '<tr><td>Current Server Time</td><td>' . esc_html($current_server_time) . '</td></tr>';
-
-        $system_info .= '</table>';
-        $system_info .= '</div>';
-
-
-        // Database Configuration
-        $system_info .= '<h2><button id="show-database-info-button" class="info-button">Database<span class="dashicons dashicons-arrow-down"></span></h2>';
-        $system_info .= '<div id="database-info-container" class="info-content" style="display:none;">';
-        $system_info .= '<h3>Database</h3>';
-        $system_info .= '<table>';
-
-        $database_extension = 'mysqli';
-
-        // Cached queries to avoid PHPCS warnings
-        $database_server_version = wp_cache_get('gs_db_server_version', 'gsc');
-        if (false === $database_server_version) {
-            // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery -- Safe, read-only server info
-            $database_server_version = $wpdb->get_var("SELECT VERSION() as version");
-            wp_cache_set('gs_db_server_version', $database_server_version, 'gsc', 3600);
-        }
-
-        $max_allowed_packet_size = wp_cache_get('gs_max_allowed_packet', 'gsc');
-        if (false === $max_allowed_packet_size) {
-            // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery -- Safe, used for diagnostics only
-            $max_allowed_packet_size = $wpdb->get_var("SHOW VARIABLES LIKE 'max_allowed_packet'");
-            wp_cache_set('gs_max_allowed_packet', $max_allowed_packet_size, 'gsc', 3600);
-        }
-
-        $max_connections_number = wp_cache_get('gs_max_connections', 'gsc');
-        if (false === $max_connections_number) {
-            // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery -- Safe, used for diagnostics only
-            $max_connections_number = $wpdb->get_var("SHOW VARIABLES LIKE 'max_connections'");
-            wp_cache_set('gs_max_connections', $max_connections_number, 'gsc', 3600);
-        }
-
-        $database_client_version = $wpdb->db_version();
-        $database_username = DB_USER;
-        $database_host = DB_HOST;
-        $database_name = DB_NAME;
-        $table_prefix = $wpdb->prefix;
-        $database_charset = $wpdb->charset;
-        $database_collation = $wpdb->collate;
-
-        $system_info .= '<tr><td>Extension</td><td>' . esc_html($database_extension) . '</td></tr>';
-        $system_info .= '<tr><td>Server Version</td><td>' . esc_html($database_server_version) . '</td></tr>';
-        $system_info .= '<tr><td>Client Version</td><td>' . esc_html($database_client_version) . '</td></tr>';
-        $system_info .= '<tr><td>Database Username</td><td>' . esc_html($database_username) . '</td></tr>';
-        $system_info .= '<tr><td>Database Host</td><td>' . esc_html($database_host) . '</td></tr>';
-        $system_info .= '<tr><td>Database Name</td><td>' . esc_html($database_name) . '</td></tr>';
-        $system_info .= '<tr><td>Table Prefix</td><td>' . esc_html($table_prefix) . '</td></tr>';
-        $system_info .= '<tr><td>Database Charset</td><td>' . esc_html($database_charset) . '</td></tr>';
-        $system_info .= '<tr><td>Database Collation</td><td>' . esc_html($database_collation) . '</td></tr>';
-        $system_info .= '<tr><td>Max Allowed Packet Size</td><td>' . esc_html($max_allowed_packet_size) . '</td></tr>';
-        $system_info .= '<tr><td>Max Connections Number</td><td>' . esc_html($max_connections_number) . '</td></tr>';
-        $system_info .= '</table>';
-        $system_info .= '</div>';
-
-        // wordpress constants
-        $system_info .= '<h2><button id="show-wrcons-info-button" class="info-button">WordPress Constants<span class="dashicons dashicons-arrow-down"></span></h2>';
-        $system_info .= '<div id="wrcons-info-container" class="info-content" style="display:none;">';
-        $system_info .= '<h3>WordPress Constants</h3>';
-        $system_info .= '<table>';
-        // Add WordPress Constants information
-        $system_info .= '<tr><td>ABSPATH</td><td>' . esc_html(ABSPATH) . '</td></tr>';
-        $system_info .= '<tr><td>WP_HOME</td><td>' . esc_html(home_url()) . '</td></tr>';
-        $system_info .= '<tr><td>WP_SITEURL</td><td>' . esc_html(site_url()) . '</td></tr>';
-        $system_info .= '<tr><td>WP_CONTENT_DIR</td><td>' . esc_html(WP_CONTENT_DIR) . '</td></tr>';
-        $system_info .= '<tr><td>WP_PLUGIN_DIR</td><td>' . esc_html(WP_PLUGIN_DIR) . '</td></tr>';
-        $system_info .= '<tr><td>WP_MEMORY_LIMIT</td><td>' . esc_html(WP_MEMORY_LIMIT) . '</td></tr>';
-        $system_info .= '<tr><td>WP_MAX_MEMORY_LIMIT</td><td>' . esc_html(WP_MAX_MEMORY_LIMIT) . '</td></tr>';
-        $system_info .= '<tr><td>WP_DEBUG</td><td>' . (defined('WP_DEBUG') && WP_DEBUG ? 'Yes' : 'No') . '</td></tr>';
-        $system_info .= '<tr><td>WP_DEBUG_DISPLAY</td><td>' . (defined('WP_DEBUG_DISPLAY') && WP_DEBUG_DISPLAY ? 'Yes' : 'No') . '</td></tr>';
-        $system_info .= '<tr><td>SCRIPT_DEBUG</td><td>' . (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? 'Yes' : 'No') . '</td></tr>';
-        $system_info .= '<tr><td>WP_CACHE</td><td>' . (defined('WP_CACHE') && WP_CACHE ? 'Yes' : 'No') . '</td></tr>';
-        $system_info .= '<tr><td>CONCATENATE_SCRIPTS</td><td>' . (defined('CONCATENATE_SCRIPTS') && CONCATENATE_SCRIPTS ? 'Yes' : 'No') . '</td></tr>';
-        $system_info .= '<tr><td>COMPRESS_SCRIPTS</td><td>' . (defined('COMPRESS_SCRIPTS') && COMPRESS_SCRIPTS ? 'Yes' : 'No') . '</td></tr>';
-        $system_info .= '<tr><td>COMPRESS_CSS</td><td>' . (defined('COMPRESS_CSS') && COMPRESS_CSS ? 'Yes' : 'No') . '</td></tr>';
-        // Manually define the environment type (example values: 'development', 'staging', 'production')
-        $environment_type = 'development';
-
-        // Display the environment type
-        $system_info .= '<tr><td>WP_ENVIRONMENT_TYPE</td><td>' . esc_html($environment_type) . '</td></tr>';
-
-        $system_info .= '<tr><td>WP_DEVELOPMENT_MODE</td><td>' . (defined('WP_DEVELOPMENT_MODE') && WP_DEVELOPMENT_MODE ? 'Yes' : 'No') . '</td></tr>';
-        $system_info .= '<tr><td>DB_CHARSET</td><td>' . esc_html(DB_CHARSET) . '</td></tr>';
-        $system_info .= '<tr><td>DB_COLLATE</td><td>' . esc_html(DB_COLLATE) . '</td></tr>';
-
-        $system_info .= '</table>';
-        $system_info .= '</div>';
-
-        // Filesystem Permission
-        // Load WP_Filesystem if not already available
-        if ( ! function_exists('WP_Filesystem') ) {
-            require_once ABSPATH . 'wp-admin/includes/file.php';
-        }
-        global $wp_filesystem;
-        WP_Filesystem();
-
-        // Get directory paths
-        $upload_dir = wp_upload_dir()['basedir'];
-        $theme_root = get_theme_root();
-
-        // Check writability using WP_Filesystem
-        $main_dir_writable     = $wp_filesystem->is_writable( ABSPATH ) ? 'Writable' : 'Not Writable';
-        $wp_content_writable   = $wp_filesystem->is_writable( WP_CONTENT_DIR ) ? 'Writable' : 'Not Writable';
-        $upload_dir_writable   = $wp_filesystem->is_writable( $upload_dir ) ? 'Writable' : 'Not Writable';
-        $plugin_dir_writable   = $wp_filesystem->is_writable( WP_PLUGIN_DIR ) ? 'Writable' : 'Not Writable';
-        $theme_dir_writable    = $wp_filesystem->is_writable( $theme_root ) ? 'Writable' : 'Not Writable';
-
-        $system_info .= '<h2><button id="show-ftps-info-button" class="info-button">Filesystem Permission <span class="dashicons dashicons-arrow-down"></span></button></h2>';
-        $system_info .= '<div id="ftps-info-container" class="info-content" style="display:none;">';
-        $system_info .= '<h3>Filesystem Permission</h3>';
-        $system_info .= '<p>Shows whether WordPress is able to write to the directories it needs access to.</p>';
-        $system_info .= '<table>';
-
-        $system_info .= '<tr><td>The main WordPress directory</td><td>' . esc_html(ABSPATH) . '</td><td>' . esc_html($main_dir_writable) . '</td></tr>';
-        $system_info .= '<tr><td>The wp-content directory</td><td>' . esc_html(WP_CONTENT_DIR) . '</td><td>' . esc_html($wp_content_writable) . '</td></tr>';
-        $system_info .= '<tr><td>The uploads directory</td><td>' . esc_html($upload_dir) . '</td><td>' . esc_html($upload_dir_writable) . '</td></tr>';
-        $system_info .= '<tr><td>The plugins directory</td><td>' . esc_html(WP_PLUGIN_DIR) . '</td><td>' . esc_html($plugin_dir_writable) . '</td></tr>';
-        $system_info .= '<tr><td>The themes directory</td><td>' . esc_html($theme_root) . '</td><td>' . esc_html($theme_dir_writable) . '</td></tr>';
-
-        $system_info .= '</table>';
-        $system_info .= '</div>';
-
-        return $system_info;
-    }
-
-    public function display_error_log()
-    {
-         // Define the path to your debug log file
-         $debug_log_file = WP_CONTENT_DIR . '/debug.log';
-
-         // Check if the debug log file exists
-         if (file_exists($debug_log_file)) {
-             // Read the contents of the debug log file
-             $debug_log_contents = file_get_contents($debug_log_file);
-
-             // Split the log content into an array of lines
-             $log_lines = explode("\n", $debug_log_contents);
-
-             // Get the last 100 lines in reversed order
-             $last_100_lines = array_slice(array_reverse($log_lines), 0, 100);
-
-             // Join the lines back together with line breaks
-             $last_100_log = implode("\n", $last_100_lines);
-            // Output the last 100 lines in reversed order in a textarea
-            ?>
-            <textarea class="errorlog" rows="20" cols="80"><?php echo esc_textarea($last_100_log); ?></textarea>
-            <?php
-        } else {
-             echo 'Debug log file not found.';
-        }
-    }
 
     /**
      * Add function to check plugins is Activate or not
@@ -1167,6 +791,75 @@ class NJforms_Gsheet_Connector_Init
             return true;
         }
         return false;
+    }
+    /** Create ninja form debug log table */
+    public function create_njfree_debug_log_table()
+    {
+
+        global $wpdb;
+
+        $table = $wpdb->prefix . 'gscnjf_error_logs';
+        $charset = $wpdb->get_charset_collate();
+
+        $sql = "CREATE TABLE {$table} (
+            id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+            error_id VARCHAR(191) NOT NULL,
+            code INT NOT NULL,
+            message TEXT NOT NULL,
+            details LONGTEXT NULL,
+            created_at DATETIME NOT NULL,
+            PRIMARY KEY (id),
+            KEY error_id (error_id),
+            KEY code (code)
+        ) {$charset};";
+
+        require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+        dbDelta($sql);
+    }
+
+    /**
+     * Delete the stored gscnjf_fields_sync_ui value for every action of a form.
+     */
+    function gscnjf_delete_saved_sync_ui($form_id)
+    {
+        global $wpdb;
+
+        $form_id = absint($form_id);
+
+        // Fallback: the builder posts the form as JSON in $_POST['form'].
+        if (! $form_id && ! empty($_POST['form'])) {
+            $posted  = json_decode(wp_unslash($_POST['form']), true);
+            $form_id = isset($posted['id']) ? absint($posted['id']) : 0;
+        }
+
+        if (! $form_id) {
+            return;
+        }
+
+        $actions_table = $wpdb->prefix . 'nf3_actions';
+        $meta_table    = $wpdb->prefix . 'nf3_action_meta';
+
+        $action_ids = $wpdb->get_col($wpdb->prepare(
+            "SELECT DISTINCT m.parent_id
+         FROM {$meta_table} m
+         INNER JOIN {$actions_table} a ON a.id = m.parent_id
+         WHERE a.parent_id = %d AND m.`key` = %s",
+            $form_id,
+            'gscnjf_fields_sync_ui'
+        ));
+
+        if (empty($action_ids)) {
+            return;
+        }
+
+        $action_ids   = array_map('absint', $action_ids);
+        $placeholders = implode(',', array_fill(0, count($action_ids), '%d'));
+
+        $deleted = $wpdb->query($wpdb->prepare(
+            "DELETE FROM {$meta_table}
+         WHERE `key` = %s AND parent_id IN ($placeholders)",
+            array_merge(array('gscnjf_fields_sync_ui'), $action_ids)
+        ));
     }
 }
 

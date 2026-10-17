@@ -51,7 +51,7 @@ class njform_gs_Connector_Adds {
   public function njform_gs_set_auth_expired_adds_interval() {
       // check nonce
       check_ajax_referer( 'njform_gs_auth_expired_adds_ajax_nonce', 'security' );
-      $time_interval = date( 'Y-m-d', strtotime( '+30 day' ) );
+      $time_interval = gmdate( 'Y-m-d', strtotime( '+30 day' ) );
       update_option( 'njform_gs_auth_expired_display_add_interval', $time_interval );
       wp_send_json_success();
    }
@@ -80,9 +80,10 @@ class njform_gs_Connector_Adds {
          'type'    => 'auth-expired-notice',
          'message' => $review_text
       ) );
-      echo $rating_block;
+      echo $rating_block;// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
    }
    
 }
-// construct an instance so that the actions get loaded
-$njform_gs_connector_adds = new njform_gs_Connector_Adds();
+
+// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
+$njform_gs_connector_adds = new njform_gs_Connector_Adds();// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound

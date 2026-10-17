@@ -1,1047 +1,2045 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "Project-Id-Version: GSheetConnector For Ninja Forms\n"
-"POT-Creation-Date: 2025-08-08 16:37+0530\n"
-"PO-Revision-Date: 2025-08-08 16:39+0530\n"
-"Language-Team: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: gsheetconnector-ninjaforms.php\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-14 16:07+0530\n"
+"PO-Revision-Date: 2026-10-14 19:22+0530\n"
+"Last-Translator: POForge <noreply@poforge.com>\n"
+"Language-Team: ar <noreply@poforge.com>\n"
 "Language: ar\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && "
+"n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+"X-Generator: Poedit 3.9\n"
 
-#: gsheetconnector-ninjaforms.php:76
-#, php-format
-msgid "Hey %1$s"
-msgstr "مرحبا %1$s"
-
-#: gsheetconnector-ninjaforms.php:82
-#, php-format
 msgid ""
-"Please help us improve %1$s! If you opt-in, some data about your usage of "
-"%1$s will be sent to %2$s. If you skip this, that's okay! %1$s will still "
-"work just fine."
+"Please help us improve %1$s! If you opt-in, some data about your usage of %1$s "
+"will be sent to %2$s. If you skip this, that's okay! %1$s will still work just "
+"fine."
 msgstr ""
-"الرجاء مساعدتنا في تحسين %1$s! إذا قمت بالاشتراك، إرسال بعض البيانات حول "
-"استخدامك %1$s إلى %2$s. إذا تخطيت هذا ، فلا بأس بذلك! %1$s ستظل تعمل بشكل "
-"جيد."
+"يرجى مساعدتنا في تحسين %1$s! إذا كنت ترغب في ذلك، سيتم إرسال بعض البيانات حول "
+"استخدامك لـ %1$s إلى %2$s. إذا تخطيت هذا، فلا بأس! ستستمر %1$s في العمل بشكل جيد."
 
-#: gsheetconnector-ninjaforms.php:211
 msgid "View Documentation"
-msgstr "الوثائق"
+msgstr "عرض الوثائق"
 
-#: gsheetconnector-ninjaforms.php:211 includes/pages/admin-footer.php:27
 msgid "Docs"
-msgstr "مستندات"
+msgstr "المستندات"
 
-#: gsheetconnector-ninjaforms.php:212
 msgid "Get Support"
-msgstr "الحصول على الدعم"
+msgstr "احصل على الدعم"
 
-#: gsheetconnector-ninjaforms.php:212 includes/pages/admin-footer.php:26
 msgid "Support"
 msgstr "الدعم"
 
-#: gsheetconnector-ninjaforms.php:446
-msgid ""
-"Ninja Form Add-on requires Ninja-Forms plugin to be installed and activated."
-msgstr ""
-"تتطلب الوظيفة الإضافية لنموذج النينجا تثبيت البرنامج المساعد Ninja-Forms "
-"وتنشيطه."
+msgid "Ninja Form Add-on requires Ninja-Forms plugin to be installed and activated."
+msgstr "يتطلب إضافة نموذج نينجا تثبيت وتفعيل الإضافة Ninja-Forms."
 
-#: gsheetconnector-ninjaforms.php:518
 msgid "Settings"
 msgstr "الإعدادات"
 
-#: gsheetconnector-ninjaforms.php:524
-#: includes/class-njforms-integration.php:357
 msgid "Upgrade to PRO"
-msgstr "التطور للنسخة المدفوعة المتطورة"
+msgstr "ترقية إلى برو"
 
-#: gsheetconnector-ninjaforms.php:727
-msgid "Ninja Forms - GSheetConnector"
-msgstr "نماذج النينجا - GSheetConnector"
+msgid "GSheetConnector For Ninja Forms"
+msgstr "موصل GSheetConnector لنماذج نينجا"
 
-#: includes/Action/NinjaFormsGoogleSheet.php:19
-#: includes/class-njform-utility.php:26
-msgid "Google Sheet"
-msgstr "عنوان URL لورقة جوجل"
+msgid "GSheetConnector for Ninja Forms"
+msgstr "GSheetConnector لـ Ninja Forms"
 
-#: includes/Action/NinjaFormsGoogleSheet.php:29
-msgid "Google Sheet Name"
-msgstr "اسم ورقة جوجل"
+msgid "The above Action Name must always be unique and not duplicated."
+msgstr "يجب أن يكون اسم الإجراء أعلاه فريدًا دائمًا وليس مكررًا."
 
-#: includes/Action/NinjaFormsGoogleSheet.php:33
-msgid ""
-"Go to your google account and click on\"Google apps\" icon and than click "
-"\"Sheets\". Select the name of the appropriate sheet you want to link your "
-"contact form or create new sheet."
+msgid "Google SpreadSheet Name"
+msgstr "اسم جدول بيانات Google"
+
+msgid "Enter the exact name of your Google Spreadsheet (as shown in Google Sheets)."
 msgstr ""
-"انتقل إلى حساب google الخاص بك وانقر على أيقونة \"تطبيقات Google\" ثم انقر "
-"فوق \"جداول البيانات\". حدد اسم الورقة المناسبة التي تريد ربط نموذج الاتصال "
-"الخاص بك أو إنشاء ورقة جديدة."
+"أدخل الاسم الدقيق لجدول بيانات Google الخاص بك (كما هو موضح في Google Sheets)."
 
-#: includes/Action/NinjaFormsGoogleSheet.php:37
-#: includes/Action/NinjaFormsGoogleSheet.php:59
-#: includes/Action/NinjaFormsGoogleSheet.php:81
-#: includes/Action/NinjaFormsGoogleSheet.php:103
 msgid "Ninja Field Alias"
-msgstr "الاسم المستعار لحقل النينجا"
+msgstr "اسم حقل نينجا"
 
-#: includes/Action/NinjaFormsGoogleSheet.php:42
-#: includes/Action/NinjaFormsGoogleSheet.php:64
-#: includes/Action/NinjaFormsGoogleSheet.php:86
-#: includes/Action/NinjaFormsGoogleSheet.php:108
 msgid "Ninja Forms Field Key"
-msgstr "مفتاح حقل نماذج النينجا"
+msgstr "مفتاح حقل نينجا"
 
-#: includes/Action/NinjaFormsGoogleSheet.php:51
-msgid "Google Sheet ID"
-msgstr "معرف جدول بيانات جوجل"
+msgid "Google SpreadSheet ID"
+msgstr "معرف جدول بيانات Google"
 
-#: includes/Action/NinjaFormsGoogleSheet.php:55
-msgid "You can get sheet id from your sheet URL."
-msgstr "يمكنك الحصول على معرف الورقة من عنوان URL للورقة."
+msgid "Paste the Spreadsheet ID from your Google Sheet URL."
+msgstr "الصق معرف الجدول من عنوان URL لجدول بيانات Google الخاص بك."
 
-#: includes/Action/NinjaFormsGoogleSheet.php:73
-msgid "Google Sheet Tab Name"
-msgstr "اسم علامة تبويب ورقة Google"
+msgid "Google SpreadSheet Tab Name"
+msgstr "اسم علامة جدول بيانات Google"
 
-#: includes/Action/NinjaFormsGoogleSheet.php:77
 msgid ""
-"Open your Google Sheet with which you want to link your contact form . You "
-"will notice a tab names at bottom of the screen. Copy the tab name where you "
-"want to have an entry of contact form."
+"nter the exact sheet tab name (e.g., Sheet1) from the bottom of your Google "
+"Spreadsheet."
 msgstr ""
-"افتح ورقة Google التي تريد ربط نموذج الاتصال بها . ستلاحظ أسماء علامات "
-"التبويب في أسفل الشاشة. انسخ اسم علامة التبويب حيث تريد إدخال نموذج الاتصال."
+"أدخل الاسم الدقيق لعلامة الورقة (مثل، Sheet1) من أسفل جدول بيانات Google الخاص بك."
 
-#: includes/Action/NinjaFormsGoogleSheet.php:95
-msgid "Google Sheet Tab ID"
-msgstr "معرف علامة تبويب ورقة Google"
+msgid "Google SpreadSheet Tab ID"
+msgstr "معرف علامة جدول بيانات Google"
 
-#: includes/Action/NinjaFormsGoogleSheet.php:99
-msgid "You can get tab id from your sheet URL."
-msgstr "يمكنك الحصول على معرف علامة التبويب من عنوان URL للورقة."
+msgid "Get the Tab ID from your sheet URL after gid=."
+msgstr "احصل على معرف العلامة من عنوان URL للورقة بعد gid=."
 
-#: includes/Action/NinjaFormsGoogleSheet.php:138
-msgid "Google Sheet URL"
-msgstr "عنوان URL لورقة جوجل"
+msgid "View Spreadsheet"
+msgstr "عرض جدول البيانات"
 
-#: includes/Action/NinjaFormsGoogleSheet.php:150
-msgid "Unlock More Features"
-msgstr "فتح المزيد من الميزات"
+msgid "Download Spreadsheet"
+msgstr "تحميل جدول البيانات"
 
-#: includes/Action/NinjaFormsGoogleSheet.php:163
-msgid "Upgrade To Pro"
-msgstr "الترقية إلى برو"
+msgid "Download Spreadsheet (PRO)"
+msgstr "تحميل جدول البيانات (PRO)"
 
-#: includes/Action/NinjaFormsGoogleSheet.php:175
-msgid "<strong>Authentication Required:</strong> You must have to"
-msgstr "<strong>المصادقة المطلوبة:</strong> يجب أن تضطر إلى"
+msgid "Automatic Google Sheets Configuration"
+msgstr "تكوين Google Sheets تلقائيًا"
 
-#: includes/Action/NinjaFormsGoogleSheet.php:176
-msgid "Authenticate using your Google Account"
-msgstr "المصادقة باستخدام حسابك على Google"
+msgid "PRO"
+msgstr "برو"
 
-#: includes/Action/NinjaFormsGoogleSheet.php:176
+msgid "- Select -"
+msgstr "- اختر -"
+
+msgid "Google Tab Name"
+msgstr "اسم علامة Google"
+
+msgid "Spreadsheet Sorting"
+msgstr "فرز جدول البيانات"
+
+msgid "Sort Column"
+msgstr "عمود الفرز"
+
+msgid "Sort Order"
+msgstr "ترتيب الفرز"
+
+msgid "Ascending"
+msgstr "تصاعدي"
+
+msgid "Descending"
+msgstr "تنازلي"
+
+msgid "Conditional Logic"
+msgstr "المنطق الشرطي"
+
 msgid ""
-"along with Google Drive and Google Sheets Permissions in order to enable the "
-"settings for configuration."
+"The Enable Conditional Logic option allows you to create rules to dynamically send "
+"(or skip) the submission to Google Sheet based on field values."
 msgstr ""
-"جنبا إلى جنب مع Google Drive وأذونات جداول بيانات Google لتمكين إعدادات "
-"التكوين."
+"يسمح لك خيار تمكين المنطق الشرطي بإنشاء قواعد لإرسال (أو تخطي) التقديم إلى جدول "
+"بيانات Google ديناميكيًا بناءً على قيم الحقول."
 
-#: includes/Config/PluginSettings.php:7
+msgid "Process This Feed If"
+msgstr "معالجة هذا التغذية إذا"
+
+msgid "All"
+msgstr "الكل"
+
+msgid "Any"
+msgstr "أي"
+
+msgid "Header Settings"
+msgstr "إعدادات الرأس"
+
+msgid ""
+"Customize the appearance and behavior of your Spreadsheet headers and rows for "
+"better readability and organization."
+msgstr "خصص مظهر وسلوك رؤوس وصفوف جدول البيانات الخاص بك لتحسين القراءة والتنظيم."
+
+msgid "Freeze Header Row"
+msgstr "تجميد صف الرأس"
+
+msgid "Freeze header if you want to freeze first row considered as header."
+msgstr "قم بتجميد الرأس إذا كنت تريد تجميد الصف الأول الذي يعتبر رأسًا."
+
+msgid "Color Appearance"
+msgstr "مظهر اللون"
+
+msgid "Please Enable If you want to color rows of header/ odd / even rows"
+msgstr "يرجى التمكين إذا كنت تريد تلوين صفوف الرأس / الصفوف الفردية / الصفوف الزوجية"
+
+msgid "Header Color"
+msgstr "لون الرأس"
+
+msgid "Odd Rows Color"
+msgstr "لون الصفوف الفردية"
+
+msgid "Even Rows Color"
+msgstr "لون الصفوف الزوجية"
+
+msgid "Header Appearance"
+msgstr "مظهر الرأس"
+
+msgid ""
+"Please Enable if you want to style the header row text (font style, size and color)"
+msgstr "يرجى التمكين إذا كنت تريد تنسيق نص صف الرأس (نمط الخط، الحجم واللون)"
+
+msgid "Font Style"
+msgstr "نمط الخط"
+
+msgid "Normal"
+msgstr "عادي"
+
+msgid "Italic"
+msgstr "مائل"
+
+msgid "Bold"
+msgstr "عريض"
+
+msgid "Font Size"
+msgstr "حجم الخط"
+
+msgid "Font Color"
+msgstr "لون الخط"
+
+msgid "Row Appearance"
+msgstr "مظهر الصف"
+
+msgid ""
+"Please Enable if you want to style the data row text (font style, size and color)"
+msgstr "يرجى التمكين إذا كنت تريد تنسيق نص صف البيانات (نمط الخط، الحجم واللون)"
+
+msgid "Google Speadsheets Data Sync"
+msgstr "مزامنة بيانات Google Sheets"
+
+msgid ""
+"Easily sync past form submissions to your connected Google Spreadsheet. Choose a "
+"date range and ensure your spreadsheet stays complete and up to date."
+msgstr ""
+"قم بسهولة بمزامنة تقديمات النموذج السابقة إلى جدول بيانات Google المتصل بك. اختر "
+"نطاق تاريخ وتأكد من بقاء جدول البيانات لديك كاملاً ومحدثًا."
+
+msgid "Sync Entries"
+msgstr "مزامنة الإدخالات"
+
+msgid "Google Sheets Setup Required"
+msgstr "تكوين Google Sheets مطلوب"
+
+msgid ""
+"To start sending form entries to Google Sheets, please connect your Google account "
+"first."
+msgstr ""
+"للبدء في إرسال إدخالات النموذج إلى Google Sheets، يرجى ربط حساب Google الخاص بك "
+"أولاً."
+
+msgid "your selected Method is : Existing Client / Secret Key (Auto Setup)."
+msgstr "الطريقة المحددة هي: عميل موجود / مفتاح سري (إعداد تلقائي)."
+
+msgid "Click on the Sign in with Google button"
+msgstr "انقر على زر تسجيل الدخول باستخدام Google"
+
+msgid "Log in using your Google account"
+msgstr "قم بتسجيل الدخول باستخدام حساب Google الخاص بك"
+
+msgid "Select the Google account where your Sheets are stored"
+msgstr "اختر حساب Google حيث يتم تخزين جداول البيانات الخاصة بك"
+
+msgid "Grant access to: Google Drive & Google Sheets"
+msgstr "امنح الوصول إلى: Google Drive و Google Sheets"
+
+msgid "Save the authentication code if prompted"
+msgstr "احفظ رمز المصادقة إذا طُلب منك ذلك"
+
+msgid "Go to Integration Setup"
+msgstr "انتقل إلى إعداد التكامل"
+
+msgid "Select Fields To Sync"
+msgstr "حدد الحقول للمزامنة"
+
+msgid "Select All Fields"
+msgstr "تحديد جميع الحقول"
+
+msgid "Submission ID"
+msgstr "معرف التقديم"
+
+msgid "Is"
+msgstr "هو"
+
+msgid "Is Not"
+msgstr "ليس"
+
+msgid "Contains"
+msgstr "يتضمن"
+
+msgid "Does Not Contain"
+msgstr "لا يتضمن"
+
+msgid "Starts With"
+msgstr "يبدأ بـ"
+
+msgid "Ends With"
+msgstr "ينتهي بـ"
+
+msgid "Greater Than"
+msgstr "أكبر من"
+
+msgid "Less Than"
+msgstr "أقل من"
+
+msgid "Is Empty"
+msgstr "فارغ"
+
+msgid "Is Not Empty"
+msgstr "ليس فارغاً"
+
+msgid "Enter a value"
+msgstr "أدخل قيمة"
+
+msgid "Auto fetch Google Sheets list"
+msgstr "جلب قائمة Google Sheets تلقائيًا"
+
+msgid "Auto detect sheet tabs"
+msgstr "الكشف التلقائي عن علامات الأوراق"
+
+msgid "Real-time entry sync"
+msgstr "مزامنة الإدخال في الوقت الفعلي"
+
+msgid "Select Fields to Sync"
+msgstr "اختر الحقول للمزامنة"
+
+msgid "Drag & drop field reordering"
+msgstr "إعادة ترتيب الحقول بالسحب والإفلات"
+
+msgid "Rename column headers"
+msgstr "إعادة تسمية رؤوس الأعمدة"
+
+msgid "Select specific fields to sync"
+msgstr "اختر حقول محددة للمزامنة"
+
+msgid "Apply rules based on form values"
+msgstr "تطبيق القواعد بناءً على قيم النموذج"
+
+msgid "Sync data only when conditions match"
+msgstr "مزامنة البيانات فقط عندما تتطابق الشروط"
+
+msgid "Freeze header row"
+msgstr "تجميد صف الرأس"
+
+msgid "Custom font styling"
+msgstr "تخصيص نمط الخط"
+
+msgid "Header & row color control"
+msgstr "التحكم في لون الرأس والصف"
+
+msgid "Download spreadsheet as file"
+msgstr "تحميل الجدول كملف"
+
+msgid "Unlock Advanced Features with Form Actions"
+msgstr "افتح الميزات المتقدمة مع إجراءات النموذج"
+
+msgid "Advanced options are available in PRO"
+msgstr "الخيارات المتقدمة متاحة في PRO"
+
+msgid "Get Advanced Features"
+msgstr "احصل على الميزات المتقدمة"
+
+msgid "Hide Features"
+msgstr "إخفاء الميزات"
+
+msgid "Show Features"
+msgstr "عرض الميزات"
+
 msgid "API Base URL"
-msgstr "عنوان URL الأساسي لواجهة برمجة التطبيقات"
+msgstr "عنوان URL لقاعدة API"
 
-#: includes/Config/PluginSettings.php:8
 msgid "Enter your njgs Base Url"
-msgstr "أدخل عنوان url الأساسي ل njgs"
+msgstr "أدخل عنوان URL الأساسي لـ njgs"
 
-#: includes/Config/PluginSettings.php:16
 msgid "Select One"
-msgstr "اختر واحد"
+msgstr "اختيار واحد"
 
-#: includes/Config/PluginSettings.php:20
 msgid "OAuth1a"
 msgstr "OAuth1a"
 
-#: includes/Config/PluginSettings.php:24
 msgid "OAuth2"
 msgstr "OAuth2"
 
-#: includes/Config/PluginSettings.php:28
 msgid "API OAuth Version"
-msgstr "API OAuth الإصدار"
+msgstr "إصدار OAuth API"
 
-#: includes/Config/PluginSettings.php:29
-msgid "Enter your njgs Authentication Version (e.g. OAuth1a or OAuth2"
-msgstr "أدخل إصدار مصادقة njgs الخاص بك (على سبيل المثال OAuth1a أو OAuth2"
+msgid "Enter your njgs Authentication Version (e.g. OAuth1a or OAuth2)"
+msgstr "أدخل إصدار المصادقة الخاص بك من njgs (مثل OAuth1a أو OAuth2)"
 
-#: includes/Config/PluginSettings.php:35
 msgid "API Client Key"
 msgstr "مفتاح عميل API"
 
-#: includes/Config/PluginSettings.php:36
 msgid "Enter your API Client Key"
 msgstr "أدخل مفتاح عميل API الخاص بك"
 
-#: includes/Config/PluginSettings.php:42
 msgid "API Client Secret"
 msgstr "سر عميل API"
 
-#: includes/Config/PluginSettings.php:43
 msgid "Enter your njgs Client Secret"
 msgstr "أدخل سر عميل njgs الخاص بك"
 
-#: includes/Config/PluginSettings.php:49
 msgid "API Callback"
-msgstr "رد اتصال API"
+msgstr "استرجاع API"
 
-#: includes/Config/PluginSettings.php:50
 msgid "OPTIONAL: Enter your njgs Callback. Will use this page if not entered."
-msgstr ""
-"اختياري: أدخل رد اتصال njgs الخاص بك. ستستخدم هذه الصفحة إذا لم يتم إدخالها."
+msgstr "اختياري: أدخل استرجاع njgs الخاص بك. سيستخدم هذه الصفحة إذا لم يتم إدخالها."
 
-#: includes/Config/PluginSettings.php:56
 msgid "Click button to authorize njgs"
-msgstr "انقر فوق الزر لتخويل njgs"
+msgstr "اضغط على الزر لتفويض njgs"
 
-#: includes/Config/PluginSettings.php:60
-msgid "Authorize"
-msgstr "الصلاحيات"
-
-#: includes/Config/PluginSettings.php:69
 msgid "API Access Token"
-msgstr "رمز الوصول إلى واجهة برمجة التطبيقات"
+msgstr "رمز وصول API"
 
-#: includes/Config/PluginSettings.php:70
 msgid "The access token when fetched or manually entered"
-msgstr "الرمز المميز للوصول عند جلبه أو إدخاله يدويا"
+msgstr "رمز الوصول عند استرجاعه أو إدخاله يدويًا"
 
-#: includes/Config/PluginSettings.php:76
 msgid "API Access Token Secret"
-msgstr "سر رمز الوصول إلى واجهة برمجة التطبيقات"
+msgstr "سر رمز وصول API"
 
-#: includes/Config/PluginSettings.php:77
 msgid "The access token secret when fetched or manually entered"
-msgstr "سر الرمز المميز للوصول عند جلبه أو إدخاله يدويا"
+msgstr "سر رمز الوصول عند استرجاعه أو إدخاله يدويًا"
 
-#: includes/Config/PluginSettings.php:83
 msgid "Click button to revoke njgs"
-msgstr "انقر فوق الزر لإبطال njgs"
+msgstr "اضغط على الزر لإلغاء تفويض njgs"
 
-#: includes/Config/PluginSettings.php:85
 msgid "De-Authorize"
 msgstr "إلغاء التفويض"
 
-#: includes/Config/PluginSettings.php:93
 msgid "API - Last Status"
-msgstr "API - الحالة الأخيرة"
+msgstr "API - آخر حالة"
 
-#: includes/Config/PluginSettingsGroups.php:7
 msgid "njgs Settings"
 msgstr "إعدادات njgs"
 
-#: includes/class-njform-utility.php:97
-msgid "There's something wrong with your code..."
-msgstr "هناك خطأ ما في التعليمات البرمجية الخاصة بك ..."
-
-#: includes/class-njforms-integration.php:100
-msgid "Choose Google API Setting :"
-msgstr "اختر إعداد واجهة برمجة تطبيقات Google:"
-
-#: includes/class-njforms-integration.php:104
-msgid "Use Existing Client/Secret Key (Auto Google API Configuration)"
-msgstr ""
-"استخدام العميل / المفتاح السري الحالي (تكوين واجهة برمجة تطبيقات Google "
-"التلقائي)"
-
-#: includes/class-njforms-integration.php:106
-msgid ""
-"Use Manual Client/Secret Key (Use Your Google API Configuration) (Upgrade To "
-"PRO)"
-msgstr ""
-"استخدم العميل اليدوي / المفتاح السري (استخدم تكوين واجهة برمجة تطبيقات "
-"Google) (الترقية إلى PRO)"
-
-#: includes/class-njforms-integration.php:109
-msgid "Upgrade To PRO"
-msgstr "الترقية إلى الاصدار المدفوع"
-
-#: includes/class-njforms-integration.php:112
-msgid ""
-"Manual Client/Secret Key (Use Your Google API Configuration) method is "
-"available in the PRO version of the plugin."
-msgstr ""
-"تتوفر طريقة العميل اليدوي / المفتاح السري (استخدام تكوين واجهة برمجة تطبيقات "
-"Google) في إصدار PRO من المكون الإضافي."
-
-#: includes/class-njforms-integration.php:122
-msgid "Ninja Forms - "
-msgstr "أشكال النينجا - "
-
-#: includes/class-njforms-integration.php:123
-msgid "Google Sheet Integration"
-msgstr "جوجل شيت التكامل"
-
-#: includes/class-njforms-integration.php:129
-msgid "Authenticate with your Google account, follow these steps:"
-msgstr "المصادقة باستخدام حساب Google الخاص بك ، اتبع الخطوات التالية:"
-
-#: includes/class-njforms-integration.php:132
-msgid "Click on the \"Sign In With Google\" button."
-msgstr "انقر فوق الزر \"تسجيل الدخول باستخدام Google\"."
-
-#: includes/class-njforms-integration.php:133
-msgid "Grant permissions for the following:"
-msgstr "منح أذونات لما يلي:"
-
-#: includes/class-njforms-integration.php:135
-msgid "Google Drive"
-msgstr "غوغل درايف"
-
-#: includes/class-njforms-integration.php:136
-msgid "Google Sheets"
-msgstr "جداول بيانات جوجل"
-
-#: includes/class-njforms-integration.php:137
-msgid "* Ensure that you enable the checkbox for each of these services."
-msgstr "* تأكد من تمكين خانة الاختيار لكل من هذه الخدمات."
-
-#: includes/class-njforms-integration.php:141
-msgid ""
-"This will allow the integration to access your Google Drive and Google "
-"Sheets."
-msgstr "سيسمح هذا للتكامل بالوصول إلى Google Drive وجداول بيانات Google."
-
-#: includes/class-njforms-integration.php:149
-msgid "Google Access Code"
-msgstr "رمز الوصول إلى جوجل"
-
-#: includes/class-njforms-integration.php:153
-msgid "Currently Active"
-msgstr "نشط حاليا"
-
-#: includes/class-njforms-integration.php:155
-msgid "Deactivate"
-msgstr "تعطيل"
-
-#: includes/class-njforms-integration.php:161
-msgid ""
-"On deactivation, all your data saved with authentication will be removed and "
-"you need to reauthenticate with your google account and configure sheet name "
-"and tab."
-msgstr ""
-"عند إلغاء التنشيط ، ستتم إزالة جميع بياناتك المحفوظة باستخدام المصادقة ، "
-"وتحتاج إلى إعادة المصادقة باستخدام حساب Google الخاص بك وتكوين اسم الورقة "
-"وعلامة التبويب."
-
-#: includes/class-njforms-integration.php:169
-msgid "Click Sign In With Google Button"
-msgstr "انقر على زر تسجيل الدخول باستخدام Google"
-
-#: includes/class-njforms-integration.php:175
-msgid "Connect Now"
-msgstr "تواصل الآن"
-
-#: includes/class-njforms-integration.php:196
-msgid ""
-"Something went wrong! It looks you have not given the permission of Google "
-"Drive and Google Sheets from your google account.Please Deactivate Auth and "
-"Re-Authenticate again with the permissions."
-msgstr ""
-"حدث خطأ ما! يبدو أنك لم تمنح إذن Google Drive وجداول بيانات Google من حساب "
-"google الخاص بك. يرجى إلغاء تنشيط المصادقة وإعادة المصادقة مرة أخرى باستخدام "
-"الأذونات."
-
-#: includes/class-njforms-integration.php:202
-msgid "Permission Screen"
-msgstr "شاشة الإذن"
-
-#: includes/class-njforms-integration.php:206
-msgid "Also,"
-msgstr "أيضًا"
-
-#: includes/class-njforms-integration.php:208
-msgid "Click Here"
-msgstr "اضغط هنا"
-
-#: includes/class-njforms-integration.php:211
-msgid ""
-" and if it displays \"GSheetConnector for WP Contact Forms\" under Third-"
-"party apps with account access then remove it."
-msgstr ""
-"وإذا كان يعرض \"GSheetConnector لنماذج جهات اتصال WP\" ضمن تطبيقات الجهات "
-"الخارجية التي يمكنها الوصول إلى الحساب ، فقم بإزالته."
-
-#: includes/class-njforms-integration.php:230
-#, php-format
-msgid "Connected email account: %s"
-msgstr "حساب البريد الإلكتروني المتصل: %s"
-
-#: includes/class-njforms-integration.php:235
-msgid ""
-"Something wrong! Your Auth code may be wrong or expired. Please Deactivate "
-"and Do Re-Auth Code "
-msgstr ""
-"شيء خاطئ! قد يكون رمز المصادقة الخاص بك خاطئا أو منتهي الصلاحية يرجى إلغاء "
-"التنشيط وإعادة رمز المصادقة "
-
-#: includes/class-njforms-integration.php:246
-msgid ""
-"We do not store any of the data from your Google account on our servers, "
-"everything is processed & stored on your server. We take your privacy "
-"extremely seriously and ensure it is never misused."
-msgstr ""
-"نحن لا نخزن أيا من البيانات من حساب Google الخاص بك على خوادمنا ، تتم معالجة "
-"كل شيء وتخزينه على الخادم الخاص بك. نحن نأخذ خصوصيتك على محمل الجد ونضمن عدم "
-"إساءة استخدامها أبدا."
-
-#: includes/class-njforms-integration.php:246
-msgid "Learn more."
-msgstr "اعرف المزيد."
-
-#: includes/class-njforms-integration.php:251
-msgid "Debug Log →"
-msgstr "سجل التصحيح ->"
-
-#: includes/class-njforms-integration.php:254
-#: includes/class-njforms-integration.php:262
-msgid "View"
-msgstr "عرض"
-
-#: includes/class-njforms-integration.php:269
-#: includes/pages/njforms-integrate-system-info.php:25
-msgid "Clear"
-msgstr "مسح"
-
-#: includes/class-njforms-integration.php:276
-msgid "Copy Logs"
-msgstr "نسخ السجلات"
-
-#: includes/class-njforms-integration.php:287
-msgid "No errors found."
-msgstr "لم يتم العثور على أخطاء."
-
-#: includes/class-njforms-integration.php:291
-msgid "No log file exists as no errors are generated."
-msgstr "لا يوجد ملف سجل حيث لا يتم إنشاء أي أخطاء."
-
-#: includes/class-njforms-integration.php:347
-msgid "Next steps…"
-msgstr "الخطوات التالية..."
-
-#: includes/class-njforms-integration.php:358
-msgid "Multiple Forms to Sheets, Merge Tags and much more..."
-msgstr "نماذج متعددة للأوراق ودمج العلامات وغير ذلك الكثير ..."
-
-#: includes/class-njforms-integration.php:368
-msgid "Compatibility"
-msgstr "التوافق"
-
-#: includes/class-njforms-integration.php:369
-msgid "Compatibility with Ninja-Forms Third-Party Plugins"
-msgstr "التوافق مع المكونات الإضافية لجهات خارجية Ninja-Forms"
-
-#: includes/class-njforms-integration.php:379
-msgid "Multi Languages"
-msgstr "متعدد اللغات"
-
-#: includes/class-njforms-integration.php:380
-msgid "This plugin supports multi-languages as well!"
-msgstr "يدعم هذا البرنامج المساعد لغات متعددة أيضا!"
-
-#: includes/class-njforms-integration.php:390
-msgid "Support WordPress Multisites"
-msgstr "دعم وورد متعدد المواقع"
-
-#: includes/class-njforms-integration.php:391
-msgid ""
-"With the use of a Multisite, you’ll also have a new level of user-available: "
-"the Super Admin."
-msgstr ""
-"باستخدام متعدد المواقع ، سيكون لديك أيضا مستوى جديد من المستخدمين المتاحين: "
-"المشرف المتميز."
-
-#: includes/class-njforms-integration.php:402
-msgid "Product Support"
-msgstr "دعم المنتج"
-
-#: includes/class-njforms-integration.php:410
-msgid "Online Documentation"
-msgstr "التوثيق عبر الإنترنت..."
-
-#: includes/class-njforms-integration.php:411
-msgid "Understand all the capabilities of Ninja-Forms GsheetConnector"
-msgstr "فهم جميع قدرات النينجا أشكال GsheetConnector"
-
-#: includes/class-njforms-integration.php:419
-msgid "Ticket Support"
-msgstr "دعم التذاكر"
-
-#: includes/class-njforms-integration.php:420
-msgid "Direct help from our qualified support team"
-msgstr "مساعدة مباشرة من فريق الدعم المؤهل لدينا"
-
-#: includes/class-njforms-integration.php:428
-msgid "Affiliate Program"
-msgstr "برنامج الانتساب"
-
-#: includes/class-njforms-integration.php:429
-#, php-format
-msgid "Earn flat 30% on every sale!"
-msgstr "اربح 30% o n ثابت في كل عملية بيع!"
-
-#: includes/pages/admin-footer.php:10
-#, php-format
-msgid "Enjoy using %1$s? Check out our reviews or leave your own on %2$s."
-msgstr "استمتع باستخدام %1$s؟ تحقق من مراجعاتنا أو اترك مراجعاتك الخاصة %2$s."
-
-#: includes/pages/admin-footer.php:14
-msgid "WordPress.org"
-msgstr "WordPress.org"
-
-#: includes/pages/admin-footer.php:23
-msgid "Made with ♥ by the GSheetConnector Team"
-msgstr "صنع بواسطة ♥ فريق GSheetConnector"
-
-#: includes/pages/admin-footer.php:28
-msgid "VIP Circle"
-msgstr "دائرة كبار الشخصيات"
-
-#: includes/pages/admin-footer.php:29
-msgid "Free Plugins"
-msgstr "إضافات مجانية"
-
-#: includes/pages/extensions.php:5
-msgid "Upgrade"
-msgstr "ترقية"
-
-#: includes/pages/extensions.php:8 includes/pages/extensions.php:33
-#: includes/pages/extensions.php:57 includes/pages/extensions.php:81
-#: includes/pages/extensions.php:106 includes/pages/extensions.php:131
-#: includes/pages/extensions.php:163 includes/pages/extensions.php:188
-#: includes/pages/extensions.php:212 includes/pages/extensions.php:236
-#: includes/pages/extensions.php:260 includes/pages/extensions.php:284
-msgid "logo"
-msgstr "الشعار"
-
-#: includes/pages/extensions.php:12 includes/pages/extensions.php:37
-#: includes/pages/extensions.php:61 includes/pages/extensions.php:85
-#: includes/pages/extensions.php:110 includes/pages/extensions.php:135
-#: includes/pages/extensions.php:167 includes/pages/extensions.php:192
-#: includes/pages/extensions.php:216 includes/pages/extensions.php:240
-#: includes/pages/extensions.php:264 includes/pages/extensions.php:288
-msgid "Learn more"
-msgstr "اعرف المزيد."
-
-#: includes/pages/extensions.php:12
-msgid "Ninja Forms Google Sheet Connector"
-msgstr "النينجا أشكال جوجل ورقة موصل"
-
-#: includes/pages/extensions.php:15
-msgid ""
-"Ninja Forms, A bridge between your WordPress based Ninja Forms and Google "
-"Sheets. It helps to record the entries in real-time."
-msgstr ""
-"نماذج النينجا ، جسر بين نماذج النينجا المستندة إلى WordPress وجداول بيانات "
-"Google. يساعد على تسجيل الإدخالات في الوقت الفعلي."
-
-#: includes/pages/extensions.php:20 includes/pages/extensions.php:45
-#: includes/pages/extensions.php:69 includes/pages/extensions.php:93
-#: includes/pages/extensions.php:118 includes/pages/extensions.php:143
-#: includes/pages/extensions.php:175
-msgid "PRO"
-msgstr "النسخة المميزة"
-
-#: includes/pages/extensions.php:24
-msgid "Upgrade Now"
-msgstr "قم بالترقية الآن"
-
-#: includes/pages/extensions.php:37
-msgid "Gravity Forms Google Sheet Connector"
-msgstr "أشكال الجاذبية موصل ورقة جوجل"
-
-#: includes/pages/extensions.php:40
-msgid ""
-"Gravity Forms Google Sheets Connector Plugin is a Bridge between your "
-"Gravity Forms and Google Sheets."
-msgstr ""
-"أشكال الجاذبية البرنامج المساعد موصل جداول بيانات Google هو جسر بين نماذج "
-"الجاذبية وجداول بيانات Google."
-
-#: includes/pages/extensions.php:48 includes/pages/extensions.php:72
-#: includes/pages/extensions.php:96 includes/pages/extensions.php:121
-#: includes/pages/extensions.php:146 includes/pages/extensions.php:178
-#: includes/pages/extensions.php:251 includes/pages/extensions.php:275
-#: includes/pages/extensions.php:299
-msgid "Download"
-msgstr "تحميل"
-
-#: includes/pages/extensions.php:49 includes/pages/extensions.php:73
-#: includes/pages/extensions.php:97 includes/pages/extensions.php:122
-#: includes/pages/extensions.php:147 includes/pages/extensions.php:179
-#: includes/pages/extensions.php:203 includes/pages/extensions.php:227
-msgid "Buy Now"
-msgstr "اشتري الآن"
-
-#: includes/pages/extensions.php:61
-msgid "WooCommerce Google Sheet Connector"
-msgstr "كتب مريم الدخيل لاكاديمية الثراء جوجل ورقة موصل"
-
-#: includes/pages/extensions.php:64
-msgid ""
-"WooCommerce Google Spreadsheet Addon Plugin to connect with Google Sheets."
-msgstr ""
-"كتب مريم الدخيل لاكاديمية الثراء جدول بيانات Google الملحق الإضافي للتواصل "
-"مع جداول بيانات Google."
-
-#: includes/pages/extensions.php:85
-msgid "Elementor Forms Google Sheet Connector"
-msgstr "عناصر أشكال موصل ورقة جوجل"
-
-#: includes/pages/extensions.php:88
-msgid ""
-"A bridge between your WordPress based Elementor Forms or Metform Elementor "
-"Builder to Google Sheets."
-msgstr ""
-"جسر بين نماذج Elementor المستندة إلى WordPress أو منشئ عناصر Metform إلى "
-"جداول بيانات Google."
-
-#: includes/pages/extensions.php:110
-msgid "CF7 Google Sheets Connector"
-msgstr "CF7 موصل جداول بيانات جوجل"
-
-#: includes/pages/extensions.php:113
-msgid ""
-"CF7 Google Sheet Connector is an addon plugin, A bridge between your "
-"WordPress based Contact Form 7 forms and Google Sheets."
-msgstr ""
-"CF7 Google Sheet Connector هو مكون إضافي إضافي ، جسر بين نماذج نموذج الاتصال "
-"7 المستندة إلى WordPress وجداول بيانات Google."
-
-#: includes/pages/extensions.php:135
-msgid "WPForms Google Sheet Connector"
-msgstr "WPForms موصل ورقة جوجل"
-
-#: includes/pages/extensions.php:138
-msgid ""
-"WPForms, A bridge between your WordPress based WPForms and Google Sheets. It "
-"helps to record the entries in real-time."
-msgstr ""
-"WPForms ، جسر بين WPForms المستند إلى WordPress وجداول بيانات Google. يساعد "
-"على تسجيل الإدخالات في الوقت الفعلي."
-
-#: includes/pages/extensions.php:167
-msgid "Easy Digital Downloads Google Sheet Connector"
-msgstr "من السهل التنزيلات الرقمية جوجل ورقة موصل"
-
-#: includes/pages/extensions.php:170
-msgid ""
-"Easy Digital Downloads Google Sheet Connector sends orders entries to Google "
-"Sheet in a real-time"
-msgstr ""
-"من السهل التنزيلات الرقمية يرسل Google Sheet Connector إدخالات الطلبات إلى "
-"Google Sheet في الوقت الفعلي"
-
-#: includes/pages/extensions.php:192
-msgid "Avada Forms Google Sheet Connector Pro"
-msgstr "افادا أشكال جوجل ورقة موصل برو"
-
-#: includes/pages/extensions.php:195
-msgid ""
-"Avada Theme Fusion Builder addon, simplifies real-time data transmission "
-"from Avada theme-based forms to Google Sheets with premium features."
-msgstr ""
-"يعمل الملحق Avada Theme Fusion Builder على تبسيط نقل البيانات في الوقت "
-"الفعلي من النماذج المستندة إلى موضوع Avada إلى جداول بيانات Google مع ميزات "
-"متميزة."
-
-#: includes/pages/extensions.php:200 includes/pages/extensions.php:224
-msgid "Available PRO Version"
-msgstr "الإصدار الاحترافي المتاح"
-
-#: includes/pages/extensions.php:216
-msgid "Divi Forms Google Sheet Connector Pro"
-msgstr "أشكال ديفي جوجل ورقة موصل برو"
-
-#: includes/pages/extensions.php:219
-msgid ""
-"Divi Forms GSheetConnector, an addon for DIVI Theme/Builder, simplifies real-"
-"time syncing of data from DIVI theme forms to both the database and Google "
-"Sheets."
-msgstr ""
-"نماذج Divi GSheetConnector ، وهو ملحق ل DIVI Theme / Builder ، يبسط مزامنة "
-"البيانات في الوقت الفعلي من نماذج سمات DIVI إلى كل من قاعدة البيانات وجداول "
-"بيانات Google."
-
-#: includes/pages/extensions.php:240
-msgid "GSheetConnector for Forminator Forms"
-msgstr "GSheetConnector لنماذج التزوير"
-
-#: includes/pages/extensions.php:243
-msgid ""
-"GSheetConnector for Forminator Forms is an addon plugin, A bridge between "
-"your WordPress based Forminator Forms forms and Google Sheets."
-msgstr ""
-"GSheetConnector لنماذج Forminator هو مكون إضافي إضافي ، جسر بين نماذج "
-"Forminator المستندة إلى WordPress وجداول بيانات Google."
-
-#: includes/pages/extensions.php:248 includes/pages/extensions.php:272
-#: includes/pages/extensions.php:296
-msgid "Free"
-msgstr "مجاني"
-
-#: includes/pages/extensions.php:264
-msgid "GSheetConnector for Formidable Forms"
-msgstr "GSheetConnector للنماذج الهائلة"
-
-#: includes/pages/extensions.php:267
-msgid ""
-"Formidable Forms, A bridge between your WordPress based Formidable Forms "
-"forms and Google Sheets."
-msgstr ""
-"نماذج هائلة ، جسر بين نماذج النماذج الهائلة المستندة إلى WordPress وجداول "
-"بيانات Google."
-
-#: includes/pages/extensions.php:288
-msgid "Caldera Forms Google Sheets Connector"
-msgstr "كالديرا أشكال جوجل جداول بيانات موصل"
-
-#: includes/pages/extensions.php:291
-msgid ""
-"Caldera Forms Closure, No more updates on this plugin Due to Caldera Forms "
-"being sunset/retired on December 31, 2021"
-msgstr ""
-"إغلاق نماذج كالديرا ، لا مزيد من التحديثات على هذا المكون الإضافي نظرا "
-"لغروب / تقاعد نماذج كالديرا في 31 ديسمبر 2021"
-
-#: includes/pages/njform-dashboard-widget.php:22
-msgid "Ninja Forms connected with Google Sheets."
-msgstr "نماذج النينجا المرتبطة بجداول بيانات Google."
-
-#: includes/pages/njform-dashboard-widget.php:35
-msgid "Form Name"
-msgstr "اسم النموذج"
-
-#: includes/pages/njform-dashboard-widget.php:59
-msgid "No Ninja Forms are connected with Google Sheets."
-msgstr "نماذج النينجا المرتبطة بجداول بيانات Google"
-
-#: includes/pages/njforms-gs-integration-support.php:10
-msgid "Like & Subscribe to our channel for regular updates"
-msgstr "أعجبني واشترك في قناتنا للحصول على تحديثات منتظمة"
-
-#: includes/pages/njforms-gs-integration-support.php:16
-msgid "Submit A Ticket"
-msgstr "أرسل التذكرة"
-
-#: includes/pages/njforms-gs-integration-support.php:18
-msgid ""
-"We offer excellent support through our advanced ticket system. Make sure to "
-"register your purchase first to access our support services and other "
-"resources."
-msgstr ""
-"نحن نقدم دعم ممتاز من خلال نظام التذاكر المتقدمة لدينا. تأكد من تسجيل عملية "
-"الشراء أولا للوصول إلى خدمات الدعم وغيرها من الموارد."
-
-#: includes/pages/njforms-gs-integration-support.php:21
-msgid "Submit a ticket"
-msgstr "أرسل التذكرة"
-
-#: includes/pages/njforms-gs-integration-support.php:24
-#: includes/pages/njforms-gs-integration-support.php:29
-msgid "Documentation"
-msgstr "الوثائق"
-
-#: includes/pages/njforms-gs-integration-support.php:26
-msgid ""
-"This is the place to go to reference different aspects of the plugin. Our "
-"online documentation is an incredible resource for learning the ins and outs."
-msgstr ""
-"هذا هو المكان المناسب للإشارة إلى جوانب مختلفة من المكون الإضافي. تعد "
-"وثائقنا عبر الإنترنت مصدرا رائعا لتعلم خصوصيات وعموميات."
-
-#: includes/pages/njforms-gs-settings.php:27
-msgid "Ninja Forms  - GSheetConnector"
-msgstr "نماذج النينجا - GSheetConnector"
-
-#: includes/pages/njforms-gs-settings.php:28
-msgid "Version :"
-msgstr "الإصدار:"
-
-#: includes/pages/njforms-gs-settings.php:31
-msgid "DASHBOARD"
-msgstr "DASHBOARD"
-
-#: includes/pages/njforms-gs-settings.php:38
-msgid "Integration"
-msgstr "دمج"
-
-#: includes/pages/njforms-gs-settings.php:39
-msgid "System Status"
-msgstr "حالة النظام"
-
-#: includes/pages/njforms-integrate-system-info.php:10
-msgid "System Info"
-msgstr "معلومات النظام"
-
-#: includes/pages/njforms-integrate-system-info.php:11
-msgid "Copy System Info to Clipboard"
-msgstr "نسخ معلومات النظام إلى الحافظة"
-
-#: includes/pages/njforms-integrate-system-info.php:17
 msgid "Error Log"
 msgstr "سجل الأخطاء"
 
-#: includes/pages/njforms-integrate-system-info.php:20
 msgid ""
-"<p>If you have <a href=\"https://www.gsheetconnector.com/how-to-enable-"
-"debugging-in-wordpress\" target=\"_blank\" rel=\"noopener noreferrer"
-"\">WP_DEBUG_LOG</a> enabled, errors are stored in a log file. Here you can "
-"find the last 100 lines in reversed order so that you or the GSheetConnector "
-"support team can view it easily. The file cannot be edited here.</p>"
+"Error logs are saved in the database. Please clear them regularly to avoid "
+"increasing the database size."
 msgstr ""
-"<p>إذا <a href=\"https://www.gsheetconnector.com/how-to-enable-debugging-in-"
-"wordpress\" target=\"_blank\" rel=\"noopener noreferrer\">قمت WP_DEBUG_LOG</"
-"a> التمكين، تخزين الأخطاء في ملف سجل. هنا يمكنك العثور على آخر 100 سطر "
-"بترتيب معكوس حتى تتمكن أنت أو فريق دعم GSheetConnector من مشاهدتها بسهولة. "
-"لا يمكن تحرير الملف هنا.</p>"
+"يتم حفظ سجلات الأخطاء في قاعدة البيانات. يرجى مسحها بانتظام لتجنب زيادة حجم قاعدة "
+"البيانات."
 
-#: includes/pages/njforms-integrate-system-info.php:24
-msgid "Copy Error Log to Clipboard"
-msgstr "نسخ سجل الأخطاء إلى الحافظة"
+msgid "Clear Logs"
+msgstr "مسح السجلات"
 
-#: includes/pages/njforms-integrate-system-info.php:30
-msgid "Copied"
-msgstr "تم النسخ"
+msgid "Download CSV"
+msgstr "تحميل CSV"
 
-#: includes/pages/njforms-integration-demo-info.php:5
+msgid "Copy Logs"
+msgstr "نسخ السجلات"
+
+msgid "Date"
+msgstr "التاريخ"
+
+msgid "Error ID"
+msgstr "معرف الخطأ"
+
+msgid "Code"
+msgstr "الرمز"
+
+msgid "Message"
+msgstr "الرسالة"
+
+msgid "Details"
+msgstr "التفاصيل"
+
+msgid "No logs found"
+msgstr "لم يتم العثور على سجلات"
+
+msgid "Permission denied."
+msgstr "تم رفض الإذن."
+
+msgid "Google Sheet"
+msgstr "جدول بيانات Google"
+
+msgid "There's something wrong with your code..."
+msgstr "هناك شيء خاطئ في الشيفرة الخاصة بك..."
+
+msgid "CF7 Google Sheet Connector"
+msgstr "موصل CF7 لجوجل شيت"
+
+msgid ""
+"Easily connect Contact Form 7 to Google Sheets and automatically sync form "
+"submissions in real-time. Every entry is instantly added to your selected "
+"spreadsheet, helping you manage leads, inquiries, and customer data efficiently "
+"without manual export."
+msgstr ""
+"قم بتوصيل نموذج الاتصال 7 بسهولة مع جوجل شيت ومواءمة تقديمات النموذج تلقائيًا في "
+"الوقت الفعلي. يتم إضافة كل إدخال على الفور إلى جدول البيانات المختار، مما يساعدك "
+"في إدارة العملاء والاستفسارات وبيانات العملاء بكفاءة دون تصدير يدوي."
+
+msgid "Install"
+msgstr "تثبيت"
+
+msgid "WPForms Google Sheet Connector"
+msgstr "موصل جدول بيانات Google لنماذج WPForms"
+
+msgid ""
+"Integrate WPForms with Google Sheets and send form entries directly to your "
+"spreadsheet automatically. Track leads, manage customer data, and streamline "
+"reporting with seamless Google Sheets integration and real-time sync."
+msgstr ""
+"دمج WPForms مع جوجل شيت وإرسال إدخالات النموذج مباشرة إلى جدول البيانات الخاص بك "
+"تلقائيًا. تتبع العملاء، إدارة بيانات العملاء، وتبسيط التقارير مع دمج سلس لجوجل شيت "
+"ومزامنة في الوقت الفعلي."
+
+msgid "Gravity Forms Google Sheet Connector"
+msgstr "موصل جدول بيانات Google لنماذج Gravity"
+
+msgid ""
+"Connect Gravity Forms to Google Sheets and automatically push form submissions to "
+"your spreadsheet. Simplify data management, improve workflow automation, and keep "
+"all entries organized in one secure location."
+msgstr ""
+"قم بتوصيل Gravity Forms بجوجل شيت وادفع تلقائيًا تقديمات النموذج إلى جدول بياناتك. "
+"تبسيط إدارة البيانات، تحسين أتمتة سير العمل، والحفاظ على تنظيم جميع الإدخالات في "
+"مكان آمن."
+
+msgid "Ninja Forms Google Sheet Connector"
+msgstr "موصل نموذج نينجا لجدول بيانات Google"
+
+msgid ""
+"Automatically sync Ninja Forms submissions to Google Sheets with one-click "
+"integration. Capture leads, monitor responses, and manage data efficiently with "
+"instant spreadsheet updates and easy reporting."
+msgstr ""
+"قم بمزامنة تقديمات Ninja Forms تلقائيًا إلى جوجل شيت بنقرة واحدة. التقاط العملاء، "
+"مراقبة الردود، وإدارة البيانات بكفاءة مع تحديثات جدول البيانات الفورية والتقارير "
+"السهلة."
+
+msgid "Forminator Forms Google Sheet Connector"
+msgstr "موصل نماذج Forminator لجوجل شيت"
+
+msgid ""
+"Integrate Forminator Forms with Google Sheets to automatically store form entries "
+"in your spreadsheet. Eliminate manual data entry and ensure accurate, real-time "
+"syncing for better data tracking and analysis."
+msgstr ""
+"دمج نماذج Forminator مع جوجل شيت لتخزين إدخالات النموذج تلقائيًا في جدول البيانات "
+"الخاص بك. القضاء على إدخال البيانات اليدوي وضمان مزامنة دقيقة وفي الوقت الفعلي "
+"لتحسين تتبع وتحليل البيانات."
+
+msgid "Free"
+msgstr "مجاني"
+
+msgid "Formidable Forms Google Sheet Connector"
+msgstr "موصل نماذج Formidable لجوجل شيت"
+
+msgid ""
+"Automatically sync Formidable Forms entries to Google Sheets. Manage leads, track "
+"submissions, and simplify data reporting with real-time integration."
+msgstr ""
+"قم بمزامنة إدخالات Formidable Forms تلقائيًا إلى جوجل شيت. إدارة العملاء، تتبع "
+"التقديمات، وتبسيط تقارير البيانات مع التكامل في الوقت الفعلي."
+
+msgid "Fluent Forms Google Sheet Connector"
+msgstr "موصل نماذج Fluent لجوجل شيت"
+
+msgid ""
+"Automatically sync Fluent Forms submissions to Google Sheets in real-time. Every "
+"form entry is instantly added to your selected spreadsheet, helping you manage "
+"leads, customer inquiries, and business data without manual export. Streamline "
+"your workflow, improve reporting accuracy, and keep all submissions organized with "
+"seamless Google Sheets integration."
+msgstr ""
+"قم بمزامنة تقديمات Fluent Forms تلقائيًا إلى جوجل شيت في الوقت الفعلي. يتم إضافة كل "
+"إدخال نموذج على الفور إلى جدول البيانات الذي اخترته، مما يساعدك في إدارة العملاء "
+"واستفسارات العملاء وبيانات الأعمال دون تصدير يدوي. تبسيط سير العمل لديك، تحسين دقة "
+"التقارير، والحفاظ على تنظيم جميع التقديمات مع دمج سلس لجوجل شيت."
+
+msgid "Elementor Forms Google Sheet Connector"
+msgstr "موصل جدول البيانات لنماذج Elementor"
+
+msgid ""
+"Sync Elementor Forms with Google Sheets instantly. Automatically add new form "
+"submissions to your spreadsheet, manage leads efficiently, and simplify reporting "
+"with real-time data synchronization."
+msgstr ""
+"مزامنة نماذج Elementor مع جوجل شيت على الفور. أضف تلقائيًا تقديمات النموذج الجديدة "
+"إلى جدول البيانات الخاص بك، إدارة العملاء بكفاءة، وتبسيط التقارير مع مزامنة "
+"البيانات في الوقت الفعلي."
+
+msgid "Avada Forms Google Sheet Connector"
+msgstr "موصل نماذج Avada لجوجل شيت"
+
+msgid ""
+"Connect Avada Forms to Google Sheets and automatically transfer form entries to "
+"your spreadsheet. Streamline lead management, automate data collection, and "
+"improve business reporting with seamless integration."
+msgstr ""
+"قم بتوصيل نماذج Avada بجوجل شيت وانقل تلقائيًا إدخالات النموذج إلى جدول البيانات "
+"الخاص بك. تبسيط إدارة العملاء، أتمتة جمع البيانات، وتحسين تقارير الأعمال مع "
+"التكامل السلس."
+
+msgid "Available PRO Version"
+msgstr "إصدار برو متاح"
+
+msgid "Divi Forms Google Sheet Connector"
+msgstr "موصل نماذج Divi لجوجل شيت"
+
+msgid ""
+"Integrate Divi Forms with Google Sheets and automatically sync submissions in real-"
+"time. Store customer data securely, track inquiries efficiently, and eliminate "
+"manual spreadsheet updates."
+msgstr ""
+"دمج نماذج Divi مع جوجل شيت ومزامنة التقديمات تلقائيًا في الوقت الفعلي. تخزين بيانات "
+"العملاء بشكل آمن، تتبع الاستفسارات بكفاءة، والقضاء على تحديثات جدول البيانات "
+"اليدوية."
+
+msgid "WP Core Google Sheet Connector"
+msgstr "موصل WP Core لجوجل شيت"
+
+msgid ""
+"Automatically send WordPress core data (like comments or custom submissions) to "
+"Google Sheets. Simplify website data tracking, automate record keeping, and "
+"centralize important information in one organized spreadsheet."
+msgstr ""
+"إرسال بيانات نواة ووردبريس (مثل التعليقات أو التقديمات المخصصة) تلقائيًا إلى جوجل "
+"شيت. تبسيط تتبع بيانات الموقع، أتمتة حفظ السجلات، وتركيز المعلومات الهامة في جدول "
+"بيانات منظم واحد."
+
+msgid "WooCommerce Google Sheet Connector"
+msgstr "موصل جدول البيانات للودجات WooCommerce"
+
+msgid ""
+"Sync WooCommerce orders with Google Sheets automatically. Store order details, "
+"customer information, and transaction data in real-time for easy reporting, "
+"accounting, and business analysis."
+msgstr ""
+"مزامنة طلبات WooCommerce مع جوجل شيت تلقائيًا. تخزين تفاصيل الطلب، معلومات العملاء، "
+"وبيانات المعاملات في الوقت الفعلي لتقارير سهلة، محاسبة، وتحليل الأعمال."
+
+msgid "Easy Digital Downloads Google Sheet Connector"
+msgstr "موصل جدول بيانات Google لـ Easy Digital Downloads"
+
+msgid ""
+"Automatically send Easy Digital Downloads (EDD) order details to Google Sheets. "
+"Track digital product sales, monitor transactions, and manage customer data "
+"effortlessly with real-time spreadsheet integration."
+msgstr ""
+"أرسل تلقائيًا تفاصيل طلبات Easy Digital Downloads (EDD) إلى Google Sheets. تتبع "
+"مبيعات المنتجات الرقمية، راقب المعاملات، وادارة بيانات العملاء بسهولة مع تكامل "
+"جداول البيانات في الوقت الفعلي."
+
+msgid "Error log table not found."
+msgstr "لم يتم العثور على جدول سجل الأخطاء."
+
+msgid "Logs are cleared."
+msgstr "تم مسح السجلات."
+
+msgid "Invalid security token"
+msgstr "رمز الأمان غير صالح"
+
+msgid "You do not have permission to activate plugin"
+msgstr "ليس لديك إذن لتفعيل الإضافة"
+
+msgid "Plugin slug is missing"
+msgstr "فقدان شريحة الإضافة"
+
+msgid "Plugin is already activated"
+msgstr "الإضافة مفعلّة بالفعل"
+
+msgid "Plugin activated successfully"
+msgstr "تم تفعيل الإضافة بنجاح"
+
+msgid "You do not have permission to install plugin"
+msgstr "ليس لديك إذن لتثبيت الإضافة"
+
+msgid "Missing required parameters"
+msgstr "فقدان معلمات مطلوبة"
+
+msgid "Invalid plugin data"
+msgstr "بيانات الإضافة غير صالحة"
+
+msgid "Upgrade failed: "
+msgstr "فشلت عملية التحديث: "
+
+msgid "Plugin upgraded successfully"
+msgstr "تم تحديث الإضافة بنجاح"
+
+msgid "Plugin already installed and up to date"
+msgstr "الإضافة مثبّتة بالفعل ومحدثة"
+
+msgid "Installation failed: "
+msgstr "فشلت عملية التثبيت: "
+
+msgid "Plugin installed successfully"
+msgstr "تم تثبيت الإضافة بنجاح"
+
+msgid "Please rate"
+msgstr "يرجى تقييم"
+
+msgid "on"
+msgstr "على"
+
+msgid "WordPress.org"
+msgstr "WordPress.org"
+
+msgid "to help us spread the word."
+msgstr "لمساعدتنا في نشر الكلمة."
+
+msgid "Version:"
+msgstr "الإصدار:"
+
+msgid "Plugins"
+msgstr "الإضافات"
+
+msgid "About GSheetConnector"
+msgstr "حول GSheetConnector"
+
+msgid "Built by Experts. Trusted by Thousands."
+msgstr "بناءً بواسطة خبراء. موثوق به من قبل الآلاف."
+
+msgid ""
+"Led by experienced developers and powered by a passionate team, GSheetConnector "
+"helps WordPress users automate their workflows with confidence."
+msgstr ""
+"تحت قيادة مطورين ذوي خبرة ومدعوم من فريق شغوف، يساعد GSheetConnector مستخدمي "
+"WordPress في أتمتة سير عملهم بثقة."
+
+msgid ""
+"We focus on building tools that are fast, secure, and easy to use - so you can "
+"spend less time managing data."
+msgstr ""
+"نحن نركز على بناء أدوات سريعة وآمنة وسهلة الاستخدام - حتى يمكنك قضاء وقت أقل في "
+"إدارة البيانات."
+
+msgid "WordPress Plugin Founder"
+msgstr "مؤسس إضافة WordPress"
+
+msgid "Product Lead & Visionary"
+msgstr "رئيس المنتج ورؤى"
+
+msgid "Abdullah Kaludi"
+msgstr "عبدالله كالودي"
+
+msgid "Founder & Lead Developer"
+msgstr "المؤسس والمطور الرئيسي"
+
+msgid "Meet Our Core Team"
+msgstr "تعرف على فريقنا الأساسي"
+
+msgid "Our Mission"
+msgstr "مهمتنا"
+
+msgid ""
+"Our mission is to make form automation simple, secure, and reliable for every "
+"WordPress user - from beginners to enterprise teams."
+msgstr ""
+"مهمتنا هي جعل أتمتة النماذج بسيطة وآمنة وموثوقة لكل مستخدم ووردبريس - من المبتدئين "
+"إلى الفرق الكبيرة."
+
+msgid "Fast & Reliable Data Sync"
+msgstr "تزامن بيانات سريع وموثوق"
+
+msgid "100% Secure Authentication"
+msgstr "تحقق 100% آمن"
+
+msgid "Real-Time Google Sheets Updates"
+msgstr "تحديثات جوجل شيت في الوقت الحقيقي"
+
+msgid "Easy Setup & Configuration"
+msgstr "إعداد وتكوين سهل"
+
+msgid "Dedicated Support Team"
+msgstr "فريق دعم مخصص"
+
+msgid "Forms Successfully Synced"
+msgstr "تم تزامن النماذج بنجاح"
+
+msgid "Trusted by Active Users"
+msgstr "موثوق به من مستخدمين نشطين"
+
+msgid "Reliable Uptime"
+msgstr "وقت تشغيل موثوق"
+
+msgid "Dedicated Support"
+msgstr "دعم مخصص"
+
+msgid "Add-ons & Extensions"
+msgstr "إضافات وامتدادات"
+
+msgid ""
+"Extend your Google Sheets integration with powerful add-ons. Install, manage, and "
+"activate extensions to unlock advanced features."
+msgstr ""
+"قم بتمديد تكامل جوجل شيت الخاص بك باستخدام إضافات قوية. قم بتثبيت وإدارة وتفعيل "
+"الامتدادات لفتح ميزات متقدمة."
+
+msgid "Installed & Active Plugins"
+msgstr "الإضافات المثبتة والنشطة"
+
+msgid ""
+"View and manage all currently installed and active connectors on your site. You "
+"can activate, deactivate, or upgrade plugins from here."
+msgstr ""
+"عرض وإدارة جميع الموصلات المثبتة والنشطة حاليًا على موقعك. يمكنك تفعيل أو إلغاء "
+"تفعيل أو ترقية الإضافات من هنا."
+
+msgid "Pro"
+msgstr "محترف"
+
+msgid "View Docs"
+msgstr "عرض الوثائق"
+
+msgid "Deactivate"
+msgstr "إلغاء تنشيط"
+
+msgid "Recommended Plugins"
+msgstr "الإضافات الموصى بها"
+
+msgid ""
+"Discover recommended plugins that enhance your workflow and help you get more "
+"value from your Google Sheets integration."
+msgstr ""
+"اكتشف الإضافات الموصى بها التي تعزز سير عملك وتساعدك على الحصول على قيمة أكبر من "
+"تكامل جوجل شيت لديك."
+
+msgid "Activate"
+msgstr "تفعيل"
+
+msgid "Explore More Plugins"
+msgstr "استكشف المزيد من الإضافات"
+
+msgid "Discover the right connector for your workflow and automate data syncing."
+msgstr "اكتشف الموصل المناسب لسير عملك وأتمتة تزامن البيانات."
+
+msgid "Forms"
+msgstr "نماذج"
+
+msgid "Page Builders"
+msgstr "منشئي الصفحات"
+
+msgid "eCommerce"
+msgstr "تجارة إلكترونية"
+
+msgid "View Demo"
+msgstr "عرض العرض التوضيحي"
+
+msgid "Deactivate Plugin"
+msgstr "إلغاء تفعيل الإضافة"
+
+msgid "Are you sure you want to deactivate this plugin?"
+msgstr "هل أنت متأكد أنك تريد إلغاء تفعيل هذه الإضافة؟"
+
+msgid "Cancel"
+msgstr "إلغاء"
+
+msgid "Ninja Forms connected with Google Sheets."
+msgstr "تم ربط نموذج نينجا بجداول بيانات Google."
+
+msgid "Form Name"
+msgstr "اسم النموذج"
+
+msgid "Action Name"
+msgstr "اسم الإجراء"
+
+msgid "Sheet Name"
+msgstr "اسم الورقة"
+
+msgid "Not connected"
+msgstr "غير متصل"
+
+msgid "Ninja Forms is not connected with Google Sheets."
+msgstr "نموذج نينجا غير متصل مع جوجل شيتس."
+
+msgid "Unlock Beta Version Control"
+msgstr "فتح التحكم في النسخة التجريبية"
+
+msgid "Test upcoming features before official release"
+msgstr "اختبر الميزات القادمة قبل الإصدار الرسمي"
+
+msgid "Early Access"
+msgstr "وصول مبكر"
+
+msgid "Get updates before public release"
+msgstr "احصل على التحديثات قبل الإصدار العام"
+
+msgid "Test new features in advance"
+msgstr "اختبر الميزات الجديدة مسبقًا"
+
+msgid "Try improvements early"
+msgstr "جرّب التحسينات مبكرًا"
+
+msgid "Stay ahead with new changes"
+msgstr "ابق في الصدارة مع التغييرات الجديدة"
+
+msgid "Testing Purpose"
+msgstr "غرض الاختبار"
+
+msgid "Features may still be under testing"
+msgstr "قد تكون الميزات لا تزال قيد الاختبار"
+
+msgid "Some options may change later"
+msgstr "قد تتغير بعض الخيارات لاحقًا"
+
+msgid "Minor issues may occur"
+msgstr "قد تحدث مشكلات بسيطة"
+
+msgid "Used for feedback and improvements"
+msgstr "تستخدم لجمع الملاحظات والتحسينات"
+
+msgid "Safety Notice"
+msgstr "إشعار السلامة"
+
+msgid "Recommended for staging sites"
+msgstr "موصى به لمواقع الاختبار"
+
+msgid "Avoid enabling on live websites"
+msgstr "تجنب التفعيل على المواقع الحية"
+
+msgid "Take backup before testing"
+msgstr "خذ نسخة احتياطية قبل الاختبار"
+
+msgid "Disable anytime if needed"
+msgstr "يمكن تعطيله في أي وقت إذا لزم الأمر"
+
+msgid "Update Control"
+msgstr "تحكم في التحديث"
+
+msgid "Receive beta notifications"
+msgstr "استقبل إشعارات النسخة التجريبية"
+
+msgid "Updates are not installed automatically"
+msgstr "التحديثات لا تُثبت تلقائيًا"
+
+msgid "You control when to update"
+msgstr "أنت تتحكم في وقت التحديث"
+
+msgid "Switch on/off anytime"
+msgstr "قم بالتبديل في أي وقت"
+
+msgid "Upgrade to Unlock"
+msgstr "ترقية لفتح المزايا"
+
+msgid "Beta Program Access"
+msgstr "الوصول إلى برنامج النسخة التجريبية"
+
+msgid ""
+"Get early access to upcoming features and improvements before they are officially "
+"released. Beta versions may include experimental updates and should be used for "
+"testing purposes only."
+msgstr ""
+"احصل على وصول مبكر إلى الميزات والتحسينات القادمة قبل إصدارها رسميًا. قد تتضمن "
+"النسخ التجريبية تحديثات تجريبية ويجب استخدامها لأغراض الاختبار فقط."
+
+msgid "Enable Beta Updates"
+msgstr "تفعيل تحديثات النسخة التجريبية"
+
+msgid ""
+"Receive notifications and access to beta releases. Updates will not be installed "
+"automatically."
+msgstr ""
+"استقبل الإشعارات والوصول إلى الإصدارات التجريبية. لن يتم تثبيت التحديثات تلقائيًا."
+
+msgid "Beta Usage Notice"
+msgstr "إشعار استخدام النسخة التجريبية"
+
+msgid "Beta versions may include unfinished or experimental features"
+msgstr "قد تتضمن النسخ التجريبية ميزات غير مكتملة أو تجريبية"
+
+msgid "Some features may change or be removed in future updates"
+msgstr "قد تتغير بعض الميزات أو يتم إزالتها في التحديثات المستقبلية"
+
+msgid "Minor bugs or performance issues may occur"
+msgstr "قد تحدث أخطاء طفيفة أو مشكلات في الأداء"
+
+msgid "We recommend enabling beta only on test or staging sites"
+msgstr "نوصي بتمكين النسخة التجريبية فقط على مواقع الاختبار أو مواقع staging"
+
+msgid ""
+"Beta versions are intended for testing purposes. Do not enable on live production "
+"websites without proper backups."
+msgstr ""
+"النسخ التجريبية مخصصة لأغراض الاختبار. لا تقم بتمكينها على مواقع الإنتاج المباشرة "
+"دون نسخ احتياطي مناسب."
+
+msgid "Save Settings"
+msgstr "احفظ الإعدادات"
+
+msgid "Existing Client/Secret Key (Auto Google API Configuration)"
+msgstr "العميل/المفتاح السري الموجود (تكوين Google API التلقائي)"
+
+msgid "Auth Required"
+msgstr "المصادقة مطلوبة"
+
+msgid "Welcome To GSheetConnector"
+msgstr "مرحباً بك في GSheetConnector"
+
+msgid ""
+"GSheetConnector is a powerful automation plugin that syncs WordPress data with "
+"Google Sheets in real time. It supports WooCommerce, Easy Digital Downloads, and "
+"popular form plugins such as Ninja Forms, Gravity Forms, Elementor Forms, along "
+"with 10+ additional WordPress integrations for efficient data management."
+msgstr ""
+"GSheetConnector هو مكون إضافي قوي للتشغيل الآلي يزامن بيانات WordPress مع Google "
+"Sheets في الوقت الفعلي. يدعم WooCommerce وEasy Digital Downloads، بالإضافة إلى "
+"المكونات الإضافية الشهيرة للنماذج مثل Ninja Forms وGravity Forms وElementor Forms، "
+"بالإضافة إلى أكثر من 10 تكاملات WordPress إضافية لضمان إدارة بيانات فعالة."
+
+msgid "Google Account Connection"
+msgstr "اتصال حساب Google"
+
+msgid "Connected Email Account"
+msgstr "حساب البريد الإلكتروني الموصّل"
+
+msgid "Connected"
+msgstr "موصول"
+
+msgid "Let's Connect"
+msgstr "دعنا نتواصل"
+
+msgid "Setup Guide & Troubleshooting"
+msgstr "دليل الإعداد واستكشاف الأخطاء وإصلاحها"
+
+msgid ""
+"Sync Ninja Forms data with Google Sheets in real-time effortlessly and accurately."
+msgstr "زامن بيانات Ninja Forms مع Google Sheets في الوقت الفعلي بكل سهولة ودقة."
+
+msgid "Getting Started"
+msgstr "كيفية البدء"
+
+msgid "Installation Process"
+msgstr "عملية التثبيت"
+
+msgid "Integration with Google (Existing Method)"
+msgstr "التكامل مع Google (الطريقة الموجودة)"
+
+msgid "Feeds Setting"
+msgstr "إعدادات الخلاصات"
+
+msgid "System Status"
+msgstr "حالة النظام"
+
+msgid "Docs & Troubleshooting"
+msgstr "المستندات واستكشاف الأخطاء وإصلاحها"
+
+msgid "Update Plugin"
+msgstr "تحديث المكون الإضافي"
+
+msgid "How to Enable Debugging in WordPress"
+msgstr "كيفية تمكين وضع التصحيح في WordPress"
+
+msgid "Invalid OAuth2 token"
+msgstr "رمز OAuth2 غير صالح"
+
+msgid "Change Date/Time Format and Time Zone in Google Sheets"
+msgstr "تغيير تنسيق التاريخ/الوقت والمنطقة الزمنية في Google Sheets"
+
+msgid "Additional Resources"
+msgstr "موارد إضافية"
+
+msgid "Integration with Google (Manual Method)"
+msgstr "التكامل مع Google (الطريقة اليدوية)"
+
+msgid "Integration with Google (Service Method)"
+msgstr "التكامل مع Google (طريقة الخدمة)"
+
+msgid "Plugin Settings"
+msgstr "إعدادات المكون الإضافي"
+
+msgid "Plugins by Category"
+msgstr "الإضافات حسب الفئة"
+
+msgid "Find the perfect connector for your WordPress workflow."
+msgstr "ابحث عن الموصل المثالي لتدفق العمل في WordPress الخاص بك."
+
+msgid "Contact Form Connectors"
+msgstr "موصلات نماذج الاتصال"
+
+msgid "6 plugins available"
+msgstr "6 إضافات متاحة"
+
+msgid "eCommerce Connectors"
+msgstr "موصلات التجارة الإلكترونية"
+
+msgid "2 plugins available"
+msgstr "2 إضافات متاحة"
+
+msgid "Page Builder Forms"
+msgstr "نموذج بناء الصفحات"
+
+msgid "3 plugins available"
+msgstr "3 إضافات متاحة"
+
+msgid "WP Core Connector"
+msgstr "موصل WP Core"
+
+msgid "1 plugin available"
+msgstr "إضافة واحدة متاحة"
+
+msgid "Free Plugins"
+msgstr "إضافات مجانية"
+
+msgid "12 plugins available"
+msgstr "12 إضافة متاحة"
+
+msgid "Need more support? We're here to help."
+msgstr "تحتاج إلى المزيد من الدعم؟ نحن هنا للمساعدة."
+
+msgid "Submit a Support Ticket"
+msgstr "إرسال تذكرة دعم"
+
+msgid "Our fast and friendly support team is always happy to help!"
+msgstr "فريق الدعم لدينا سريع وودود دائماً مستعد للمساعدة!"
+
+msgid "Amazing Key Features"
+msgstr "ميزات رئيسية مذهلة"
+
+msgid "Everything You Need to Sync Data"
+msgstr "كل ما تحتاجه لمزامنة البيانات"
+
+msgid ""
+"Common features shared across every GSheetConnector Pro add-on built for "
+"reliability, flexibility, and scale."
+msgstr ""
+"ميزات شائعة تتشارك في كل إضافة GSheetConnector Pro مصممة للاعتمادية والمرونة "
+"والنطاق."
+
+msgid "Google Sheets API (Up-to date)"
+msgstr "واجهة برمجة تطبيقات Google Sheets (محدثة)"
+
+msgid "One Click Authentication"
+msgstr "مصادقة بنقرة واحدة"
+
+msgid "Authenticated Email Display"
+msgstr "عرض البريد الإلكتروني المعتمد"
+
+msgid "Click & Fetch Sheet Automated"
+msgstr "انقر واحصل على ورقة بشكل تلقائي"
+
+msgid "Creating New Sheet Option"
+msgstr "إنشاء خيار ورقة جديدة"
+
+msgid "Manually Adding Sheet Name & Tab Name"
+msgstr "إضافة اسم ورقة واسم تبويب يدوياً"
+
+msgid "Automated Sheet & Tab Name"
+msgstr "اسم الورقة والتبويب بشكل تلقائي"
+
+msgid "Multiple Forms to Sheets"
+msgstr "نماذج متعددة إلى أوراق"
+
+msgid "Custom Ordering"
+msgstr "ترتيب مخصص"
+
+msgid "Custom / Merge Tags"
+msgstr "علامات مخصصة / دمج"
+
+msgid "Supported with other official and 3rd Party Addons"
+msgstr "مدعوم مع إضافات رسمية أخرى وإضافات تابعة لجهات خارجية"
+
+msgid "Conditional Sheet"
+msgstr "ورقة شرطية"
+
+msgid "Enable/Disable Sheet Headers"
+msgstr "تفعيل/تعطيل ترويسات الأوراق"
+
+msgid "Freeze Header / Color Option"
+msgstr "تجميد الرأس / خيار اللون"
+
+msgid "Sync Setting"
+msgstr "إعداد المزامنة"
+
+msgid "Role Management"
+msgstr "إدارة الأدوار"
+
+msgid "Multi Language Support"
+msgstr "دعم متعدد اللغات"
+
+msgid "Multi Site Support"
+msgstr "دعم مواقع متعددة"
+
+msgid "Manual Integration"
+msgstr "تكامل يدوي"
+
+msgid "Automatic Updates"
+msgstr "تحديثات تلقائية"
+
+msgid "Quick Configuration"
+msgstr "تكوين سريع"
+
+msgid "Latest WordPress & PHP Support"
+msgstr "أحدث دعم لـ WordPress و PHP"
+
+msgid "Excellent Priority Customer Support"
+msgstr "دعم عملاء ممتاز"
+
+msgid "Comprehensive Documentation"
+msgstr "توثيق شامل"
+
+msgid "View Full Features"
+msgstr "عرض الميزات الكاملة"
+
+msgid "Form"
+msgstr "نموذج"
+
+msgid "Processing"
+msgstr "جاري المعالجة"
+
+msgid "Sheet"
+msgstr "ورقة"
+
+msgid "Instant"
+msgstr "فوري"
+
+msgid "Real-time updates"
+msgstr "تحديثات في الوقت الحقيقي"
+
+msgid "100%"
+msgstr "100%"
+
+msgid "Accuracy"
+msgstr "الدقة"
+
+msgid "Flexible"
+msgstr "مرن"
+
+msgid "Custom mapping"
+msgstr "تخطيط مخصص"
+
+msgid "Video Tutorials"
+msgstr "دروس الفيديو"
+
+msgid "Ninja Forms - Google Sheet Settings"
+msgstr "نموذج نينجا - إعدادات ورقة Google"
+
+msgid "Select a form to configure the Ninja Forms GSheetConnector integration."
+msgstr "حدد نموذجًا لتكوين تكامل Ninja Forms GSheetConnector."
+
+msgid "Select Form"
+msgstr "حدد نموذج"
+
+msgid "General Settings"
+msgstr "الإعدادات العامة"
+
+msgid "Role Permissions"
+msgstr "أذونات الأدوار"
+
+msgid "Version Control"
+msgstr "تحكم في الإصدار"
+
+msgid "Plugin Preferences"
+msgstr "تفضيلات المكون الإضافي"
+
+msgid ""
+"Manage how plugin settings and data are handled when the plugin is uninstalled."
+msgstr "إدارة كيفية التعامل مع إعدادات وبيانات المكون الإضافي عند إلغاء تثبيته."
+
+msgid "Delete Plugin Data on Uninstall"
+msgstr "حذف بيانات الملحق عند إلغاء التثبيت"
+
+msgid "Removes all plugin data (options, metadata) when the plugin is deleted."
+msgstr "يتم إزالة جميع بيانات الملحق (الخيارات، البيانات الوصفية) عند حذف الملحق."
+
+msgid "Uninstall Data Notice"
+msgstr "إشعار بيانات إلغاء التثبيت"
+
+msgid "Enable this option only if you want a complete cleanup"
+msgstr "قم بتمكين هذا الخيار فقط إذا كنت تريد تنظيفًا كاملاً"
+
+msgid "All plugin settings and data will be permanently removed"
+msgstr "ستتم إزالة جميع إعدادات وبيانات الملحق بشكل دائم"
+
+msgid "Incorrect settings can delete all sensitive form and user data"
+msgstr "يمكن أن تحذف الإعدادات غير الصحيحة جميع البيانات الحساسة للنموذج والمستخدم"
+
+msgid "Confirm Data Deletion"
+msgstr "تأكيد حذف البيانات"
+
+msgid ""
+"Enabling this option will permanently delete all plugin data, including settings "
+"and integrations, when the plugin is uninstalled."
+msgstr ""
+"تمكين هذا الخيار سيؤدي إلى حذف جميع بيانات الملحق بشكل دائم، بما في ذلك الإعدادات "
+"والتكاملات، عند إلغاء تثبيت الملحق."
+
+msgid ""
+"If you plan to upgrade from Free to Pro, you may lose your existing configuration "
+"data."
+msgstr ""
+"إذا كنت تخطط للترقية من النسخة المجانية إلى النسخة الاحترافية، فقد تفقد بيانات "
+"التهيئة الحالية لديك."
+
+msgid "Proceed only if you want a complete cleanup. This action cannot be undone."
+msgstr "تابع فقط إذا كنت ترغب في تنظيف كامل. لا يمكن التراجع عن هذا الإجراء."
+
+msgid "Enable Deletion"
+msgstr "تمكين الحذف"
+
+msgid "Like & Subscribe to our channel for regular updates"
+msgstr "أعجبك واشتراك في قناتنا للحصول على تحديثات منتظمة"
+
+msgid "Submit A Ticket"
+msgstr "تقديم تذكرة"
+
+msgid ""
+"We offer excellent support through our advanced ticket system. Make sure to "
+"register your purchase first to access our support services and other resources."
+msgstr ""
+"نحن نقدم دعمًا ممتازًا من خلال نظام التذاكر المتقدم لدينا. تأكد من تسجيل عملية "
+"الشراء الخاصة بك أولاً للوصول إلى خدمات الدعم الخاصة بنا وغيرها من الموارد."
+
+msgid "Submit a ticket"
+msgstr "تقديم تذكرة"
+
+msgid "Documentation"
+msgstr "الوثائق"
+
+msgid ""
+"This is the place to go to reference different aspects of the plugin. Our online "
+"documentation is an incredible resource for learning the ins and outs."
+msgstr ""
+"هذا هو المكان المناسب للرجوع إلى جوانب مختلفة من الإضافة. تعتبر وثائقنا عبر "
+"الإنترنت مصدرًا رائعًا لفهم التفاصيل."
+
+msgid "Existing"
+msgstr "موجود"
+
+msgid ""
+"You`re using GSheetConnector for Ninja Forms. To unlock more features consider "
+msgstr "أنت تستخدم GSheetConnector لـ Ninja Forms. لفتح المزيد من الميزات، اعتبر  "
+
+msgid "upgrading to Pro"
+msgstr "الترقية إلى النسخة الاحترافية"
+
+msgid "Unlock Advance Features of Ninja Forms Pro version 🚀"
+msgstr "افتح ميزات متقدمة من النسخة الاحترافية لـ Ninja Forms 🚀"
+
+msgid ""
+"Use advanced features like Manual Authentication and automatic field mapping, no "
+"need to create columns in Google Sheets manually."
+msgstr ""
+"استخدم الميزات المتقدمة مثل المصادقة اليدوية والتخطيط التلقائي للحقل، ولا حاجة "
+"لإنشاء أعمدة في Google Sheets يدويًا."
+
+msgid ""
+"Choose only the fields you need with simple toggles, use advanced tags, sync past "
+"form entries, and get priority support."
+msgstr ""
+"اختر فقط الحقول التي تحتاجها مع تبديلات بسيطة، استخدم علامات متقدمة، ونسق إدخالات "
+"النموذج السابقة، واحصل على دعم ذي أولوية."
+
+msgid "View License Types"
+msgstr "عرض أنواع الترخيص"
+
+msgid "Compare Features"
+msgstr "قارن الميزات"
+
+msgid "Maybe Later"
+msgstr "ربما لاحقًا"
+
+msgid "Enjoying the Plugin?"
+msgstr "هل تستمتع بالملحق؟"
+
+msgid ""
+"If you are enjoying the plugin, please consider leaving a 5-star review. Your "
+"support helps us improve and grow."
+msgstr ""
+"إذا كنت تستمتع بالملحق، يرجى التفكير في ترك تقييم 5 نجوم. دعمك يساعدنا على التحسن "
+"والنمو."
+
+msgid "Ok, you deserve it!"
+msgstr "حسنا، أنت تستحق ذلك!"
+
+msgid "I already did"
+msgstr "لقد فعلت ذلك بالفعل"
+
+msgid "I need help"
+msgstr "أحتاج مساعدة"
+
+msgid " Enhance Your Setup"
+msgstr "حسن إعدادك"
+
+msgid "Extend your workflow with our add-ons."
+msgstr "قم بتمديد سير عملك مع إضافاتنا."
+
+msgid "Discover tools that integrate seamlessly and help you get more done."
+msgstr "اكتشف الأدوات التي تتكامل بسلاسة وتساعدك في إنجاز المزيد."
+
+msgid "View Details"
+msgstr "عرض التفاصيل"
+
+msgid "Authenticate with Your Google Account"
+msgstr "المصادقة باستخدام حساب Google الخاص بك"
+
+msgid "Your connection has expired or hasn’t been set up yet."
+msgstr "انتهت صلاحية اتصالك أو لم يتم إعداده بعد."
+
+msgid ""
+"Please reauthenticate with your google account to continue syncing data without "
+"interruptions."
+msgstr ""
+"يرجى إعادة المصادقة باستخدام حسابك على Google للاستمرار في مزامنة البيانات دون "
+"انقطاعات."
+
+msgid "Authenticate Now"
+msgstr "المصادقة الآن"
+
+msgid "Learn How"
+msgstr "تعلم كيف"
+
+msgid "v"
+msgstr "v"
+
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+msgid "Integration"
+msgstr "التكامل"
+
+msgid "Forms Settings"
+msgstr "إعدادات النماذج"
+
+msgid "Extensions"
+msgstr "الإضافات"
+
+msgid "Advanced Tools for Easy Spreadsheet Control"
+msgstr "أدوات متقدمة للتحكم السهل في الجداول"
+
+msgid ""
+"Improve your sheet management with smart automation and flexible customization "
+"features."
+msgstr "حسّن إدارة الجداول الخاصة بك من خلال الأتمتة الذكية وميزات التخصيص المرنة."
+
+msgid "Google Sheets API v4"
+msgstr "واجهة برمجة تطبيقات Google Sheets v4"
+
+msgid "One-Click Authentication"
+msgstr "المصادقة بضغطه واحدة"
+
+msgid "Click & Fetch Automation"
+msgstr "أتمتة النقر والاسترداد"
+
+msgid "Create New Spreadsheet"
+msgstr "إنشاء جدول بيانات جديد"
+
+msgid "You do not have permission to access this page."
+msgstr "ليس لديك إذن للوصول إلى هذه الصفحة."
+
+msgid "System Information"
+msgstr "معلومات النظام"
+
+msgid ""
+"View detailed information about your plugin, server, and WordPress setup for "
+"troubleshooting and support."
+msgstr ""
+"عرض معلومات تفصيلية حول إضافتك والخادم وإعداد WordPress لدعم الحلول والمساعدة."
+
+msgid "Copy System Info"
+msgstr "نسخ معلومات النظام"
+
+msgid "Does not exist"
+msgstr "غير موجود"
+
+msgid "Debug Log"
+msgstr "سجل الأخطاء"
+
+msgid "Copied successfully"
+msgstr "تم النسخ بنجاح"
+
+msgid "Type"
+msgstr "النوع"
+
+msgid "File"
+msgstr "ملف"
+
+msgid "No debug logs found"
+msgstr "لا توجد سجلات أخطاء"
+
 msgid "GSheetConnector Ninja Forms Demo Information"
-msgstr "معلومات العرض التوضيحي لنماذج النينجا GSheetConnector"
+msgstr "معلومات عرض نموذج Ninja Forms لـ GSheetConnector"
 
-#: includes/pages/njforms-integration-demo-info.php:8
 msgid "URL"
-msgstr "الرابط"
+msgstr "عنوان URL"
 
-#: includes/pages/njforms-integration-demo-info.php:14
 msgid "Sheet URL"
-msgstr "عنوان URL للورقة"
+msgstr "عنوان URL لجدول البيانات"
 
-#: includes/pages/njforms-integration-demo-info.php:16
 msgid "Demo URL"
-msgstr "عنوان URL التجريبي"
+msgstr "عنوان URL للعرض"
 
-#: includes/pages/njforms-integration-faq.php:5
 msgid "How to configure your Google Spreadsheet with Ninja Form plugin?"
-msgstr ""
-"كيفية تكوين جدول بيانات Google الخاص بك باستخدام المكون الإضافي Ninja Form؟"
+msgstr "كيف تهيئ جدول بيانات Google الخاص بك مع إضافة نموذج نينجا؟"
 
-#: includes/pages/njforms-integration-faq.php:8
 msgid "Go to the Ninja Forms Menu."
-msgstr "انتقل إلى قائمة نماذج النينجا ."
+msgstr "اذهب إلى قائمة نماذج نينجا."
 
-#: includes/pages/njforms-integration-faq.php:9
 msgid "Edit/Add Ninja Form."
-msgstr "تحرير / إضافة نموذج النينجا."
+msgstr "تحرير/إضافة نموذج نينجا."
 
-#: includes/pages/njforms-integration-faq.php:10
 msgid "Go to Emails & Actions tabs."
-msgstr "انتقل إلى علامات التبويب رسائل البريد الإلكتروني والإجراءات."
+msgstr "اذهب إلى علامات التبويب البريد الإلكتروني والإجراءات."
 
-#: includes/pages/njforms-integration-faq.php:11
 msgid "Click on (Add new action) OR +(Plus Sign)."
-msgstr "انقر فوق (إضافة إجراء جديد) أو + (علامة الجمع)."
+msgstr "اضغط على (أضف إجراء جديد) أو +(علامة الجمع)."
 
-#: includes/pages/njforms-integration-faq.php:18
 msgid "Click on Google Sheet action"
-msgstr "انقر على إجراء ورقة جوجل"
+msgstr "اضغط على إجراء جدول بيانات Google"
 
-#: includes/pages/njforms-integration-faq.php:23
-msgid ""
-"Fill the below details >> Click on Done button >> Click on Publish button"
-msgstr "املأ التفاصيل أدناه >> انقر فوق الزر \"تم\" >> انقر فوق الزر \"نشر\" "
+msgid "Fill the below details >> Click on Done button >> Click on Publish button"
+msgstr "املأ التفاصيل أدناه >> اضغط على زر \"تم\" >> اضغط على زر \"نشر\""
 
-#: includes/pages/njforms-integration-faq.php:28
 msgid ""
 "Google Sheet Name, Google Sheet ID, Tab Name and Tab ID you can copy from "
 "spreadsheet like below"
 msgstr ""
-"اسم جدول بيانات Google ومعرف جدول بيانات Google واسم علامة التبويب ومعرف "
-"علامة التبويب يمكنك النسخ من جدول البيانات كما هو موضح أدناه   "
+"يمكنك نسخ اسم جدول بيانات Google ومعرف جدول البيانات واسم العلامة ومعرف العلامة من "
+"جدول البيانات كما هو أدناه."
 
-#: includes/pages/njforms-integration-faq.php:38
 msgid "Why I am Getting Error 500 After Installing Plugin."
-msgstr "لماذا أتلقى الخطأ 500 بعد تثبيت المكون الإضافي."
+msgstr "لماذا أحصل على خطأ 500 بعد تثبيت الإضافة؟"
 
-#: includes/pages/njforms-integration-faq.php:40
 msgid "Following are few of the points which will help to debug the issue."
-msgstr "فيما يلي بعض النقاط التي ستساعد في تصحيح المشكلة."
+msgstr "فيما يلي بعض النقاط التي ستساعد في تصحيح الخطأ."
 
-#: includes/pages/njforms-integration-faq.php:42
 msgid ""
 "1) Enable debug by adding the following in your wp-config.php file before /* "
 "That’s all, stop editing! Happy blogging."
 msgstr ""
-"1) قم بتمكين تصحيح الأخطاء عن طريق إضافة ما يلي في ملف wp-config.php الخاص "
-"بك قبل /* هذا كل شيء ، توقف عن التحرير! تدوين سعيد."
+"1) قم بتمكين التصحيح عن طريق إضافة ما يلي إلى ملف wp-config.php الخاص بك قبل /* "
+"هذا كل شيء، توقف عن التعديل! استمتع بالتدوين."
 
-#: includes/pages/njforms-integration-faq.php:44
 msgid ""
-"define('WP_DEBUG', true); define('WP_DEBUG_LOG', true); "
-"define('SCRIPT_DEBUG', true); define('SAVEQUERIES', true);"
+"define('WP_DEBUG', true); define('WP_DEBUG_LOG', true); define('SCRIPT_DEBUG', "
+"true); define('SAVEQUERIES', true);"
 msgstr ""
-"تعريف (\"WP_DEBUG\" ، صحيح) ؛ تعريف (\"WP_DEBUG_LOG\" ، صحيح) ؛ تعريف "
-"(\"SCRIPT_DEBUG\" ، صحيح) ؛ تعريف (\"استعلامات الحفظ\" ، صحيح) ؛"
+"define('WP_DEBUG', true); define('WP_DEBUG_LOG', true); define('SCRIPT_DEBUG', "
+"true); define('SAVEQUERIES', true);"
 
-#: includes/pages/njforms-integration-faq.php:46
 msgid ""
-"And then try to activate the plugin again. This will create a debug.log "
-"under wp-content folder. Check for Ninja Forms Google Sheet Connector "
-"errors. If found, send us the file at support@westerndeal.com"
+"And then try to activate the plugin again. This will create a debug.log under wp-"
+"content folder. Check for Ninja Forms Google Sheet Connector errors. If found, "
+"send us the file at support@westerndeal.com"
 msgstr ""
-"ثم حاول تنشيط المكون الإضافي مرة أخرى. سيؤدي هذا إلى إنشاء debug.log ضمن "
-"مجلد wp-content. تحقق من وجود خطأ في موصل ورقة Google Forms من Ninja إذا كان "
-"الأمر كذلك ، فأرسل لنا الملف على support@westerndeal.com"
+"ثم حاول تنشيط الإضافة مرة أخرى. سيؤدي هذا إلى إنشاء ملف debug.log في مجلد wp-"
+"content. تحقق من الأخطاء الخاصة بموصل Google Sheet لنماذج نينجا. إذا تم العثور "
+"عليها، أرسل لنا الملف على support@westerndeal.com"
 
-#: includes/pages/njforms-integration-faq.php:48
 msgid ""
-"2) Check the log that is created by Ninja Forms Google Sheet. For that, "
-"click “View” from the Google Sheet Integration page. Let us know if there is "
-"any error—we will assist you."
+"2) Check the log that is created by Ninja Forms Google Sheet. For that, click "
+"“View” from the Google Sheet Integration page. Let us know if there is any error—"
+"we will assist you."
 msgstr ""
-"2) تحقق من السجل الذي تم إنشاؤه بواسطة Ninja Forms Google Sheet. لذلك ، انقر "
-"فوق \"عرض\" من صفحة تكامل جدول بيانات Google. أخبرنا إذا كان هناك أي خطأ - "
+"2) تحقق من السجل الذي تم إنشاؤه بواسطة موصل Google Sheet لنماذج نينجا. لذلك، انقر "
+"فوق \"عرض\" من صفحة تكامل جدول بيانات Google. دعنا نعرف إذا كان هناك أي خطأ – "
 "سنساعدك."
 
-#: includes/pages/njforms-integration-faq.php:57
 msgid "How do I get the Google Access Code required in step 3 of Installation?"
-msgstr "كيف أحصل على رمز الوصول إلى Google المطلوب في الخطوة 3 من التثبيت؟"
+msgstr "كيف أحصل على رمز وصول Google المطلوب في الخطوة 3 من التثبيت؟"
 
-#: includes/pages/njforms-integration-faq.php:64
 msgid "On the <code>Admin Panel &gt; Ninja Forms &gt; Google Sheets.</code>"
-msgstr "على<code>Admin Panel &gt; Ninja Forms &gt; Google Sheets.</code>"
+msgstr "في <code>لوحة الإدارة &gt; نماذج نينجا &gt; جداول بيانات Google.</code>"
 
-#: includes/pages/njforms-integration-faq.php:70
 msgid "Go to “Integration” tab and click on \"Get Code\" button."
-msgstr "انتقل إلى علامة التبويب \"التكامل\" وانقر على زر \"الحصول على الرمز\"."
+msgstr "اذهب إلى علامة \"التكامل\" واضغط على زر \"احصل على الرمز\"."
 
-#: includes/pages/njforms-integration-faq.php:74
 msgid ""
-"In a popup Google will ask you to authorize the plugin to connect to your "
-"Google Sheets. Authorize it – you may have to log in to your Google account "
-"if you aren’t already logged in."
+"In a popup Google will ask you to authorize the plugin to connect to your Google "
+"Sheets. Authorize it – you may have to log in to your Google account if you aren’t "
+"already logged in."
 msgstr ""
-"في نافذة منبثقة ، ستطلب منك Google تفويض المكون الإضافي للاتصال بجداول "
-"بيانات Google. قم بتفويضه - قد تضطر إلى تسجيل الدخول إلى حساب Google الخاص "
-"بك إذا لم تكن قد قمت بتسجيل الدخول بالفعل."
+"في نافذة منبثقة، ستطلب Google منك تفويض الإضافة للاتصال بجداول بيانات Google "
+"الخاصة بك. قم بتفويضه - قد تحتاج إلى تسجيل الدخول إلى حساب Google الخاص بك إذا لم "
+"تكن مسجلاً بالفعل."
 
-#: includes/pages/njforms-integration-faq.php:78
 msgid "On the next screen, you should receive the Access Code. Copy it."
-msgstr "في الشاشة التالية ، يجب أن تتلقى رمز الوصول. انسخه."
+msgstr "في الشاشة التالية، يجب أن تتلقى رمز الوصول. انسخه."
 
-#: includes/pages/njforms-integration-faq.php:82
 msgid "Now you can paste this code back in the Google Access Code."
-msgstr "يمكنك الآن لصق هذا الرمز مرة أخرى في رمز الوصول إلى Google."
+msgstr "الآن يمكنك لصق هذا الرمز مرة أخرى في رمز وصول Google."
 
-#: includes/pages/njforms-integration-faq.php:91
 msgid "Submitted Value is not showing in Googlesheet."
-msgstr "لا تظهر القيمة المرسلة في جدول بيانات Google."
+msgstr "القيمة المقدمة لا تظهر في جدول بيانات Google."
 
-#: includes/pages/njforms-integration-faq.php:97
 msgid ""
 "Sometimes it can take a while of spinning before it goes through. But if the "
-"entries never show up in your Sheet then one of these things might be the "
-"reason:"
+"entries never show up in your Sheet then one of these things might be the reason:"
 msgstr ""
-"في بعض الأحيان قد يستغرق الأمر بعض الوقت من الدوران قبل أن يمر. ولكن إذا لم "
-"تظهر الإدخالات أبدا في الورقة الخاصة بك ، فقد يكون أحد هذه الأشياء هو السبب:"
+"في بعض الأحيان قد يستغرق الأمر بعض الوقت قبل أن يتم ذلك. ولكن إذا لم تظهر "
+"الإدخالات أبدًا في جدول بياناتك، فقد تكون إحدى هذه الأشياء هي السبب:"
 
-#: includes/pages/njforms-integration-faq.php:101
-#: includes/pages/njforms-integration-faq.php:127
 msgid "Wrong access code (Check debug log)"
-msgstr "رمز الوصول خاطئ ( تحقق من سجل التصحيح )"
+msgstr "رمز الوصول الخاطئ (تحقق من سجل التصحيح)"
 
-#: includes/pages/njforms-integration-faq.php:102
-#: includes/pages/njforms-integration-faq.php:128
 msgid "Wrong Sheet name or tab name"
-msgstr "اسم الورقة أو اسم علامة التبويب غير صحيح"
+msgstr "اسم الجدول أو اسم العلامة خاطئ"
 
-#: includes/pages/njforms-integration-faq.php:103
 msgid ""
-"Wrong Column name (Column names in Ninja Forms. It cannot have underscore, "
-"space or any special characters.)"
+"Wrong Column name (Column names in Ninja Forms. It cannot have underscore, space "
+"or any special characters.)"
 msgstr ""
-"اسم عمود خاطئ (أسماء الأعمدة في نماذج النينجا. لا يمكن أن تحتوي على شرطة "
-"سفلية أو مساحة أو أي أحرف خاصة.)"
+"اسم العمود خاطئ (أسماء الأعمدة في نماذج نينجا. لا يمكن أن تحتوي على شرطة سفلية أو "
+"مسافة أو أي أحرف خاصة.)"
 
-#: includes/pages/njforms-integration-faq.php:107
 msgid ""
-"Please double-check those items and hopefully getting them right will fix "
-"the issue."
-msgstr ""
-"يرجى التحقق مرة أخرى من هذه العناصر ونأمل أن يؤدي الحصول عليها بشكل صحيح إلى "
-"حل المشكلة."
+"Please double-check those items and hopefully getting them right will fix the "
+"issue."
+msgstr "يرجى التحقق مرة أخرى من تلك العناصر ونأمل أن يكون تصحيحها سيحل المشكلة."
 
-#: includes/pages/njforms-integration-faq.php:118
-msgid ""
-"Why am I not seeing Ninja Form values (submitted data) in my Google Sheet?"
+msgid "Why am I not seeing Ninja Form values (submitted data) in my Google Sheet?"
 msgstr ""
-"لماذا لا أرى قيم نموذج النينجا (البيانات المرسلة) في جدول بيانات Google "
-"الخاص بي؟"
+"لماذا لا أرى قيم نموذج نينجا (البيانات المقدمة) في جدول بيانات Google الخاص بي؟"
 
-#: includes/pages/njforms-integration-faq.php:123
 msgid ""
 "Sometimes it can take a while of spinning before it goes through. But if the "
-"entries never show up in your Sheet, then one of these things might be the "
-"reason:"
+"entries never show up in your Sheet, then one of these things might be the reason:"
 msgstr ""
-"في بعض الأحيان قد يستغرق الأمر بعض الوقت من الدوران قبل أن يمر. ولكن إذا لم "
-"تظهر الإدخالات أبدا في الورقة الخاصة بك ، فقد يكون أحد هذه الأشياء هو السبب:"
+"في بعض الأحيان قد يستغرق الأمر بعض الوقت قبل أن يتم ذلك. ولكن إذا لم تظهر "
+"الإدخالات أبدًا في جدول بياناتك، فقد تكون إحدى هذه الأشياء هي السبب:"
 
-#: includes/pages/njforms-integration-faq.php:129
 msgid ""
-"Wrong column name mapping (Column names in Ninja Forms cannot have "
-"underscores, spaces, or any special characters)"
+"Wrong column name mapping (Column names in Ninja Forms cannot have underscores, "
+"spaces, or any special characters)"
 msgstr ""
-"تعيين اسم العمود خاطئ (لا يمكن أن تحتوي أسماء الأعمدة في نماذج النينجا على "
-"شرطة سفلية أو مسافات أو أي أحرف خاصة)"
+"تعيين اسم العمود بشكل خاطئ (أسماء الأعمدة في نماذج نينجا لا يمكن أن تحتوي على "
+"شرطات سفلية أو مسافات أو أي أحرف خاصة)"
 
-#: includes/pages/njforms-integration-faq.php:133
 msgid ""
-"Please double-check those items — getting them right will likely fix the "
-"issue."
+"Please double-check those items — getting them right will likely fix the issue."
 msgstr ""
-"يرجى التحقق مرة أخرى من هذه العناصر - من المحتمل أن يؤدي الحصول عليها بشكل "
-"صحيح إلى حل المشكلة."
+"يرجى التحقق مرة أخرى من تلك العناصر - فإن الحصول عليها بشكل صحيح من المحتمل أن يحل "
+"المشكلة."
 
-#. Plugin Name of the plugin/theme
-msgid "GSheetConnector For Ninja Forms"
-msgstr "GSheetConnector لنماذج النينجا"
+msgid "Google Sheets Integration for Ninja Forms"
+msgstr "دمج Google Sheets مع Ninja Forms"
 
-#. Description of the plugin/theme
+msgid "Choose Google API Setting"
+msgstr "اختر إعداد واجهة برمجة التطبيقات Google"
+
+msgid "Existing Client / Secret Key (Auto Setup)"
+msgstr "مفتاح العميل / المفتاح السري الحالي (الإعداد التلقائي)"
+
+msgid "Manual Client/Secret Key (Use Your Google API Configuration)"
+msgstr ""
+"مفتاح العميل/المفتاح السري اليدوي (استخدم إعدادات واجهة برمجة التطبيقات Google "
+"الخاصة بك)"
+
+msgid "Service Account (Recommended)"
+msgstr "حساب الخدمة (موصى به)"
+
+msgid "Select how Ninja Forms should authenticate with Google Sheets."
+msgstr "اختر كيفية مصادقة Ninja Forms مع Google Sheets."
+
+msgid "Auto Setup"
+msgstr "الإعداد التلقائي"
+
+msgid ""
+"Sign in with your Google account to connect Ninja Forms with Google Sheets. Once "
+"connected, your data syncs based on your settings. Learn more in the documentation"
+msgstr ""
+"سجل الدخول باستخدام حساب جوجل الخاص بك لربط Ninja Forms مع Google Sheets. بمجرد "
+"الاتصال، تتزامن بياناتك بناءً على إعداداتك. لمعرفة المزيد، اقرأ الوثائق"
+
+msgid "click here"
+msgstr "انقر هنا"
+
+msgid "Click on the <strong>Sign in with Google</strong> button."
+msgstr "انقر على زر <strong>تسجيل الدخول باستخدام جوجل</strong>."
+
+msgid "Log in using your Google account."
+msgstr "تسجيل الدخول باستخدام حساب جوجل الخاص بك."
+
+msgid "Select the Google account where your Sheets are stored."
+msgstr "حدد حساب جوجل الذي تم تخزين أوراقك فيه."
+
+msgid "Grant access to:"
+msgstr "منح الوصول إلى:"
+
+msgid "Google Drive"
+msgstr "Google Drive"
+
+msgid "Google Sheets"
+msgstr "جداول بيانات Google"
+
+msgid "Click <strong>Allow</strong> to finish authorization."
+msgstr "انقر <strong>السماح</strong> لإتمام التفويض."
+
+msgid "Save the authentication code if prompted."
+msgstr "احفظ رمز المصادقة إذا تم طلب ذلك."
+
+msgid "This allows the plugin to securely sync your form data with Google Sheets."
+msgstr "يسمح هذا للملحق بمزامنة بيانات النموذج الخاصة بك بأمان مع Google Sheets."
+
+msgid ""
+"<p class=\"fw-400 text-dark\"><strong>Google Drive</strong> and <strong>Google "
+"Sheets</strong> permissions were not granted during authentication with Google.</"
+"p>\n"
+"                                            <p class=\"fw-400 text-"
+"dark\"><strong>Refer to Step 4 in the Connection Guide shown alongside.</"
+"strong><br> Then, deactivate the connection and re-authorize it, ensuring both "
+"Google Drive and Google Sheets permissions are enabled.</p>"
+msgstr ""
+"<p class=\"fw-400 text-dark\"><strong>لم يتم منح أذونات Google Drive</strong> "
+"و<strong>Google Sheets</strong> أثناء المصادقة مع جوجل.</p>\n"
+"                                            <p class=\"fw-400 text-"
+"dark\"><strong>راجِع الخطوة 4 في دليل الاتصال الموضح بجانبها.</strong><br> بعد ذلك، "
+"قم بإيقاف الاتصال وأعد تفويضه، مع التأكد من تمكين كل من أذونات Google Drive "
+"وGoogle Sheets.</p>"
+
+msgid "Connected Google Account"
+msgstr "حساب جوجل المتصل"
+
+msgid ""
+"Authentication failed. Your Google access token may be expired or invalid. Please "
+"re-authenticate your account with the required permissions."
+msgstr ""
+"فشلت المصادقة. قد يكون رمز وصول جوجل الخاص بك قد انتهت صلاحيته أو غير صالح. يرجى "
+"إعادة مصادقة حسابك مع الأذونات المطلوبة."
+
+msgid "Connect Your Google Account"
+msgstr "ربط حساب جوجل الخاص بك"
+
+msgid ""
+"Securely link your Google account to start syncing form entries automatically."
+msgstr "اربط حساب جوجل الخاص بك بأمان لبدء مزامنة إدخالات النموذج تلقائيًا."
+
+msgid "Sign in with Google"
+msgstr "تسجيل الدخول باستخدام جوجل"
+
+msgid "Client Token"
+msgstr "رمز العميل"
+
+msgid "Save Client Token"
+msgstr "احفظ رمز العميل"
+
+msgid ""
+"We do not store any of the data from your Google account on our servers, "
+"everything is processed & stored on your server. We take your privacy extremely "
+"seriously and ensure it is never misused. Learn more in the documentation"
+msgstr ""
+"نحن لا نخزن أي من البيانات من حساب جوجل الخاص بك على خوادمنا، كل شيء تتم معالجته "
+"وتخزينه على خادمك. نحن نأخذ خصوصيتك على محمل الجد ون确保 أنه لا يتم إساءة "
+"استخدامها أبدًا. لمعرفة المزيد، اقرأ الوثائق"
+
+msgid "click here."
+msgstr "انقر هنا."
+
+msgid "Connection Status & Next Steps"
+msgstr "حالة الاتصال والخطوات التالية"
+
+msgid ""
+"Your Google account has been successfully connected. You are now ready to sync "
+"your form submissions with Google Sheets securely and automatically."
+msgstr ""
+"تم الاتصال بحساب جوجل الخاص بك بنجاح. أنت الآن جاهز لمزامنة تقديمات النموذج الخاص "
+"بك مع Google Sheets بشكل آمن وتلقائي."
+
+msgid "Create New Feed"
+msgstr "إنشاء تغذية جديدة"
+
+msgid "Select Google Spreadsheet"
+msgstr "حدد جدول بيانات جوجل"
+
+msgid "Add Labels in Sheet Headers Manually"
+msgstr "إضافة علامات في رؤوس الأوراق يدويًا"
+
+msgid "Enable Fields to Sync"
+msgstr "تمكين الحقول للمزامنة"
+
+msgid "Customize the Headers Appearance"
+msgstr "تخصيص مظهر الرؤوس"
+
+msgid "Use Sync Settings (Past Entries)"
+msgstr "استخدام إعدادات المزامنة (الإدخالات السابقة)"
+
+msgid "Upgrade to unlock"
+msgstr "ترقية لفتح"
+
+msgid "Connection Guide"
+msgstr "دليل الاتصال"
+
+msgid "Step-by-Step"
+msgstr "خطوة بخطوة"
+
+msgid ""
+"Follow these steps to connect your Google account and start syncing your form data "
+"with Google Sheets."
+msgstr ""
+"اتبع هذه الخطوات لربط حساب Google الخاص بك وبدء مزامنة بيانات النموذج مع Google "
+"Sheets."
+
+msgid "Step-1 Connect Your Google Account"
+msgstr "الخطوة-1 ربط حساب Google الخاص بك"
+
+msgid ""
+"Sign in with your Google account to start the automatic Google Sheets integration."
+msgstr ""
+"قم بتسجيل الدخول باستخدام حساب Google الخاص بك لبدء تكامل Google Sheets التلقائي."
+
+msgid "Step-2 Choose Google Account"
+msgstr "الخطوة-2 اختيار حساب Google"
+
+msgid "Choose the Google account where your Sheets are stored."
+msgstr "اختر حساب Google الذي تم تخزين أوراق العمل الخاصة بك فيه."
+
+msgid "check our detailed guideline"
+msgstr "تحقق من دليلنا التفصيلي"
+
+msgid "Step-3 Review Access Information"
+msgstr "الخطوة-3 مراجعة معلومات الوصول"
+
+msgid "Google will show what information the plugin can access."
+msgstr "ستظهر Google المعلومات التي يمكن أن يصل إليها المكون الإضافي."
+
+msgid "Step-4 Grant Required Permissions"
+msgstr "الخطوة-4 منح الأذونات المطلوبة"
+
+msgid "Allow required permissions for Google Sheets and Drive access."
+msgstr "اسمح بالأذونات المطلوبة للوصول إلى Google Sheets وDrive."
+
+msgid "Step-5 Save Authentication Code"
+msgstr "الخطوة-5 حفظ رمز المصادقة"
+
+msgid "Save the authentication code to complete the Google account connection."
+msgstr "احفظ رمز المصادقة لإكمال ربط حساب Google."
+
+msgid "Step-6 Integration Completed"
+msgstr "الخطوة-6 اكتمل التكامل"
+
+msgid "Your Google account is now successfully connected."
+msgstr "تم الآن ربط حساب Google الخاص بك بنجاح."
+
+msgid "Manual Google Sheets Integration"
+msgstr "تكامل Google Sheets اليدوي"
+
+msgid ""
+"Connect Ninja  Froms to Google Sheets using your own Google Cloud project.\n"
+"                            Ideal for advanced users who need full API control, "
+"custom OAuth setup,\n"
+"                            and independent credential management."
+msgstr ""
+"قم بربط Ninja Froms بـ Google Sheets باستخدام مشروع Google Cloud الخاص بك.\n"
+"                            مثالي للمستخدمين المتقدمين الذين يحتاجون إلى التحكم "
+"الكامل في API وإعداد OAuth مخصص،\n"
+"                            وإدارة بيانات الاعتماد المستقلة."
+
+msgid "Custom API Credentials"
+msgstr "بيانات اعتماد API مخصصة"
+
+msgid ""
+"Connect using your own Google Cloud Client ID and Client Secret for full "
+"authentication control."
+msgstr ""
+"اتصل باستخدام معرف عميل Google Cloud الخاص بك وسر العميل للحصول على التحكم الكامل "
+"في المصادقة."
+
+msgid "Secure Authentication"
+msgstr "مصداقية موثوقة"
+
+msgid ""
+"Authenticate directly with Google using a secure Authentication flow without third-"
+"party dependency."
+msgstr ""
+"قم بالمصادقة مباشرة مع Google باستخدام تدفق مصادقة آمن دون الاعتماد على طرف ثالث."
+
+msgid "Advanced Configuration"
+msgstr "تكوين متقدم"
+
+msgid ""
+"Set custom Redirect URIs, manage scopes, and configure API settings based on your "
+"project needs."
+msgstr ""
+"قم بتعيين عناوين URL المعاد توجيهها المخصصة، وإدارة النطاقات، وتكوين إعدادات API "
+"بناءً على احتياجات مشروعك."
+
+msgid "Priority Technical Support"
+msgstr "دعم فني ذو أولوية"
+
+msgid ""
+"Get fast assistance from our expert team for setup, troubleshooting, and "
+"optimization."
+msgstr ""
+"احصل على مساعدة سريعة من فريق الخبراء لدينا بشأن الإعداد، واستكشاف الأخطاء، "
+"والتحسين."
+
+msgid "View Pro Features"
+msgstr "عرض الميزات المميزة"
+
+msgid "Service Account Google Sheets Integration"
+msgstr "تكامل حساب الخدمة لـ Google Sheets"
+
+msgid ""
+"Securely connect Ninja Froms to Google Sheets using a Google Cloud Service Account "
+"JSON key. Ideal for automated server-to-server syncing without requiring manual "
+"Google login."
+msgstr ""
+"قم بالاتصال بأمان بين Ninja Froms و Google Sheets باستخدام مفتاح JSON لحساب خدمة "
+"Google Cloud. مثالي للمزامنة الآلية من الخادم إلى الخادم دون الحاجة إلى تسجيل "
+"الدخول اليدوي إلى Google."
+
+msgid "Secure JSON Authentication"
+msgstr "مصداقية JSON آمنة"
+
+msgid ""
+"Authenticate using a secure Google Cloud JSON key file for direct and encrypted "
+"communication with Google Sheets."
+msgstr ""
+"قم بالمصادقة باستخدام ملف مفتاح JSON آمن من Google Cloud للتواصل المباشر والمشفر "
+"مع Google Sheets."
+
+msgid "No Authentication Login Required"
+msgstr "لا يتطلب تسجيل دخول مصادق عليه"
+
+msgid ""
+"Enable automatic background syncing without requiring Google account sign-in "
+"during setup."
+msgstr ""
+"تمكين مزامنة تلقائية في الخلفية دون الحاجة لتسجيل الدخول إلى حساب Google أثناء "
+"الإعداد."
+
+msgid "Direct Spreadsheet Access"
+msgstr "الوصول المباشر إلى جدول البيانات"
+
+msgid ""
+"Share your Google Sheet with the service account email to enable automatic data "
+"transfer."
+msgstr "شارك جدول بيانات Google الخاص بك مع بريد الخدمة لتمكين نقل البيانات تلقائيًا."
+
+msgid "Production-Ready & Reliable"
+msgstr "جاهز للإنتاج وموثوق"
+
+msgid ""
+"Built for stable, uninterrupted syncing in professional and high-traffic "
+"environments."
+msgstr ""
+"مصمم لتوفير مزامنة مستقرة وغير منقطعة في البيئات المهنية ذات الحركة المرورية "
+"العالية."
+
+msgid "Deactivate Integration"
+msgstr "تعطيل التكامل"
+
+msgid ""
+"Are you sure you want to deactivate Google Sheets integration?\n"
+"            This will stop syncing your form entries."
+msgstr ""
+"هل أنت متأكد أنك تريد تعطيل تكامل جداول بيانات Google؟\n"
+"            سيؤدي ذلك إلى إيقاف مزامنة إدخالات النموذج الخاصة بك."
+
+msgid "Permission Not Allowed"
+msgstr "الإذن غير مسموح"
+
+msgid "Unlock Role-Based Access Control"
+msgstr "فتح التحكم في الوصول القائم على الدور"
+
+msgid "Allow specific WordPress roles"
+msgstr "السماح لأدوار WordPress المحددة"
+
+msgid "Enable/disable integration access"
+msgstr "تفعيل/تعطيل وصول التكامل"
+
+msgid "Control form feed visibility"
+msgstr "التحكم في رؤية تغذية النموذج"
+
+msgid "Restrict settings management"
+msgstr "تقييد إدارة الإعدادات"
+
+msgid "Security Control"
+msgstr "تحكم أمني"
+
+msgid "Prevent unauthorized changes"
+msgstr "منع التغييرات غير المصرح بها"
+
+msgid "Secure Google Sheet credentials"
+msgstr "تأمين بيانات اعتماد جدول بيانات Google"
+
+msgid "Role-based configuration control"
+msgstr "التحكم في تكوين القائم على الدور"
+
+msgid "Protect integration settings"
+msgstr "حماية إعدادات التكامل"
+
+msgid "Management Benefits"
+msgstr "فوائد الإدارة"
+
+msgid "Grant access to trusted editors"
+msgstr "منح الوصول للمحررين الموثوق بهم"
+
+msgid "Hide settings from subscribers"
+msgstr "إخفاء الإعدادات عن المشتركين"
+
+msgid "Team-based permission structure"
+msgstr "هيكل الإذن القائم على الفريق"
+
+msgid "Improved dashboard security"
+msgstr "تحسين أمان لوحة التحكم"
+
+msgid "Audit & Monitoring"
+msgstr "التدقيق والمراقبة"
+
+msgid "Track role-based changes"
+msgstr "تتبع التغييرات القائم على الدور"
+
+msgid "Monitor integration access"
+msgstr "مراقبة وصول التكامل"
+
+msgid "Review permission updates"
+msgstr "مراجعة تحديثات الأذونات"
+
+msgid "Maintain admin accountability"
+msgstr "الحفاظ على مسؤولية المشرف"
+
+msgid "Access Management"
+msgstr "إدارة الوصول"
+
+msgid ""
+"Control which user roles are allowed to access and manage the Google Sheets "
+"integration for your forms."
+msgstr "حدد أي أدوار المستخدمين مسموح لها بالوصول وإدارة دمج Google Sheets لنماذجك."
+
+msgid "Plugin Access Control"
+msgstr "تحكم وصول الإضافات"
+
+msgid "Control who can access and manage the GSheetConnector plugin settings."
+msgstr "حدد من يمكنه الوصول وإدارة إعدادات إضافة GSheetConnector."
+
+msgid "Administrator"
+msgstr "المشرف"
+
+msgid "Permission Guidelines"
+msgstr "إرشادات الأذونات"
+
+msgid "Control which user roles can access the GSheetConnector plugin"
+msgstr "حدد أي أدوار المستخدمين يمكنها الوصول إلى إضافة GSheetConnector"
+
+msgid "Allow selected users to manage Google Sheets integration settings"
+msgstr "اسمح للمستخدمين المحددين بإدارة إعدادات دمج Google Sheets"
+
+msgid "Restrict access to sensitive features like feeds, logs, and configurations"
+msgstr "تقييد الوصول إلى الميزات الحساسة مثل الخلاصات، السجلات، والتكوينات"
+
+msgid "Only enabled roles will see the plugin menu in the admin panel"
+msgstr "فقط الأدوار المفعلة ستظهر قائمة الإضافات في لوحة الإدارة"
+
+msgid "Recommended: Allow only Administrators and trusted Editors"
+msgstr "موصى به: السماح فقط للمشرفين والمحررين الموثوقين"
+
+msgid "Form Permissions"
+msgstr "أذونات النموذج"
+
+msgid "ontrol who can configure Google Sheets integration inside Ninja."
+msgstr "حدد من يمكنه تكوين دمج Google Sheets داخل Ninja."
+
+msgid "Control which user roles can access Google Sheet settings inside Ninja Forms"
+msgstr ""
+"حدد أي أدوار المستخدمين يمكنها الوصول إلى إعدادات Google Sheet داخل نماذج Ninja"
+
+msgid "Allow users to configure sheet connections in individual forms"
+msgstr "اسمح للمستخدمين بتكوين اتصالات الورقة في النماذج الفردية"
+
+msgid "Prevent unauthorized users from modifying form integrations"
+msgstr "منع المستخدمين غير المصرح لهم من تعديل تكاملات النماذج"
+
+msgid "display"
+msgstr "عرض"
+
+msgid "https://www.gsheetconnector.com/ninja-forms-google-sheet-connector-pro"
+msgstr "https://www.gsheetconnector.com/ninja-forms-google-sheet-connector-pro"
+
 msgid "Send your Ninja Forms data to your Google Sheets spreadsheet."
-msgstr "أرسل بيانات نماذج النينجا إلى جدول بيانات \"جداول بيانات Google\"."
+msgstr "إرسال بيانات نماذج نينجا إلى جدول بيانات Google الخاص بك."
 
-#. Author of the plugin/theme
 msgid "GSheetConnector"
-msgstr "جموصل شيت"
+msgstr "موصل GSheetConnector"
 
-#. Author URI of the plugin/theme
 msgid "https://www.gsheetconnector.com/"
-msgstr "https://www.gsheetconnector.com"
+msgstr "https://www.gsheetconnector.com/"

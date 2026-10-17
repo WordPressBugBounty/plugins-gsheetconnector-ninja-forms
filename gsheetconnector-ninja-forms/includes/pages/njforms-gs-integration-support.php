@@ -1,3 +1,10 @@
+<?php 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+?>
+
 <div class="wrap">
    <div class="support">
       <div class="row">

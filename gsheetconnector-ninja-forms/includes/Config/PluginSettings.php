@@ -1,11 +1,11 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit;
-
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 
 $settings['njgs_api_base_url'] = array(
     'id'    => 'njgs_api_base_url',
     'type'  => 'textbox',
     'label' => __( 'API Base URL', 'gsheetconnector-ninja-forms' ),
-    'desc'  => __( 'Enter your njgs Base Url' ),
+    'desc'  => __( 'Enter your njgs Base Url', 'gsheetconnector-ninja-forms'  ),
 );
 
 $settings['njgs_api_version'] = array(
@@ -26,28 +26,28 @@ $settings['njgs_api_version'] = array(
         ),
     ),
     'label' => __( 'API OAuth Version', 'gsheetconnector-ninja-forms' ),
-    'desc'  => __( 'Enter your njgs Authentication Version (e.g. OAuth1a or OAuth2' ),
+    'desc'  => __( 'Enter your njgs Authentication Version (e.g. OAuth1a or OAuth2)', 'gsheetconnector-ninja-forms'  ),
 );
 
 $settings['njgs_api_client_key'] = array(
     'id'    => 'njgs_api_client_key',
     'type'  => 'textbox',
     'label' => __( 'API Client Key', 'gsheetconnector-ninja-forms' ),
-    'desc'  => __( 'Enter your API Client Key' ),
+    'desc'  => __( 'Enter your API Client Key', 'gsheetconnector-ninja-forms'  ),
 );
 
 $settings['njgs_api_client_secret'] = array(
     'id'    => 'njgs_api_client_secret',
     'type'  => 'textbox',
     'label' => __( 'API Client Secret', 'gsheetconnector-ninja-forms' ),
-    'desc'  => __( 'Enter your njgs Client Secret' ),
+    'desc'  => __( 'Enter your njgs Client Secret', 'gsheetconnector-ninja-forms'  ),
 );
 
 $settings['njgs_api_callback'] = array(
     'id'    => 'njgs_api_callback',
     'type'  => 'textbox',
     'label' => __( 'API Callback', 'gsheetconnector-ninja-forms' ),
-    'desc'  => __( 'OPTIONAL: Enter your njgs Callback. Will use this page if not entered.' ),
+    'desc'  => __( 'OPTIONAL: Enter your njgs Callback. Will use this page if not entered.', 'gsheetconnector-ninja-forms'  ),
 );
 
 $settings['njgs_authorize'] = array(
@@ -55,26 +55,26 @@ $settings['njgs_authorize'] = array(
     'type'  => 'html',
     'label' => __( 'Click button to authorize njgs', 'gsheetconnector-ninja-forms' ),
     'html' => '<button type="submit" id="ninja_forms[njgs_authorize]" name="ninja_forms[njgs_authorize]" class="button-primary" value="1">'
-        . __(
+        . (
             (Ninja_Forms()->get_setting('njgs_api_access_token') && Ninja_Forms()->get_setting('njgs_api_access_token_secret') ? 'Re-' : '')
-        . 'Authorize', 'gsheetconnector-ninja-forms' )
+        . __( 'Authorize', 'gsheetconnector-ninja-forms' ) )
         . '</button>'
 );
 
-if (!strlen(Ninja_Forms()->get_setting('njgs_api_access_token')) && !isset($_GET['oauth_verifier']) && !isset($_GET['state'])) {
+if (!strlen(Ninja_Forms()->get_setting('njgs_api_access_token')) && !isset($_GET['oauth_verifier']) && !isset($_GET['state'])) {// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
     $settings['njgs_api_access_token'] = array(
         'id'    => 'njgs_api_access_token',
         'type'  => 'textbox',
         'label' => __( 'API Access Token', 'gsheetconnector-ninja-forms' ),
-        'desc'  => __( 'The access token when fetched or manually entered' ),
+        'desc'  => __( 'The access token when fetched or manually entered', 'gsheetconnector-ninja-forms'  ),
     );
 
     $settings['njgs_api_access_token_secret'] = array(
         'id'    => 'njgs_api_access_token_secret',
         'type'  => 'textbox',
         'label' => __( 'API Access Token Secret', 'gsheetconnector-ninja-forms' ),
-        'desc'  => __( 'The access token secret when fetched or manually entered' ),
+        'desc'  => __( 'The access token secret when fetched or manually entered', 'gsheetconnector-ninja-forms'  ),
     );
 } else {
     $settings['njgs_deauthorize'] = array(
@@ -82,7 +82,7 @@ if (!strlen(Ninja_Forms()->get_setting('njgs_api_access_token')) && !isset($_GET
         'type'  => 'html',
         'label' => __( 'Click button to revoke njgs', 'gsheetconnector-ninja-forms' ),
         'html' => '<button type="submit" id="ninja_forms[njgs_deauthorize]" name="ninja_forms[njgs_deauthorize]" class="button-primary" value="1">'
-            . __( 'De-Authorize', 'ninja-forms-njgs' ). '</button>'
+            . __( 'De-Authorize', 'gsheetconnector-ninja-forms' ). '</button>'
     );
 
 }
@@ -93,5 +93,5 @@ $settings['njgs_api_last_status'] = array(
     'label' => __( 'API - Last Status', 'gsheetconnector-ninja-forms' ),
     'html' => 'Status: ' . Ninja_Forms()->get_setting('njgs_api_last_status'),
 );
-
-return apply_filters( 'ninja_forms_njgs_plugin_settings', $settings );
+// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
+return apply_filters( 'ninja_forms_njgs_plugin_settings', $settings );// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound

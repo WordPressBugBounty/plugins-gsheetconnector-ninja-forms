@@ -1,32 +1,28 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: GSheetConnector For Ninja Forms\n"
-"POT-Creation-Date: 2025-08-08 16:37+0530\n"
+"POT-Creation-Date: 2026-10-14 16:07+0530\n"
 "PO-Revision-Date: 2025-08-08 16:35+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: gsheetconnector-ninjaforms.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: gsheetconnector-ninjaforms.php:76
-#, php-format
-msgid "Hey %1$s"
-msgstr ""
-
-#: gsheetconnector-ninjaforms.php:82
+#. translators: %1$s: Plugin title, %2$s: Site link (Freemius), both HTML formatted
+#. phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
+#: gsheetconnector-ninjaforms.php:87
 #, php-format
 msgid ""
 "Please help us improve %1$s! If you opt-in, some data about your usage of "
@@ -34,121 +30,458 @@ msgid ""
 "work just fine."
 msgstr ""
 
-#: gsheetconnector-ninjaforms.php:211
+#: gsheetconnector-ninjaforms.php:223
 msgid "View Documentation"
 msgstr ""
 
-#: gsheetconnector-ninjaforms.php:211 includes/pages/admin-footer.php:27
+#: gsheetconnector-ninjaforms.php:223 includes/pages/admin-footer.php:128
 msgid "Docs"
 msgstr ""
 
-#: gsheetconnector-ninjaforms.php:212
+#: gsheetconnector-ninjaforms.php:224
 msgid "Get Support"
 msgstr ""
 
-#: gsheetconnector-ninjaforms.php:212 includes/pages/admin-footer.php:26
+#: gsheetconnector-ninjaforms.php:224 includes/pages/admin-footer.php:150
 msgid "Support"
 msgstr ""
 
-#: gsheetconnector-ninjaforms.php:446
+#: gsheetconnector-ninjaforms.php:464
 msgid ""
 "Ninja Form Add-on requires Ninja-Forms plugin to be installed and activated."
 msgstr ""
 
-#: gsheetconnector-ninjaforms.php:518
+#: gsheetconnector-ninjaforms.php:539
+#: includes/pages/njforms-gs-settings.php:390
 msgid "Settings"
 msgstr ""
 
-#: gsheetconnector-ninjaforms.php:524
-#: includes/class-njforms-integration.php:357
+#: gsheetconnector-ninjaforms.php:545
 msgid "Upgrade to PRO"
 msgstr ""
 
-#: gsheetconnector-ninjaforms.php:727
-msgid "Ninja Forms - GSheetConnector"
+#. Plugin Name of the plugin/theme
+#: gsheetconnector-ninjaforms.php:732
+msgid "GSheetConnector For Ninja Forms"
 msgstr ""
 
-#: includes/Action/NinjaFormsGoogleSheet.php:19
-#: includes/class-njform-utility.php:26
-msgid "Google Sheet"
+#: includes/Action/NinjaFormsGoogleSheet.php:27
+#: includes/pages/admin-footer.php:21
+#: includes/pages/njforms-gs-settings.php:319
+msgid "GSheetConnector for Ninja Forms"
 msgstr ""
 
-#: includes/Action/NinjaFormsGoogleSheet.php:29
-msgid "Google Sheet Name"
+#: includes/Action/NinjaFormsGoogleSheet.php:36
+msgid "The above Action Name must always be unique and not duplicated."
 msgstr ""
 
-#: includes/Action/NinjaFormsGoogleSheet.php:33
+#: includes/Action/NinjaFormsGoogleSheet.php:48
+#: includes/Action/NinjaFormsGoogleSheet.php:217
+msgid "Google SpreadSheet Name"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:52
 msgid ""
-"Go to your google account and click on\"Google apps\" icon and than click "
-"\"Sheets\". Select the name of the appropriate sheet you want to link your "
-"contact form or create new sheet."
+"Enter the exact name of your Google Spreadsheet (as shown in Google Sheets)."
 msgstr ""
 
-#: includes/Action/NinjaFormsGoogleSheet.php:37
-#: includes/Action/NinjaFormsGoogleSheet.php:59
-#: includes/Action/NinjaFormsGoogleSheet.php:81
-#: includes/Action/NinjaFormsGoogleSheet.php:103
+#: includes/Action/NinjaFormsGoogleSheet.php:56
+#: includes/Action/NinjaFormsGoogleSheet.php:78
+#: includes/Action/NinjaFormsGoogleSheet.php:100
+#: includes/Action/NinjaFormsGoogleSheet.php:122
 msgid "Ninja Field Alias"
 msgstr ""
 
-#: includes/Action/NinjaFormsGoogleSheet.php:42
-#: includes/Action/NinjaFormsGoogleSheet.php:64
-#: includes/Action/NinjaFormsGoogleSheet.php:86
-#: includes/Action/NinjaFormsGoogleSheet.php:108
+#: includes/Action/NinjaFormsGoogleSheet.php:61
+#: includes/Action/NinjaFormsGoogleSheet.php:83
+#: includes/Action/NinjaFormsGoogleSheet.php:105
+#: includes/Action/NinjaFormsGoogleSheet.php:127
 msgid "Ninja Forms Field Key"
 msgstr ""
 
-#: includes/Action/NinjaFormsGoogleSheet.php:51
-msgid "Google Sheet ID"
+#: includes/Action/NinjaFormsGoogleSheet.php:70
+msgid "Google SpreadSheet ID"
 msgstr ""
 
-#: includes/Action/NinjaFormsGoogleSheet.php:55
-msgid "You can get sheet id from your sheet URL."
+#: includes/Action/NinjaFormsGoogleSheet.php:74
+msgid "Paste the Spreadsheet ID from your Google Sheet URL."
 msgstr ""
 
-#: includes/Action/NinjaFormsGoogleSheet.php:73
-msgid "Google Sheet Tab Name"
+#: includes/Action/NinjaFormsGoogleSheet.php:92
+msgid "Google SpreadSheet Tab Name"
 msgstr ""
 
-#: includes/Action/NinjaFormsGoogleSheet.php:77
+#: includes/Action/NinjaFormsGoogleSheet.php:96
 msgid ""
-"Open your Google Sheet with which you want to link your contact form . You "
-"will notice a tab names at bottom of the screen. Copy the tab name where you "
-"want to have an entry of contact form."
+"nter the exact sheet tab name (e.g., Sheet1) from the bottom of your Google "
+"Spreadsheet."
 msgstr ""
 
-#: includes/Action/NinjaFormsGoogleSheet.php:95
-msgid "Google Sheet Tab ID"
+#: includes/Action/NinjaFormsGoogleSheet.php:114
+msgid "Google SpreadSheet Tab ID"
 msgstr ""
 
-#: includes/Action/NinjaFormsGoogleSheet.php:99
-msgid "You can get tab id from your sheet URL."
-msgstr ""
-
-#: includes/Action/NinjaFormsGoogleSheet.php:138
-msgid "Google Sheet URL"
-msgstr ""
-
-#: includes/Action/NinjaFormsGoogleSheet.php:150
-msgid "Unlock More Features"
+#: includes/Action/NinjaFormsGoogleSheet.php:118
+msgid "Get the Tab ID from your sheet URL after gid=."
 msgstr ""
 
 #: includes/Action/NinjaFormsGoogleSheet.php:163
-msgid "Upgrade To Pro"
+msgid "View Spreadsheet"
 msgstr ""
 
-#: includes/Action/NinjaFormsGoogleSheet.php:175
-msgid "<strong>Authentication Required:</strong> You must have to"
+#: includes/Action/NinjaFormsGoogleSheet.php:180
+msgid "Download Spreadsheet"
 msgstr ""
 
-#: includes/Action/NinjaFormsGoogleSheet.php:176
-msgid "Authenticate using your Google Account"
+#: includes/Action/NinjaFormsGoogleSheet.php:180
+msgid "Download Spreadsheet (PRO)"
 msgstr ""
 
-#: includes/Action/NinjaFormsGoogleSheet.php:176
+#: includes/Action/NinjaFormsGoogleSheet.php:208
+#: includes/Action/NinjaFormsGoogleSheet.php:884
+msgid "Automatic Google Sheets Configuration"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:208
+#: includes/Action/NinjaFormsGoogleSheet.php:262
+#: includes/Action/NinjaFormsGoogleSheet.php:296
+#: includes/Action/NinjaFormsGoogleSheet.php:340
+#: includes/Action/NinjaFormsGoogleSheet.php:519
+#: includes/Action/NinjaFormsGoogleSheet.php:648
+#: includes/class-njform-utility.php:201 includes/class-njform-utility.php:220
+#: includes/class-njform-utility.php:239 includes/class-njform-utility.php:258
+#: includes/class-njform-utility.php:334 includes/class-njform-utility.php:391
+#: includes/class-njform-utility.php:410 includes/class-njform-utility.php:429
+#: includes/pages/njforms-integration.php:375
+#: includes/pages/njforms-integration.php:386
+#: includes/pages/njforms-integration.php:397
+msgid "PRO"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:222
+#: includes/Action/NinjaFormsGoogleSheet.php:234
+msgid "- Select -"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:229
+msgid "Google Tab Name"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:262
+msgid "Spreadsheet Sorting"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:271
+msgid "Sort Column"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:282
+msgid "Sort Order"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:287
+msgid "Ascending"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:288
+msgid "Descending"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:296
+#: includes/Action/NinjaFormsGoogleSheet.php:894
+msgid "Conditional Logic"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:306
 msgid ""
-"along with Google Drive and Google Sheets Permissions in order to enable the "
-"settings for configuration."
+"The Enable Conditional Logic option allows you to create rules to "
+"dynamically send (or skip) the submission to Google Sheet based on field "
+"values."
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:314
+msgid "Process This Feed If"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:319
+#: includes/pages/extensions.php:494
+msgid "All"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:320
+msgid "Any"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:340
+#: includes/Action/NinjaFormsGoogleSheet.php:899
+msgid "Header Settings"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:353
+msgid ""
+"Customize the appearance and behavior of your Spreadsheet headers and rows "
+"for better readability and organization."
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:363
+msgid "Freeze Header Row"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:367
+msgid "Freeze header if you want to freeze first row considered as header."
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:374
+msgid "Color Appearance"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:378
+msgid "Please Enable If you want to color rows of header/ odd / even rows"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:385
+msgid "Header Color"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:395
+msgid "Odd Rows Color"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:405
+msgid "Even Rows Color"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:415
+msgid "Header Appearance"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:419
+msgid ""
+"Please Enable if you want to style the header row text (font style, size and "
+"color)"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:434
+#: includes/Action/NinjaFormsGoogleSheet.php:482
+msgid "Font Style"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:439
+#: includes/Action/NinjaFormsGoogleSheet.php:487
+msgid "Normal"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:440
+#: includes/Action/NinjaFormsGoogleSheet.php:488
+msgid "Italic"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:441
+#: includes/Action/NinjaFormsGoogleSheet.php:489
+msgid "Bold"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:449
+#: includes/Action/NinjaFormsGoogleSheet.php:497
+msgid "Font Size"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:460
+#: includes/Action/NinjaFormsGoogleSheet.php:508
+msgid "Font Color"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:471
+msgid "Row Appearance"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:475
+msgid ""
+"Please Enable if you want to style the data row text (font style, size and "
+"color)"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:519
+msgid "Google Speadsheets Data Sync"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:529
+msgid ""
+"Easily sync past form submissions to your connected Google Spreadsheet. "
+"Choose a date range and ensure your spreadsheet stays complete and up to "
+"date."
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:541
+msgid "Sync Entries"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:559
+msgid "Google Sheets Setup Required"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:560
+msgid ""
+"To start sending form entries to Google Sheets, please connect your Google "
+"account first."
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:561
+msgid "your selected Method is : Existing Client / Secret Key (Auto Setup)."
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:566
+msgid "Click on the Sign in with Google button"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:567
+msgid "Log in using your Google account"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:568
+msgid "Select the Google account where your Sheets are stored"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:569
+msgid "Grant access to: Google Drive & Google Sheets"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:570
+msgid "Save the authentication code if prompted"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:573
+msgid "Go to Integration Setup"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:647
+msgid "Select Fields To Sync"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:651
+msgid "Select All Fields"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:688
+msgid "Submission ID"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:694
+msgid "Is"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:695
+msgid "Is Not"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:696
+msgid "Contains"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:697
+msgid "Does Not Contain"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:698
+msgid "Starts With"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:699
+msgid "Ends With"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:700
+msgid "Greater Than"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:701
+msgid "Less Than"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:702
+msgid "Is Empty"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:703
+msgid "Is Not Empty"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:719
+msgid "Enter a value"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:885
+msgid "Auto fetch Google Sheets list"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:886
+msgid "Auto detect sheet tabs"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:887
+msgid "Real-time entry sync"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:889
+msgid "Select Fields to Sync"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:890
+msgid "Drag & drop field reordering"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:891
+msgid "Rename column headers"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:892
+msgid "Select specific fields to sync"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:895
+msgid "Apply rules based on form values"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:896
+msgid "Sync data only when conditions match"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:900
+msgid "Freeze header row"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:901
+msgid "Custom font styling"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:902
+msgid "Header & row color control"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:903
+msgid "Download spreadsheet as file"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:920
+msgid "Unlock Advanced Features with Form Actions"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:922
+#: includes/pages/njforms-role-setting.php:46
+msgid "Advanced options are available in PRO"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:924
+msgid "Get Advanced Features"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:944
+#: includes/Action/NinjaFormsGoogleSheet.php:947
+msgid "Hide Features"
+msgstr ""
+
+#: includes/Action/NinjaFormsGoogleSheet.php:945
+msgid "Show Features"
 msgstr ""
 
 #: includes/Config/PluginSettings.php:7
@@ -176,7 +509,7 @@ msgid "API OAuth Version"
 msgstr ""
 
 #: includes/Config/PluginSettings.php:29
-msgid "Enter your njgs Authentication Version (e.g. OAuth1a or OAuth2"
+msgid "Enter your njgs Authentication Version (e.g. OAuth1a or OAuth2)"
 msgstr ""
 
 #: includes/Config/PluginSettings.php:35
@@ -207,10 +540,6 @@ msgstr ""
 msgid "Click button to authorize njgs"
 msgstr ""
 
-#: includes/Config/PluginSettings.php:60
-msgid "Authorize"
-msgstr ""
-
 #: includes/Config/PluginSettings.php:69
 msgid "API Access Token"
 msgstr ""
@@ -239,699 +568,2021 @@ msgstr ""
 msgid "API - Last Status"
 msgstr ""
 
-#: includes/Config/PluginSettingsGroups.php:7
+#: includes/Config/PluginSettingsGroups.php:8
 msgid "njgs Settings"
+msgstr ""
+
+#: includes/class-njform-error-logs.php:216
+msgid "Error Log"
+msgstr ""
+
+#: includes/class-njform-error-logs.php:217
+msgid ""
+"Error logs are saved in the database. Please clear them regularly to avoid "
+"increasing the database size."
+msgstr ""
+
+#: includes/class-njform-error-logs.php:224
+#: includes/pages/njforms-integrate-system-info.php:768
+msgid "Clear Logs"
+msgstr ""
+
+#: includes/class-njform-error-logs.php:232
+#: includes/pages/njforms-integrate-system-info.php:774
+msgid "Download CSV"
+msgstr ""
+
+#: includes/class-njform-error-logs.php:234
+#: includes/pages/njforms-integrate-system-info.php:780
+msgid "Copy Logs"
+msgstr ""
+
+#: includes/class-njform-error-logs.php:244
+#: includes/pages/njforms-integrate-system-info.php:811
+msgid "Date"
+msgstr ""
+
+#: includes/class-njform-error-logs.php:245
+msgid "Error ID"
+msgstr ""
+
+#: includes/class-njform-error-logs.php:246
+msgid "Code"
+msgstr ""
+
+#: includes/class-njform-error-logs.php:247
+#: includes/pages/njforms-integrate-system-info.php:813
+msgid "Message"
+msgstr ""
+
+#: includes/class-njform-error-logs.php:248
+msgid "Details"
+msgstr ""
+
+#: includes/class-njform-error-logs.php:308
+msgid "No logs found"
+msgstr ""
+
+#: includes/class-njform-error-logs.php:428
+msgid "Permission denied."
+msgstr ""
+
+#: includes/class-njform-utility.php:26
+#: includes/pages/njforms-gs-settings.php:379
+msgid "Google Sheet"
 msgstr ""
 
 #: includes/class-njform-utility.php:97
 msgid "There's something wrong with your code..."
 msgstr ""
 
-#: includes/class-njforms-integration.php:100
-msgid "Choose Google API Setting :"
+#: includes/class-njform-utility.php:194
+msgid "CF7 Google Sheet Connector"
 msgstr ""
 
-#: includes/class-njforms-integration.php:104
-msgid "Use Existing Client/Secret Key (Auto Google API Configuration)"
-msgstr ""
-
-#: includes/class-njforms-integration.php:106
+#: includes/class-njform-utility.php:197
 msgid ""
-"Use Manual Client/Secret Key (Use Your Google API Configuration) (Upgrade To "
-"PRO)"
-msgstr ""
-
-#: includes/class-njforms-integration.php:109
-msgid "Upgrade To PRO"
-msgstr ""
-
-#: includes/class-njforms-integration.php:112
-msgid ""
-"Manual Client/Secret Key (Use Your Google API Configuration) method is "
-"available in the PRO version of the plugin."
-msgstr ""
-
-#: includes/class-njforms-integration.php:122
-msgid "Ninja Forms - "
-msgstr ""
-
-#: includes/class-njforms-integration.php:123
-msgid "Google Sheet Integration"
-msgstr ""
-
-#: includes/class-njforms-integration.php:129
-msgid "Authenticate with your Google account, follow these steps:"
-msgstr ""
-
-#: includes/class-njforms-integration.php:132
-msgid "Click on the \"Sign In With Google\" button."
-msgstr ""
-
-#: includes/class-njforms-integration.php:133
-msgid "Grant permissions for the following:"
-msgstr ""
-
-#: includes/class-njforms-integration.php:135
-msgid "Google Drive"
-msgstr ""
-
-#: includes/class-njforms-integration.php:136
-msgid "Google Sheets"
-msgstr ""
-
-#: includes/class-njforms-integration.php:137
-msgid "* Ensure that you enable the checkbox for each of these services."
-msgstr ""
-
-#: includes/class-njforms-integration.php:141
-msgid ""
-"This will allow the integration to access your Google Drive and Google "
-"Sheets."
-msgstr ""
-
-#: includes/class-njforms-integration.php:149
-msgid "Google Access Code"
-msgstr ""
-
-#: includes/class-njforms-integration.php:153
-msgid "Currently Active"
-msgstr ""
-
-#: includes/class-njforms-integration.php:155
-msgid "Deactivate"
-msgstr ""
-
-#: includes/class-njforms-integration.php:161
-msgid ""
-"On deactivation, all your data saved with authentication will be removed and "
-"you need to reauthenticate with your google account and configure sheet name "
-"and tab."
-msgstr ""
-
-#: includes/class-njforms-integration.php:169
-msgid "Click Sign In With Google Button"
-msgstr ""
-
-#: includes/class-njforms-integration.php:175
-msgid "Connect Now"
-msgstr ""
-
-#: includes/class-njforms-integration.php:196
-msgid ""
-"Something went wrong! It looks you have not given the permission of Google "
-"Drive and Google Sheets from your google account.Please Deactivate Auth and "
-"Re-Authenticate again with the permissions."
-msgstr ""
-
-#: includes/class-njforms-integration.php:202
-msgid "Permission Screen"
-msgstr ""
-
-#: includes/class-njforms-integration.php:206
-msgid "Also,"
-msgstr ""
-
-#: includes/class-njforms-integration.php:208
-msgid "Click Here"
-msgstr ""
-
-#: includes/class-njforms-integration.php:211
-msgid ""
-" and if it displays \"GSheetConnector for WP Contact Forms\" under Third-"
-"party apps with account access then remove it."
-msgstr ""
-
-#: includes/class-njforms-integration.php:230
-#, php-format
-msgid "Connected email account: %s"
-msgstr ""
-
-#: includes/class-njforms-integration.php:235
-msgid ""
-"Something wrong! Your Auth code may be wrong or expired. Please Deactivate "
-"and Do Re-Auth Code "
-msgstr ""
-
-#: includes/class-njforms-integration.php:246
-msgid ""
-"We do not store any of the data from your Google account on our servers, "
-"everything is processed & stored on your server. We take your privacy "
-"extremely seriously and ensure it is never misused."
-msgstr ""
-
-#: includes/class-njforms-integration.php:246
-msgid "Learn more."
-msgstr ""
-
-#: includes/class-njforms-integration.php:251
-msgid "Debug Log →"
-msgstr ""
-
-#: includes/class-njforms-integration.php:254
-#: includes/class-njforms-integration.php:262
-msgid "View"
-msgstr ""
-
-#: includes/class-njforms-integration.php:269
-#: includes/pages/njforms-integrate-system-info.php:25
-msgid "Clear"
-msgstr ""
-
-#: includes/class-njforms-integration.php:276
-msgid "Copy Logs"
-msgstr ""
-
-#: includes/class-njforms-integration.php:287
-msgid "No errors found."
-msgstr ""
-
-#: includes/class-njforms-integration.php:291
-msgid "No log file exists as no errors are generated."
-msgstr ""
-
-#: includes/class-njforms-integration.php:347
-msgid "Next steps…"
-msgstr ""
-
-#: includes/class-njforms-integration.php:358
-msgid "Multiple Forms to Sheets, Merge Tags and much more..."
-msgstr ""
-
-#: includes/class-njforms-integration.php:368
-msgid "Compatibility"
-msgstr ""
-
-#: includes/class-njforms-integration.php:369
-msgid "Compatibility with Ninja-Forms Third-Party Plugins"
-msgstr ""
-
-#: includes/class-njforms-integration.php:379
-msgid "Multi Languages"
-msgstr ""
-
-#: includes/class-njforms-integration.php:380
-msgid "This plugin supports multi-languages as well!"
-msgstr ""
-
-#: includes/class-njforms-integration.php:390
-msgid "Support WordPress Multisites"
-msgstr ""
-
-#: includes/class-njforms-integration.php:391
-msgid ""
-"With the use of a Multisite, you’ll also have a new level of user-available: "
-"the Super Admin."
-msgstr ""
-
-#: includes/class-njforms-integration.php:402
-msgid "Product Support"
-msgstr ""
-
-#: includes/class-njforms-integration.php:410
-msgid "Online Documentation"
-msgstr ""
-
-#: includes/class-njforms-integration.php:411
-msgid "Understand all the capabilities of Ninja-Forms GsheetConnector"
-msgstr ""
-
-#: includes/class-njforms-integration.php:419
-msgid "Ticket Support"
-msgstr ""
-
-#: includes/class-njforms-integration.php:420
-msgid "Direct help from our qualified support team"
-msgstr ""
-
-#: includes/class-njforms-integration.php:428
-msgid "Affiliate Program"
-msgstr ""
-
-#: includes/class-njforms-integration.php:429
-#, php-format
-msgid "Earn flat 30% on every sale!"
-msgstr ""
-
-#: includes/pages/admin-footer.php:10
-#, php-format
-msgid "Enjoy using %1$s? Check out our reviews or leave your own on %2$s."
-msgstr ""
-
-#: includes/pages/admin-footer.php:14
-msgid "WordPress.org"
-msgstr ""
-
-#: includes/pages/admin-footer.php:23
-msgid "Made with ♥ by the GSheetConnector Team"
-msgstr ""
-
-#: includes/pages/admin-footer.php:28
-msgid "VIP Circle"
-msgstr ""
-
-#: includes/pages/admin-footer.php:29
-msgid "Free Plugins"
-msgstr ""
-
-#: includes/pages/extensions.php:5
-msgid "Upgrade"
-msgstr ""
-
-#: includes/pages/extensions.php:8 includes/pages/extensions.php:33
-#: includes/pages/extensions.php:57 includes/pages/extensions.php:81
-#: includes/pages/extensions.php:106 includes/pages/extensions.php:131
-#: includes/pages/extensions.php:163 includes/pages/extensions.php:188
-#: includes/pages/extensions.php:212 includes/pages/extensions.php:236
-#: includes/pages/extensions.php:260 includes/pages/extensions.php:284
-msgid "logo"
-msgstr ""
-
-#: includes/pages/extensions.php:12 includes/pages/extensions.php:37
-#: includes/pages/extensions.php:61 includes/pages/extensions.php:85
-#: includes/pages/extensions.php:110 includes/pages/extensions.php:135
-#: includes/pages/extensions.php:167 includes/pages/extensions.php:192
-#: includes/pages/extensions.php:216 includes/pages/extensions.php:240
-#: includes/pages/extensions.php:264 includes/pages/extensions.php:288
-msgid "Learn more"
-msgstr ""
-
-#: includes/pages/extensions.php:12
-msgid "Ninja Forms Google Sheet Connector"
-msgstr ""
-
-#: includes/pages/extensions.php:15
-msgid ""
-"Ninja Forms, A bridge between your WordPress based Ninja Forms and Google "
-"Sheets. It helps to record the entries in real-time."
-msgstr ""
-
-#: includes/pages/extensions.php:20 includes/pages/extensions.php:45
-#: includes/pages/extensions.php:69 includes/pages/extensions.php:93
-#: includes/pages/extensions.php:118 includes/pages/extensions.php:143
-#: includes/pages/extensions.php:175
-msgid "PRO"
-msgstr ""
-
-#: includes/pages/extensions.php:24
-msgid "Upgrade Now"
-msgstr ""
-
-#: includes/pages/extensions.php:37
-msgid "Gravity Forms Google Sheet Connector"
-msgstr ""
-
-#: includes/pages/extensions.php:40
-msgid ""
-"Gravity Forms Google Sheets Connector Plugin is a Bridge between your "
-"Gravity Forms and Google Sheets."
-msgstr ""
-
-#: includes/pages/extensions.php:48 includes/pages/extensions.php:72
-#: includes/pages/extensions.php:96 includes/pages/extensions.php:121
-#: includes/pages/extensions.php:146 includes/pages/extensions.php:178
-#: includes/pages/extensions.php:251 includes/pages/extensions.php:275
-#: includes/pages/extensions.php:299
-msgid "Download"
-msgstr ""
-
-#: includes/pages/extensions.php:49 includes/pages/extensions.php:73
-#: includes/pages/extensions.php:97 includes/pages/extensions.php:122
-#: includes/pages/extensions.php:147 includes/pages/extensions.php:179
-#: includes/pages/extensions.php:203 includes/pages/extensions.php:227
-msgid "Buy Now"
-msgstr ""
-
-#: includes/pages/extensions.php:61
-msgid "WooCommerce Google Sheet Connector"
-msgstr ""
-
-#: includes/pages/extensions.php:64
-msgid ""
-"WooCommerce Google Spreadsheet Addon Plugin to connect with Google Sheets."
-msgstr ""
-
-#: includes/pages/extensions.php:85
-msgid "Elementor Forms Google Sheet Connector"
-msgstr ""
-
-#: includes/pages/extensions.php:88
-msgid ""
-"A bridge between your WordPress based Elementor Forms or Metform Elementor "
-"Builder to Google Sheets."
-msgstr ""
-
-#: includes/pages/extensions.php:110
-msgid "CF7 Google Sheets Connector"
-msgstr ""
-
-#: includes/pages/extensions.php:113
-msgid ""
-"CF7 Google Sheet Connector is an addon plugin, A bridge between your "
-"WordPress based Contact Form 7 forms and Google Sheets."
-msgstr ""
-
-#: includes/pages/extensions.php:135
+"Easily connect Contact Form 7 to Google Sheets and automatically sync form "
+"submissions in real-time. Every entry is instantly added to your selected "
+"spreadsheet, helping you manage leads, inquiries, and customer data "
+"efficiently without manual export."
+msgstr ""
+
+#: includes/class-njform-utility.php:200 includes/class-njform-utility.php:219
+#: includes/class-njform-utility.php:238 includes/class-njform-utility.php:257
+#: includes/class-njform-utility.php:276 includes/class-njform-utility.php:295
+#: includes/class-njform-utility.php:314 includes/class-njform-utility.php:333
+#: includes/class-njform-utility.php:352 includes/class-njform-utility.php:371
+#: includes/class-njform-utility.php:390 includes/class-njform-utility.php:409
+#: includes/class-njform-utility.php:428
+msgid "Install"
+msgstr ""
+
+#: includes/class-njform-utility.php:213
 msgid "WPForms Google Sheet Connector"
 msgstr ""
 
-#: includes/pages/extensions.php:138
+#: includes/class-njform-utility.php:216
 msgid ""
-"WPForms, A bridge between your WordPress based WPForms and Google Sheets. It "
-"helps to record the entries in real-time."
+"Integrate WPForms with Google Sheets and send form entries directly to your "
+"spreadsheet automatically. Track leads, manage customer data, and streamline "
+"reporting with seamless Google Sheets integration and real-time sync."
 msgstr ""
 
-#: includes/pages/extensions.php:167
-msgid "Easy Digital Downloads Google Sheet Connector"
+#: includes/class-njform-utility.php:232
+msgid "Gravity Forms Google Sheet Connector"
 msgstr ""
 
-#: includes/pages/extensions.php:170
+#: includes/class-njform-utility.php:235
 msgid ""
-"Easy Digital Downloads Google Sheet Connector sends orders entries to Google "
-"Sheet in a real-time"
+"Connect Gravity Forms to Google Sheets and automatically push form "
+"submissions to your spreadsheet. Simplify data management, improve workflow "
+"automation, and keep all entries organized in one secure location."
 msgstr ""
 
-#: includes/pages/extensions.php:192
-msgid "Avada Forms Google Sheet Connector Pro"
+#: includes/class-njform-utility.php:251
+msgid "Ninja Forms Google Sheet Connector"
 msgstr ""
 
-#: includes/pages/extensions.php:195
+#: includes/class-njform-utility.php:254
 msgid ""
-"Avada Theme Fusion Builder addon, simplifies real-time data transmission "
-"from Avada theme-based forms to Google Sheets with premium features."
+"Automatically sync Ninja Forms submissions to Google Sheets with one-click "
+"integration. Capture leads, monitor responses, and manage data efficiently "
+"with instant spreadsheet updates and easy reporting."
 msgstr ""
 
-#: includes/pages/extensions.php:200 includes/pages/extensions.php:224
-msgid "Available PRO Version"
+#: includes/class-njform-utility.php:270
+msgid "Forminator Forms Google Sheet Connector"
 msgstr ""
 
-#: includes/pages/extensions.php:216
-msgid "Divi Forms Google Sheet Connector Pro"
-msgstr ""
-
-#: includes/pages/extensions.php:219
+#: includes/class-njform-utility.php:273
 msgid ""
-"Divi Forms GSheetConnector, an addon for DIVI Theme/Builder, simplifies real-"
-"time syncing of data from DIVI theme forms to both the database and Google "
-"Sheets."
+"Integrate Forminator Forms with Google Sheets to automatically store form "
+"entries in your spreadsheet. Eliminate manual data entry and ensure "
+"accurate, real-time syncing for better data tracking and analysis."
 msgstr ""
 
-#: includes/pages/extensions.php:240
-msgid "GSheetConnector for Forminator Forms"
-msgstr ""
-
-#: includes/pages/extensions.php:243
-msgid ""
-"GSheetConnector for Forminator Forms is an addon plugin, A bridge between "
-"your WordPress based Forminator Forms forms and Google Sheets."
-msgstr ""
-
-#: includes/pages/extensions.php:248 includes/pages/extensions.php:272
-#: includes/pages/extensions.php:296
+#: includes/class-njform-utility.php:277 includes/class-njform-utility.php:296
+#: includes/class-njform-utility.php:315 includes/pages/extensions.php:294
+#: includes/pages/extensions.php:424 includes/pages/extensions.php:564
 msgid "Free"
 msgstr ""
 
-#: includes/pages/extensions.php:264
-msgid "GSheetConnector for Formidable Forms"
+#: includes/class-njform-utility.php:289
+msgid "Formidable Forms Google Sheet Connector"
 msgstr ""
 
-#: includes/pages/extensions.php:267
+#: includes/class-njform-utility.php:292
 msgid ""
-"Formidable Forms, A bridge between your WordPress based Formidable Forms "
-"forms and Google Sheets."
+"Automatically sync Formidable Forms entries to Google Sheets. Manage leads, "
+"track submissions, and simplify data reporting with real-time integration."
 msgstr ""
 
-#: includes/pages/extensions.php:288
-msgid "Caldera Forms Google Sheets Connector"
+#: includes/class-njform-utility.php:308
+msgid "Fluent Forms Google Sheet Connector"
 msgstr ""
 
-#: includes/pages/extensions.php:291
+#: includes/class-njform-utility.php:311
 msgid ""
-"Caldera Forms Closure, No more updates on this plugin Due to Caldera Forms "
-"being sunset/retired on December 31, 2021"
+"Automatically sync Fluent Forms submissions to Google Sheets in real-time. "
+"Every form entry is instantly added to your selected spreadsheet, helping "
+"you manage leads, customer inquiries, and business data without manual "
+"export. Streamline your workflow, improve reporting accuracy, and keep all "
+"submissions organized with seamless Google Sheets integration."
 msgstr ""
 
-#: includes/pages/njform-dashboard-widget.php:22
+#: includes/class-njform-utility.php:327
+msgid "Elementor Forms Google Sheet Connector"
+msgstr ""
+
+#: includes/class-njform-utility.php:330
+msgid ""
+"Sync Elementor Forms with Google Sheets instantly. Automatically add new "
+"form submissions to your spreadsheet, manage leads efficiently, and simplify "
+"reporting with real-time data synchronization."
+msgstr ""
+
+#: includes/class-njform-utility.php:346
+msgid "Avada Forms Google Sheet Connector"
+msgstr ""
+
+#: includes/class-njform-utility.php:349
+msgid ""
+"Connect Avada Forms to Google Sheets and automatically transfer form entries "
+"to your spreadsheet. Streamline lead management, automate data collection, "
+"and improve business reporting with seamless integration."
+msgstr ""
+
+#: includes/class-njform-utility.php:353 includes/class-njform-utility.php:372
+msgid "Available PRO Version"
+msgstr ""
+
+#: includes/class-njform-utility.php:365
+msgid "Divi Forms Google Sheet Connector"
+msgstr ""
+
+#: includes/class-njform-utility.php:368
+msgid ""
+"Integrate Divi Forms with Google Sheets and automatically sync submissions "
+"in real-time. Store customer data securely, track inquiries efficiently, and "
+"eliminate manual spreadsheet updates."
+msgstr ""
+
+#: includes/class-njform-utility.php:384
+msgid "WP Core Google Sheet Connector"
+msgstr ""
+
+#: includes/class-njform-utility.php:387
+msgid ""
+"Automatically send WordPress core data (like comments or custom submissions) "
+"to Google Sheets. Simplify website data tracking, automate record keeping, "
+"and centralize important information in one organized spreadsheet."
+msgstr ""
+
+#: includes/class-njform-utility.php:403
+msgid "WooCommerce Google Sheet Connector"
+msgstr ""
+
+#: includes/class-njform-utility.php:406
+msgid ""
+"Sync WooCommerce orders with Google Sheets automatically. Store order "
+"details, customer information, and transaction data in real-time for easy "
+"reporting, accounting, and business analysis."
+msgstr ""
+
+#: includes/class-njform-utility.php:422
+msgid "Easy Digital Downloads Google Sheet Connector"
+msgstr ""
+
+#: includes/class-njform-utility.php:425
+msgid ""
+"Automatically send Easy Digital Downloads (EDD) order details to Google "
+"Sheets. Track digital product sales, monitor transactions, and manage "
+"customer data effortlessly with real-time spreadsheet integration."
+msgstr ""
+
+#: includes/class-njforms-integration.php:217
+msgid "Error log table not found."
+msgstr ""
+
+#: includes/class-njforms-integration.php:222
+msgid "Logs are cleared."
+msgstr ""
+
+#: includes/class-njforms-integration.php:287
+#: includes/class-njforms-integration.php:374
+msgid "Invalid security token"
+msgstr ""
+
+#: includes/class-njforms-integration.php:294
+msgid "You do not have permission to activate plugin"
+msgstr ""
+
+#: includes/class-njforms-integration.php:301
+msgid "Plugin slug is missing"
+msgstr ""
+
+#: includes/class-njforms-integration.php:315
+msgid "Plugin is already activated"
+msgstr ""
+
+#: includes/class-njforms-integration.php:329
+msgid "Plugin activated successfully"
+msgstr ""
+
+#: includes/class-njforms-integration.php:381
+msgid "You do not have permission to install plugin"
+msgstr ""
+
+#: includes/class-njforms-integration.php:387
+msgid "Missing required parameters"
+msgstr ""
+
+#: includes/class-njforms-integration.php:396
+msgid "Invalid plugin data"
+msgstr ""
+
+#: includes/class-njforms-integration.php:433
+msgid "Upgrade failed: "
+msgstr ""
+
+#: includes/class-njforms-integration.php:438
+msgid "Plugin upgraded successfully"
+msgstr ""
+
+#: includes/class-njforms-integration.php:443
+msgid "Plugin already installed and up to date"
+msgstr ""
+
+#: includes/class-njforms-integration.php:456
+msgid "Installation failed: "
+msgstr ""
+
+#: includes/class-njforms-integration.php:461
+msgid "Plugin installed successfully"
+msgstr ""
+
+#: includes/pages/admin-footer.php:18
+msgid "Please rate"
+msgstr ""
+
+#: includes/pages/admin-footer.php:26
+msgid "on"
+msgstr ""
+
+#: includes/pages/admin-footer.php:29
+msgid "WordPress.org"
+msgstr ""
+
+#: includes/pages/admin-footer.php:32
+msgid "to help us spread the word."
+msgstr ""
+
+#: includes/pages/admin-footer.php:97
+msgid "Version:"
+msgstr ""
+
+#: includes/pages/admin-footer.php:139
+msgid "Plugins"
+msgstr ""
+
+#: includes/pages/extensions.php:19
+msgid "About GSheetConnector"
+msgstr ""
+
+#: includes/pages/extensions.php:22
+msgid "Built by Experts. Trusted by Thousands."
+msgstr ""
+
+#: includes/pages/extensions.php:28
+msgid ""
+"Led by experienced developers and powered by a passionate team, "
+"GSheetConnector helps WordPress users automate their workflows with "
+"confidence."
+msgstr ""
+
+#: includes/pages/extensions.php:35
+msgid ""
+"We focus on building tools that are fast, secure, and easy to use - so you "
+"can spend less time managing data."
+msgstr ""
+
+#: includes/pages/extensions.php:47
+msgid "WordPress Plugin Founder"
+msgstr ""
+
+#: includes/pages/extensions.php:50
+msgid "Product Lead & Visionary"
+msgstr ""
+
+#: includes/pages/extensions.php:57
+msgid "Abdullah Kaludi"
+msgstr ""
+
+#: includes/pages/extensions.php:60
+msgid "Founder & Lead Developer"
+msgstr ""
+
+#: includes/pages/extensions.php:66
+msgid "Meet Our Core Team"
+msgstr ""
+
+#: includes/pages/extensions.php:94
+msgid "Our Mission"
+msgstr ""
+
+#: includes/pages/extensions.php:99
+msgid ""
+"Our mission is to make form automation simple, secure, and reliable for "
+"every WordPress user - from beginners to enterprise teams."
+msgstr ""
+
+#: includes/pages/extensions.php:107
+msgid "Fast & Reliable Data Sync"
+msgstr ""
+
+#: includes/pages/extensions.php:109
+msgid "100% Secure Authentication"
+msgstr ""
+
+#: includes/pages/extensions.php:111
+msgid "Real-Time Google Sheets Updates"
+msgstr ""
+
+#: includes/pages/extensions.php:113
+msgid "Easy Setup & Configuration"
+msgstr ""
+
+#: includes/pages/extensions.php:115
+msgid "Dedicated Support Team"
+msgstr ""
+
+#: includes/pages/extensions.php:130
+msgid "Forms Successfully Synced"
+msgstr ""
+
+#: includes/pages/extensions.php:137
+msgid "Trusted by Active Users"
+msgstr ""
+
+#: includes/pages/extensions.php:144
+msgid "Reliable Uptime"
+msgstr ""
+
+#: includes/pages/extensions.php:153
+msgid "Dedicated Support"
+msgstr ""
+
+#: includes/pages/extensions.php:166
+msgid "Add-ons & Extensions"
+msgstr ""
+
+#: includes/pages/extensions.php:167
+msgid ""
+"Extend your Google Sheets integration with powerful add-ons. Install, "
+"manage, and activate extensions to unlock advanced features."
+msgstr ""
+
+#: includes/pages/extensions.php:175
+msgid "Installed & Active Plugins"
+msgstr ""
+
+#: includes/pages/extensions.php:177
+msgid ""
+"View and manage all currently installed and active connectors on your site. "
+"You can activate, deactivate, or upgrade plugins from here."
+msgstr ""
+
+#: includes/pages/extensions.php:242 includes/pages/extensions.php:386
+#: includes/pages/extensions.php:420 includes/pages/extensions.php:569
+msgid "Pro"
+msgstr ""
+
+#: includes/pages/extensions.php:263 includes/pages/extensions.php:315
+#: includes/pages/extensions.php:443 includes/pages/extensions.php:593
+#: includes/pages/njforms-dashboard.php:468
+msgid "View Docs"
+msgstr ""
+
+#: includes/pages/extensions.php:269 includes/pages/extensions.php:323
+#: includes/pages/extensions.php:646 includes/pages/njforms-integration.php:233
+#: includes/pages/njforms-integration.php:817
+msgid "Deactivate"
+msgstr ""
+
+#: includes/pages/extensions.php:339
+msgid "Recommended Plugins"
+msgstr ""
+
+#: includes/pages/extensions.php:342
+msgid ""
+"Discover recommended plugins that enhance your workflow and help you get "
+"more value from your Google Sheets integration."
+msgstr ""
+
+#: includes/pages/extensions.php:448 includes/pages/extensions.php:454
+#: includes/pages/extensions.php:467
+msgid "Activate"
+msgstr ""
+
+#: includes/pages/extensions.php:487
+msgid "Explore More Plugins"
+msgstr ""
+
+#: includes/pages/extensions.php:489
+msgid ""
+"Discover the right connector for your workflow and automate data syncing."
+msgstr ""
+
+#: includes/pages/extensions.php:495
+msgid "Forms"
+msgstr ""
+
+#: includes/pages/extensions.php:496
+msgid "Page Builders"
+msgstr ""
+
+#: includes/pages/extensions.php:497
+msgid "eCommerce"
+msgstr ""
+
+#: includes/pages/extensions.php:600
+msgid "View Demo"
+msgstr ""
+
+#: includes/pages/extensions.php:628
+msgid "Deactivate Plugin"
+msgstr ""
+
+#: includes/pages/extensions.php:632
+msgid "Are you sure you want to deactivate this plugin?"
+msgstr ""
+
+#: includes/pages/extensions.php:640
+#: includes/pages/njforms-general-settings.php:139
+#: includes/pages/njforms-integration.php:814
+msgid "Cancel"
+msgstr ""
+
+#: includes/pages/njform-dashboard-widget.php:23
 msgid "Ninja Forms connected with Google Sheets."
 msgstr ""
 
-#: includes/pages/njform-dashboard-widget.php:35
+#: includes/pages/njform-dashboard-widget.php:63
+#: includes/pages/njforms-dashboard.php:100
 msgid "Form Name"
 msgstr ""
 
-#: includes/pages/njform-dashboard-widget.php:59
-msgid "No Ninja Forms are connected with Google Sheets."
+#: includes/pages/njform-dashboard-widget.php:64
+#: includes/pages/njforms-dashboard.php:101
+msgid "Action Name"
 msgstr ""
 
-#: includes/pages/njforms-gs-integration-support.php:10
+#: includes/pages/njform-dashboard-widget.php:65
+#: includes/pages/njforms-dashboard.php:102
+msgid "Sheet Name"
+msgstr ""
+
+#: includes/pages/njform-dashboard-widget.php:115
+#: includes/pages/njforms-dashboard.php:149
+msgid "Not connected"
+msgstr ""
+
+#: includes/pages/njform-dashboard-widget.php:130
+#: includes/pages/njforms-dashboard.php:164
+msgid "Ninja Forms is not connected with Google Sheets."
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:25
+msgid "Unlock Beta Version Control"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:26
+msgid "Test upcoming features before official release"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:33
+msgid "Early Access"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:36
+msgid "Get updates before public release"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:37
+msgid "Test new features in advance"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:38
+msgid "Try improvements early"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:39
+msgid "Stay ahead with new changes"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:45
+msgid "Testing Purpose"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:48
+msgid "Features may still be under testing"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:49
+msgid "Some options may change later"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:50
+msgid "Minor issues may occur"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:51
+msgid "Used for feedback and improvements"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:57
+msgid "Safety Notice"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:60
+msgid "Recommended for staging sites"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:61
+msgid "Avoid enabling on live websites"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:62
+msgid "Take backup before testing"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:63
+msgid "Disable anytime if needed"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:69
+msgid "Update Control"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:72
+msgid "Receive beta notifications"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:73
+msgid "Updates are not installed automatically"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:74
+msgid "You control when to update"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:75
+msgid "Switch on/off anytime"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:86
+#: includes/pages/njforms-integration.php:662
+#: includes/pages/njforms-integration.php:782
+#: includes/pages/njforms-role-setting.php:113
+msgid "Upgrade to Unlock"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:100
+msgid "Beta Program Access"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:102
+msgid ""
+"Get early access to upcoming features and improvements before they are "
+"officially released. Beta versions may include experimental updates and "
+"should be used for testing purposes only."
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:106
+msgid "Enable Beta Updates"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:109
+msgid ""
+"Receive notifications and access to beta releases. Updates will not be "
+"installed automatically."
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:126
+msgid "Beta Usage Notice"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:129
+msgid "Beta versions may include unfinished or experimental features"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:132
+msgid "Some features may change or be removed in future updates"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:135
+msgid "Minor bugs or performance issues may occur"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:138
+msgid "We recommend enabling beta only on test or staging sites"
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:141
+msgid ""
+"Beta versions are intended for testing purposes. Do not enable on live "
+"production websites without proper backups."
+msgstr ""
+
+#: includes/pages/njforms-beta-version.php:150
+#: includes/pages/njforms-general-settings.php:106
+#: includes/pages/njforms-role-setting.php:221
+msgid "Save Settings"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:16
+msgid "Existing Client/Secret Key (Auto Google API Configuration)"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:19
+#: includes/pages/njforms-dashboard.php:22
+#: includes/pages/njforms-gs-settings.php:50
+msgid "Auth Required"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:39
+msgid "Welcome To GSheetConnector"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:42
+msgid ""
+"GSheetConnector is a powerful automation plugin that syncs WordPress data "
+"with Google Sheets in real time. It supports WooCommerce, Easy Digital "
+"Downloads, and popular form plugins such as Ninja Forms, Gravity Forms, "
+"Elementor Forms, along with 10+ additional WordPress integrations for "
+"efficient data management."
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:54
+#: includes/pages/njforms-integration.php:97
+msgid "Google Account Connection"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:65
+msgid "Connected Email Account"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:78
+#: includes/pages/njforms-integration.php:207
+msgid "Connected"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:186
+msgid "Let's Connect"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:198
+msgid "Setup Guide & Troubleshooting"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:201
+msgid ""
+"Sync Ninja Forms data with Google Sheets in real-time effortlessly and "
+"accurately."
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:208
+msgid "Getting Started"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:210
+msgid "Installation Process"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:211
+msgid "Integration with Google (Existing Method)"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:212
+msgid "Feeds Setting"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:213
+#: includes/pages/njforms-gs-settings.php:391
+msgid "System Status"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:219
+msgid "Docs & Troubleshooting"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:221
+msgid "Update Plugin"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:222
+msgid "How to Enable Debugging in WordPress"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:223
+msgid "Invalid OAuth2 token"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:224
+msgid "Change Date/Time Format and Time Zone in Google Sheets"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:231
+msgid "Additional Resources"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:233
+msgid "Integration with Google (Manual Method)"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:234
+msgid "Integration with Google (Service Method)"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:235
+msgid "Plugin Settings"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:246
+msgid "Plugins by Category"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:249
+msgid "Find the perfect connector for your WordPress workflow."
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:264
+msgid "Contact Form Connectors"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:267
+msgid "6 plugins available"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:288
+msgid "eCommerce Connectors"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:291
+msgid "2 plugins available"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:312
+msgid "Page Builder Forms"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:315
+msgid "3 plugins available"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:335
+msgid "WP Core Connector"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:338
+msgid "1 plugin available"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:360
+msgid "Free Plugins"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:363
+msgid "12 plugins available"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:389
+#: includes/pages/njforms-general-settings.php:173
+msgid "Need more support? We're here to help."
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:392
+#: includes/pages/njforms-general-settings.php:176
+msgid "Submit a Support Ticket"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:412
+#: includes/pages/njforms-general-settings.php:194
+msgid "Our fast and friendly support team is always happy to help!"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:426
+msgid "Amazing Key Features"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:427
+msgid "Everything You Need to Sync Data"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:429
+msgid ""
+"Common features shared across every GSheetConnector Pro add-on built for "
+"reliability, flexibility, and scale."
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:437
+msgid "Google Sheets API (Up-to date)"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:438
+msgid "One Click Authentication"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:439
+#: includes/pages/njforms-gs-settings.php:462
+msgid "Authenticated Email Display"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:440
+msgid "Click & Fetch Sheet Automated"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:441
+msgid "Creating New Sheet Option"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:442
+#: includes/pages/njforms-gs-settings.php:465
+msgid "Manually Adding Sheet Name & Tab Name"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:443
+#: includes/pages/njforms-gs-settings.php:466
+msgid "Automated Sheet & Tab Name"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:444
+#: includes/pages/njforms-gs-settings.php:467
+msgid "Multiple Forms to Sheets"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:447
+#: includes/pages/njforms-gs-settings.php:471
+msgid "Custom Ordering"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:448
+#: includes/pages/njforms-gs-settings.php:472
+msgid "Custom / Merge Tags"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:449
+#: includes/pages/njforms-gs-settings.php:473
+msgid "Supported with other official and 3rd Party Addons"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:450
+#: includes/pages/njforms-gs-settings.php:474
+msgid "Conditional Sheet"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:451
+#: includes/pages/njforms-gs-settings.php:475
+msgid "Enable/Disable Sheet Headers"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:452
+#: includes/pages/njforms-gs-settings.php:476
+msgid "Freeze Header / Color Option"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:453
+#: includes/pages/njforms-gs-settings.php:477
+msgid "Sync Setting"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:454
+#: includes/pages/njforms-gs-settings.php:478
+msgid "Role Management"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:457
+#: includes/pages/njforms-gs-settings.php:481
+msgid "Multi Language Support"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:458
+#: includes/pages/njforms-gs-settings.php:482
+msgid "Multi Site Support"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:459
+#: includes/pages/njforms-gs-settings.php:483
+msgid "Manual Integration"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:460
+#: includes/pages/njforms-gs-settings.php:484
+msgid "Automatic Updates"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:461
+#: includes/pages/njforms-gs-settings.php:485
+msgid "Quick Configuration"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:462
+#: includes/pages/njforms-gs-settings.php:486
+msgid "Latest WordPress & PHP Support"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:463
+#: includes/pages/njforms-gs-settings.php:487
+msgid "Excellent Priority Customer Support"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:464
+#: includes/pages/njforms-gs-settings.php:488
+msgid "Comprehensive Documentation"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:469
+msgid "View Full Features"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:480
+msgid "Form"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:482
+msgid "Processing"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:484
+msgid "Sheet"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:490
+msgid "Instant"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:491
+msgid "Real-time updates"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:494
+msgid "100%"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:495
+msgid "Accuracy"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:498
+msgid "Flexible"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:499
+msgid "Custom mapping"
+msgstr ""
+
+#: includes/pages/njforms-dashboard.php:513
+msgid "Video Tutorials"
+msgstr ""
+
+#: includes/pages/njforms-forms-settings.php:14
+msgid "Ninja Forms - Google Sheet Settings"
+msgstr ""
+
+#: includes/pages/njforms-forms-settings.php:15
+msgid "Select a form to configure the Ninja Forms GSheetConnector integration."
+msgstr ""
+
+#: includes/pages/njforms-forms-settings.php:29
+msgid "Select Form"
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:32
+msgid "General Settings"
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:33
+#: includes/pages/njforms-role-setting.php:54
+msgid "Role Permissions"
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:34
+msgid "Version Control"
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:56
+msgid "Plugin Preferences"
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:58
+msgid ""
+"Manage how plugin settings and data are handled when the plugin is "
+"uninstalled."
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:62
+msgid "Delete Plugin Data on Uninstall"
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:65
+msgid "Removes all plugin data (options, metadata) when the plugin is deleted."
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:88
+msgid "Uninstall Data Notice"
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:91
+msgid "Enable this option only if you want a complete cleanup"
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:93
+msgid "All plugin settings and data will be permanently removed"
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:95
+msgid "Incorrect settings can delete all sensitive form and user data"
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:123
+msgid "Confirm Data Deletion"
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:126
+msgid ""
+"Enabling this option will permanently delete all plugin data, including "
+"settings and integrations, when the plugin is uninstalled."
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:129
+msgid ""
+"If you plan to upgrade from Free to Pro, you may lose your existing "
+"configuration data."
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:133
+msgid ""
+"Proceed only if you want a complete cleanup. This action cannot be undone."
+msgstr ""
+
+#: includes/pages/njforms-general-settings.php:142
+msgid "Enable Deletion"
+msgstr ""
+
+#: includes/pages/njforms-gs-integration-support.php:17
 msgid "Like & Subscribe to our channel for regular updates"
 msgstr ""
 
-#: includes/pages/njforms-gs-integration-support.php:16
+#: includes/pages/njforms-gs-integration-support.php:23
 msgid "Submit A Ticket"
 msgstr ""
 
-#: includes/pages/njforms-gs-integration-support.php:18
+#: includes/pages/njforms-gs-integration-support.php:25
 msgid ""
 "We offer excellent support through our advanced ticket system. Make sure to "
 "register your purchase first to access our support services and other "
 "resources."
 msgstr ""
 
-#: includes/pages/njforms-gs-integration-support.php:21
+#: includes/pages/njforms-gs-integration-support.php:28
 msgid "Submit a ticket"
 msgstr ""
 
-#: includes/pages/njforms-gs-integration-support.php:24
-#: includes/pages/njforms-gs-integration-support.php:29
+#: includes/pages/njforms-gs-integration-support.php:31
+#: includes/pages/njforms-gs-integration-support.php:36
 msgid "Documentation"
 msgstr ""
 
-#: includes/pages/njforms-gs-integration-support.php:26
+#: includes/pages/njforms-gs-integration-support.php:33
 msgid ""
 "This is the place to go to reference different aspects of the plugin. Our "
 "online documentation is an incredible resource for learning the ins and outs."
 msgstr ""
 
-#: includes/pages/njforms-gs-settings.php:27
-msgid "Ninja Forms  - GSheetConnector"
+#: includes/pages/njforms-gs-settings.php:47
+msgid "Existing"
 msgstr ""
 
-#: includes/pages/njforms-gs-settings.php:28
-msgid "Version :"
+#: includes/pages/njforms-gs-settings.php:113
+msgid ""
+"You`re using GSheetConnector for Ninja Forms. To unlock more features "
+"consider "
 msgstr ""
 
-#: includes/pages/njforms-gs-settings.php:31
-msgid "DASHBOARD"
+#: includes/pages/njforms-gs-settings.php:115
+msgid "upgrading to Pro"
 msgstr ""
 
-#: includes/pages/njforms-gs-settings.php:38
+#: includes/pages/njforms-gs-settings.php:142
+msgid "Unlock Advance Features of Ninja Forms Pro version 🚀"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:146
+msgid ""
+"Use advanced features like Manual Authentication and automatic field "
+"mapping, no need to create columns in Google Sheets manually."
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:149
+msgid ""
+"Choose only the fields you need with simple toggles, use advanced tags, sync "
+"past form entries, and get priority support."
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:156
+msgid "View License Types"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:161
+msgid "Compare Features"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:165
+#: includes/pages/njforms-gs-settings.php:209
+msgid "Maybe Later"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:183
+msgid "Enjoying the Plugin?"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:187
+msgid ""
+"If you are enjoying the plugin, please consider leaving a 5-star review. "
+"Your support helps us improve and grow."
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:194
+msgid "Ok, you deserve it!"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:198
+msgid "I already did"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:204
+msgid "I need help"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:226
+msgid " Enhance Your Setup"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:230
+msgid "Extend your workflow with our add-ons."
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:233
+msgid "Discover tools that integrate seamlessly and help you get more done."
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:241
+msgid "View Details"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:260
+#: includes/pages/njforms-integration.php:111
+msgid "Authenticate with Your Google Account"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:264
+msgid "Your connection has expired or hasn’t been set up yet."
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:268
+msgid ""
+"Please reauthenticate with your google account to continue syncing data "
+"without interruptions."
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:275
+msgid "Authenticate Now"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:281
+msgid "Learn How"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:323
+msgid "v"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:387
+msgid "Dashboard"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:388
 msgid "Integration"
 msgstr ""
 
-#: includes/pages/njforms-gs-settings.php:39
-msgid "System Status"
+#: includes/pages/njforms-gs-settings.php:389
+msgid "Forms Settings"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:392
+msgid "Extensions"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:456
+msgid "Advanced Tools for Easy Spreadsheet Control"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:457
+msgid ""
+"Improve your sheet management with smart automation and flexible "
+"customization features."
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:460
+msgid "Google Sheets API v4"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:461
+msgid "One-Click Authentication"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:463
+msgid "Click & Fetch Automation"
+msgstr ""
+
+#: includes/pages/njforms-gs-settings.php:464
+msgid "Create New Spreadsheet"
 msgstr ""
 
 #: includes/pages/njforms-integrate-system-info.php:10
-msgid "System Info"
+msgid "You do not have permission to access this page."
 msgstr ""
 
-#: includes/pages/njforms-integrate-system-info.php:11
-msgid "Copy System Info to Clipboard"
+#: includes/pages/njforms-integrate-system-info.php:18
+msgid "System Information"
 msgstr ""
 
-#: includes/pages/njforms-integrate-system-info.php:17
-msgid "Error Log"
-msgstr ""
-
-#: includes/pages/njforms-integrate-system-info.php:20
+#: includes/pages/njforms-integrate-system-info.php:23
 msgid ""
-"<p>If you have <a href=\"https://www.gsheetconnector.com/how-to-enable-"
-"debugging-in-wordpress\" target=\"_blank\" rel=\"noopener noreferrer"
-"\">WP_DEBUG_LOG</a> enabled, errors are stored in a log file. Here you can "
-"find the last 100 lines in reversed order so that you or the GSheetConnector "
-"support team can view it easily. The file cannot be edited here.</p>"
+"View detailed information about your plugin, server, and WordPress setup for "
+"troubleshooting and support."
 msgstr ""
 
-#: includes/pages/njforms-integrate-system-info.php:24
-msgid "Copy Error Log to Clipboard"
+#: includes/pages/njforms-integrate-system-info.php:36
+msgid "Copy System Info"
 msgstr ""
 
-#: includes/pages/njforms-integrate-system-info.php:30
-msgid "Copied"
+#: includes/pages/njforms-integrate-system-info.php:732
+msgid "Does not exist"
 msgstr ""
 
-#: includes/pages/njforms-integration-demo-info.php:5
+#: includes/pages/njforms-integrate-system-info.php:759
+msgid "Debug Log"
+msgstr ""
+
+#: includes/pages/njforms-integrate-system-info.php:797
+msgid "Copied successfully"
+msgstr ""
+
+#: includes/pages/njforms-integrate-system-info.php:812
+msgid "Type"
+msgstr ""
+
+#: includes/pages/njforms-integrate-system-info.php:814
+msgid "File"
+msgstr ""
+
+#: includes/pages/njforms-integrate-system-info.php:859
+msgid "No debug logs found"
+msgstr ""
+
+#: includes/pages/njforms-integration-demo-info.php:13
 msgid "GSheetConnector Ninja Forms Demo Information"
 msgstr ""
 
-#: includes/pages/njforms-integration-demo-info.php:8
+#: includes/pages/njforms-integration-demo-info.php:16
 msgid "URL"
 msgstr ""
 
-#: includes/pages/njforms-integration-demo-info.php:14
+#: includes/pages/njforms-integration-demo-info.php:22
 msgid "Sheet URL"
 msgstr ""
 
-#: includes/pages/njforms-integration-demo-info.php:16
+#: includes/pages/njforms-integration-demo-info.php:24
 msgid "Demo URL"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:5
+#: includes/pages/njforms-integration-faq.php:12
 msgid "How to configure your Google Spreadsheet with Ninja Form plugin?"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:8
+#: includes/pages/njforms-integration-faq.php:15
 msgid "Go to the Ninja Forms Menu."
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:9
+#: includes/pages/njforms-integration-faq.php:16
 msgid "Edit/Add Ninja Form."
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:10
+#: includes/pages/njforms-integration-faq.php:17
 msgid "Go to Emails & Actions tabs."
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:11
+#: includes/pages/njforms-integration-faq.php:18
 msgid "Click on (Add new action) OR +(Plus Sign)."
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:18
+#: includes/pages/njforms-integration-faq.php:22
 msgid "Click on Google Sheet action"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:23
+#: includes/pages/njforms-integration-faq.php:27
 msgid ""
 "Fill the below details >> Click on Done button >> Click on Publish button"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:28
+#: includes/pages/njforms-integration-faq.php:32
 msgid ""
 "Google Sheet Name, Google Sheet ID, Tab Name and Tab ID you can copy from "
 "spreadsheet like below"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:38
+#: includes/pages/njforms-integration-faq.php:42
 msgid "Why I am Getting Error 500 After Installing Plugin."
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:40
+#: includes/pages/njforms-integration-faq.php:44
 msgid "Following are few of the points which will help to debug the issue."
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:42
+#: includes/pages/njforms-integration-faq.php:46
 msgid ""
 "1) Enable debug by adding the following in your wp-config.php file before /* "
 "That’s all, stop editing! Happy blogging."
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:44
+#: includes/pages/njforms-integration-faq.php:48
 msgid ""
 "define('WP_DEBUG', true); define('WP_DEBUG_LOG', true); "
 "define('SCRIPT_DEBUG', true); define('SAVEQUERIES', true);"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:46
+#: includes/pages/njforms-integration-faq.php:50
 msgid ""
 "And then try to activate the plugin again. This will create a debug.log "
 "under wp-content folder. Check for Ninja Forms Google Sheet Connector "
 "errors. If found, send us the file at support@westerndeal.com"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:48
+#: includes/pages/njforms-integration-faq.php:52
 msgid ""
 "2) Check the log that is created by Ninja Forms Google Sheet. For that, "
 "click “View” from the Google Sheet Integration page. Let us know if there is "
 "any error—we will assist you."
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:57
+#: includes/pages/njforms-integration-faq.php:61
 msgid "How do I get the Google Access Code required in step 3 of Installation?"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:64
+#: includes/pages/njforms-integration-faq.php:68
 msgid "On the <code>Admin Panel &gt; Ninja Forms &gt; Google Sheets.</code>"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:70
+#: includes/pages/njforms-integration-faq.php:74
 msgid "Go to “Integration” tab and click on \"Get Code\" button."
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:74
+#: includes/pages/njforms-integration-faq.php:78
 msgid ""
 "In a popup Google will ask you to authorize the plugin to connect to your "
 "Google Sheets. Authorize it – you may have to log in to your Google account "
 "if you aren’t already logged in."
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:78
+#: includes/pages/njforms-integration-faq.php:82
 msgid "On the next screen, you should receive the Access Code. Copy it."
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:82
+#: includes/pages/njforms-integration-faq.php:86
 msgid "Now you can paste this code back in the Google Access Code."
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:91
+#: includes/pages/njforms-integration-faq.php:95
 msgid "Submitted Value is not showing in Googlesheet."
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:97
+#: includes/pages/njforms-integration-faq.php:101
 msgid ""
 "Sometimes it can take a while of spinning before it goes through. But if the "
 "entries never show up in your Sheet then one of these things might be the "
 "reason:"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:101
-#: includes/pages/njforms-integration-faq.php:127
+#: includes/pages/njforms-integration-faq.php:105
+#: includes/pages/njforms-integration-faq.php:131
 msgid "Wrong access code (Check debug log)"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:102
-#: includes/pages/njforms-integration-faq.php:128
+#: includes/pages/njforms-integration-faq.php:106
+#: includes/pages/njforms-integration-faq.php:132
 msgid "Wrong Sheet name or tab name"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:103
+#: includes/pages/njforms-integration-faq.php:107
 msgid ""
 "Wrong Column name (Column names in Ninja Forms. It cannot have underscore, "
 "space or any special characters.)"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:107
+#: includes/pages/njforms-integration-faq.php:111
 msgid ""
 "Please double-check those items and hopefully getting them right will fix "
 "the issue."
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:118
+#: includes/pages/njforms-integration-faq.php:122
 msgid ""
 "Why am I not seeing Ninja Form values (submitted data) in my Google Sheet?"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:123
+#: includes/pages/njforms-integration-faq.php:127
 msgid ""
 "Sometimes it can take a while of spinning before it goes through. But if the "
 "entries never show up in your Sheet, then one of these things might be the "
 "reason:"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:129
+#: includes/pages/njforms-integration-faq.php:133
 msgid ""
 "Wrong column name mapping (Column names in Ninja Forms cannot have "
 "underscores, spaces, or any special characters)"
 msgstr ""
 
-#: includes/pages/njforms-integration-faq.php:133
+#: includes/pages/njforms-integration-faq.php:137
 msgid ""
 "Please double-check those items — getting them right will likely fix the "
 "issue."
 msgstr ""
 
-#. Plugin Name of the plugin/theme
-msgid "GSheetConnector For Ninja Forms"
+#: includes/pages/njforms-integration.php:58
+msgid "Google Sheets Integration for Ninja Forms"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:64
+msgid "Choose Google API Setting"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:68
+msgid "Existing Client / Secret Key (Auto Setup)"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:71
+msgid "Manual Client/Secret Key (Use Your Google API Configuration)"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:74
+msgid "Service Account (Recommended)"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:79
+msgid "Select how Ninja Forms should authenticate with Google Sheets."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:99
+msgid "Auto Setup"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:102
+msgid ""
+"Sign in with your Google account to connect Ninja Forms with Google Sheets. "
+"Once connected, your data syncs based on your settings. Learn more in the "
+"documentation"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:104
+msgid "click here"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:118
+msgid "Click on the <strong>Sign in with Google</strong> button."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:124
+msgid "Log in using your Google account."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:128
+msgid "Select the Google account where your Sheets are stored."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:132
+msgid "Grant access to:"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:135
+msgid "Google Drive"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:138
+msgid "Google Sheets"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:146
+msgid "Click <strong>Allow</strong> to finish authorization."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:152
+msgid "Save the authentication code if prompted."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:157
+msgid ""
+"This allows the plugin to securely sync your form data with Google Sheets."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:172
+msgid ""
+"<p class=\"fw-400 text-dark\"><strong>Google Drive</strong> and "
+"<strong>Google Sheets</strong> permissions were not granted during "
+"authentication with Google.</p>\n"
+"                                            <p class=\"fw-400 text-"
+"dark\"><strong>Refer to Step 4 in the Connection Guide shown alongside.</"
+"strong><br> Then, deactivate the connection and re-authorize it, ensuring "
+"both Google Drive and Google Sheets permissions are enabled.</p>"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:198
+msgid "Connected Google Account"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:218
+msgid ""
+"Authentication failed. Your Google access token may be expired or invalid. "
+"Please re-authenticate your account with the required permissions."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:245
+msgid "Connect Your Google Account"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:246
+msgid ""
+"Securely link your Google account to start syncing form entries "
+"automatically."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:255
+#: includes/pages/njforms-integration.php:257
+#: includes/pages/njforms-integration.php:442
+msgid "Sign in with Google"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:272
+msgid "Client Token"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:285
+msgid "Save Client Token"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:307
+msgid ""
+"We do not store any of the data from your Google account on our servers, "
+"everything is processed & stored on your server. We take your privacy "
+"extremely seriously and ensure it is never misused. Learn more in the "
+"documentation"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:309
+msgid "click here."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:323
+msgid "Connection Status & Next Steps"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:329
+msgid ""
+"Your Google account has been successfully connected. You are now ready to "
+"sync your form submissions with Google Sheets securely and automatically."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:344
+msgid "Create New Feed"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:354
+msgid "Select Google Spreadsheet"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:364
+msgid "Add Labels in Sheet Headers Manually"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:374
+msgid "Enable Fields to Sync"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:385
+msgid "Customize the Headers Appearance"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:396
+msgid "Use Sync Settings (Past Entries)"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:404
+msgid "Upgrade to unlock"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:419
+msgid "Connection Guide"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:420
+msgid "Step-by-Step"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:422
+msgid ""
+"Follow these steps to connect your Google account and start syncing your "
+"form data with Google Sheets."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:430
+msgid "Step-1 Connect Your Google Account"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:432
+msgid ""
+"Sign in with your Google account to start the automatic Google Sheets "
+"integration."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:452
+msgid "Step-2 Choose Google Account"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:454
+msgid "Choose the Google account where your Sheets are stored."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:464
+#: includes/pages/njforms-integration.php:483
+#: includes/pages/njforms-integration.php:504
+#: includes/pages/njforms-integration.php:525
+#: includes/pages/njforms-integration.php:547
+msgid "check our detailed guideline"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:471
+msgid "Step-3 Review Access Information"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:473
+msgid "Google will show what information the plugin can access."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:492
+msgid "Step-4 Grant Required Permissions"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:494
+msgid "Allow required permissions for Google Sheets and Drive access."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:513
+msgid "Step-5 Save Authentication Code"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:515
+msgid "Save the authentication code to complete the Google account connection."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:535
+msgid "Step-6 Integration Completed"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:537
+msgid "Your Google account is now successfully connected."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:577
+msgid "Manual Google Sheets Integration"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:578
+msgid ""
+"Connect Ninja  Froms to Google Sheets using your own Google Cloud project.\n"
+"                            Ideal for advanced users who need full API "
+"control, custom OAuth setup,\n"
+"                            and independent credential management."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:597
+msgid "Custom API Credentials"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:598
+msgid ""
+"Connect using your own Google Cloud Client ID and Client Secret for full "
+"authentication control."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:614
+msgid "Secure Authentication"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:615
+msgid ""
+"Authenticate directly with Google using a secure Authentication flow without "
+"third-party dependency."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:633
+msgid "Advanced Configuration"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:634
+msgid ""
+"Set custom Redirect URIs, manage scopes, and configure API settings based on "
+"your project needs."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:650
+msgid "Priority Technical Support"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:652
+msgid ""
+"Get fast assistance from our expert team for setup, troubleshooting, and "
+"optimization."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:665
+#: includes/pages/njforms-integration.php:785
+msgid "View Pro Features"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:683
+msgid "Service Account Google Sheets Integration"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:686
+msgid ""
+"Securely connect Ninja Froms to Google Sheets using a Google Cloud Service "
+"Account JSON key. Ideal for automated server-to-server syncing without "
+"requiring manual Google login."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:706
+msgid "Secure JSON Authentication"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:708
+msgid ""
+"Authenticate using a secure Google Cloud JSON key file for direct and "
+"encrypted communication with Google Sheets."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:727
+msgid "No Authentication Login Required"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:729
+msgid ""
+"Enable automatic background syncing without requiring Google account sign-in "
+"during setup."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:749
+msgid "Direct Spreadsheet Access"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:750
+msgid ""
+"Share your Google Sheet with the service account email to enable automatic "
+"data transfer."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:770
+msgid "Production-Ready & Reliable"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:772
+msgid ""
+"Built for stable, uninterrupted syncing in professional and high-traffic "
+"environments."
+msgstr ""
+
+#: includes/pages/njforms-integration.php:807
+msgid "Deactivate Integration"
+msgstr ""
+
+#: includes/pages/njforms-integration.php:808
+msgid ""
+"Are you sure you want to deactivate Google Sheets integration?\n"
+"            This will stop syncing your form entries."
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:9
+msgid "Permission Not Allowed"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:43
+msgid "Unlock Role-Based Access Control"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:57
+msgid "Allow specific WordPress roles"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:58
+msgid "Enable/disable integration access"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:59
+msgid "Control form feed visibility"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:60
+msgid "Restrict settings management"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:67
+msgid "Security Control"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:70
+msgid "Prevent unauthorized changes"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:71
+msgid "Secure Google Sheet credentials"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:73
+msgid "Role-based configuration control"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:75
+msgid "Protect integration settings"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:82
+msgid "Management Benefits"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:85
+msgid "Grant access to trusted editors"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:87
+msgid "Hide settings from subscribers"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:88
+msgid "Team-based permission structure"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:90
+msgid "Improved dashboard security"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:97
+msgid "Audit & Monitoring"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:100
+msgid "Track role-based changes"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:101
+msgid "Monitor integration access"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:102
+msgid "Review permission updates"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:103
+msgid "Maintain admin accountability"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:123
+msgid "Access Management"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:124
+msgid ""
+"Control which user roles are allowed to access and manage the Google Sheets "
+"integration for your forms."
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:129
+msgid "Plugin Access Control"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:130
+msgid "Control who can access and manage the GSheetConnector plugin settings."
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:133
+#: includes/pages/njforms-role-setting.php:180
+msgid "Administrator"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:161
+#: includes/pages/njforms-role-setting.php:208
+msgid "Permission Guidelines"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:163
+msgid "Control which user roles can access the GSheetConnector plugin"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:164
+msgid "Allow selected users to manage Google Sheets integration settings"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:165
+msgid ""
+"Restrict access to sensitive features like feeds, logs, and configurations"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:166
+msgid "Only enabled roles will see the plugin menu in the admin panel"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:167
+#: includes/pages/njforms-role-setting.php:213
+msgid "Recommended: Allow only Administrators and trusted Editors"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:176
+msgid "Form Permissions"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:177
+msgid "ontrol who can configure Google Sheets integration inside Ninja."
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:210
+msgid ""
+"Control which user roles can access Google Sheet settings inside Ninja Forms"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:211
+msgid "Allow users to configure sheet connections in individual forms"
+msgstr ""
+
+#: includes/pages/njforms-role-setting.php:212
+msgid "Prevent unauthorized users from modifying form integrations"
+msgstr ""
+
+#: lib/vendor/freemius/assets/js/pricing/freemius-pricing.js:2
+msgid "display"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.gsheetconnector.com/ninja-forms-google-sheet-connector-pro"
 msgstr ""
 
 #. Description of the plugin/theme

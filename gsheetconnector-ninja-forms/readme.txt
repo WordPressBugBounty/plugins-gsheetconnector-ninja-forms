@@ -6,7 +6,7 @@ Requires at least: 5.6
 Tested up to: 7.1
 Requires PHP: 7.4
 Requires Plugins: ninja-forms
-Stable tag: 2.0.2
+Stable tag: 3.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -88,11 +88,23 @@ Please double-check those items and hopefully getting them right will fix the is
 
 == Changelog ==
 
+= 3.0.0 = (17/10/2026)
+- Added: Introduced a refreshed and more intuitive user interface.
+- Added: Added a new Dashboard tab for quick access to plugin information.
+- Added: Introduced a notification bar to display important updates and alerts.
+- Added: Improved the Feed Settings interface for better usability.
+- Added: Added a static Google Sheets Connector layout for Ninja Forms Pro in the Feed/Action section.
+- Fixed: Fixed Ninja Forms field synchronization in the Feed/Action section.
+- Fixed: Fixed the display and synchronization of Signature and Repeater field values in Google Sheets.
+- Fixed: Resolved a compatibility issue related to PCP.
+- Fixed: Removed the unused lib directory from the plugin package.
+- Updated: Updated the Freemius SDK to the latest version.
+
 = 2.0.2 = (19/11/2025)
 - Fixed : Vulnerabilities issue resolved. 
 
 = 2.0.1 = (18/11/2025)
-- Updatd:  UI changes. 
+- Updatd: UI changes. 
 
 = 2.0.0 (08/08/2025) =
 - Removed direct links to 5-star reviews to comply with WordPress plugin guidelines.

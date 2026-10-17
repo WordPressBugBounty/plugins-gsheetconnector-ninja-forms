@@ -1,48 +1,965 @@
 <script id="nf-tmpl-mautic-custom-field-map-row1" type="text/template">
 
-    <div>
-        <span class="dashicons dashicons-menu handle"></span>
-    </div>
-    <div>
-        <label>
-            <input type="text" class="setting" value="{{{ data.mautic_field_alias1 }}}" data-id="mautic_field_alias1">
-            <input type="text" class="setting" value="{{{ data.mautic_field_alias1 }}}" data-id="mautic_field_alias1">
-        </label>
-        <span class="nf-option-error"></span>
-    </div>
-    <div>
-        <label class="has-merge-tags">
-            <input type="text" class="setting" value="{{{ data.value }}}" data-id="value">
-            <input type="text" class="setting" value="{{{ data.value }}}" data-id="value">
-            <span class="dashicons dashicons-list-view merge-tags"></span>
-        </label>
-        <span class="nf-option-error"></span>
-    </div>
-    <div>
-        <span class="dashicons dashicons-dismiss nf-delete"></span>
-    </div>
-
-
+  <div>
+      <span class="dashicons dashicons-menu handle"></span>
+  </div>
+  <div>
+      <label>
+          <input type="text" class="setting" value="{{{ data.mautic_field_alias1 }}}" data-id="mautic_field_alias1">
+          <input type="text" class="setting" value="{{{ data.mautic_field_alias1 }}}" data-id="mautic_field_alias1">
+      </label>
+      <span class="nf-option-error"></span>
+  </div>
+  <div>
+      <label class="has-merge-tags">
+          <input type="text" class="setting" value="{{{ data.value }}}" data-id="value">
+          <input type="text" class="setting" value="{{{ data.value }}}" data-id="value">
+          <span class="dashicons dashicons-list-view merge-tags"></span>
+      </label>
+      <span class="nf-option-error"></span>
+  </div>
+  <div>
+      <span class="dashicons dashicons-dismiss nf-delete"></span>
+  </div>
 </script>
+
+
 <style>
-    #field_map_ninja_gs_nj_error{
-   display: none;
+  #field_map_ninja_gs_nj_error {
+    display: none;
   }
-  label[for=field_map_ninja_gs_nj_error] {
-     border: 1px solid #C3C4C7;
+  label[for="field_map_ninja_gs_nj_error"] {
+    border: 1px solid #c3c4c7;
     border-left-width: 4px;
-    border-left-color: #D63638;
+    border-left-color: #d63638;
     margin: 5px 0 15px;
     background: #fff;
-    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
     padding: 12px 12px;
     height: 70px !important;
     text-transform: unset !important;
-   }
-   #google_sheet_link{
+  }
+  #google_sheet_link {
     display: none;
-   }
-   #field_map_ninja_gs_upgrade_to_pro, #field_map_ninja_gs_upgrade_to_pro_link{
+  }
+  #field_map_ninja_gs_upgrade_to_pro,
+  #field_map_ninja_gs_upgrade_to_pro_link {
     display: none;
-   }
+  }
+
+  .gscnjf-setup-alert {
+    display: flex;
+    gap: 16px;
+    background: #fff7ed;
+    border: 1px solid #fdba74;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0px auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .gscnjf-alert-icon {
+    font-size: 30px;
+    line-height: 1;
+    color: #ea580c;
+  }
+
+  .feed-alert-header {
+    margin: 0 0 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #9a3412;
+    line-height: normal;
+  }
+
+  .gscnjf-alert-content ul {
+    margin: 0 0 14px;
+    padding-left: 18px;
+  }
+
+  a.gscnjf-alert-btn.link-hover-white {
+    display: inline-block;
+    background: #ea580c;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+
+  .gscnjf-alert-content p {
+    margin: 0 0 10px;
+    font-size: 13px;
+    color: #7c2d12;
+    line-height: 1.5;
+  }
+
+  .gscnjf-alert-content li {
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #7c2d12;
+  }
+
+  .gscnjf-sync-row legend {
+    padding: 0px;
+  }
+
+  input.setting.gscnjf-default-sync-toggle:disabled {
+    border-color: #f4f5fa;
+    background: #f4f5fa;
+  }
+
+  span.gscnjf-field-label {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+    color: #767676;
+  }
+  .gscnjf-switch input:checked + .gscnjf-switch-track {
+    background: #84cc1e !important;
+  }
+
+  .ninja-forms-app label {
+    text-transform: capitalize !important;
+  }
+
+  #action_name_unique {
+    display: none;
+  }
+
+  label[for="action_name_unique"] {
+    color: red !important;
+  }
+
+  .google_sheet_link a,
+  .google_sheet_download a {
+    background: #1ea9ea;
+    border: 1px solid #1ea9ea;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 17px;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+
+  fieldset.nf-list-options.google_sheet_link {
+    border: none;
+  }
+
+  .google_sheet_download a:focus,
+  .google_sheet_download a:active,
+  .google_sheet_link a:focus,
+  .google_sheet_link a:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+  }
+
+  /* Hover tooltip for the view / download buttons */
+  .google_sheet_link,
+  .google_sheet_link legend,
+  .google_sheet_download,
+  .google_sheet_download legend {
+    overflow: visible !important;
+  }
+
+  .gscnjf-tip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .gscnjf-tip:before,
+  .gscnjf-tip:after {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, 6px);
+    transition: all 0.18s ease-out;
+  }
+
+  .gscnjf-tip:after {
+    content: attr(data-tooltip);
+    background: #1e293b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    white-space: nowrap;
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .gscnjf-tip:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #1e293b;
+    margin-bottom: 2px;
+  }
+
+  .gscnjf-tip:hover:before,
+  .gscnjf-tip:hover:after {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+  }
+
+  /* Put the "view sheet" and "download sheet" buttons next to each other.
+       Markup: <div>(no class) > <div class="half"> > <fieldset class="nf-list-options google_sheet_link"> */
+  div:has(> .half > .google_sheet_link),
+  div:has(> .half > .google_sheet_download) {
+    display: inline-block !important;
+    width: auto !important;
+    vertical-align: top;
+    margin: 0 10px 10px 0 !important;
+  }
+
+  div:has(> .half > .google_sheet_link) > .half,
+  div:has(> .half > .google_sheet_download) > .half {
+    width: auto !important;
+    float: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .google_sheet_link,
+  .google_sheet_download {
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .google_sheet_link .nf-div-table,
+  .google_sheet_download .nf-div-table {
+    display: none !important;
+  }
+
+  .google_sheet_link legend,
+  .google_sheet_download legend {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .google_sheet_link ~ span,
+  .google_sheet_download ~ span {
+    display: none !important;
+  }
+
+  .google_sheet_download a {
+    cursor: not-allowed;
+  }
+
+  [data-testid="nf-setting-sheet_sorting_enable"] .nf-setting-label,
+  [data-testid="nf-setting-sheet_sorting_enable"] label {
+    text-transform: none !important;
+  }
+
+  .gscnjf-pro-badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 10px;
+    background: #dcdcde;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #1d2327;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+    vertical-align: middle;
+  }
+
+  input#gscnjf_auto_config_title {
+    display: none;
+  }
+
+  [data-testid="nf-setting-gscnjf_auto_config_title"] {
+    border-top: 2px solid #e5e7ec;
+    padding-top: 15px;
+    margin-top: 15px;
+  }
+
+  .gscnjf-cl-desc {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .gscnjf-cl-card {
+    padding: 50px 34px 40px;
+    background: #fff;
+    border: 1px solid #e6e9f1;
+    border-radius: 8px;
+  }
+  .gscnjf-cl-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .gscnjf-cl-select {
+    flex: 0 0 186px;
+    height: 40px;
+    padding: 0 12px;
+    background: #fff;
+    border: 1px solid #c9cdd6;
+    border-radius: 2px;
+    font-size: 13px;
+  }
+  .gscnjf-cl-operator {
+    flex-basis: 147px;
+  }
+
+  .gscnjf-cl-value {
+    flex: 1;
+    height: 52px;
+    padding: 0 16px;
+    background: #fff;
+    border: 1px solid #e1e4ec;
+    font-size: 13px;
+    box-sizing: border-box;
+  }
+
+  .gscnjf-cl-add,
+  .gscnjf-cl-remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    cursor: not-allowed;
+  }
+  .gscnjf-cl-add {
+    width: 24px;
+    height: 24px;
+    background: #1a87c0;
+    font-size: 18px;
+  }
+  .gscnjf-cl-remove {
+    width: 18px;
+    height: 18px;
+    background: #c9cdd6;
+    font-size: 9px;
+  }
+
+  .gscnjf-cl-card select:disabled,
+  .gscnjf-cl-card input:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  input#gscnjf_field_map_ninja_gs_upgrade_to_pro_link {
+    display: none;
+  }
+  select.gscnjf-cl-select {
+    width: 10px;
+  }
+
+  .ninja-forms-app label {
+    font-size: 14px !important;
+    text-transform: capitalize !important;
+    padding: 0px !important;
+  }
+
+  .gscnjf-pro {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #fff;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: #1f2937;
+    overflow: hidden;
+    text-align: left;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+  .gscnjf-pro * {
+    box-sizing: border-box;
+  }
+  .gscnjf-pro-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 20px 18px;
+    border-bottom: 1px solid #f1f3f5;
+  }
+  .gscnjf-pro-lock {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+  }
+  .gscnjf-pro-title {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #767676;
+    text-transform: capitalize;
+  }
+  .gscnjf-pro-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .gscnjf-pro-btn {
+    background: #15803d;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  .gscnjf-pro-btn:hover,
+  .gscnjf-pro-btn:focus {
+    background: #166534;
+    color: #fff;
+  }
+  .gscnjf-pro-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 24px 20px 20px;
+  }
+  .gscnjf-pro-cols h4 {
+    margin: 0 0 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #767676;
+    text-transform: capitalize;
+    text-decoration: underline;
+  }
+  .gscnjf-pro-cols ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .gscnjf-pro-cols li {
+    position: relative;
+    padding-left: 14px;
+    margin: 0 0 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #767676;
+    text-transform: capitalize;
+  }
+  .gscnjf-pro-cols li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    background: #9ca3af;
+  }
+  .gscnjf-pro-toggle {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    background: #f3f4f6;
+    border-top: 1px solid #e5e7eb;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f2937;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  .gscnjf-pro-toggle:hover {
+    background: #eceef1;
+    color: #1f2937;
+  }
+  fieldset[data-testid="nf-repeater-gscnjf_pro_features_box"] {
+    border: none !important;
+  }
+
+  legend[data-testid="nf-repeater-gscnjf_pro_features_box"] {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+
+  .ninja-forms-app legend {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+
+  fieldset[data-testid="nf-repeater-gscnjf_pro_features_box"] > legend {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    float: none;
+  }
+  fieldset.nf-list-options.gscnjf_pro_features_box {
+    margin-bottom: 0px;
+  }
+
+  span.gscnjf-feature-title {
+    font-size: 14px;
+  }
+
+  span.nf-setting-label {
+    text-transform: capitalize !important;
+    font-size: 14px !important;
+  }
+
+  /* Lock the picker, but keep the color visible */
+  .gscnjf-color-disabled {
+    opacity: 1;
+    cursor: not-allowed;
+  }
+  .gscnjf-color-disabled .wp-color-result {
+    pointer-events: none;
+    opacity: 1;
+    border: 1px solid #8c8f94;
+    box-shadow: none;
+  }
+  .gscnjf-color-disabled .wp-color-result-text {
+    color: #50575e;
+  }
+  .gscnjf-color-disabled input.wp-color-picker {
+    pointer-events: none;
+    background-color: #f3f4f6;
+    color: #50575e;
+    border-color: #dcdcde;
+  }
+  .gscnjf-color-disabled .wp-picker-clear,
+  .gscnjf-color-disabled .wp-picker-default {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  p.nf-gscnjf-sync-setting-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #767676;
+  }
+
+  p.nf-gscnjf-sync-setting-label {
+    border-bottom: 2px solid #ddd !important;
+    padding-bottom: 20px;
+  }
+
+  a.nf-button.primary.nf-close-drawer.gscnf-sync-entries {
+    background-color: #1ea9ea;
+    padding: 10px !important;
+  }
+
+  [data-testid="nf-setting-gscnjf_freeze_header"] .nf-setting-label,
+  [data-testid="nf-setting-gscnjf_color_settings"] .nf-setting-label,
+  [data-testid="nf-setting-gscnjf_header_appearance_settings"]
+    .nf-setting-label,
+  [data-testid="nf-setting-gscnjf_row_appearance_settings"] .nf-setting-label {
+    border-bottom: none !important;
+  }
+
+  [data-testid="nf-setting-gscnjf_sync_setting_title"] {
+    border-bottom: 2px solid #ddd !important;
+  }
+
+  .gscnjf-row-toggle {
+    opacity: 0 !important;
+  }
+
+  a.nf-button.primary.nf-close-drawer.gscnf-sync-entries {
+    cursor: not-allowed;
+  }
+
+  #gscnjf_sync_setting_title {
+    display: none;
+  }
+
+  .gscnjf-sync-card {
+    position: relative;
+    margin-top: 20px;
+    padding: 16px 16px 8px;
+    background: #f0f2f8;
+    border: 1px solid #dfe3ec;
+    border-radius: 10px;
+  }
+
+  .gscnjf-sync-title {
+    position: absolute;
+    top: -14px;
+    left: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 6px;
+    background: #f0f2f8;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+  }
+
+  .gscnjf-select-all {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 6px 18px;
+    border-bottom: 1px solid #dfe3ec;
+    margin-bottom: 24px;
+  }
+
+  .gscnjf-select-all-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+  }
+
+  .gscnjf-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 6px;
+    border-bottom: 1px solid #e6e9f1;
+  }
+
+  .gscnjf-row:last-child {
+    border-bottom: 0;
+  }
+
+  .gscnjf-drag {
+    color: #9aa1af;
+    font-size: 15px;
+    cursor: move;
+  }
+
+  .gscnjf-field-label {
+    flex: 0 0 150px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .gscnjf-input-wrap {
+    position: relative;
+    flex: 1;
+  }
+
+  .gscnjf-col-input {
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    background: #fff;
+    border: 1px solid #e1e4ec;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #111;
+    box-sizing: border-box;
+  }
+
+  .gscnjf-remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #c9cdd6;
+    color: #fff;
+    font-size: 10px;
+  }
+
+  .gscnjf-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    flex: 0 0 40px;
+  }
+
+  .gscnjf-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  .gscnjf-slider {
+    position: absolute;
+    inset: 0;
+    background: #c4c8d0;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .gscnjf-slider:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s;
+  }
+
+  .gscnjf-switch input:checked + .gscnjf-slider {
+    background: #7ac70c;
+  }
+
+  .gscnjf-switch input:checked + .gscnjf-slider:before {
+    transform: translateX(18px);
+  }
+  a.nf-button.primary.nf-close-drawer.gscnf-sync-entries {
+    text-transform: capitalize;
+  }
+  /*#label, #field_map_ninja_gsname, #field_map_ninja_gsid, #field_map_ninja_gstabname, #field_map_ninja_gstabid {
+    height: 52px;
+  }
+  input.gscnjf-col-input {
+    height: 52px !important;
+}*/
+
+
+
+  @media (max-width: 1100px) {
+    .gscnjf-pro-cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .gscnjf-pro-cols {
+      grid-template-columns: 1fr;
+    }
+
+.gscnjf-row {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 6px;
+    border-bottom: 1px solid #e6e9f1;
+    position: relative;
+}
+.gscnjf-remove {
+      position: absolute;
+    top: 14px;
+    right: 11px;
+}
+
+.nf-settings .nf-field-settings {
+    width: 100% !important;
+}
+
+.gscnjf-cl-card {
+    padding: 10px;
+}
+
+.gscnjf-cl-row {
+    gap: 5px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.gscnjf-drag {
+    grid-column: 1;
+}
+.gscnjf-switch {
+    grid-column: 2;
+}
+.gscnjf-field-label {
+    grid-column: 3;
+}
+.gscnjf-remove {
+    grid-column: 4;
+}
+.gscnjf-input-wrap {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+.gscnjf-input-wrap .gscnjf-col-input {
+    width: 100%;
+    box-sizing: border-box;
+}
+    
+  }
 </style>
+
+<script>
+  jQuery(function ($) {
+    function lockSortingToggle() {
+      $("#sheet_sorting_enable").prop("checked", true).prop("disabled", true);
+
+      $(
+        "#sheet_sorting_column, #sheet_sorting_order, #auto_sheet_names, #auto_sheet_tab_names_drop",
+      ).prop("disabled", true);
+    }
+
+    lockSortingToggle();
+
+    new MutationObserver(lockSortingToggle).observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+  });
+
+  /* disabled toggle in ninja inner forms*/
+  jQuery(function ($) {
+    var ids = [
+      "gscnjf_sheet_sorting_enable",
+      "gscnjf_conditional_logic_enable",
+      "gscnjf_freeze_header",
+      "gscnjf_color_settings",
+      "gscnjf_header_appearance_settings",
+      "gscnjf_row_appearance_settings",
+
+      // Select dropdowns
+      "gscnjf_sheet_sorting_column",
+      "gscnjf_sheet_sorting_order",
+      "gscnjf_conditional_logic_match_type",
+      "gscnjf_header_font_style",
+      "gscnjf_header_font_size",
+      "gscnjf_row_font_style",
+      "gscnjf_row_font_size",
+      "gscnjf_auto_sheet_names",
+      "gscnjf_auto_sheet_tab_names_drop",
+    ];
+
+    // Color picker settings (WordPress wpColorPicker wraps the input)
+    var colorIds = [
+      "gscnjf_header_color_njf",
+      "gscnjf_odd_color_njf",
+      "gscnjf_even_color_njf",
+      "gscnjf_header_font_color",
+      "gscnjf_row_font_color",
+    ];
+
+    function lockColors() {
+      $.each(colorIds, function (i, id) {
+        var $input = $("#" + id);
+        if (!$input.length) {
+          return;
+        }
+
+        // Runs every pass (no "already locked" gate) because the picker
+        // wrapper/button can be built after the input is rendered.
+        $input.prop("disabled", true).attr("aria-disabled", "true");
+
+        var $wrap = $input.closest(".wp-picker-container");
+        $wrap.addClass("gscnjf-color-disabled");
+
+        // Keep the swatch showing the saved color (e.g. #ffffff).
+        // Don't use the "disabled" attribute on the swatch: it drops its color styling.
+        // Clicks are blocked with CSS (pointer-events) + tabindex for the keyboard.
+        $wrap
+          .find(".wp-color-result")
+          .css("background-color", $input.val() || "#ffffff")
+          .attr({ "aria-disabled": "true", tabindex: "-1" });
+
+        $wrap
+          .find(".wp-picker-clear, .wp-picker-default")
+          .prop("disabled", true)
+          .attr("aria-disabled", "true");
+      });
+    }
+
+    function lockToggles() {
+      $.each(ids, function (i, id) {
+        var $input = $("#" + id);
+
+        // Not rendered yet, or already locked.
+        if (!$input.length || $input.data("gscnjfLocked")) {
+          return;
+        }
+
+        $input
+          .prop("disabled", true)
+          .attr("aria-disabled", "true")
+          .data("gscnjfLocked", true);
+
+        $('label[for="' + id + '"]').addClass("gscnjf-disabled");
+        $input.closest(".nf-setting").addClass("gscnjf-setting-disabled");
+      });
+
+      lockColors();
+    }
+
+    // Run once, then again whenever the builder re-renders settings (Backbone).
+    var timer;
+    function scheduleLock() {
+      clearTimeout(timer);
+      timer = setTimeout(lockToggles, 50);
+    }
+
+    lockToggles();
+    new MutationObserver(scheduleLock).observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+  });
+
+  jQuery(document).ready(function (jQuery) {
+    jQuery(function ($) {
+      var fieldIds = [
+        "field_map_ninja_gsname",
+        "field_map_ninja_gsid",
+        "field_map_ninja_gstabname",
+        "field_map_ninja_gstabid",
+      ];
+
+      var selector = fieldIds
+        .map(function (id) {
+          return "#" + id;
+        })
+        .join(",");
+
+      function toggleSheetButtons() {
+        var allFilled = fieldIds.every(function (id) {
+          return $.trim($("#" + id).val() || "") !== "";
+        });
+
+        if (allFilled) {
+          $(".google_sheet_link, .google_sheet_download").show();
+        } else {
+          $(".google_sheet_link, .google_sheet_download").hide();
+        }
+      }
+
+      // fires while typing, pasting, or changing any of the 4 fields
+      // (delegated, so it works even if the builder re-renders the fields)
+      $(document).on("input keyup change paste", selector, function () {
+        setTimeout(toggleSheetButtons, 0);
+      });
+
+      // initial check on page load
+      toggleSheetButtons();
+
+      // re-check when the action drawer is opened (Ninja Forms builder re-renders it)
+      $(document).on(
+        "click",
+        ".nf-action-item, .nf-add-new-action",
+        function () {
+          setTimeout(toggleSheetButtons, 400);
+        },
+      );
+    });
+  });
+</script>

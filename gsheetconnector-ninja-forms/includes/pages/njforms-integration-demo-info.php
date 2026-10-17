@@ -1,3 +1,11 @@
+<?php 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+?>
+
+
 <div class="gs-sidebar-block">
   <div class="card1">
     <div class="WP-fields demo-block">
